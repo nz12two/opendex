@@ -1,0 +1,61 @@
+---
+interface Props {
+  score: number;
+  size?: 'sm' | 'md' | 'lg';
+  showLabel?: boolean;
+}
+
+const { score, size = 'md', showLabel = true } = Astro.props;
+
+const clampedScore = Math.min(Math.max(score, 0), 100);
+
+const sizeMap = {
+  sm: { outer: 'h-10 w-10', inner: 'text-[10px]', svg: 26, r: 11, stroke: 2 },
+  md: { outer: 'h-14 w-14', inner: 'text-sm', svg: 36, r: 15.5, stroke: 3 },
+  lg: { outer: 'h-20 w-20', inner: 'text-lg font-bold', svg: 50, r: 22, stroke: 3.5 },
+};
+
+const { outer, inner, svg, r, stroke } = sizeMap[size];
+
+function getColor(score: number): string {
+  if (score >= 80) return 'text-emerald-500';
+  if (score >= 60) return 'text-emerald-400';
+  if (score >= 40) return 'text-amber-400';
+  if (score >= 20) return 'text-orange-400';
+  return 'text-red-400';
+}
+
+const textColor = getColor(clampedScore);
+const circumference = 2 * Math.PI * r;
+const offset = circumference - (clampedScore / 100) * circumference;
+---
+
+<div class="flex flex-col items-center gap-1">
+  <div class={`relative ${outer}`}>
+    <svg class={`h-full w-full -rotate-90 ${textColor}`} viewBox={`0 0 ${svg} ${svg}`}>
+      <circle
+        cx={svg / 2}
+        cy={svg / 2}
+        r={r}
+        fill="none"
+        stroke="hsl(var(--muted))"
+        stroke-width={stroke}
+      />
+      <circle
+        cx={svg / 2}
+        cy={svg / 2}
+        r={r}
+        fill="none"
+        stroke="currentColor"
+        stroke-width={stroke}
+        stroke-dasharray={circumference}
+        stroke-dashoffset={offset}
+        stroke-linecap="round"
+      />
+    </svg>
+    <span class={`absolute inset-0 flex items-center justify-center font-bold ${inner} ${textColor}`}>
+      {clampedScore}
+    </span>
+  </div>
+  {showLabel && <span class="text-[10px] text-muted-foreground font-medium">SCORE</span>}
+</div>

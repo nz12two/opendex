@@ -1,0 +1,53 @@
+---
+interface Props {
+  categories: string[];
+  activeCategory: string;
+  count?: number;
+}
+
+const { categories, activeCategory, count } = Astro.props;
+---
+
+<div class="flex flex-wrap items-center gap-1.5">
+  <span class="text-xs font-medium text-muted-foreground mr-1">Categorias:</span>
+  <a
+    href="."
+    class="filter-btn inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+    class:list={{
+      'bg-primary text-primary-foreground': activeCategory === 'all',
+      'bg-secondary text-secondary-foreground hover:bg-secondary/80': activeCategory !== 'all',
+    }}
+    data-filter="all"
+  >
+    Todas
+    {count !== undefined && (
+      <span class="ml-1.5 inline-flex items-center justify-center rounded-full bg-background/20 px-1.5 py-0.5 text-[10px]">
+        {count}
+      </span>
+    )}
+  </a>
+  {categories.map((cat) => {
+    const isActive = activeCategory === cat;
+    return (
+      <a
+        href={isActive ? '.' : `?category=${encodeURIComponent(cat)}`}
+        class="filter-btn inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+        class:list={{
+          'bg-primary text-primary-foreground': isActive,
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80': !isActive,
+        }}
+        data-filter={cat}
+      >
+        {cat}
+      </a>
+    );
+  })}
+</div>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // The link navigation handles the actual filtering
+    });
+  });
+</script>

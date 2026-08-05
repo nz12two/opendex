@@ -1,0 +1,34 @@
+---
+interface Props {
+  activeCategory: string;
+}
+
+const { activeCategory } = Astro.props;
+
+const categories = [
+  { id: 'all', label: 'Todas' },
+  { id: 'repositorio', label: '📦 Repositório' },
+  { id: 'licenca', label: '📜 Licença' },
+  { id: 'npm', label: '⬇️ npm' },
+];
+---
+
+<div class="flex flex-wrap items-center gap-1.5">
+  <span class="text-xs font-medium text-muted-foreground mr-1">Categorias:</span>
+  {categories.map((cat) => {
+    const isActive = activeCategory === cat.id;
+    return (
+      <a
+        href={isActive ? '.' : `?category=${encodeURIComponent(cat.id)}`}
+        class="filter-btn inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+        class:list={{
+          'bg-primary text-primary-foreground': isActive,
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80': !isActive,
+        }}
+        data-filter={cat.id}
+      >
+        {cat.label}
+      </a>
+    );
+  })}
+</div>

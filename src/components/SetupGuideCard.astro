@@ -1,0 +1,62 @@
+---
+import type { SetupGuide } from '@/data/setup-guides/types';
+import { cn } from '@/lib/utils';
+import { Clock, ArrowRight, Wrench } from 'lucide-react';
+
+interface Props {
+  guide: SetupGuide;
+}
+
+const { guide } = Astro.props;
+
+const difficultyColor: Record<string, string> = {
+  'iniciante': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  'intermediário': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+  'avançado': 'bg-red-500/10 text-red-400 border-red-500/20'
+};
+---
+
+<a
+  href={`/opendex/configuracao/${guide.slug}`}
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <Wrench class="h-6 w-6 text-primary" />
+    </div>
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors text-lg">
+        {guide.name}
+      </h3>
+      <p class="text-xs text-muted-foreground mt-0.5">{guide.provider}</p>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="mt-3 text-sm text-muted-foreground line-clamp-2">
+    {guide.description}
+  </p>
+
+  <!-- Meta -->
+  <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
+    <span class={cn('inline-flex items-center rounded-full border px-2 py-0.5 font-medium', difficultyColor[guide.difficulty])}>
+      {guide.difficulty}
+    </span>
+    <span class="flex items-center gap-1 rounded-md bg-muted/50 px-2 py-0.5 text-muted-foreground">
+      <Clock class="h-3 w-3" />
+      {guide.timeToComplete}
+    </span>
+    <span class="rounded-md bg-muted/50 px-2 py-0.5 text-muted-foreground">
+      {guide.steps.length} passos
+    </span>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-4 flex items-center justify-between pt-3 border-t border-border/30">
+    <span class="text-xs text-muted-foreground">Ver guia completo</span>
+    <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+  </div>
+</a>
+
+

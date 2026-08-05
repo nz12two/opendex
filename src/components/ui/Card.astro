@@ -1,0 +1,31 @@
+---
+import { cn } from '@/lib/utils';
+import type { LucideIcon } from 'lucide-react';
+
+interface Props {
+  title: string;
+  icon?: LucideIcon;
+  color?: string;
+}
+
+const { title, icon: Icon, color } = Astro.props;
+---
+
+<article
+  class={cn(
+    'group relative rounded-lg border border-border/50 bg-card p-4 card-hover',
+    color && `border-${color}-500/20`,
+  )}
+>
+  {Icon && (
+    <div class="mb-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <Icon class={cn('h-4 w-4', color ? `text-${color}-500` : 'text-primary')} />
+    </div>
+  )}
+  <h3 class="text-sm font-semibold text-card-foreground group-hover:text-primary transition-colors">
+    {title}
+  </h3>
+  <div class="mt-1.5 text-xs text-muted-foreground [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+    <slot />
+  </div>
+</article>

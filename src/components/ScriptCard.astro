@@ -1,0 +1,60 @@
+---
+import type { Script } from '@/data/scripts/types';
+import TagBadge from './TagBadge.astro';
+import { Package, ExternalLink } from 'lucide-react';
+
+interface Props {
+  script: Script;
+}
+
+const { script } = Astro.props;
+---
+
+<a
+  href={script.npm}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+        <Package class="h-5 w-5 text-primary" />
+      </div>
+      <div>
+        <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+          {script.name}
+        </h3>
+        <div class="mt-0.5 flex items-center gap-2">
+          <span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400 border border-emerald-500/20">
+            v{script.version}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="mt-3 text-sm text-muted-foreground line-clamp-2">
+    {script.description}
+  </p>
+
+  <!-- Footer -->
+  <div class="mt-4 flex items-center justify-between">
+    <div class="flex flex-wrap gap-1.5">
+      {script.tags.slice(0, 3).map((tag) => (
+        <TagBadge tag={tag} />
+      ))}
+      {script.tags.length > 3 && (
+        <span class="text-[10px] text-muted-foreground self-center">
+          +{script.tags.length - 3}
+        </span>
+      )}
+    </div>
+    <div class="flex items-center gap-1 text-xs text-muted-foreground">
+      <ExternalLink class="h-3 w-3" />
+      <span>npm</span>
+    </div>
+  </div>
+</a>

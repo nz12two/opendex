@@ -1,0 +1,145 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ContributorCard from "../../components/ContributorCard.astro";
+import EventTimeline from "../../components/EventTimeline.astro";
+import CommunityDashboard from "../../components/CommunityDashboard.tsx";
+import CommunityNews from "../../components/CommunityNews.tsx";
+import {
+  contributors,
+  getUpcomingEvents,
+  getPastEvents,
+  getContributorsByContributions,
+} from "../../data/community";
+import { Users, CalendarDays, ArrowRight, Sparkles, Activity } from "lucide-react";
+
+const sortedContributors = getContributorsByContributions();
+const topContributors = sortedContributors.slice(0, 3);
+const upcomingEvents = getUpcomingEvents();
+const pastEvents = getPastEvents();
+const totalEvents = upcomingEvents.length + pastEvents.length;
+---
+
+<MainLayout
+  title="Comunidade — OpenDex"
+  description="Conheça a comunidade OpenCode: métricas ao vivo, contribuidores, eventos e novidades."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Users class="h-4 w-4 text-primary" />
+        <span>Comunidade</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Comunidade
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Conheça as pessoas que fazem o ecossistema OpenCode acontecer.
+        Acompanhe métricas ao vivo, eventos e novidades.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-4 text-sm text-muted-foreground flex-wrap">
+        <span class="flex items-center gap-1.5">
+          <Users class="h-4 w-4 text-primary" />
+          {contributors.length} contribuidores verificados
+        </span>
+        <span class="flex items-center gap-1.5">
+          <CalendarDays class="h-4 w-4 text-primary" />
+          {totalEvents} eventos confirmados
+        </span>
+        <span class="flex items-center gap-1.5">
+          <Activity class="h-4 w-4 text-primary" />
+          Dados ao vivo do GitHub
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mx-auto max-w-6xl px-4 py-10 space-y-16">
+    <!-- Métricas ao Vivo -->
+    <section>
+      <CommunityDashboard client:load />
+    </section>
+
+    <!-- Últimas Novidades -->
+    <section>
+      <CommunityNews client:load />
+    </section>
+
+    <!-- Top Contributors -->
+    <section>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="flex items-center gap-2 text-xl font-bold">
+          <Sparkles class="h-5 w-5 text-primary" />
+          Principais Contribuidores
+        </h2>
+        <a
+          href="/opendex/community/contribuidores/"
+          class="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          Ver todos <ArrowRight class="h-3.5 w-3.5" />
+        </a>
+      </div>
+      {topContributors.length > 0 ? (
+        <div class="grid gap-6 sm:grid-cols-3">
+          {topContributors.map((c) => (
+            <ContributorCard contributor={c} />
+          ))}
+        </div>
+      ) : (
+        <div class="rounded-lg border border-border/50 bg-card p-10 text-center">
+          <p class="text-sm font-medium text-card-foreground">Dados em breve</p>
+          <p class="mt-1 text-sm text-muted-foreground">
+            A lista é gerada pela API do GitHub do repositório oficial (anomalyco/opencode).
+            Nenhum dado não verificado é exibido.
+          </p>
+        </div>
+      )}
+    </section>
+
+    <!-- Eventos -->
+    <section>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="flex items-center gap-2 text-xl font-bold">
+          <CalendarDays class="h-5 w-5 text-primary" />
+          Eventos
+        </h2>
+        <a
+          href="/opendex/community/eventos/"
+          class="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          Ver todos <ArrowRight class="h-3.5 w-3.5" />
+        </a>
+      </div>
+
+      {totalEvents > 0 ? (
+        <>
+          {upcomingEvents.length > 0 && (
+            <div class="mb-8">
+              <h3 class="mb-4 text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                Próximos Eventos
+              </h3>
+              <EventTimeline events={upcomingEvents} title="" />
+            </div>
+          )}
+
+          {pastEvents.length > 0 && (
+            <div>
+              <h3 class="mb-4 text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                Eventos Passados
+              </h3>
+              <EventTimeline events={pastEvents} title="" />
+            </div>
+          )}
+        </>
+      ) : (
+        <div class="rounded-lg border border-border/50 bg-card p-10 text-center">
+          <p class="text-sm font-medium text-card-foreground">Nenhum evento confirmado no momento</p>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Eventos só são publicados com fonte oficial verificada.
+          </p>
+        </div>
+      )}
+    </section>
+  </div>
+</MainLayout>

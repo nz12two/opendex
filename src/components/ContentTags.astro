@@ -1,0 +1,53 @@
+---
+import { cn } from '@/lib/utils';
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+
+const categoryColors: Record<string, string> = {
+  contexto: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+  performance: 'bg-green-500/10 text-green-400 border-green-500/20',
+  tokens: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+  prompt: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+  models: 'bg-pink-500/10 text-pink-400 border-pink-500/20',
+  compaction: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+};
+
+function getTagCategory(tag: string): string {
+  const lower = tag.toLowerCase();
+  if (lower.includes('contexto') || lower.includes('context') || lower.includes('ctx')) return 'contexto';
+  if (lower.includes('performance') || lower.includes('perf')) return 'performance';
+  if (lower.includes('token')) return 'tokens';
+  if (lower.includes('prompt')) return 'prompt';
+  if (lower.includes('model')) return 'models';
+  if (lower.includes('compaction') || lower.includes('compress') || lower.includes('compact')) return 'compaction';
+  return 'fallback';
+}
+---
+
+{
+  tags.length > 0 ? (
+    <div class="flex flex-wrap gap-1.5">
+      {tags.map((tag) => {
+        const category = getTagCategory(tag);
+        const colorClass =
+          categoryColors[category] || 'bg-muted text-muted-foreground border-border/50';
+        return (
+          <span
+            class={cn(
+              'inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium',
+              colorClass,
+            )}
+          >
+            {tag}
+          </span>
+        );
+      })}
+    </div>
+  ) : (
+    <span class="text-xs text-muted-foreground">Sem tags</span>
+  )
+}

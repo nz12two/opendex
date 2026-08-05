@@ -1,0 +1,45 @@
+---
+interface Props {
+  activeFilter: string;
+  onFilterChange?: (filter: string) => void;
+}
+
+const { activeFilter } = Astro.props;
+
+const filters = [
+  { id: 'all', label: 'Todos' },
+  { id: 'Free', label: 'Free' },
+  { id: 'Productivity', label: 'Productivity' },
+  { id: 'Git', label: 'Git' },
+  { id: 'Database', label: 'Database' },
+  { id: 'Docker', label: 'Docker' },
+  { id: 'MCP', label: 'MCP' },
+  { id: 'IA', label: 'AI' },
+];
+---
+
+<div class="flex flex-wrap items-center gap-1.5">
+  <span class="text-xs font-medium text-muted-foreground mr-1">Filtros:</span>
+  {filters.map((f) => {
+    const isActive = activeFilter === f.id;
+    return (
+      <a
+        href={isActive ? '.' : `?filter=${encodeURIComponent(f.id)}`}
+        class="filter-btn inline-flex items-center rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+        class:list={{
+          'bg-primary text-primary-foreground': isActive,
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80': !isActive,
+        }}
+        data-filter={f.id}
+      >
+        {f.label}
+      </a>
+    );
+  })}
+</div>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {});
+  });
+</script>

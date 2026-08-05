@@ -1,0 +1,65 @@
+---
+import { cn } from '@/lib/utils';
+import { Info, Lightbulb, AlertTriangle, AlertCircle } from 'lucide-react';
+
+interface Props {
+  type?: 'note' | 'tip' | 'caution' | 'danger';
+}
+
+const { type = 'note' } = Astro.props;
+
+const config: Record<string, { icon: string; bg: string; border: string; text: string; label: string }> = {
+  note: {
+    icon: 'info',
+    bg: 'bg-blue-500/10',
+    border: 'border-blue-500/20',
+    text: 'text-blue-400',
+    label: 'Nota',
+  },
+  tip: {
+    icon: 'tip',
+    bg: 'bg-green-500/10',
+    border: 'border-green-500/20',
+    text: 'text-green-400',
+    label: 'Dica',
+  },
+  caution: {
+    icon: 'caution',
+    bg: 'bg-yellow-500/10',
+    border: 'border-yellow-500/20',
+    text: 'text-yellow-400',
+    label: 'Cuidado',
+  },
+  danger: {
+    icon: 'danger',
+    bg: 'bg-red-500/10',
+    border: 'border-red-500/20',
+    text: 'text-red-400',
+    label: 'Perigo',
+  },
+};
+
+const { icon: iconType, bg, border, text, label } = config[type];
+---
+
+<div
+  class={cn(
+    'flex gap-3 rounded-lg border p-4',
+    bg,
+    border,
+  )}
+  role="alert"
+>
+  <span class={cn('mt-0.5 shrink-0', text)}>
+    {iconType === 'info' && <Info class="h-5 w-5" />}
+    {iconType === 'tip' && <Lightbulb class="h-5 w-5" />}
+    {iconType === 'caution' && <AlertTriangle class="h-5 w-5" />}
+    {iconType === 'danger' && <AlertCircle class="h-5 w-5" />}
+  </span>
+  <div class="min-w-0 flex-1 space-y-2">
+    <p class={cn('text-sm font-semibold', text)}>{label}</p>
+    <div class="text-sm text-foreground/85 [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+      <slot />
+    </div>
+  </div>
+</div>

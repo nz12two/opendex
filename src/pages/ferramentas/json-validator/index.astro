@@ -1,0 +1,71 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import JsonValidator from "../../../components/JsonValidator";
+import DifficultyBadge from "../../../components/DifficultyBadge.tsx";
+import { SourceBadge } from "../../../components/SourceBadge";
+import DidYouKnow from "../../../components/DidYouKnow.tsx";
+import ContentTags from "../../../components/ContentTags.astro";
+import { getToolBySlug } from "../../../data/tools";
+import FavoriteButton from "../../../components/FavoriteButton";
+import { FileJson, ArrowLeft } from "lucide-react";
+
+const tool = getToolBySlug("json-validator");
+---
+
+<MainLayout
+  title="JSON Validator — OpenDex"
+  description="Valide e formate seus JSONs com preview em tempo real e detecção de erros."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-12 pb-8 md:pt-16 md:pb-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl relative">
+      <a
+        href="/opendex/ferramentas/"
+        class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+      >
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Ferramentas
+      </a>
+
+      <div class="flex items-center gap-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+          <FileJson class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            JSON Validator
+          </h1>
+          <p class="mt-2 text-base text-muted-foreground">
+            Valide, formate e beautify seus JSONs com detecção de erros em tempo real.
+          </p>
+          <div class="flex items-center gap-3 mt-2">
+            <SourceBadge source="npm" />
+          </div>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            {tool.difficulty && <DifficultyBadge difficulty={tool.difficulty} size="sm" />}
+            {tool.tags?.length > 0 && <ContentTags tags={tool.tags} />}
+            <FavoriteButton
+              type="ferramenta"
+              slug="json-validator"
+              title="JSON Validator"
+              url="/opendex/ferramentas/json-validator/"
+              client:load
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool content -->
+  <section class="px-4 py-8 md:py-10">
+    <div class="container mx-auto max-w-4xl">
+      <JsonValidator client:load />
+    </div>
+  </section>
+
+  <div class="mt-12">
+    <DidYouKnow />
+  </div>
+</MainLayout>

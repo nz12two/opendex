@@ -1,0 +1,137 @@
+---
+import type { Model } from '@/data/models/types';
+import { getCategoryLabel, getCategoryColor } from '@/data/models';
+import { cn } from '@/lib/utils';
+import { Zap, Star, DollarSign, FileText, Wrench, Brain, Check, X } from 'lucide-react';
+
+interface Props {
+  model: Model;
+}
+
+const { model } = Astro.props;
+---
+
+<div class="space-y-8">
+  <!-- Specs Grid -->
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <Zap class="h-4 w-4" />
+        <span>Velocidade</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-foreground">{model.speed}/5</span>
+        <div class="flex gap-0.5">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} class={cn('h-2 w-4 rounded-full', i < model.speed ? 'bg-amber-500' : 'bg-muted')} />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <Star class="h-4 w-4" />
+        <span>Qualidade</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-foreground">{model.quality}/5</span>
+        <div class="flex gap-0.5">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} class={cn('h-2 w-4 rounded-full', i < model.quality ? 'bg-violet-500' : 'bg-muted')} />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <DollarSign class="h-4 w-4" />
+        <span>Preço</span>
+      </div>
+      <p class="text-xl font-bold text-foreground">{model.price}</p>
+    </div>
+
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <FileText class="h-4 w-4" />
+        <span>Contexto Máximo</span>
+      </div>
+      <p class="text-xl font-bold text-foreground">
+        {model.context >= 1000000 ? `${(model.context / 1000000).toFixed(0)}M` : `${(model.context / 1000).toFixed(0)}K`} tokens
+      </p>
+    </div>
+
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <Wrench class="h-4 w-4" />
+        <span>Tool Calling</span>
+      </div>
+      <div class="flex items-center gap-2">
+        {model.toolCalling ? (
+          <>
+            <Check class="h-5 w-5 text-emerald-500" />
+            <span class="text-sm font-medium text-emerald-500">Suportado</span>
+          </>
+        ) : (
+          <>
+            <X class="h-5 w-5 text-red-500" />
+            <span class="text-sm font-medium text-red-500">Não suportado</span>
+          </>
+        )}
+      </div>
+    </div>
+
+    <div class="rounded-lg border border-border bg-card p-4">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+        <Brain class="h-4 w-4" />
+        <span>Reasoning</span>
+      </div>
+      <div class="flex items-center gap-2">
+        {model.reasoning ? (
+          <>
+            <Check class="h-5 w-5 text-emerald-500" />
+            <span class="text-sm font-medium text-emerald-500">Nativo</span>
+          </>
+        ) : (
+          <>
+            <X class="h-5 w-5 text-red-500" />
+            <span class="text-sm font-medium text-red-500">Não suportado</span>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Quando Usar / Não Usar -->
+  <div class="grid gap-6 md:grid-cols-2">
+    <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-5">
+      <h3 class="font-semibold text-emerald-400 mb-2 flex items-center gap-2">
+        <Check class="h-4 w-4" />
+        Quando usar
+      </h3>
+      <p class="text-sm text-muted-foreground leading-relaxed">
+        {model.whenToUse}
+      </p>
+    </div>
+    <div class="rounded-lg border border-red-500/20 bg-red-500/5 p-5">
+      <h3 class="font-semibold text-red-400 mb-2 flex items-center gap-2">
+        <X class="h-4 w-4" />
+        Quando NÃO usar
+      </h3>
+      <p class="text-sm text-muted-foreground leading-relaxed">
+        {model.whenNotToUse}
+      </p>
+    </div>
+  </div>
+
+  <!-- Category -->
+  <div class="flex items-center gap-2">
+    <span class="text-sm text-muted-foreground">Categoria:</span>
+    <span class={cn('inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium', getCategoryColor(model.category))}>
+      {getCategoryLabel(model.category)}
+    </span>
+  </div>
+</div>
+
+

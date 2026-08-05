@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://opencode-community.github.io/opendex/opencode-schema.json",
+  "title": "OpenCode Asset Metadata",
+  "description": "Schema para metadados de plugins, agentes, MCPs e skills do ecossistema OpenCode",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["agent", "plugin", "mcp", "skill", "template", "tool", "theme"],
+      "description": "Tipo do ativo"
+    },
+    "name": { "type": "string", "description": "Nome do ativo" },
+    "version": { "type": "string", "description": "Versão semântica (ex: 1.2.0)" },
+    "description": { "type": "string", "maxLength": 280, "description": "Descrição curta" },
+    "author": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object", "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "url": { "type": "string", "format": "uri" }
+        }}
+      ]
+    },
+    "license": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object", "properties": {
+          "spdx": { "type": "string" },
+          "commercial": { "type": "boolean" },
+          "fee": { "type": "number" }
+        }}
+      ]
+    },
+    "category": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "opencode": { "type": "string" },
+        "os": { "type": "array", "items": { "type": "string" } },
+        "engine": { "type": "string" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "github": { "type": "string", "format": "uri" },
+        "npm": { "type": "string" },
+        "website": { "type": "string", "format": "uri" },
+        "docs": { "type": "string", "format": "uri" }
+      },
+      "required": ["github"]
+    }
+  },
+  "required": ["type", "name", "version", "description", "author", "category", "tags", "source"]
+}

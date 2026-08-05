@@ -1,0 +1,166 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+import DifficultyBadge from "../../components/DifficultyBadge.tsx";
+import DidYouKnow from "../../components/DidYouKnow.tsx";
+import ContentTags from "../../components/ContentTags.astro";
+import { Giscus } from "../../components/Giscus.tsx";
+import readingTime from 'reading-time';
+import { giscusConfig } from "../../data/navigation";
+import { getCollection, render } from "astro:content";
+import { CalendarDays, Clock, ArrowLeft, User } from "lucide-react";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts
+    .filter((p) => p.id !== "index")
+    .map((post) => ({
+      params: { slug: post.id.replace(/^blog\//, "") },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const allPosts = await getCollection("blog");
+const published = allPosts
+  .filter((p) => !p.data.draft && p.id !== post.id)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const relatedPosts = published
+  .filter((p) => p.data.tags.some((t) => post.data.tags.includes(t)) || p.data.categories.some((c) => post.data.categories.includes(c)))
+  .slice(0, 3);
+
+const { Content, headings } = await render(post);
+
+const readingStats = readingTime(post.body ?? '');
+---
+
+<MainLayout title={`${post.data.title} — Blog — OpenDex`} description={post.data.description} image={`/opendex/og/${post.id.replace(/^blog\//, "")}.png`}>
+  <Breadcrumb items={[
+    { label: "Blog", href: "/opendex/blog/" },
+    { label: post.data.title },
+  ]} />
+
+  <div class="container mx-auto max-w-6xl px-4 py-8">
+    <div class="grid gap-8 lg:grid-cols-[1fr_220px]">
+      <!-- Main Content -->
+      <article class="min-w-0">
+        <a
+          href="/opendex/blog/"
+          class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+        >
+          <ArrowLeft class="h-4 w-4" />
+          Voltar para o Blog
+        </a>
+
+        <header class="mb-8">
+          <!-- Categories -->
+          {post.data.categories.length > 0 && (
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              {post.data.categories.map((cat) => (
+                <span class="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+            {post.data.title}
+          </h1>
+
+          <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <span class="inline-flex items-center gap-1.5">
+              <User class="h-4 w-4" />
+              {post.data.author}
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <CalendarDays class="h-4 w-4" />
+              {post.data.pubDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </span>
+            {post.data.updatedDate && (
+              <span class="inline-flex items-center gap-1.5">
+                <Clock class="h-4 w-4" />
+                Atualizado em {post.data.updatedDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </span>
+            )}
+            <span class="inline-flex items-center gap-1.5" title={`${readingStats.words} palavras`}>
+              <Clock class="h-4 w-4" />
+              {Math.max(1, Math.round(readingStats.minutes))} min de leitura
+            </span>
+          </div>
+
+          <!-- Difficulty & Tags -->
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            {post.data.difficulty && <DifficultyBadge difficulty={post.data.difficulty} size="sm" />}
+            {post.data.tags?.length > 0 && <ContentTags tags={post.data.tags} />}
+          </div>
+        </header>
+
+        <div class="prose prose-invert prose-code:font-mono prose-pre:border prose-pre:border-border prose-a:text-primary max-w-none">
+          <Content />
+        </div>
+
+        {/* Post Footer */}
+        <footer class="mt-12 border-t border-border/40 pt-8">
+          <p class="text-sm text-muted-foreground">
+            Publicado por <strong>{post.data.author}</strong> em {post.data.pubDate.toLocaleDateString('pt-BR')}
+          </p>
+        </footer>
+
+        {giscusConfig.enabled && (
+          <section class="mt-12">
+            <h2 class="text-xl font-bold mb-6">Comentários</h2>
+            <Giscus
+              repo={giscusConfig.repo}
+              repoId={giscusConfig.repoId}
+              category={giscusConfig.category}
+              categoryId={giscusConfig.categoryId}
+              term={post.id}
+              theme="dark"
+              client:load
+            />
+          </section>
+        )}
+
+        <!-- Did You Know -->
+        <div class="mt-12">
+          <DidYouKnow />
+        </div>
+
+        <!-- Related Posts -->
+        {relatedPosts.length > 0 && (
+          <section class="mt-12 border-t border-border/40 pt-10">
+            <h2 class="text-xl font-bold mb-6">Artigos relacionados</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <a
+                  href={`/opendex/blog/${related.id}/`}
+                  class="group rounded-lg border border-border/50 bg-card p-4 transition-all hover:border-primary/30"
+                >
+                  <h3 class="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">
+                    {related.data.title}
+                  </h3>
+                  <p class="mt-1 text-xs text-muted-foreground line-clamp-2">
+                    {related.data.description}
+                  </p>
+                  <span class="mt-2 block text-[10px] text-muted-foreground/60">
+                    {related.data.pubDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </article>
+
+      <!-- Table of Contents -->
+      <aside class="hidden xl:block">
+        <div class="sticky top-24">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
+    </div>
+  </div>
+</MainLayout>

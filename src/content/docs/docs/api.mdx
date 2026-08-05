@@ -1,0 +1,89 @@
+---
+title: API Reference
+description: Documentação completa da API do OpenCode para integração e automação.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+
+## Visão geral
+
+O OpenCode expõe uma API REST para integração com ferramentas externas e automação de workflows.
+
+## Endpoints
+
+### `POST /api/agents/:agent/execute`
+
+Executa um agente com um prompt personalizado.
+
+**Parâmetros:**
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| prompt | string | O prompt para o agente |
+| context | object | Contexto adicional (opcional) |
+| files | string[] | Arquivos para incluir no contexto (opcional) |
+
+**Exemplo:**
+
+```bash
+curl -X POST https://api.opencode.ai/api/agents/builder/execute \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Crie uma função de validação de email",
+    "context": { "language": "typescript" }
+  }'
+```
+
+### `GET /api/agents`
+
+Lista todos os agentes disponíveis.
+
+### `GET /api/plugins`
+
+Lista todos os plugins instalados.
+
+### `POST /api/workflows/run`
+
+Executa um workflow definido no projeto.
+
+## Autenticação
+
+<Callout type="caution">
+  <strong>Autenticação</strong>
+  <p>Todas as requisições à API requerem um token de autenticação:</p>
+
+  ```bash
+  Authorization: Bearer <seu-token>
+  ```
+</Callout>
+
+## Rate limiting
+
+| Plano | Limite |
+|-------|--------|
+| Gratuito | 100 req/min |
+| Pro | 1000 req/min |
+| Enterprise | Ilimitado |
+
+## SDKs
+
+<Callout type="note">
+  <strong>SDKs</strong>
+  <p>Integre o OpenCode em sua aplicação com nossos SDKs oficiais.</p>
+</Callout>
+
+### JavaScript/TypeScript
+
+```bash
+npm install @opencode/sdk
+```
+
+```javascript
+import { OpenCode } from '@opencode/sdk';
+
+const client = new OpenCode({ apiKey: 'seu-token' });
+const result = await client.agents.execute('builder', {
+  prompt: 'Crie um componente React',
+});
+```

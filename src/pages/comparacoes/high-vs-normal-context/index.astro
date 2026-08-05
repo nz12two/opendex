@@ -1,0 +1,146 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ComparisonGrid from "../../../components/ComparisonGrid.astro";
+import { ArrowLeft, GitCompare, FileText, Zap, DollarSign } from "lucide-react";
+---
+
+<MainLayout title="Alto Contexto vs Contexto Normal — Comparações — OpenDex" description="Comparação detalhada entre modelos de alto contexto (1M+ tokens) e modelos de contexto normal.">
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/comparacoes/" class="hover:text-foreground transition-colors">Comparações</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">Alto Contexto vs Contexto Normal</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/comparacoes/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Comparações
+      </a>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <FileText class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Alto Contexto vs Contexto Normal
+          </h1>
+        </div>
+      </div>
+      <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+        Entenda as diferenças entre modelos com janela de contexto massiva (1M+ tokens) e os modelos tradicionais (32K-200K tokens). Quando vale a pena pagar mais por mais contexto?
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10 space-y-12">
+    <!-- Intro -->
+    <section class="rounded-lg border border-border bg-card p-6">
+      <h2 class="text-xl font-bold mb-3">O que significa "contexto"?</h2>
+      <p class="text-muted-foreground leading-relaxed">
+        A janela de contexto define quantos tokens (palavras/pedaços de texto) o modelo consegue processar de uma vez. Isso inclui o prompt + a conversa + o código. Modelos com mais contexto podem analisar codebases inteiros, documentos enormes ou longas conversas sem perder informações.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2 class="text-xl font-bold mb-6">Comparação Direta</h2>
+      <ComparisonGrid
+        headers={["Alto Contexto (1M+)", "Contexto Normal (32K-200K)"]}
+        rows={[
+          { feature: "Modelos exemplo", values: [
+            { label: "Alto", value: "Gemini Pro, GPT-5.5, Gemini Flash" },
+            { label: "Normal", value: "Claude Sonnet, GPT-4o, DeepSeek" }
+          ]},
+          { feature: "Janela de contexto", values: [
+            { label: "Alto", value: "1M a 2M tokens" },
+            { label: "Normal", value: "32K a 200K tokens" }
+          ]},
+          { feature: "Preço por token", values: [
+            { label: "Alto", value: "$$$$ (mais caro)" },
+            { label: "Normal", value: "$$ (mais barato)" }
+          ]},
+          { feature: "Velocidade", values: [
+            { label: "Alto", value: "Moderada a lenta" },
+            { label: "Normal", value: "Rápida a muito rápida" }
+          ]},
+          { feature: "Ideal para", values: [
+            { label: "Alto", value: "Codebases grandes, documentação extensa, análises profundas" },
+            { label: "Normal", value: "Chat, coding rápido, tarefas do dia a dia" }
+          ]},
+        ]}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <Zap class="h-5 w-5 text-emerald-500" />
+          Quando usar ALTO contexto
+        </h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Analisar um projeto inteiro de código</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Processar documentos jurídicos ou acadêmicos enormes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Manter contexto de conversas muito longas</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Data analysis com datasets grandes</span>
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-amber-500/20 bg-amber-500/5 p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <DollarSign class="h-5 w-5 text-amber-500" />
+          Quando usar contexto NORMAL
+        </h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Tarefas rápidas do dia a dia</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Quando o custo é prioridade</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Chatbots e assistentes simples</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Aplicações que exigem resposta em milissegundos</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <section class="rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
+      <h2 class="text-xl font-bold mb-3">Veredito</h2>
+      <p class="text-muted-foreground leading-relaxed text-lg">
+        Contexto grande é um diferencial enorme para tarefas específicas, mas não é necessário para a maioria dos usos diários. 
+        <strong class="text-foreground">Gemini Flash (grátis, 1M tokens)</strong> é a melhor opção custo-benefício se você precisa de contexto grande. 
+        Para a maioria dos desenvolvedores, <strong class="text-foreground">Claude Sonnet (200K tokens)</strong> oferece o melhor equilíbrio entre contexto, qualidade e custo.
+      </p>
+    </section>
+  </div>
+</MainLayout>

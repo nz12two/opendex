@@ -1,0 +1,122 @@
+---
+title: Workflows
+description: Automação de fluxos de trabalho com OpenCode — CI/CD, revisão, deploy e mais.
+---
+
+import Mermaid from '../../../components/ui/Mermaid.astro';
+import Callout from '../../../components/ui/Callout.astro';
+
+## O que são workflows?
+
+Workflows no OpenCode são sequências automatizadas de passos que orquestram múltiplos agentes e ferramentas para realizar tarefas complexas.
+
+## Workflow de desenvolvimento SDD
+
+O fluxo SDD (Spec-Driven Development) é o workflow principal do OpenCode:
+
+<Mermaid
+  chart={`graph LR
+    O[Orchestrator] -->|Spec| B[Builder]
+    B -->|Código| R[Reviewer]
+    R -->|Aprovado| T[Tester]
+    T -->|Falha| D[Debugger]
+    D -->|Correção| B`}
+  title="Fluxo SDD"
+/>
+
+## Workflow de CI/CD
+
+<Callout type="note">
+  Configure a integração contínua com o OpenCode usando GitHub Actions:
+
+  ```yaml
+  # .github/workflows/opencode.yml
+  name: OpenCode CI
+  on: [push, pull_request]
+
+  jobs:
+    review:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: opencode/action@v1
+          with:
+            command: review
+
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: opencode/action@v1
+          with:
+            command: test
+  ```
+</Callout>
+
+## Workflow de deploy
+
+<Callout type="note">
+  Automatize o deploy contínuo com o workflow abaixo:
+
+  ```yaml
+  name: Deploy
+  on:
+    push:
+      branches: [main]
+
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: opencode/action@v1
+          with:
+            command: deploy
+            args: --env production
+  ```
+</Callout>
+
+## Criando workflows customizados
+
+Workflows são definidos em arquivos YAML no diretório `.opencode/workflows/`:
+
+```yaml
+# .opencode/workflows/meu-workflow.yaml
+name: Meu Workflow
+description: Descrição do workflow
+
+steps:
+  - name: passo-1
+    agent: builder
+    prompt: "Implemente a funcionalidade X"
+
+  - name: passo-2
+    agent: reviewer
+    prompt: "Revise o código implementado"
+
+  - name: passo-3
+    agent: tester
+    prompt: "Teste a funcionalidade implementada"
+```
+
+## Boas práticas
+
+<Callout type="tip">
+  <strong>Idempotência:</strong> workflows devem poder ser executados múltiplas vezes
+</Callout>
+
+<Callout type="tip">
+  <strong>Checkpoints:</strong> salve estado entre passos para retomada
+</Callout>
+
+<Callout type="tip">
+  <strong>Paralelismo:</strong> use passos paralelos quando possível
+</Callout>
+
+<Callout type="tip">
+  <strong>Notificações:</strong> configure alertas para falhas
+</Callout>
+
+<Callout type="tip">
+  <strong>Versionamento:</strong> mantenha workflows no controle de versão
+</Callout>

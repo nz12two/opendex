@@ -1,0 +1,58 @@
+---
+import type { MCP } from '@/data/mcps/types';
+import { ExternalLink, Server } from 'lucide-react';
+
+interface Props {
+  mcp: MCP;
+}
+
+const { mcp } = Astro.props;
+---
+
+<a
+  href={mcp.npm}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <Server class="h-6 w-6 text-primary" />
+    </div>
+    <div class="min-w-0 flex-1">
+      <div class="flex items-center gap-2">
+        <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+          {mcp.name}
+        </h3>
+        <span class="inline-flex items-center rounded-full border border-border/50 bg-muted/50 px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+          {mcp.category}
+        </span>
+      </div>
+      <div class="mt-0.5 flex items-center gap-2">
+        <span class="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400 border border-emerald-500/20">
+          v{mcp.version}
+        </span>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground line-clamp-2">
+        {mcp.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="mt-3 flex items-center gap-3 text-xs text-muted-foreground">
+    <span>{mcp.downloads.toLocaleString()} downloads/mês</span>
+    <span>•</span>
+    <span class="text-muted-foreground/70">por {mcp.author}</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-4 flex items-center justify-between pt-3 border-t border-border/30">
+    <span class="inline-flex items-center gap-1 text-[11px] text-muted-foreground group-hover:text-primary transition-colors">
+      <ExternalLink class="h-3 w-3" />
+      Ver no npm
+    </span>
+    <ExternalLink class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+  </div>
+</a>

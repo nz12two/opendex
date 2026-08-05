@@ -1,0 +1,75 @@
+---
+import { cn } from '@/lib/utils';
+import { Info, Lightbulb, AlertTriangle, AlertCircle, Bell } from 'lucide-react';
+
+interface Props {
+  type?: 'note' | 'tip' | 'important' | 'warning' | 'caution';
+}
+
+const { type = 'note' } = Astro.props;
+
+const config: Record<string, { icon: string; bg: string; border: string; text: string; label: string }> = {
+  note: {
+    icon: 'info',
+    bg: 'bg-blue-500/5',
+    border: 'border-blue-500/20',
+    text: 'text-blue-400',
+    label: 'NOTE',
+  },
+  tip: {
+    icon: 'tip',
+    bg: 'bg-green-500/5',
+    border: 'border-green-500/20',
+    text: 'text-green-400',
+    label: 'TIP',
+  },
+  important: {
+    icon: 'important',
+    bg: 'bg-purple-500/5',
+    border: 'border-purple-500/20',
+    text: 'text-purple-400',
+    label: 'IMPORTANT',
+  },
+  warning: {
+    icon: 'warning',
+    bg: 'bg-yellow-500/5',
+    border: 'border-yellow-500/20',
+    text: 'text-yellow-400',
+    label: 'WARNING',
+  },
+  caution: {
+    icon: 'caution',
+    bg: 'bg-red-500/5',
+    border: 'border-red-500/20',
+    text: 'text-red-400',
+    label: 'CAUTION',
+  },
+};
+
+const { icon: iconType, bg, border, text, label } = config[type];
+---
+
+<div
+  class={cn(
+    'rounded-lg border p-4',
+    bg,
+    border,
+  )}
+  role="alert"
+>
+  <div class="flex items-center gap-2">
+    <span class={cn('shrink-0', text)}>
+      {iconType === 'info' && <Info class="h-4 w-4" />}
+      {iconType === 'tip' && <Lightbulb class="h-4 w-4" />}
+      {iconType === 'important' && <Bell class="h-4 w-4" />}
+      {iconType === 'warning' && <AlertTriangle class="h-4 w-4" />}
+      {iconType === 'caution' && <AlertCircle class="h-4 w-4" />}
+    </span>
+    <span class={cn('text-xs font-bold uppercase tracking-wider', text)}>
+      {label}
+    </span>
+  </div>
+  <div class="mt-2 text-sm text-foreground/85 [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+    <slot />
+  </div>
+</div>

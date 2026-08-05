@@ -1,0 +1,41 @@
+---
+export interface Props {
+  category: string;
+  count?: number;
+  active?: boolean;
+}
+
+const { category, count, active = false } = Astro.props;
+
+const categoryColors: Record<string, string> = {
+  conceitos: "bg-blue-500/10 text-blue-500 border-blue-500/20",
+  economia: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+  modelos: "bg-violet-500/10 text-violet-500 border-violet-500/20",
+  instalacao: "bg-amber-500/10 text-amber-500 border-amber-500/20",
+  criacao: "bg-rose-500/10 text-rose-500 border-rose-500/20",
+  cache: "bg-cyan-500/10 text-cyan-500 border-cyan-500/20",
+};
+
+const categoryLabels: Record<string, string> = {
+  conceitos: "Conceitos",
+  economia: "Economia",
+  modelos: "Modelos",
+  instalacao: "Instalação",
+  criacao: "Criação",
+  cache: "Cache",
+};
+
+const colorClass = categoryColors[category] || "bg-muted text-muted-foreground border-border";
+const label = categoryLabels[category] || category;
+---
+
+<span
+  class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-all duration-200 {colorClass} {active ? 'ring-2 ring-primary/30' : ''}"
+>
+  {label}
+  {count !== undefined && (
+    <span class="inline-flex items-center justify-center min-w-[1.25rem] h-5 rounded-full bg-background/50 px-1 text-[10px] font-bold">
+      {count}
+    </span>
+  )}
+</span>

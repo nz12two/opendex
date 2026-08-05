@@ -1,0 +1,69 @@
+---
+import { Check, Copy } from 'lucide-react';
+
+interface Props {
+  code: string;
+  language?: string;
+  title?: string;
+}
+
+const { code, language = 'typescript', title } = Astro.props;
+
+// Generate a unique ID for each code block
+const id = `code-${Math.random().toString(36).substring(2, 10)}`;
+---
+
+<div class="group relative rounded-lg border border-border bg-muted/50 overflow-hidden">
+  {
+    title && (
+      <div class="flex items-center justify-between border-b border-border px-4 py-2">
+        <span class="text-xs font-medium text-muted-foreground">{title}</span>
+        <span class="text-[10px] text-muted-foreground/60 uppercase">{language}</span>
+      </div>
+    )
+  }
+  <div class="relative">
+    <pre class="overflow-x-auto p-4 text-sm"><code id="{id}-code" class="font-mono text-foreground/90 leading-relaxed">{code}</code></pre>
+    <button
+      id="{id}-copy-btn"
+      class="absolute right-2 top-2 inline-flex items-center gap-1 rounded-md border border-border bg-background px-2 py-1 text-xs text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:bg-accent hover:text-accent-foreground"
+      aria-label="Copiar código"
+    >
+      <Copy id="{id}-copy-icon" class="h-3.5 w-3.5" />
+      <span id="{id}-copy-text">Copiar</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('{id}-copy-btn');
+  const icon = document.getElementById('{id}-copy-icon');
+  const text = document.getElementById('{id}-copy-text');
+  const codeEl = document.getElementById('{id}-code');
+
+  if (btn && icon && text && codeEl) {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(codeEl.textContent || '');
+
+        // Visual feedback
+        const originalHTML = icon.innerHTML;
+        icon.innerHTML = new DOMParser().parseFromString(
+          '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+          'text/html'
+        ).body.firstElementChild?.outerHTML || icon.innerHTML;
+        text.textContent = 'Copiado!';
+
+        setTimeout(() => {
+          icon.innerHTML = originalHTML;
+          text.textContent = 'Copiar';
+        }, 2000);
+      } catch {
+        text.textContent = 'Erro ao copiar';
+        setTimeout(() => {
+          text.textContent = 'Copiar';
+        }, 2000);
+      }
+    });
+  }
+</script>

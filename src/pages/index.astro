@@ -1,0 +1,121 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import EcosystemStats from "../components/EcosystemStats";
+import { ArrowRight, Sparkles, Code, BookOpen, Users, Search } from "lucide-react";
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("blog")).filter(p => !p.data.draft);
+const latestPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 4);
+---
+
+<MainLayout title="Home" image="/opendex/og/home.png">
+  <section class="relative overflow-hidden px-4 pt-20 pb-16 md:pt-32 md:pb-24">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-8">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>Ecossistema OpenCode</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <span class="bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent">
+          OpenDex
+        </span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+        Descubra scripts, agentes, plugins, MCPs e tudo que você precisa para turbinar seu OpenCode.
+      </p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="/opendex/scripts/"
+          class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
+        >
+          Explorar Catálogo
+          <ArrowRight class="h-4 w-4" />
+        </a>
+        <a
+          href="/opendex/docs/"
+          class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-medium transition-colors hover:bg-muted"
+        >
+          <BookOpen class="h-4 w-4" />
+          Documentação
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-4 py-8">
+    <div class="container mx-auto max-w-6xl">
+      <EcosystemStats client:load />
+    </div>
+  </section>
+
+  <section class="border-t border-border/40 px-4 py-16 md:py-24">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-center text-2xl font-bold md:text-3xl">O ecossistema completo</h2>
+      <p class="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
+        Tudo que você precisa para criar, compartilhar e descobrir no universo OpenCode.
+      </p>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="/opendex/scripts/" class="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <Code class="h-6 w-6 text-primary" />
+          </div>
+          <h3 class="font-semibold group-hover:text-primary transition-colors">Catálogo de Scripts</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Como npm, mas para OpenCode. Descubra e compartilhe scripts.</p>
+        </a>
+        <a href="/opendex/agents/" class="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <Users class="h-6 w-6 text-primary" />
+          </div>
+          <h3 class="font-semibold group-hover:text-primary transition-colors">Agentes</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Agentes especializados prontos para usar no seu workflow.</p>
+        </a>
+        <a href="/opendex/ecossistema/" class="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <Search class="h-6 w-6 text-primary" />
+          </div>
+          <h3 class="font-semibold group-hover:text-primary transition-colors">Plugins & MCPs</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Marketplace de plugins, MCPs e extensões para seu OpenCode.</p>
+        </a>
+        <a href="/opendex/aprenda/" class="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <BookOpen class="h-6 w-6 text-primary" />
+          </div>
+          <h3 class="font-semibold group-hover:text-primary transition-colors">Aprenda</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Tutoriais, guias e arquiteturas do básico ao avançado.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border/40 px-4 py-16 md:py-24">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl font-bold md:text-3xl">Últimos do Blog</h2>
+          <p class="mt-2 text-muted-foreground">Novidades, tutoriais e atualizações do ecossistema.</p>
+        </div>
+        <a href="/opendex/blog/" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+          Ver todos <ArrowRight class="h-4 w-4" />
+        </a>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {latestPosts.map((post) => (
+          <a href={`/opendex/blog/${post.id}/`} class="group rounded-lg border border-border/50 bg-card p-5 transition-all hover:border-primary/50 hover:shadow-md">
+            <span class="inline-flex items-center rounded-full border border-border/60 bg-muted/30 px-2.5 py-0.5 text-[11px] font-medium text-muted-foreground mb-3">
+              {post.data.categories?.[0] || 'Artigo'}
+            </span>
+            <h3 class="font-semibold group-hover:text-primary transition-colors line-clamp-2">{post.data.title}</h3>
+            <p class="mt-2 text-sm text-muted-foreground line-clamp-2">{post.data.description}</p>
+            <p class="mt-3 text-xs text-muted-foreground">{post.data.pubDate.toLocaleDateString('pt-BR')}</p>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href="/opendex/blog/" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+          Ver todos os posts <ArrowRight class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

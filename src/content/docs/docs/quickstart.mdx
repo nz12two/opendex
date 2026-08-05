@@ -1,0 +1,128 @@
+---
+title: Quickstart
+description: Comece aqui — exemplo completo com todos os componentes de documentação.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+import CodeGroup from '../../../components/ui/CodeGroup.tsx';
+
+Bem-vindo ao **Quickstart** do OpenDex! Este guia mostra todos os componentes visuais disponíveis para a documentação.
+
+---
+
+## Instalação Rápida
+
+<Callout type="tip">
+  Você pode instalar o OpenCode com apenas um comando. Escolha seu gerenciador de pacotes favorito.
+</Callout>
+
+<CodeGroup client:load
+  items={[
+    {
+      language: "npm",
+      title: "npm",
+      code: "npm install -g opencode"
+    },
+    {
+      language: "yarn",
+      title: "yarn",
+      code: "yarn global add opencode"
+    },
+    {
+      language: "pnpm",
+      title: "pnpm",
+      code: "pnpm add -g opencode"
+    }
+  ]}
+/>
+
+## Configuração
+
+<Callout type="note">
+  Certifique-se de ter **Node.js 18+** instalado antes de continuar.
+</Callout>
+
+### Passo 1: Inicialize
+
+Abra o terminal e execute:
+
+```bash
+opencode init
+```
+
+Isso criará a estrutura inicial do projeto:
+
+```
+.opencode/
+├── state/
+│   ├── tasks/
+│   └── checkpoints/
+├── config.json
+└── prompts/
+```
+
+### Passo 2: Configure
+
+Edite o arquivo `opencode.json` na raiz do seu projeto:
+
+```json
+{
+  "name": "meu-projeto",
+  "version": "1.0.0",
+  "agent": {
+    "model": "claude-sonnet-4-20260514",
+    "temperature": 0.7
+  }
+}
+```
+
+---
+
+## Próximos Passos
+
+<Callout type="tip">
+  Agora que você já instalou e configurou, explore os guias abaixo para dominar o OpenCode.
+</Callout>
+
+| Recurso | Descrição | Nível |
+|---------|-----------|-------|
+| [Instalação](/opendex/docs/instalacao) | Guia completo de instalação | Iniciante |
+| [Configuração](/opendex/docs/configuracao) | Personalização avançada | Intermediário |
+| [Agentes](/opendex/docs/agentes) | Criação de agentes | Avançado |
+| [Plugins](/opendex/docs/plugins) | Extensões do ecossistema | Intermediário |
+
+<Callout type="caution">
+  Lembre-se de configurar suas chaves de API antes de usar recursos que exigem modelos de linguagem.
+</Callout>
+
+## Dicas de Uso
+
+### Code blocks com linguagem específica
+
+```typescript
+import { defineConfig } from 'opencode';
+
+export default defineConfig({
+  agent: {
+    model: 'gpt-4o',
+    temperature: 0.3,
+  },
+});
+```
+
+### Listas de tarefas
+
+- [x] Instalar OpenCode
+- [x] Configurar projeto
+- [ ] Criar primeiro agente
+- [ ] Publicar plugin
+
+---
+
+## Referência Rápida
+
+| Recurso | Descrição |
+|---------|-----------|
+| [Documentação](/opendex/docs) | Guia completo de todos os recursos |
+| [Instalação](/opendex/docs/instalacao) | Como instalar e configurar |
+| [FAQ](/opendex/docs/faq) | Perguntas frequentes |

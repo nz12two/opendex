@@ -1,0 +1,38 @@
+---
+export interface Props {
+  letters: string[];
+  activeLetter: string | null;
+  baseHref?: string;
+}
+
+const { letters, activeLetter, baseHref } = Astro.props;
+
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+---
+
+<nav class="flex flex-wrap justify-center gap-1" aria-label="Navegação alfabética">
+  {
+    alphabet.map((letter) => {
+      const hasContent = letters.includes(letter);
+      const isActive = activeLetter === letter;
+      return (
+        <a
+          href={baseHref ? `${baseHref}?letra=${letter.toLowerCase()}` : `#letra-${letter.toLowerCase()}`}
+          class={`
+            inline-flex items-center justify-center w-9 h-9 rounded-lg text-sm font-medium transition-all duration-200
+            ${isActive
+              ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20'
+              : hasContent
+                ? 'text-foreground hover:bg-accent hover:text-primary'
+                : 'text-muted-foreground/30 pointer-events-none'
+            }
+          `}
+          aria-label={`Ir para letra ${letter}`}
+          aria-current={isActive ? 'true' : undefined}
+        >
+          {letter}
+        </a>
+      );
+    })
+  }
+</nav>

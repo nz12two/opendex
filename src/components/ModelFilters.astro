@@ -1,0 +1,100 @@
+---
+import { getCategoryLabel, getCategoryColor } from '@/data/models';
+import { cn } from '@/lib/utils';
+import type { Model } from '@/data/models/types';
+
+interface Props {
+  activeCategory?: string;
+  modelCount: number;
+}
+
+const { activeCategory = 'all', modelCount } = Astro.props;
+
+const categories = ['all', 'free', 'cheap', 'fast', 'reasoning', 'coding', 'large-context', 'vision', 'local'] as const;
+---
+
+<section class="border-b border-border/40 px-4 py-6">
+  <div class="container mx-auto max-w-6xl">
+    <div class="space-y-4">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Buscar modelos por nome, descrição ou provedor..."
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 pl-9 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        />
+      </div>
+
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="text-xs font-medium text-muted-foreground">Categorias:</span>
+        {categories.map((cat) => {
+          const isActive = activeCategory === cat;
+          const label = cat === 'all' ? 'Todas' : getCategoryLabel(cat);
+          return (
+            <button
+              class={cn(
+                'filter-btn rounded-md px-2.5 py-1 text-xs font-medium transition-colors',
+                isActive
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              )}
+              data-filter={cat}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div id="results-count" class="text-sm text-muted-foreground">
+        {modelCount} resultado(s)
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const searchInput = document.getElementById("search-input") as HTMLInputElement;
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".model-item");
+  const emptyState = document.getElementById("empty-state")!;
+  const resultsCount = document.getElementById("results-count")!;
+
+  let activeTag = "all";
+
+  function filter() {
+    const query = searchInput.value.toLowerCase();
+    let visible = 0;
+
+    items.forEach((item) => {
+      const tags = (item.getAttribute("data-category") || "").toLowerCase();
+      const text = item.textContent?.toLowerCase() || "";
+
+      const matchTag = activeTag === "all" || tags.includes(activeTag.toLowerCase());
+      const matchSearch = !query || text.includes(query);
+
+      const show = matchTag && matchSearch;
+      (item as HTMLElement).style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    emptyState.classList.toggle("hidden", visible > 0);
+    resultsCount.textContent = `${visible} resultado(s)`;
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => {
+        b.classList.remove("active", "bg-primary", "text-primary-foreground");
+        b.classList.add("bg-secondary", "text-secondary-foreground");
+      });
+      btn.classList.remove("bg-secondary", "text-secondary-foreground");
+      btn.classList.add("active", "bg-primary", "text-primary-foreground");
+      activeTag = btn.getAttribute("data-filter") || "all";
+      filter();
+    });
+  });
+
+  searchInput.addEventListener("input", filter);
+</script>

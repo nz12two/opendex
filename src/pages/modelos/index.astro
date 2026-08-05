@@ -1,0 +1,67 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import LiveModelList from "../../components/LiveModelList";
+import ModelComparisonChart from "../../components/ModelComparisonChart";
+import { Brain, Sparkles, Radio, BookOpen, BarChart3 } from "lucide-react";
+---
+
+<MainLayout title="Modelos — OpenDex" description="Catálogo completo de modelos de IA compatíveis com OpenCode. Compare speed, qualidade, preço e contexto.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center justify-center gap-3 mb-6 flex-wrap">
+        <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground">
+          <Brain class="h-4 w-4 text-primary" />
+          <span>Catálogo de Modelos</span>
+        </div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground">
+          <Radio class="h-4 w-4 text-green-500" />
+          <span>OpenRouter Ao Vivo</span>
+        </div>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Modelos de IA
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Compare modelos, veja specs detalhadas e encontre o melhor para cada tarefa. De gratuitos a premium, locais a cloud.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>342+ modelos disponíveis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Models -->
+  <section class="px-4 py-16">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-10">
+        <p class="mx-auto max-w-2xl text-base text-muted-foreground">
+          Catálogo completo com <strong class="text-foreground">342+ modelos</strong> disponíveis via OpenRouter API.
+          Filtre por Free, Vision, Reasoning e mais. Dados atualizados a cada 5 minutos.
+        </p>
+        <div class="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+          <BookOpen class="h-3.5 w-3.5" />
+          <span>Não precisa de API key — dados públicos</span>
+        </div>
+      </div>
+
+      <LiveModelList client:load />
+    </div>
+  </section>
+
+  <!-- Model Comparison Charts -->
+  <section class="border-t border-border/40 px-4 py-16">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex items-center gap-2 mb-2">
+        <BarChart3 class="h-5 w-5 text-primary" />
+        <h2 class="text-2xl font-bold">Comparar Modelos</h2>
+      </div>
+      <p class="text-muted-foreground mb-8">
+        Compare preço, contexto e velocidade lado a lado com gráficos e tabela interativa.
+      </p>
+      <ModelComparisonChart client:load />
+    </div>
+  </section>
+</MainLayout>

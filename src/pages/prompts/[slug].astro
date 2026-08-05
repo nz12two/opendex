@@ -1,0 +1,195 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import CodeBlock from "../../components/CodeBlock.astro";
+import TagBadge from "../../components/TagBadge.astro";
+import { getPromptBySlug, prompts } from "../../data/prompts";
+import { ArrowLeft, Copy, Check } from "lucide-react";
+
+export async function getStaticPaths() {
+  return prompts.map((prompt) => ({
+    params: { slug: prompt.slug },
+    props: { prompt },
+  }));
+}
+
+const { prompt } = Astro.props;
+
+if (!prompt) {
+  return Astro.redirect("/opendex/404");
+}
+
+const relatedPrompts = prompts
+  .filter((p) => p.slug !== prompt.slug && (p.category === prompt.category || p.tags.some((t) => prompt.tags.includes(t))))
+  .slice(0, 3);
+---
+
+<MainLayout title={`${prompt.name} — Prompts — OpenDex`} description={prompt.description}>
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/prompts/" class="hover:text-foreground transition-colors">Prompts</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">{prompt.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/prompts/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Prompts
+      </a>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+            {prompt.name}
+          </h1>
+          <p class="mt-3 text-lg text-muted-foreground">
+            {prompt.description}
+          </p>
+        </div>
+        <span class="shrink-0 rounded-md bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary">
+          {prompt.category}
+        </span>
+      </div>
+
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        {prompt.tags.map((tag) => (
+          <TagBadge tag={tag} variant="primary" />
+        ))}
+      </div>
+
+      <div class="mt-5 flex items-start gap-3 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 text-xs text-muted-foreground">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 shrink-0 mt-0.5"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        <span><span class="font-semibold text-foreground">Exemplo didático.</span> Prompt genérico de exemplo para você adaptar — não é um produto oficial do OpenCode.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10">
+    <!-- Prompt Content -->
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold">Conteúdo do Prompt</h2>
+        <button
+          id="copy-full-btn"
+          class="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+          data-content={prompt.content}
+        >
+          <Copy class="h-4 w-4" />
+          <span>Copiar prompt</span>
+        </button>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-6">
+        <pre class="whitespace-pre-wrap font-mono text-sm leading-relaxed text-foreground">
+{prompt.content}
+        </pre>
+      </div>
+    </section>
+
+    <!-- Usage tips -->
+    <section class="mt-10">
+      <h2 class="text-xl font-bold mb-4">Como usar</h2>
+      <div class="rounded-lg border border-border bg-card p-5">
+        <ol class="space-y-3">
+          <li class="flex items-start gap-3 text-sm">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">1</span>
+            <span class="text-muted-foreground">Copie o prompt acima clicando no botão "Copiar prompt"</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">2</span>
+            <span class="text-muted-foreground">Cole no OpenCode substituindo os valores entre colchetes <span class="font-mono text-xs bg-muted px-1 rounded">[framework]</span>, <span class="font-mono text-xs bg-muted px-1 rounded">[entidade]</span> pelos seus dados</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">3</span>
+            <span class="text-muted-foreground">Execute o prompt e veja os resultados</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Related -->
+    {relatedPrompts.length > 0 && (
+      <section class="mt-16 border-t border-border/40 pt-10">
+        <h2 class="text-xl font-bold mb-6">Prompts relacionados</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {relatedPrompts.map((related) => (
+            <a
+              href={`/opendex/prompts/${related.slug}/`}
+              class="group rounded-lg border border-border/50 bg-card p-4 transition-all hover:border-primary/30"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span class="rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+                  {related.category}
+                </span>
+              </div>
+              <h3 class="font-semibold group-hover:text-primary transition-colors">{related.name}</h3>
+              <p class="mt-1 text-sm text-muted-foreground line-clamp-2">{related.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</MainLayout>
+
+<script>
+  const copyBtn = document.getElementById("copy-full-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      const content = copyBtn.getAttribute("data-content");
+      if (!content) return;
+      try {
+        await navigator.clipboard.writeText(content);
+        const text = copyBtn.querySelector("span");
+        const icon = copyBtn.querySelector("svg");
+        if (text) text.textContent = "Copiado!";
+        if (icon) {
+          const check = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          check.setAttribute("width", "16");
+          check.setAttribute("height", "16");
+          check.setAttribute("viewBox", "0 0 24 24");
+          check.setAttribute("fill", "none");
+          check.setAttribute("stroke", "currentColor");
+          check.setAttribute("stroke-width", "2");
+          check.setAttribute("stroke-linecap", "round");
+          check.setAttribute("stroke-linejoin", "round");
+          check.classList.add("text-green-500");
+          check.innerHTML = '<path d="M20 6 9 17l-5-5"/>';
+          icon.replaceWith(check);
+        }
+        setTimeout(() => {
+          if (text) text.textContent = "Copiar prompt";
+          const check = copyBtn.querySelector(".text-green-500")?.parentElement;
+          if (check) {
+            const copyIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            copyIcon.setAttribute("width", "16");
+            copyIcon.setAttribute("height", "16");
+            copyIcon.setAttribute("viewBox", "0 0 24 24");
+            copyIcon.setAttribute("fill", "none");
+            copyIcon.setAttribute("stroke", "currentColor");
+            copyIcon.setAttribute("stroke-width", "2");
+            copyIcon.setAttribute("stroke-linecap", "round");
+            copyIcon.setAttribute("stroke-linejoin", "round");
+            copyIcon.innerHTML = '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>';
+            check.replaceWith(copyIcon);
+          }
+        }, 2000);
+      } catch {
+        // ignore
+      }
+    });
+  }
+</script>

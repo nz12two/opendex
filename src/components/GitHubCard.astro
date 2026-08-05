@@ -1,0 +1,88 @@
+---
+import type { GitHubRepo } from '@/data/github/types';
+import { Star, GitFork, ExternalLink, Code2, Clock } from 'lucide-react';
+
+interface Props {
+  repo: GitHubRepo;
+}
+
+const { repo } = Astro.props;
+
+const languageColors: Record<string, string> = {
+  TypeScript: 'bg-blue-500',
+  Python: 'bg-yellow-500',
+  Shell: 'bg-green-500',
+  Rust: 'bg-orange-500',
+  JavaScript: 'bg-yellow-400',
+  Go: 'bg-cyan-500',
+  Ruby: 'bg-red-500',
+  'C#': 'bg-purple-500',
+};
+
+const langColor = languageColors[repo.language] || 'bg-muted-foreground';
+
+function formatStars(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+  return n.toString();
+}
+---
+
+<a
+  href={repo.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <Code2 class="h-6 w-6 text-primary" />
+    </div>
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors truncate">
+        {repo.owner}/{repo.name}
+      </h3>
+      <p class="mt-1 text-sm text-muted-foreground line-clamp-2">
+        {repo.description}
+      </p>
+    </div>
+    <ExternalLink class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
+  </div>
+
+  <!-- Stars & Forks -->
+  <div class="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
+    <div class="flex items-center gap-1.5">
+      <Star class="h-3.5 w-3.5 fill-yellow-500 text-yellow-500" />
+      <span class="font-medium text-foreground">{formatStars(repo.stars)}</span>
+      <span>stars</span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <GitFork class="h-3.5 w-3.5" />
+      <span>{repo.forks}</span>
+      <span>forks</span>
+    </div>
+  </div>
+
+  <!-- Language -->
+  <div class="mt-3 flex items-center gap-2">
+    <span class={`h-2.5 w-2.5 rounded-full ${langColor}`} />
+    <span class="text-xs font-medium text-foreground/80">{repo.language}</span>
+  </div>
+
+  <!-- Topics -->
+  {repo.topics.length > 0 && (
+    <div class="mt-3 flex flex-wrap gap-1.5">
+      {repo.topics.slice(0, 4).map((topic) => (
+        <span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
+          {topic}
+        </span>
+      ))}
+    </div>
+  )}
+
+  <!-- Updated -->
+  <div class="mt-4 flex items-center gap-1.5 text-[10px] text-muted-foreground/60 pt-3 border-t border-border/30">
+    <Clock class="h-3 w-3" />
+    <span>Atualizado em {repo.updatedAt}</span>
+  </div>
+</a>

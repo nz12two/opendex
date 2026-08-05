@@ -1,0 +1,91 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import BenchmarkTable from "../../components/BenchmarkTable.astro";
+import BenchmarkChart from "../../components/BenchmarkChart";
+import { comparisons, benchmark } from "../../data/comparisons";
+import { ArrowRight, BarChart3, GitCompare } from "lucide-react";
+---
+
+<MainLayout title="Comparações — OpenDex" description="Compare OpenCode com outras ferramentas de coding assistido por IA. Benchmarks de modelos e tabelas comparativas.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <GitCompare class="h-4 w-4 text-primary" />
+        <span>Comparações</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Comparações
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Veja como o OpenCode se compara a outras ferramentas do mercado. Análises detalhadas e benchmarks de performance.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <GitCompare class="h-4 w-4 text-primary" />
+        <span>{comparisons.length} comparações disponíveis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparisons Grid -->
+  <section class="px-4 py-10 border-b border-border/40">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-2xl font-bold mb-8">OpenCode vs.</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        {comparisons.map((comp) => (
+          <a
+            href={`/opendex/comparacoes/${comp.slug}/`}
+            class="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <span class="text-sm font-bold text-primary">OC</span>
+                </div>
+                <div class="flex items-center gap-2 text-lg font-bold text-muted-foreground">
+                  <span class="text-foreground">OpenCode</span>
+                  <span>vs</span>
+                  <span>{comp.tool}</span>
+                </div>
+              </div>
+              <ArrowRight class="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </div>
+            <p class="text-sm text-muted-foreground line-clamp-2">
+              {comp.description}
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
+              <span class="rounded-md bg-muted px-1.5 py-0.5">{comp.table.length} features comparadas</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Benchmark -->
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex items-center gap-3 mb-2">
+        <BarChart3 class="h-6 w-6 text-primary" />
+        <h2 class="text-2xl font-bold">Benchmark de Modelos</h2>
+      </div>
+      <p class="text-muted-foreground mb-8 max-w-2xl">
+        {benchmark.description}
+      </p>
+
+      <!-- Chart -->
+      <div class="mb-10 rounded-lg border border-border bg-card p-6">
+        <h3 class="text-lg font-semibold mb-4">Comparativo Visual</h3>
+        <BenchmarkChart models={benchmark.models} client:load />
+      </div>
+
+      <!-- Table -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Tabela Detalhada</h3>
+        <BenchmarkTable models={benchmark.models} />
+      </div>
+    </div>
+  </section>
+</MainLayout>

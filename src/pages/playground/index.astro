@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkflowCanvas from "../../components/playground/WorkflowCanvas";
+
+const title = "Playground Visual";
+const description = "Monte workflows de agentes arrastando e conectando blocos";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="flex h-screen w-screen flex-col overflow-hidden bg-[#0f172a]">
+    <!-- Top bar -->
+    <header class="flex items-center justify-between border-b border-border/50 bg-card/90 px-4 py-2 backdrop-blur-sm">
+      <div class="flex items-center gap-3">
+        <a href="/opendex/" class="text-sm font-bold text-foreground hover:text-primary transition-colors">
+          OpenDex
+        </a>
+        <span class="text-muted-foreground/40">/</span>
+        <h1 class="text-sm font-semibold text-foreground">Playground Visual</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <a
+          href="/opendex/workflows/"
+          class="text-xs text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Workflows
+        </a>
+      </div>
+    </header>
+
+    <!-- Canvas (full remaining height) -->
+    <div class="flex-1 overflow-hidden">
+      <WorkflowCanvas client:load />
+    </div>
+  </div>
+</BaseLayout>

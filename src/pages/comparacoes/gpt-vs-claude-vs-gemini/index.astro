@@ -1,0 +1,177 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ComparisonGrid from "../../../components/ComparisonGrid.astro";
+import { ArrowLeft, GitCompare, Zap, Star, DollarSign } from "lucide-react";
+---
+
+<MainLayout title="GPT vs Claude vs Gemini — Comparações — OpenDex" description="Comparação definitiva entre os três maiores provedores de IA: OpenAI (GPT), Anthropic (Claude) e Google (Gemini).">
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/comparacoes/" class="hover:text-foreground transition-colors">Comparações</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">GPT vs Claude vs Gemini</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/comparacoes/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Comparações
+      </a>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <GitCompare class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            GPT vs Claude vs Gemini
+          </h1>
+        </div>
+      </div>
+      <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+        Comparação completa entre os três maiores ecossistemas de IA. Qual deles é o melhor para coding, custo-benefício, contexto e qualidade geral?
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10 space-y-12">
+    <!-- Overview -->
+    <section class="rounded-lg border border-border bg-card p-6">
+      <h2 class="text-xl font-bold mb-3">Visão Geral</h2>
+      <p class="text-muted-foreground leading-relaxed">
+        OpenAI (GPT), Anthropic (Claude) e Google (Gemini) são os três maiores provedores de modelos de linguagem. Cada um tem seus pontos fortes e fracos, e a escolha depende do seu caso de uso específico.
+      </p>
+    </section>
+
+    <!-- Main Comparison -->
+    <section>
+      <h2 class="text-xl font-bold mb-6">Comparação Direta</h2>
+      <ComparisonGrid
+        headers={["GPT (OpenAI)", "Claude (Anthropic)", "Gemini (Google)"]}
+        rows={[
+          { feature: "Modelo top", values: [
+            { label: "GPT", value: "GPT-5.5, o3" },
+            { label: "Claude", value: "Claude Sonnet 4" },
+            { label: "Gemini", value: "Gemini 2.5 Pro" }
+          ]},
+          { feature: "Qualidade geral", values: [
+            { label: "GPT", value: "⭐⭐⭐⭐⭐" },
+            { label: "Claude", value: "⭐⭐⭐⭐⭐" },
+            { label: "Gemini", value: "⭐⭐⭐⭐" }
+          ]},
+          { feature: "Qualidade de código", values: [
+            { label: "GPT", value: "⭐⭐⭐⭐" },
+            { label: "Claude", value: "⭐⭐⭐⭐⭐ (melhor)" },
+            { label: "Gemini", value: "⭐⭐⭐" }
+          ]},
+          { feature: "Contexto máximo", values: [
+            { label: "GPT", value: "1M tokens" },
+            { label: "Claude", value: "200K tokens" },
+            { label: "Gemini", value: "2M tokens (maior)" }
+          ]},
+          { feature: "Velocidade", values: [
+            { label: "GPT", value: "Rápida" },
+            { label: "Claude", value: "Moderada" },
+            { label: "Gemini", value: "Rápida" }
+          ]},
+          { feature: "Modelo gratuito", values: [
+            { label: "GPT", value: "❌" },
+            { label: "Claude", value: "❌" },
+            { label: "Gemini", value: "✅ Flash (1M ctx)" }
+          ]},
+          { feature: "Ecossistema", values: [
+            { label: "GPT", value: "Mais maduro" },
+            { label: "Claude", value: "Crescendo rápido" },
+            { label: "Gemini", value: "Integração Google" }
+          ]},
+          { feature: "Preço (top model)", values: [
+            { label: "GPT", value: "$$$$ (~$5/M)" },
+            { label: "Claude", value: "$$$ (~$3/M)" },
+            { label: "Gemini", value: "$$ (~$1/M)" }
+          ]},
+          { feature: "Multimodal", values: [
+            { label: "GPT", value: "✅ Visão + Áudio" },
+            { label: "Claude", value: "✅ Visão" },
+            { label: "Gemini", value: "✅ Visão + Áudio + Vídeo" }
+          ]},
+        ]}
+      />
+    </section>
+
+    <!-- Best for -->
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="rounded-lg border border-border bg-card p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
+            <span class="text-lg font-bold text-green-400">GPT</span>
+          </div>
+          <h3 class="font-bold">Melhor para</h3>
+        </div>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li class="flex items-start gap-2">• Ecossistema completo e maduro</li>
+          <li class="flex items-start gap-2">• Ferramentas e APIs robustas</li>
+          <li class="flex items-start gap-2">• Modelo de reasoning (o3) de ponta</li>
+          <li class="flex items-start gap-2">• Suporte a plugins e functions</li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-primary/20 bg-primary/5 p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+            <span class="text-lg font-bold text-primary">Claude</span>
+          </div>
+          <h3 class="font-bold">Melhor para</h3>
+        </div>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li class="flex items-start gap-2">• Coding assistido (melhor do mercado)</li>
+          <li class="flex items-start gap-2">• Análise profunda de código</li>
+          <li class="flex items-start gap-2">• Documentação técnica</li>
+          <li class="flex items-start gap-2">• Segurança e alinhamento</li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-amber-500/20 bg-amber-500/5 p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10">
+            <span class="text-lg font-bold text-amber-400">Gemini</span>
+          </div>
+          <h3 class="font-bold">Melhor para</h3>
+        </div>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li class="flex items-start gap-2">• Contexto massivo (2M tokens)</li>
+          <li class="flex items-start gap-2">• Multimodal (texto, imagem, áudio, vídeo)</li>
+          <li class="flex items-start gap-2">• Modelo gratuito de alta qualidade</li>
+          <li class="flex items-start gap-2">• Integração com Google Workspace</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <section class="rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
+      <h2 class="text-xl font-bold mb-3">Veredito</h2>
+      <p class="text-muted-foreground leading-relaxed text-lg">
+        Não existe um "melhor" — tudo depende do seu uso:
+      </p>
+      <ul class="mt-4 space-y-2 text-muted-foreground">
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+          <span><strong class="text-foreground">Claude Sonnet</strong> é a melhor escolha para coding e análise técnica.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-green-500" />
+          <span><strong class="text-foreground">Gemini Flash</strong> é imbatível em custo-benefício com contexto gigante.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+          <span><strong class="text-foreground">GPT-5.5/o3</strong> é a escolha para quem precisa do ecossistema mais maduro e reasoning de ponta.</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+</MainLayout>

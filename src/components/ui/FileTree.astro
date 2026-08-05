@@ -1,0 +1,46 @@
+---
+import { cn } from '@/lib/utils';
+import { Folder, File, FolderOpen } from 'lucide-react';
+
+interface FileNode {
+  name: string;
+  type: 'file' | 'directory';
+  children?: FileNode[];
+}
+
+interface Props {
+  structure: FileNode[];
+  level?: number;
+}
+
+const { structure, level = 0 } = Astro.props;
+---
+
+{
+  structure.length > 0 && (
+    <ul class={cn('space-y-1', level === 0 && 'm-0 p-0')}>
+      {structure.map((node) => (
+        <li class="list-none">
+          <div class="flex items-center gap-2 rounded-md px-2 py-1 text-sm hover:bg-muted/50 transition-colors">
+            {node.type === 'directory' ? (
+              <>
+                <Folder class="h-4 w-4 shrink-0 text-blue-400" />
+                <span class="font-medium text-foreground/90">{node.name}/</span>
+              </>
+            ) : (
+              <>
+                <File class="h-4 w-4 shrink-0 text-muted-foreground" />
+                <span class="text-foreground/80">{node.name}</span>
+              </>
+            )}
+          </div>
+          {node.type === 'directory' && node.children && node.children.length > 0 && (
+            <div class="ml-4 border-l border-border/40 pl-3">
+              <Astro.self structure={node.children} level={level + 1} />
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
+}

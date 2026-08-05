@@ -1,0 +1,38 @@
+---
+import { cn } from '@/lib/utils';
+import { ArrowUpRight, type LucideIcon } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon?: LucideIcon;
+}
+
+const { title, description, href, icon: Icon } = Astro.props;
+---
+
+<a
+  href={href}
+  class={cn(
+    'group relative flex items-start gap-3 rounded-lg border border-border/50 bg-card p-3.5',
+    'transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_15px_hsl(var(--primary)/0.1)]',
+  )}
+>
+  {Icon && (
+    <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+      <Icon class="h-4 w-4 text-primary" />
+    </div>
+  )}
+  <div class="min-w-0 flex-1">
+    <div class="flex items-center gap-2">
+      <h3 class="text-sm font-semibold text-card-foreground group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <ArrowUpRight class="h-3.5 w-3.5 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+    </div>
+    <p class="mt-0.5 text-xs text-muted-foreground line-clamp-2">
+      {description}
+    </p>
+  </div>
+</a>

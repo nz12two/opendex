@@ -1,0 +1,61 @@
+---
+import { Github, BookOpen, Globe, Heart, Rss } from "lucide-react";
+import { siteConfig } from "../data/navigation";
+---
+
+<footer class="border-t border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40">
+  <div class="container mx-auto max-w-7xl px-4 py-12 md:px-6">
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div class="col-span-2 md:col-span-1">
+        <a href="/opendex/" class="flex items-center gap-2 text-lg font-bold group">
+          <span class="text-primary transition-transform group-hover:scale-105">#</span>
+          <span class="bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">{siteConfig.name}</span>
+        </a>
+        <p class="mt-2 text-sm text-muted-foreground">
+          {siteConfig.description}
+        </p>
+      </div>
+      {siteConfig.footerColumns.map((column) => (
+        <div>
+          <h3 class="mb-3 text-sm font-semibold">{column.title}</h3>
+          <ul class="space-y-2">
+            {column.links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-muted-foreground transition-all duration-200 hover:text-foreground hover:translate-x-0.5 inline-block"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 border-t border-border/40 pt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <p class="text-xs text-muted-foreground">
+        &copy; {new Date().getFullYear()} {siteConfig.name}. Feito com <Heart class="inline h-3 w-3 text-red-500" /> para a comunidade OpenCode.
+      </p>
+      <div class="flex items-center gap-3 text-xs text-muted-foreground">
+        <Rss class="h-4 w-4 text-primary" />
+        <a href="/opendex/rss.xml" class="transition-colors hover:text-primary" aria-label="Feed RSS">RSS</a>
+        <span class="text-border">/</span>
+        <a href="/opendex/atom.xml" class="transition-colors hover:text-primary" aria-label="Feed Atom">Atom</a>
+        <span class="text-border">/</span>
+        <a href="/opendex/feed.json" class="transition-colors hover:text-primary" aria-label="JSON Feed">JSON</a>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://github.com" class="text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-110" aria-label="GitHub">
+          <Github class="h-4 w-4" />
+        </a>
+        <a href="/opendex/docs/" class="text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-110" aria-label="Docs">
+          <BookOpen class="h-4 w-4" />
+        </a>
+        <a href="/opendex/blog/" class="text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-110" aria-label="Blog">
+          <Globe class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

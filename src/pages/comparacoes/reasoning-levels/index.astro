@@ -1,0 +1,147 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ComparisonGrid from "../../../components/ComparisonGrid.astro";
+import { ArrowLeft, Brain, GitCompare, TrendingUp } from "lucide-react";
+---
+
+<MainLayout title="Níveis de Reasoning — Comparações — OpenDex" description="Comparação entre modelos com diferentes capacidades de reasoning: baixo, médio e alto. Qual escolher?" >
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/comparacoes/" class="hover:text-foreground transition-colors">Comparações</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">Níveis de Reasoning</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/comparacoes/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Comparações
+      </a>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <Brain class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Níveis de Reasoning
+          </h1>
+        </div>
+      </div>
+      <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+        Modelos de IA têm diferentes capacidades de raciocínio lógico. Entenda as diferenças entre reasoning baixo, médio e alto para escolher o modelo certo para cada tarefa.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10 space-y-12">
+    <!-- Explanation -->
+    <section class="rounded-lg border border-border bg-card p-6">
+      <h2 class="text-xl font-bold mb-3">O que é "Reasoning"?</h2>
+      <p class="text-muted-foreground leading-relaxed">
+        Reasoning é a capacidade do modelo de realizar raciocínio lógico, resolver problemas complexos, fazer deduções e seguir cadeias de pensamento. Modelos com reasoning avançado "pensam antes de responder", o que melhora a precisão mas aumenta o tempo de resposta.
+      </p>
+    </section>
+
+    <!-- Levels -->
+    <section>
+      <h2 class="text-xl font-bold mb-6">Comparação por Nível</h2>
+      <ComparisonGrid
+        headers={["Baixo Reasoning", "Médio Reasoning", "Alto Reasoning"]}
+        rows={[
+          { feature: "Modelos", values: [
+            { label: "Baixo", value: "Llama 4, Mistral, GLM" },
+            { label: "Médio", value: "GPT-4o Mini, Claude Haiku, Gemini Flash" },
+            { label: "Alto", value: "o3, Claude Sonnet, DeepSeek" }
+          ]},
+          { feature: "Velocidade", values: [
+            { label: "Baixo", value: "⚡ Rápido" },
+            { label: "Médio", value: "⚡⚡ Médio" },
+            { label: "Alto", value: "🐢 Lento (pensa muito)" }
+          ]},
+          { feature: "Precisão em matemática", values: [
+            { label: "Baixo", value: "30-50%" },
+            { label: "Médio", value: "50-70%" },
+            { label: "Alto", value: "85-95%" }
+          ]},
+          { feature: "Coding complexo", values: [
+            { label: "Baixo", value: "❌ Ruim" },
+            { label: "Médio", value: "⚠️ Razoável" },
+            { label: "Alto", value: "✅ Excelente" }
+          ]},
+          { feature: "Custo", values: [
+            { label: "Baixo", value: "$ (barato)" },
+            { label: "Médio", value: "$$ (moderado)" },
+            { label: "Alto", value: "$$$ (caro)" }
+          ]},
+          { feature: "Quando usar", values: [
+            { label: "Baixo", value: "Chat simples, classificação, extração" },
+            { label: "Médio", value: "Dia a dia, coding leve, análise básica" },
+            { label: "Alto", value: "Pesquisa, matemática, debugging complexo" }
+          ]},
+        ]}
+      />
+    </section>
+
+    <!-- Quando escolher -->
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="rounded-lg border border-border bg-card p-6">
+        <h3 class="font-semibold mb-3 flex items-center gap-2">
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-bold">1</span>
+          Baixo Reasoning
+        </h3>
+        <p class="text-sm text-muted-foreground mb-3">Ideal para tarefas que não exigem raciocínio profundo.</p>
+        <ul class="space-y-1.5 text-sm text-muted-foreground">
+          <li>• Chatbots simples</li>
+          <li>• Classificação de texto</li>
+          <li>• Extração de dados</li>
+          <li>• Respostas rápidas</li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-primary/20 bg-primary/5 p-6">
+        <h3 class="font-semibold mb-3 flex items-center gap-2">
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold">2</span>
+          Médio Reasoning
+        </h3>
+        <p class="text-sm text-muted-foreground mb-3">O equilíbrio ideal para a maioria dos desenvolvedores.</p>
+        <ul class="space-y-1.5 text-sm text-muted-foreground">
+          <li>• Coding do dia a dia</li>
+          <li>• Análise de código</li>
+          <li>• Criação de conteúdo</li>
+          <li>• Suporte técnico</li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-violet-500/20 bg-violet-500/5 p-6">
+        <h3 class="font-semibold mb-3 flex items-center gap-2">
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-violet-500/20 text-violet-400 text-xs font-bold">3</span>
+          Alto Reasoning
+        </h3>
+        <p class="text-sm text-muted-foreground mb-3">Para problemas complexos que exigem pensamento profundo.</p>
+        <ul class="space-y-1.5 text-sm text-muted-foreground">
+          <li>• Pesquisa científica</li>
+          <li>• Matemática avançada</li>
+          <li>• Debugging complexo</li>
+          <li>• Arquitetura de software</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <section class="rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
+      <h2 class="text-xl font-bold mb-3">Veredito</h2>
+      <p class="text-muted-foreground leading-relaxed text-lg">
+        Para 80% das tarefas do dia a dia, <strong class="text-foreground">reasoning médio é suficiente</strong>. 
+        Modelos com alto reasoning (o3, Sonnet) são excelentes para problemas complexos, mas o custo e a latência mais altos nem sempre compensam. 
+        Tenha ambos disponíveis: um modelo rápido para tarefas simples e um reasoning para quando precisar de profundidade.
+      </p>
+    </section>
+  </div>
+</MainLayout>

@@ -1,0 +1,162 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SetupSteps from "../../components/SetupSteps.astro";
+import { getSetupGuideBySlug, setupGuides } from "../../data/setup-guides";
+import { cn } from '@/lib/utils';
+import { ArrowLeft, Clock, Wrench, Lightbulb, ChevronRight } from "lucide-react";
+
+export async function getStaticPaths() {
+  return setupGuides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+
+if (!guide) {
+  return Astro.redirect("/opendex/404");
+}
+
+const relatedGuides = setupGuides.filter((g) => g.slug !== guide.slug).slice(0, 3);
+
+const difficultyColor: Record<string, string> = {
+  'iniciante': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  'intermediário': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+  'avançado': 'bg-red-500/10 text-red-400 border-red-500/20'
+};
+---
+
+<MainLayout title={`${guide.name} — Configuração — OpenDex`} description={guide.description}>
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/configuracao/" class="hover:text-foreground transition-colors">Configuração</a>
+        <ChevronRight class="h-3 w-3" />
+        <span class="text-foreground font-medium">{guide.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/configuracao/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Configuração
+      </a>
+
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="flex-1">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+              <Wrench class="h-7 w-7 text-primary" />
+            </div>
+            <div>
+              <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                {guide.name}
+              </h1>
+              <p class="text-sm text-muted-foreground mt-1">{guide.provider}</p>
+            </div>
+          </div>
+          <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+            {guide.description}
+          </p>
+
+          <!-- Meta tags -->
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class={cn('inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium', difficultyColor[guide.difficulty])}>
+              {guide.difficulty}
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-border bg-muted/50 px-2.5 py-0.5 text-xs text-muted-foreground">
+              <Clock class="h-3 w-3" />
+              {guide.timeToComplete}
+            </span>
+            <span class="inline-flex items-center gap-1 rounded-full border border-border bg-muted/50 px-2.5 py-0.5 text-xs text-muted-foreground">
+              {guide.steps.length} passos
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10">
+    <div class="grid gap-10 lg:grid-cols-3">
+      <!-- Main Steps -->
+      <div class="lg:col-span-2 space-y-10">
+        <section>
+          <h2 class="text-xl font-bold mb-6">Passo a Passo</h2>
+          <SetupSteps steps={guide.steps} />
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <!-- Requisitos -->
+        {guide.requirements && guide.requirements.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-5">
+            <h3 class="font-semibold mb-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>
+              Requisitos
+            </h3>
+            <ul class="space-y-2">
+              {guide.requirements.map((req) => (
+                <li class="flex items-start gap-2 text-sm">
+                  <span class="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                  <span class="text-muted-foreground">{req}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Tips -->
+        {guide.tips && guide.tips.length > 0 && (
+          <div class="rounded-lg border border-border bg-card p-5">
+            <h3 class="font-semibold mb-3 flex items-center gap-2">
+              <Lightbulb class="h-4 w-4 text-primary" />
+              Dicas
+            </h3>
+            <ul class="space-y-2">
+              {guide.tips.map((tip) => (
+                <li class="flex items-start gap-2 text-sm">
+                  <span class="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500/60" />
+                  <span class="text-muted-foreground">{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+
+    <!-- Related -->
+    {relatedGuides.length > 0 && (
+      <section class="mt-16 border-t border-border/40 pt-10">
+        <h2 class="text-xl font-bold mb-6">Outros guias</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {relatedGuides.map((related) => (
+            <a
+              href={`/opendex/configuracao/${related.slug}/`}
+              class="group rounded-lg border border-border/50 bg-card p-4 transition-all hover:border-primary/30"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                  <Wrench class="h-4 w-4 text-primary" />
+                </div>
+                <h3 class="font-semibold group-hover:text-primary transition-colors">{related.name}</h3>
+              </div>
+              <p class="text-sm text-muted-foreground line-clamp-2">{related.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</MainLayout>
+
+

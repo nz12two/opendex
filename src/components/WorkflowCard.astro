@@ -1,0 +1,58 @@
+---
+import type { Workflow } from '@/data/workflows/types';
+import TagBadge from './TagBadge.astro';
+import { Workflow as WorkflowIcon, ArrowRight } from 'lucide-react';
+
+interface Props {
+  workflow: Workflow;
+}
+
+const { workflow } = Astro.props;
+const stepCount = workflow.steps.length;
+---
+
+<a
+  href={`/opendex/workflows/${workflow.slug}`}
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <WorkflowIcon class="h-6 w-6 text-primary" />
+    </div>
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+        {workflow.name}
+      </h3>
+      <p class="mt-1 text-sm text-muted-foreground line-clamp-2">
+        {workflow.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- Steps visual -->
+  <div class="mt-4 space-y-2">
+    <span class="text-xs font-medium text-muted-foreground">
+      {stepCount} etapas
+    </span>
+    <div class="flex flex-wrap items-center gap-1.5">
+      {workflow.steps.map((step, i) => (
+        <>
+          <span class="inline-flex items-center gap-1 rounded-md border border-border bg-muted/50 px-2 py-1 text-[10px] font-medium text-foreground">
+            {step.name}
+          </span>
+          {i < workflow.steps.length - 1 && (
+            <ArrowRight class="h-3 w-3 text-muted-foreground/40 shrink-0" />
+          )}
+        </>
+      ))}
+    </div>
+  </div>
+
+  <!-- Agents involved -->
+  <div class="mt-4 flex flex-wrap gap-1.5">
+    {[...new Set(workflow.steps.map(s => s.agent))].map((agent) => (
+      <TagBadge tag={agent} variant="secondary" />
+    ))}
+  </div>
+</a>

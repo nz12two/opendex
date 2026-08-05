@@ -1,0 +1,75 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Sparkles, Lightbulb } from "lucide-react";
+import RecommendationApp from "../../components/RecommendationApp";
+---
+
+<MainLayout title="Recomendação — OpenDex" description="Motor de recomendação inteligente para descobrir agentes, plugins, MCPs, workflows e prompts ideais para seu projeto.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>Motor de Recomendação</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        O que você vai construir?
+      </h1>
+      <p class="mx-auto mt-2 max-w-2xl text-lg text-muted-foreground">
+        Descreva seu projeto em linguagem natural e descubra agentes, plugins, MCPs, 
+        workflows e prompts ideais para turbinar seu desenvolvimento.
+      </p>
+    </div>
+  </section>
+
+  <!-- App React (form + resultados) -->
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-4xl">
+      <RecommendationApp client:load />
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="border-t border-border/40 px-4 py-16">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-4">
+          <Lightbulb class="h-4 w-4 text-primary" />
+          <span>Como funciona</span>
+        </div>
+        <h2 class="text-2xl font-bold md:text-3xl">Recomendação inteligente baseada em regras</h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="text-center">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+            <span class="text-lg font-bold text-primary">1</span>
+          </div>
+          <h3 class="font-semibold mb-2">Descreva seu projeto</h3>
+          <p class="text-sm text-muted-foreground">
+            Escreva em linguagem natural o que você está construindo, incluindo frameworks, bancos e funcionalidades.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+            <span class="text-lg font-bold text-primary">2</span>
+          </div>
+          <h3 class="font-semibold mb-2">Análise inteligente</h3>
+          <p class="text-sm text-muted-foreground">
+            Nosso motor extrai palavras-chave, detecta tecnologias e calcula scores ponderados de compatibilidade.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+            <span class="text-lg font-bold text-primary">3</span>
+          </div>
+          <h3 class="font-semibold mb-2">Recomendações ranqueadas</h3>
+          <p class="text-sm text-muted-foreground">
+            Receba uma lista ranqueada de agentes, plugins, MCPs, workflows e prompts ideais para seu projeto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

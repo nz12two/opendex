@@ -1,0 +1,100 @@
+---
+title: MCP — Model Context Protocol
+description: Guia completo sobre servidores MCP no OpenCode — criação, configuração e uso.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+import Mermaid from '../../../components/ui/Mermaid.astro';
+
+<Callout type="note">
+MCP (Model Context Protocol) é um padrão aberto que permite que modelos de linguagem se conectem a ferramentas externas de forma segura e padronizada. Pense nele como um "USB-C para IAs" — um único protocolo que conecta LLMs a qualquer ferramenta.
+</Callout>
+
+## O que é MCP?
+
+MCP (Model Context Protocol) é um protocolo que permite que modelos de linguagem acessem ferramentas e recursos externos de forma padronizada. No OpenCode, MCPs são servidores que expõem ferramentas que os agentes podem usar.
+
+## Arquitetura
+
+<Mermaid
+  chart={`
+    graph LR
+      A[Agente LLM] --> B[MCP Client OpenCode]
+      B --> C[MCP Server]
+      C --> D[Ferramenta Externa]
+  `}
+  caption="Fluxo de comunicação entre agente LLM, cliente MCP e servidor de ferramentas"
+/>
+
+## Configurando um MCP Server
+
+No `opencode.json`:
+
+```json
+{
+  "mcp": {
+    "servers": [
+      {
+        "name": "meu-servidor",
+        "command": "node",
+        "args": ["servidor-mcp.js"],
+        "env": {
+          "API_KEY": "${API_KEY}"
+        }
+      }
+    ]
+  }
+}
+```
+
+## Criando um MCP Server
+
+Um servidor MCP minimalista em Node.js:
+
+```javascript
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+
+const server = new Server({
+  name: 'meu-servidor',
+  version: '1.0.0',
+}, {
+  capabilities: { tools: {} },
+});
+
+server.setRequestHandler('tools/list', async () => ({
+  tools: [{
+    name: 'saudacao',
+    description: 'Retorna uma saudação personalizada',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        nome: { type: 'string' },
+      },
+    },
+  }],
+}));
+
+server.setRequestHandler('tools/call', async (request) => {
+  if (request.params.name === 'saudacao') {
+    return {
+      content: [{
+        type: 'text',
+        text: `Olá, ${request.params.arguments.nome}!`,
+      }],
+    };
+  }
+});
+
+const transport = new StdioServerTransport();
+await server.connect(transport);
+```
+
+## MCPs disponíveis no OpenDex
+
+| Nome | Descrição | Tipo |
+|------|-----------|------|
+| Filesystem | Operações seguras de arquivo | Sistema |
+| Playwright | Automação de browser | Navegação |
+| Sequential Thinking | Raciocínio estruturado | Cognitivo |
+| Memory | Memória persistente (knowledge graph) | Dados |

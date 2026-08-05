@@ -1,0 +1,56 @@
+---
+import type { Contributor } from "../data/community";
+import { Github, GitCommit } from "lucide-react";
+
+interface Props {
+  contributor: Contributor;
+}
+
+const { contributor } = Astro.props;
+---
+
+<div class="group relative flex flex-col items-center rounded-lg border border-border/50 bg-card p-6 text-center transition-all hover:border-primary/30 hover:shadow-md hover:shadow-primary/5">
+  <!-- Avatar -->
+  <div class="relative mb-4">
+    <div class="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
+    <img
+      src={contributor.avatar}
+      alt={contributor.name}
+      class="relative h-20 w-20 rounded-full border-2 border-border object-cover"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- Name -->
+  <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+    {contributor.name}
+  </h3>
+
+  <!-- Role -->
+  <span class="mt-1 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">
+    {contributor.role}
+  </span>
+
+  <!-- Bio -->
+  <p class="mt-3 text-sm text-muted-foreground line-clamp-3">
+    {contributor.bio}
+  </p>
+
+  <!-- Stats & Link -->
+  <div class="mt-4 flex w-full items-center justify-between border-t border-border/40 pt-4">
+    <span class="flex items-center gap-1.5 text-xs text-muted-foreground">
+      <GitCommit class="h-3.5 w-3.5 text-primary" />
+      {contributor.contributions} contribuições
+    </span>
+    <a
+      href={`https://github.com/${contributor.github}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
+      title={`@${contributor.github} no GitHub`}
+    >
+      <Github class="h-3.5 w-3.5" />
+      @{contributor.github}
+    </a>
+  </div>
+</div>

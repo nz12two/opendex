@@ -1,0 +1,69 @@
+---
+title: Agentes
+description: Guia completo sobre agentes OpenCode — criação, configuração e boas práticas.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+
+
+
+## O que são agentes?
+
+Agentes no OpenCode são entidades especializadas que executam tarefas específicas usando modelos de linguagem. Cada agente tem um propósito, um conjunto de ferramentas e um comportamento definido.
+
+## Agentes padrão
+
+O OpenCode vem com os seguintes agentes pré-configurados:
+
+| Agente | Função | Modelo recomendado |
+|--------|--------|-------------------|
+| Orchestrator | Coordena o fluxo SDD | GPT-4o / Claude 3.5 |
+| Builder | Implementa código | GPT-4o |
+| Reviewer | Revisa código | Claude 3.5 Sonnet |
+| Tester | Gera e executa testes | GPT-4o |
+| Debugger | Diagnostica falhas | Claude 3.5 Sonnet |
+| Researcher | Pesquisa externa | GPT-4o / Gemini |
+
+## Criando um agente customizado
+
+Crie um arquivo na pasta `agentes/` do seu projeto:
+
+```markdown
+# .opencode/agentes/meu-agente.json
+
+{
+  "name": "meu-agente",
+  "description": "Descrição do meu agente",
+  "model": "gpt-4o",
+  "temperature": 0.3,
+  "systemPrompt": "Você é um assistente especializado em...",
+  "tools": ["filesystem", "search"],
+  "maxTokens": 4096
+}
+```
+
+## Boas práticas
+
+> **Especialização:** cada agente deve ter um propósito claro
+
+> **System prompt:** seja específico sobre o comportamento esperado
+
+> **Ferramentas:** forneça apenas as ferramentas necessárias
+
+> **Temperatura:** use valores baixos (0.1-0.3) para tarefas determinísticas
+
+> **Contexto:** limite o tamanho do contexto para evitar custos excessivos
+
+## Exemplo: Agente de documentação
+
+```json
+{
+  "name": "doc-writer",
+  "description": "Escreve documentação técnica",
+  "model": "claude-3-5-sonnet-20241022",
+  "temperature": 0.2,
+  "systemPrompt": "Você é um escritor técnico especializado em documentação de software. Gere documentação clara, concisa e bem estruturada.",
+  "tools": ["filesystem"],
+  "maxTokens": 8192
+}
+```

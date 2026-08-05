@@ -1,0 +1,97 @@
+---
+title: Plugins
+description: Criação e uso de plugins no OpenCode para estender funcionalidades.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+
+<Callout type="note">
+**Plugins vs MCPs:** Enquanto plugins estendem o próprio OpenCode adicionando comandos, hooks e integrações, MCPs conectam agentes a ferramentas externas de forma padronizada. Plugins modificam o comportamento do OpenCode; MCPs expandem o que os agentes podem acessar.
+</Callout>
+
+## O que são plugins?
+
+Plugins são pacotes que estendem as funcionalidades do OpenCode. Eles podem adicionar novos comandos, integrações, provedores de modelo, e muito mais.
+
+## Instalando plugins
+
+```bash
+opencode plugin add nome-do-plugin
+```
+
+Ou manualmente no `opencode.json`:
+
+```json
+{
+  "plugins": [
+    "opencode-plugin-eslint",
+    "opencode-plugin-prettier",
+    "opencode-plugin-docker"
+  ]
+}
+```
+
+## Criando um plugin
+
+Estrutura básica de um plugin:
+
+```
+meu-plugin/
+├── package.json
+├── index.js
+└── README.md
+```
+
+```javascript
+// index.js
+export default {
+  name: 'meu-plugin',
+  version: '1.0.0',
+  
+  hooks: {
+    'app:init': async (context) => {
+      console.log('Plugin inicializado!');
+    },
+    
+    'command:before': async (command, args) => {
+      // Executa antes de cada comando
+    },
+    
+    'agent:before': async (agent, prompt) => {
+      // Modifica o prompt antes de enviar ao agente
+      return prompt;
+    },
+  },
+  
+  commands: {
+    'meu-comando': {
+      description: 'Descrição do comando',
+      handler: async (args) => {
+        return 'Resultado do comando';
+      },
+    },
+  },
+};
+```
+
+## Plugins recomendados
+
+| Plugin | Descrição |
+|--------|-----------|
+| eslint | Integração com ESLint para linting automático |
+| prettier | Formatação de código com Prettier |
+| docker | Comandos Docker integrados |
+| jest | Execução de testes com Jest |
+| github | Integração com GitHub Issues e PRs |
+
+<Callout type="tip">
+**Criou um plugin interessante?** Publique no npm e submeta para o catálogo do OpenDex para compartilhar com a comunidade!
+</Callout>
+
+## Publicando plugins
+
+Para publicar seu plugin no OpenDex:
+
+1. Crie o plugin seguindo o template acima
+2. Publique no npm
+3. Submeta para o catálogo do OpenDex

@@ -1,0 +1,153 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import TagBadge from "../../components/TagBadge.astro";
+import { getComparisonBySlug, comparisons } from "../../data/comparisons";
+import DifficultyBadge from "../../components/DifficultyBadge.tsx";
+import DidYouKnow from "../../components/DidYouKnow.tsx";
+import ContentTags from "../../components/ContentTags.astro";
+import { ArrowLeft, Check, X, GitCompare } from "lucide-react";
+
+export async function getStaticPaths() {
+  return comparisons.map((comp) => ({
+    params: { slug: comp.slug },
+    props: { comparison: comp },
+  }));
+}
+
+const { comparison } = Astro.props;
+
+if (!comparison) {
+  return Astro.redirect("/opendex/404");
+}
+
+const relatedComparisons = comparisons.filter((c) => c.slug !== comparison.slug).slice(0, 2);
+---
+
+<MainLayout title={`OpenCode vs ${comparison.tool} — Comparações — OpenDex`} description={comparison.description}>
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/comparacoes/" class="hover:text-foreground transition-colors">Comparações</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">OpenCode vs {comparison.tool}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/comparacoes/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Comparações
+      </a>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <GitCompare class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="text-2xl font-extrabold">OpenCode</span>
+            <span class="text-lg text-muted-foreground">vs</span>
+            <span class="text-2xl font-extrabold text-muted-foreground">{comparison.tool}</span>
+          </div>
+        </div>
+      </div>
+      <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+        {comparison.description}
+      </p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        {comparison.difficulty && <DifficultyBadge difficulty={comparison.difficulty} size="sm" />}
+        {comparison.tags?.length > 0 && <ContentTags tags={comparison.tags} />}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10">
+    <!-- Comparison Table -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-6">Comparação Detalhada</h2>
+      <ComparisonTable comparison={comparison} />
+    </section>
+
+    <!-- Pros & Cons -->
+    <div class="grid gap-8 md:grid-cols-2 mb-12">
+      <!-- Pros -->
+      <div>
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <Check class="h-5 w-5 text-emerald-500" />
+          Prós do OpenCode
+        </h2>
+        <ul class="space-y-3">
+          {comparison.pros?.map((pro) => (
+            <li class="flex items-start gap-3 rounded-lg border border-border/50 bg-card p-4">
+              <Check class="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+              <span class="text-sm text-muted-foreground">{pro}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Cons -->
+      <div>
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <X class="h-5 w-5 text-red-500" />
+          Limitações
+        </h2>
+        <ul class="space-y-3">
+          {comparison.cons?.map((con) => (
+            <li class="flex items-start gap-3 rounded-lg border border-border/50 bg-card p-4">
+              <X class="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
+              <span class="text-sm text-muted-foreground">{con}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    {comparison.verdict && (
+      <section class="mb-12 rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
+        <h2 class="text-xl font-bold mb-3">Veredito</h2>
+        <p class="text-muted-foreground leading-relaxed text-lg">
+          {comparison.verdict}
+        </p>
+      </section>
+    )}
+
+    <!-- Did You Know -->
+    <div class="mt-16">
+      <DidYouKnow />
+    </div>
+
+    <!-- Related -->
+    {relatedComparisons.length > 0 && (
+      <section class="border-t border-border/40 pt-10">
+        <h2 class="text-xl font-bold mb-6">Outras Comparações</h2>
+        <div class="grid gap-6 sm:grid-cols-2">
+          {relatedComparisons.map((related) => (
+            <a
+              href={`/opendex/comparacoes/${related.slug}/`}
+              class="group rounded-lg border border-border/50 bg-card p-4 transition-all hover:border-primary/30"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                  <GitCompare class="h-4 w-4 text-primary" />
+                </div>
+                <h3 class="font-semibold group-hover:text-primary transition-colors">
+                  OpenCode vs {related.tool}
+                </h3>
+              </div>
+              <p class="text-sm text-muted-foreground line-clamp-2">{related.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</MainLayout>

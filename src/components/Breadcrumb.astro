@@ -1,0 +1,31 @@
+---
+import { ChevronRight } from 'lucide-react';
+
+interface Props {
+  items: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="border-b border-border/40 px-4 py-3" aria-label="Breadcrumb">
+  <div class="container mx-auto max-w-6xl">
+    <ol class="flex items-center gap-2 text-sm text-muted-foreground">
+      {items.map((item, i) => {
+        const isLast = i === items.length - 1;
+        return (
+          <li class="flex items-center gap-2">
+            {i > 0 && <ChevronRight class="h-3.5 w-3.5 shrink-0" />}
+            {item.href && !isLast ? (
+              <a href={item.href} class="hover:text-foreground transition-colors">
+                {item.label}
+              </a>
+            ) : (
+              <span class={isLast ? 'text-foreground font-medium' : ''}>{item.label}</span>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</nav>

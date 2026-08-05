@@ -1,0 +1,81 @@
+---
+interface Props {
+  types: string[];
+  activeType: string;
+  totalCount: number;
+}
+
+const { types, activeType, totalCount } = Astro.props;
+---
+
+<div class="space-y-4">
+  <!-- Search -->
+  <div class="relative">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input
+      id="showcase-search"
+      type="text"
+      placeholder="Buscar projetos por nome, descrição ou tags..."
+      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 pl-9 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    />
+  </div>
+
+  <!-- Type Filters -->
+  <div class="flex flex-wrap items-center gap-1.5">
+    <span class="text-xs font-medium text-muted-foreground">Tipo:</span>
+    <button class="filter-btn active rounded-md px-2.5 py-1 text-xs font-medium bg-primary text-primary-foreground" data-filter="all">Todos</button>
+    {types.map((type) => (
+      <button class="filter-btn rounded-md px-2.5 py-1 text-xs font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80" data-filter={type}>
+        {type}
+      </button>
+    ))}
+  </div>
+
+  <div id="results-count" class="text-sm text-muted-foreground">
+    {totalCount} resultado(s)
+  </div>
+</div>
+
+<script>
+  const searchInput = document.getElementById("showcase-search") as HTMLInputElement;
+  const items = document.querySelectorAll(".showcase-item");
+  const emptyState = document.getElementById("empty-state")!;
+  const resultsCount = document.getElementById("results-count")!;
+
+  let activeTag = "all";
+
+  function filter() {
+    const query = searchInput.value.toLowerCase();
+    let visible = 0;
+
+    items.forEach((item) => {
+      const type = (item.getAttribute("data-type") || "").toLowerCase();
+      const text = item.textContent?.toLowerCase() || "";
+
+      const matchType = activeTag === "all" || type.includes(activeTag.toLowerCase());
+      const matchSearch = !query || text.includes(query);
+
+      const show = matchType && matchSearch;
+      (item as HTMLElement).style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    emptyState.classList.toggle("hidden", visible > 0);
+    resultsCount.textContent = `${visible} resultado(s)`;
+  }
+
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach((b) => {
+        b.classList.remove("active", "bg-primary", "text-primary-foreground");
+        b.classList.add("bg-secondary", "text-secondary-foreground");
+      });
+      btn.classList.remove("bg-secondary", "text-secondary-foreground");
+      btn.classList.add("active", "bg-primary", "text-primary-foreground");
+      activeTag = btn.getAttribute("data-filter") || "all";
+      filter();
+    });
+  });
+
+  searchInput.addEventListener("input", filter);
+</script>

@@ -1,0 +1,85 @@
+---
+title: Modelos de Linguagem
+description: Modelos suportados pelo OpenCode, configuração e boas práticas.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+
+## Modelos suportados
+
+O OpenCode suporta múltiplos provedores de modelos de linguagem:
+
+| Provedor | Modelos | Uso recomendado |
+|----------|---------|-----------------|
+| OpenAI | GPT-4, GPT-4o, GPT-4o-mini | Agentes gerais, orquestração |
+| Anthropic | Claude 3.5 Sonnet, Claude 3 Opus | Revisão de código, análise |
+| Google | Gemini 1.5 Pro, Gemini 1.5 Flash | Pesquisa, sumarização |
+| Local | Ollama (Llama 3, Mistral) | Desenvolvimento offline |
+
+## Configuração de modelo por agente
+
+Cada agente pode usar um modelo diferente:
+
+```json
+{
+  "agents": {
+    "orchestrator": {
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "maxTokens": 4096
+    },
+    "reviewer": {
+      "model": "claude-3-5-sonnet-20241022",
+      "temperature": 0.1
+    },
+    "builder": {
+      "model": "gpt-4o",
+      "temperature": 0.2
+    }
+  }
+}
+```
+
+## Modelos locais (Ollama)
+
+Para usar modelos locais com Ollama:
+
+```bash
+# Instale o Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Baixe um modelo
+ollama pull llama3
+
+# Configure no opencode.json
+```
+
+```json
+{
+  "agents": {
+    "builder": {
+      "provider": "ollama",
+      "model": "llama3",
+      "baseUrl": "http://localhost:11434"
+    }
+  }
+}
+```
+
+## Boas práticas
+
+<Callout type="tip">
+**Modelos mais capazes** — Utilize modelos como GPT-4o e Claude 3.5 Sonnet para orquestração e revisão de código, onde precisão e profundidade são essenciais.
+</Callout>
+
+<Callout type="tip">
+**Modelos mais rápidos** — Prefira modelos como GPT-4o-mini e Gemini 1.5 Flash para tarefas simples e repetitivas, onde velocidade é mais importante que capacidade.
+</Callout>
+
+<Callout type="tip">
+**Modelos locais** — Use Ollama com Llama 3 ou Mistral para desenvolvimento offline ou quando trabalhar com dados sensíveis que não podem sair do ambiente local.
+</Callout>
+
+<Callout type="tip">
+**Ajuste de temperatura** — Configure 0.1-0.3 para tarefas determinísticas (código, análise) e 0.7-0.9 para tarefas criativas (geração de texto, brainstorming).
+</Callout>

@@ -1,0 +1,18 @@
+---
+import ApiMethod from './ApiMethod.astro';
+
+export interface Props {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string;
+  description?: string;
+}
+
+const { method, path, description } = Astro.props;
+---
+<div class="flex items-start gap-3 rounded-lg border border-border/50 bg-card p-4">
+  <ApiMethod method={method} />
+  <div class="min-w-0 flex-1">
+    <code class="text-sm font-mono text-foreground break-all">{path}</code>
+    {description && <p class="mt-1 text-sm text-muted-foreground">{description}</p>}
+  </div>
+</div>

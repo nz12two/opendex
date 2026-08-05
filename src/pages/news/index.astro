@@ -1,0 +1,151 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import NewsTimeline from "../../components/NewsTimeline.astro";
+import { newsItems, getNewsTypes } from "../../data/news";
+import { Newspaper, Sparkles, Search, Tag, X } from "lucide-react";
+
+const types = getNewsTypes();
+const { type, tag: tagParam } = Object.fromEntries(Astro.url.searchParams);
+
+const activeType = type && types.includes(type as any) ? type : 'all';
+const activeTag = tagParam || '';
+
+const filteredByType = activeType === 'all'
+  ? newsItems
+  : newsItems.filter(n => n.type === activeType);
+
+const filteredItems = activeTag
+  ? filteredByType.filter(n => n.tags?.includes(activeTag))
+  : filteredByType;
+
+// Collect all tags from filtered items
+const allTags = [...new Set(filteredByType.flatMap(n => n.tags || []))].sort();
+
+const typeLabels: Record<string, string> = {
+  release: 'Releases',
+  plugin: 'Plugins',
+  pr: 'Pull Requests',
+  roadmap: 'Roadmap',
+  event: 'Eventos',
+  mcp: 'MCPs',
+  benchmark: 'Benchmarks',
+  project: 'Projetos',
+  tool: 'Ferramentas',
+  community: 'Comunidade',
+};
+
+const typeIcons: Record<string, string> = {
+  release: '🚀',
+  plugin: '🧩',
+  pr: '🔄',
+  roadmap: '🗺️',
+  event: '🏆',
+  mcp: '🔌',
+  benchmark: '📊',
+  project: '📁',
+  tool: '🛠️',
+  community: '👥',
+};
+---
+
+<MainLayout
+  title="Novidades — OpenDex"
+  description="Releases oficiais do OpenCode e artigos reais da comunidade, todos com fonte."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Newspaper class="h-4 w-4 text-primary" />
+        <span>Novidades</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Novidades
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Releases oficiais do OpenCode e artigos reais da comunidade, todos apontando para a fonte original.
+      </p>
+
+      <div class="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>{newsItems.length} novidades</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="border-b border-border/40 px-4 py-4">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Type Filters -->
+      <div class="flex flex-wrap gap-2">
+        <a
+          href={activeTag ? `/opendex/news/?tag=${activeTag}` : "/opendex/news/"}
+          class={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
+            activeType === 'all'
+              ? 'border-primary bg-primary/10 text-primary'
+              : 'border-border bg-background text-muted-foreground hover:border-primary/30'
+          }`}
+        >
+          Todas
+        </a>
+        {types.map(t => (
+          <a
+            key={t}
+            href={activeTag ? `/opendex/news/?type=${t}&tag=${activeTag}` : `/opendex/news/?type=${t}`}
+            class={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
+              activeType === t
+                ? 'border-primary bg-primary/10 text-primary'
+                : 'border-border bg-background text-muted-foreground hover:border-primary/30'
+            }`}
+          >
+            <span>{typeIcons[t] || '📌'}</span>
+            {typeLabels[t] || t}
+          </a>
+        ))}
+      </div>
+
+      <!-- Tag Filters -->
+      {allTags.length > 0 && (
+        <div class="mt-3 flex flex-wrap items-center gap-1.5">
+          <Tag class="h-3.5 w-3.5 text-muted-foreground shrink-0" />
+          {activeTag && (
+            <a
+              href={activeType !== 'all' ? `/opendex/news/?type=${activeType}` : "/opendex/news/"}
+              class="inline-flex items-center gap-1 rounded-lg border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary"
+            >
+              {activeTag}
+              <X class="h-3 w-3" />
+            </a>
+          )}
+          {allTags.filter(t => t !== activeTag).slice(0, 10).map(tag => (
+            <a
+              key={tag}
+              href={activeType !== 'all' ? `/opendex/news/?type=${activeType}&tag=${tag}` : `/opendex/news/?tag=${tag}`}
+              class="inline-flex items-center rounded-lg border border-border bg-background px-2 py-0.5 text-[10px] font-medium text-muted-foreground hover:border-primary/30 hover:text-primary transition-all"
+            >
+              {tag}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="px-4 py-10 md:py-14">
+    <div class="container mx-auto max-w-4xl">
+      <NewsTimeline items={filteredItems} />
+      {filteredItems.length === 0 && (
+        <div class="py-20 text-center">
+          <div class="inline-flex items-center justify-center rounded-full bg-muted p-4">
+            <Newspaper class="h-6 w-6 text-muted-foreground" />
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Nenhuma novidade encontrada</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Tente ajustar os filtros.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</MainLayout>

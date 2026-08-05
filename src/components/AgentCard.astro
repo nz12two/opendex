@@ -1,0 +1,74 @@
+---
+import type { Agent } from '@/data/agents/types';
+import TagBadge from './TagBadge.astro';
+import { Bot, ArrowRight } from 'lucide-react';
+
+interface Props {
+  agent: Agent;
+}
+
+const { agent } = Astro.props;
+---
+
+<a
+  href={`/opendex/agents/${agent.slug}`}
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+      <Bot class="h-6 w-6 text-primary" />
+    </div>
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+        {agent.name}
+      </h3>
+      <p class="mt-1 text-sm text-muted-foreground line-clamp-2">
+        {agent.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- What it does -->
+  <div class="mt-4 rounded-md bg-muted/50 p-3">
+    <p class="text-xs text-muted-foreground">
+      <span class="font-medium text-foreground">O que faz:</span> {agent.whatItDoes}
+    </p>
+  </div>
+
+  <!-- Inputs / Outputs -->
+  <div class="mt-3 grid grid-cols-2 gap-3 text-xs">
+    <div>
+      <span class="font-medium text-foreground">Entradas:</span>
+      <ul class="mt-1 space-y-0.5 text-muted-foreground">
+        {agent.inputs.slice(0, 2).map((input) => (
+          <li class="truncate">• {input}</li>
+        ))}
+        {agent.inputs.length > 2 && (
+          <li class="text-muted-foreground/60">+{agent.inputs.length - 2} mais</li>
+        )}
+      </ul>
+    </div>
+    <div>
+      <span class="font-medium text-foreground">Saídas:</span>
+      <ul class="mt-1 space-y-0.5 text-muted-foreground">
+        {agent.outputs.slice(0, 2).map((output) => (
+          <li class="truncate">• {output}</li>
+        ))}
+        {agent.outputs.length > 2 && (
+          <li class="text-muted-foreground/60">+{agent.outputs.length - 2} mais</li>
+        )}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-4 flex items-center justify-between">
+    <div class="flex flex-wrap gap-1.5">
+      {agent.tags.slice(0, 3).map((tag) => (
+        <TagBadge tag={tag} />
+      ))}
+    </div>
+    <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+  </div>
+</a>

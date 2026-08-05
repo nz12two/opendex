@@ -1,0 +1,45 @@
+---
+import type { SetupStep } from '@/data/setup-guides/types';
+import { AlertTriangle } from 'lucide-react';
+
+interface Props {
+  steps: SetupStep[];
+}
+
+const { steps } = Astro.props;
+---
+
+<div class="space-y-6">
+  {steps.map((step, index) => (
+    <div class="relative pl-12">
+      <!-- Step Number -->
+      <div class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-sm">
+        {index + 1}
+      </div>
+
+      <!-- Connector Line (not for last) -->
+      {index < steps.length - 1 && (
+        <div class="absolute left-4 top-8 h-full w-px bg-border" />
+      )}
+
+      <!-- Content -->
+      <div class="space-y-3">
+        <h3 class="font-semibold text-foreground">{step.title}</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          {step.description}
+        </p>
+
+        {step.code && (
+          <pre class="overflow-x-auto rounded-lg border border-border bg-zinc-950 p-4 text-sm"><code>{step.code}</code></pre>
+        )}
+
+        {step.warning && (
+          <div class="flex items-start gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 p-3 text-sm">
+            <AlertTriangle class="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
+            <span class="text-amber-400">{step.warning}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  ))}
+</div>

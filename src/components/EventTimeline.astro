@@ -1,0 +1,113 @@
+---
+import type { CommunityEvent } from "../data/community";
+import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+
+interface Props {
+  events: CommunityEvent[];
+  title?: string;
+}
+
+const { events: items, title = "Eventos" } = Astro.props;
+
+const typeLabels: Record<string, string> = {
+  hackathon: "Hackathon",
+  meetup: "Meetup",
+  conference: "Conferência",
+  workshop: "Workshop",
+};
+
+const typeColors: Record<string, string> = {
+  hackathon: "bg-violet-500/10 text-violet-500 border-violet-500/20",
+  meetup: "bg-blue-500/10 text-blue-500 border-blue-500/20",
+  conference: "bg-amber-500/10 text-amber-500 border-amber-500/20",
+  workshop: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+};
+
+const sorted = [...items].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+
+<div class="relative">
+  <!-- Timeline line -->
+  <div class="absolute left-[19px] top-0 bottom-0 w-px bg-border/60 hidden sm:block" />
+
+  <div class="space-y-8">
+    {sorted.map((event, i) => {
+      const eventDate = new Date(event.date);
+      const endDate = event.endDate ? new Date(event.endDate) : null;
+
+      return (
+        <div key={event.title} class="relative">
+          {/* Timeline dot */}
+          <div class="absolute left-[-34px] top-6 hidden sm:block">
+            <div class={`h-2.5 w-2.5 rounded-full border-2 ${
+              event.status === 'upcoming'
+                ? 'border-primary bg-primary/30'
+                : 'border-muted-foreground/40 bg-background'
+            }`} />
+          </div>
+
+          <div class={`rounded-lg border ${
+            event.status === 'upcoming'
+              ? 'border-primary/30 bg-primary/5'
+              : 'border-border bg-card'
+          } p-5 transition-all hover:shadow-md`}>
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0 flex-1">
+                {/* Type badge */}
+                <span class={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium ${typeColors[event.type] || ''}`}>
+                  {typeLabels[event.type] || event.type}
+                </span>
+
+                {/* Status badge */}
+                {event.status === 'upcoming' && (
+                  <span class="ml-2 inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-500 border border-emerald-500/20">
+                    Em breve
+                  </span>
+                )}
+
+                {/* Title */}
+                <h3 class="mt-2 font-semibold text-card-foreground">
+                  {event.title}
+                </h3>
+
+                {/* Description */}
+                <p class="mt-1 text-sm text-muted-foreground">
+                  {event.description}
+                </p>
+
+                {/* Meta */}
+                <div class="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                  <span class="flex items-center gap-1">
+                    <CalendarDays class="h-3.5 w-3.5" />
+                    {eventDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                    {endDate && (
+                      <>
+                        {' — '}
+                        {endDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      </>
+                    )}
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <MapPin class="h-3.5 w-3.5" />
+                    {event.location}
+                  </span>
+                </div>
+              </div>
+
+              {event.url && (
+                <a
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/30 transition-all"
+                >
+                  <ExternalLink class="h-4 w-4" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

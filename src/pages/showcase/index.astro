@@ -1,0 +1,86 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ShowcaseCard from "../../components/ShowcaseCard.astro";
+import ShowcaseFilters from "../../components/ShowcaseFilters.astro";
+import { SourceBadge } from "../../components/SourceBadge";
+import { projects, getProjectTypes, getFeaturedProjects, collectedAt } from "../../data/showcase";
+import { Sparkles, Star } from "lucide-react";
+
+const allTypes = getProjectTypes();
+const featured = getFeaturedProjects();
+---
+
+<MainLayout title="Showcase — OpenDex" description="Projetos da comunidade OpenCode. Descubra o que está sendo construído com OpenCode.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>Projetos da Comunidade</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Showcase
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Descubra projetos reais construídos pela comunidade OpenCode, com dados coletados diretamente do GitHub.
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <Sparkles class="h-4 w-4 text-primary" />
+        <span>{projects.length} projetos cadastrados</span>
+      </div>
+      <div class="mt-4 flex items-center justify-center">
+        <SourceBadge source="github" lastUpdated={collectedAt} />
+      </div>
+      <p class="mt-3 text-xs text-muted-foreground/70">
+        Dados reais da API do GitHub — nada inventado.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  {featured.length > 0 && (
+    <section class="border-b border-border/40 px-4 py-10">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex items-center gap-2 mb-6">
+          <Star class="h-5 w-5 fill-yellow-500 text-yellow-500" />
+          <h2 class="text-lg font-bold">Projetos em Destaque</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project, i) => (
+            <div class={`showcase-item animate-in stagger-${Math.min(i + 1, 8)}`} data-type={project.type}>
+              <ShowcaseCard project={project} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Filters -->
+  <section class="border-b border-border/40 px-4 py-6">
+    <div class="container mx-auto max-w-6xl">
+      <ShowcaseFilters types={allTypes} activeType="all" totalCount={projects.length} />
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-6xl">
+      <div id="projects-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, i) => (
+          <div class={`showcase-item animate-in stagger-${Math.min(i + 1, 8)}`} data-type={project.type}>
+            <ShowcaseCard project={project} />
+          </div>
+        ))}
+      </div>
+      <div id="empty-state" class="hidden py-20 text-center">
+        <div class="inline-flex items-center justify-center rounded-full bg-muted p-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Nenhum projeto encontrado</h3>
+        <p class="mt-2 text-sm text-muted-foreground">Tente ajustar os filtros ou buscar por outro termo.</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>

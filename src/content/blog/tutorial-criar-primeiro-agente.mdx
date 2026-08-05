@@ -1,0 +1,55 @@
+---
+title: "Tutorial: Criando seu primeiro agente OpenCode"
+description: Aprenda passo a passo a criar um agente especializado para revisão de código.
+pubDate: 2026-07-15
+author: "OpenDex Team"
+authorAvatar: "/opendex/favicon.svg"
+tags: ["tutorial", "agentes", "iniciante"]
+categories: ["Tutoriais"]
+featured: true
+difficulty: beginner
+---
+
+Neste tutorial, você vai criar seu primeiro agente OpenCode do zero. Vamos construir um **agente de revisão de código** especializado em TypeScript.
+
+## Pré-requisitos
+
+- OpenCode instalado (veja o [guia de instalação](/opendex/docs/instalacao))
+- Conhecimento básico de JSON
+- Um projeto para testar
+
+## Passo 1: Estrutura do agente
+
+Crie um arquivo `.opencode/agentes/revisor-typescript.json`:
+
+```json
+{
+  "name": "revisor-typescript",
+  "description": "Revisor especializado em TypeScript — verifica tipos, null safety e padrões",
+  "model": "claude-3-5-sonnet-20241022",
+  "temperature": 0.1,
+  "systemPrompt": "Você é um revisor de código TypeScript rigoroso. Verifique:\n1. Tipagem correta (evitar `any`)\n2. Null safety\n3. Padrões do projeto\n4. Performance\n5. Legibilidade\n\nSempre sugira melhorias concretas com exemplos de código.",
+  "tools": ["filesystem", "search"],
+  "maxTokens": 4096
+}
+```
+
+## Passo 2: Testando o agente
+
+```bash
+opencode run revisor-typescript
+```
+
+O agente vai solicitar o código para revisão. Cole o código e veja a análise.
+
+## Passo 3: Customizando
+
+Você pode ajustar:
+
+- **Modelo**: troque para `gpt-4o` se preferir
+- **Temperatura**: aumente para 0.3 se quiser sugestões mais criativas
+- **System prompt**: adicione regras específicas do seu projeto
+
+## Conclusão
+
+Você criou seu primeiro agente OpenCode! Experimente criar outros agentes para diferentes tarefas.

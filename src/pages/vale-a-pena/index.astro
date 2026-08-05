@@ -1,0 +1,125 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { models } from "../../data/models";
+import { getCategoryLabel, getCategoryColor } from "../../data/models";
+import { cn } from "@/lib/utils";
+import { Check, X, Brain, Sparkles, Star, ArrowRight } from "lucide-react";
+---
+
+<MainLayout title="Vale a Pena? — OpenDex" description="Análise completa: vantagens e desvantagens de cada modelo de IA. Descubra qual modelo realmente vale o investimento.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Brain class="h-4 w-4 text-primary" />
+        <span>Análise de Valor</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Vale a Pena?
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Análise honesta de cada modelo: vantagens, desvantagens e veredito. Descubra qual modelo realmente vale o investimento para o seu uso.
+      </p>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid gap-8 md:grid-cols-2">
+        {models.map((model, i) => {
+          const pros = model.pros.slice(0, 4);
+          const cons = model.cons.slice(0, 4);
+          const verdictScore = model.communityRating >= 4.5 ? "Excelente" : model.communityRating >= 4.0 ? "Bom" : model.communityRating >= 3.5 ? "Regular" : "Fraco";
+          const verdictColor = model.communityRating >= 4.5 ? "text-emerald-400" : model.communityRating >= 4.0 ? "text-primary" : model.communityRating >= 3.5 ? "text-amber-400" : "text-red-400";
+          
+          return (
+            <div class={cn(
+              "rounded-lg border border-border/50 bg-card overflow-hidden card-hover",
+              "flex flex-col"
+            )}>
+              <!-- Header -->
+              <div class="border-b border-border/40 p-5">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1">
+                      <h3 class="text-lg font-bold text-foreground">{model.name}</h3>
+                      <span class={cn('inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium', getCategoryColor(model.category))}>
+                        {getCategoryLabel(model.category)}
+                      </span>
+                    </div>
+                    {model.provider && (
+                      <p class="text-xs text-muted-foreground">{model.provider}</p>
+                    )}
+                  </div>
+                  <div class="text-right">
+                    <div class="flex items-center gap-1 text-amber-500">
+                      <Star class="h-4 w-4 fill-amber-500" />
+                      <span class="font-bold text-foreground">{model.communityRating}</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-0.5">{model.price}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="flex-1 p-5 space-y-4">
+                <!-- Pros -->
+                <div>
+                  <div class="flex items-center gap-1.5 text-sm font-medium text-emerald-400 mb-2">
+                    <Check class="h-4 w-4" />
+                    <span>Vantagens</span>
+                  </div>
+                  <ul class="space-y-1.5">
+                    {pros.map((pro) => (
+                      <li class="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span class="mt-1 h-1 w-1 shrink-0 rounded-full bg-emerald-500/60" />
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <!-- Cons -->
+                <div>
+                  <div class="flex items-center gap-1.5 text-sm font-medium text-red-400 mb-2">
+                    <X class="h-4 w-4" />
+                    <span>Desvantagens</span>
+                  </div>
+                  <ul class="space-y-1.5">
+                    {cons.map((con) => (
+                      <li class="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span class="mt-1 h-1 w-1 shrink-0 rounded-full bg-red-500/60" />
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Footer / Verdict -->
+              <div class={cn(
+                "border-t border-border/40 p-4",
+                "flex items-center justify-between"
+              )}>
+                <div class="flex items-center gap-2">
+                  <Sparkles class="h-4 w-4 text-muted-foreground" />
+                  <span class="text-sm text-muted-foreground">Veredito:</span>
+                  <span class={cn("text-sm font-bold", verdictColor)}>{verdictScore}</span>
+                </div>
+                <a
+                  href={`/opendex/modelos/${model.slug}/`}
+                  class="inline-flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors"
+                >
+                  Detalhes
+                  <ArrowRight class="h-3 w-3" />
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,77 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import EventTimeline from "../../components/EventTimeline.astro";
+import { getUpcomingEvents, getPastEvents } from "../../data/community";
+import { CalendarDays, Sparkles } from "lucide-react";
+
+const upcomingEvents = getUpcomingEvents();
+const pastEvents = getPastEvents();
+const totalEvents = upcomingEvents.length + pastEvents.length;
+---
+
+<MainLayout
+  title="Eventos — OpenDex"
+  description="Eventos confirmados da comunidade OpenCode."
+>
+  <Breadcrumb items={[
+    { label: "Comunidade", href: "/opendex/community/" },
+    { label: "Eventos" },
+  ]} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-12 pb-10 md:pt-16 md:pb-12">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl text-center relative">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+        Eventos
+      </h1>
+      <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
+        Eventos confirmados da comunidade OpenCode, com fonte oficial verificada.
+      </p>
+      <div class="mt-4 flex items-center justify-center gap-4 text-sm text-muted-foreground">
+        <span class="flex items-center gap-1.5">
+          <Sparkles class="h-4 w-4 text-primary" />
+          {upcomingEvents.length} próximos confirmados
+        </span>
+        <span class="flex items-center gap-1.5">
+          <CalendarDays class="h-4 w-4 text-primary" />
+          {pastEvents.length} realizados confirmados
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mx-auto max-w-4xl px-4 py-10">
+    {totalEvents > 0 ? (
+      <>
+        {upcomingEvents.length > 0 && (
+          <section class="mb-14">
+            <h2 class="mb-6 flex items-center gap-2 text-xl font-bold">
+              <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+              Próximos Eventos
+            </h2>
+            <EventTimeline events={upcomingEvents} />
+          </section>
+        )}
+
+        {pastEvents.length > 0 && (
+          <section>
+            <h2 class="mb-6 flex items-center gap-2 text-xl font-bold text-muted-foreground">
+              <CalendarDays class="h-5 w-5" />
+              Eventos Realizados
+            </h2>
+            <EventTimeline events={pastEvents} />
+          </section>
+        )}
+      </>
+    ) : (
+      <div class="rounded-lg border border-border/50 bg-card p-10 text-center">
+        <p class="text-sm font-medium text-card-foreground">Nenhum evento confirmado no momento</p>
+        <p class="mt-1 text-sm text-muted-foreground">
+          Eventos só são publicados com fonte oficial verificada.
+        </p>
+      </div>
+    )}
+  </div>
+</MainLayout>

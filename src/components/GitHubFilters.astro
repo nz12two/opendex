@@ -1,0 +1,89 @@
+---
+interface Props {
+  languages: string[];
+  activeLanguage: string;
+  totalCount: number;
+}
+
+const { languages, activeLanguage, totalCount } = Astro.props;
+---
+
+<div class="space-y-4">
+  <!-- Search -->
+  <div class="relative">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
+    <input
+      id="github-search"
+      type="text"
+      placeholder="Buscar repositórios por nome, descrição ou linguagem..."
+      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 pl-9 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    />
+  </div>
+
+  <!-- Language Filters -->
+  <div class="flex flex-wrap items-center gap-1.5">
+    <span class="text-xs font-medium text-muted-foreground">Linguagem:</span>
+    <button class="filter-btn active rounded-md px-2.5 py-1 text-xs font-medium bg-primary text-primary-foreground" data-filter="all">
+      Todas
+    </button>
+    {languages.map((lang) => (
+      <button
+        class="filter-btn rounded-md px-2.5 py-1 text-xs font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80"
+        data-filter={lang}
+      >
+        {lang}
+      </button>
+    ))}
+  </div>
+
+  <div id="github-results-count" class="text-sm text-muted-foreground">
+    {totalCount} resultado(s)
+  </div>
+</div>
+
+<script>
+  const searchInput = document.getElementById("github-search") as HTMLInputElement;
+  const items = document.querySelectorAll(".github-repo-item");
+  const emptyState = document.getElementById("github-empty-state")!;
+  const resultsCount = document.getElementById("github-results-count")!;
+
+  let activeLanguage = "all";
+
+  function filter() {
+    const query = searchInput.value.toLowerCase();
+    let visible = 0;
+
+    items.forEach((item) => {
+      const lang = (item.getAttribute("data-language") || "").toLowerCase();
+      const text = item.textContent?.toLowerCase() || "";
+
+      const matchLang = activeLanguage === "all" || lang === activeLanguage.toLowerCase();
+      const matchSearch = !query || text.includes(query);
+
+      const show = matchLang && matchSearch;
+      (item as HTMLElement).style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    emptyState.classList.toggle("hidden", visible > 0);
+    resultsCount.textContent = `${visible} resultado(s)`;
+  }
+
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach((b) => {
+        b.classList.remove("active", "bg-primary", "text-primary-foreground");
+        b.classList.add("bg-secondary", "text-secondary-foreground");
+      });
+      btn.classList.remove("bg-secondary", "text-secondary-foreground");
+      btn.classList.add("active", "bg-primary", "text-primary-foreground");
+      activeLanguage = btn.getAttribute("data-filter") || "all";
+      filter();
+    });
+  });
+
+  searchInput.addEventListener("input", filter);
+</script>

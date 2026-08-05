@@ -1,0 +1,114 @@
+/* ========================================
+   Starlight Theme Override — OpenDex
+   Matcha o design system do site principal
+   ======================================== */
+
+/* Dark theme (padrão) — baseado no globals.css do OpenDex */
+:root {
+  /* Accent — primary indigo do site */
+  --sl-color-accent: hsl(271, 76%, 53%);
+  --sl-color-accent-high: hsl(271, 76%, 60%);
+  --sl-color-accent-low: hsl(271, 76%, 20%);
+
+  /* Gray scale — alinhada com o theme dark do site */
+  --sl-color-gray-1: hsl(240, 10%, 97%);
+  --sl-color-gray-2: hsl(240, 8%, 88%);
+  --sl-color-gray-3: hsl(240, 6%, 70%);
+  --sl-color-gray-4: hsl(240, 5%, 45%);
+  --sl-color-gray-5: hsl(240, 4%, 22%);
+  --sl-color-gray-6: hsl(240, 4%, 14%);
+
+  /* Backgrounds — match com bg-background e bg-card */
+  --sl-color-bg: hsl(240, 10%, 3.9%);
+  --sl-color-bg-nav: hsl(240, 10%, 5.9%);
+  --sl-color-bg-sidebar: hsl(240, 10%, 5.9%);
+  --sl-color-bg-inline-code: hsl(240, 4%, 14%);
+  --sl-color-bg-hover: hsl(240, 4%, 16%);
+
+  /* Text colors */
+  --sl-color-text: hsl(0, 0%, 98%);
+  --sl-color-text-accent: hsl(271, 76%, 53%);
+  --sl-color-muted: hsl(240, 5%, 65%);
+  --sl-color-white: hsl(0, 0%, 100%);
+
+  /* Borders */
+  --sl-color-border: hsl(240, 4%, 16%);
+
+  /* Highlight */
+  --sl-color-hairline: hsl(240, 4%, 14%);
+  --sl-color-hairline-shade: hsl(240, 4%, 18%);
+
+  /* Code blocks — bg mais escuro como o site principal */
+  --sl-color-bg-code: hsl(240, 10%, 3.9%);
+
+  /* Line heights e fontes consistentes */
+  --sl-text-body: 0.875rem;
+  --sl-text-sm: 0.8125rem;
+  --sl-text-xs: 0.75rem;
+  --sl-text-code: 0.8125rem;
+}
+
+/* Sidebar styling */
+.sidebar-content a[aria-current="page"] {
+  background: hsl(271, 76%, 53% / 0.1) !important;
+  border-right: 2px solid hsl(271, 76%, 53%) !important;
+  color: hsl(271, 76%, 53%) !important;
+  font-weight: 600 !important;
+}
+
+/* Card styling no conteúdo das docs */
+.starlight-card {
+  background: hsl(240, 10%, 5.9%) !important;
+  border: 1px solid hsl(240, 4%, 16%) !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+}
+
+/* Botões */
+.sl-button {
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* Header da navegação */
+.page-frame-header {
+  background: hsl(240, 10%, 5.9%) !important;
+  border-bottom: 1px solid hsl(240, 4%, 16%) !important;
+}
+
+/* Links no conteúdo */
+.content a {
+  color: hsl(271, 76%, 60%) !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+
+.content a:hover {
+  color: hsl(271, 76%, 70%) !important;
+  text-decoration: underline !important;
+}
+
+/* Tabela de conteúdos lateral */
+.table-of-content {
+  border-left: 1px solid hsl(240, 4%, 16%) !important;
+}
+
+/* Input de busca (Pagefind) */
+.pagefind-ui__search-input {
+  border-radius: 0.5rem !important;
+  background: hsl(240, 4%, 14%) !important;
+  border: 1px solid hsl(240, 4%, 16%) !important;
+  color: hsl(0, 0%, 98%) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Expressive Code — code blocks */
+.frame {
+  border-radius: 0.5rem !important;
+  border: 1px solid hsl(240, 4%, 16%) !important;
+}
+
+/* Tab buttons do Expressive Code */
+.tab {
+  font-size: 0.75rem !important;
+}

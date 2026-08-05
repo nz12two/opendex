@@ -1,0 +1,60 @@
+---
+title: "OpenCode vs Claude Code: Comparativo completo"
+description: Uma análise detalhada das diferenças entre OpenCode e Claude Code para desenvolvimento assistido.
+pubDate: 2026-06-28
+author: "OpenDex Team"
+authorAvatar: "/opendex/favicon.svg"
+tags: ["comparacao", "opencode", "claude"]
+categories: ["Análises"]
+difficulty: beginner
+---
+
+Comparamos o OpenCode com o Claude Code para ajudar você a escolher a melhor ferramenta para seu fluxo de desenvolvimento.
+
+## Visão geral
+
+| Característica | OpenCode | Claude Code |
+|---------------|----------|-------------|
+| Open source | ✅ Sim | ❌ Não |
+| Multi-agente | ✅ Sim | ❌ Não |
+| MCP nativo | ✅ Sim | ✅ Sim |
+| Plugins | ✅ Sim | ❌ Limitado |
+| Modelos | Múltiplos | Claude apenas |
+| Preço | Grátis (open source) | $20/mês |
+
+## Arquitetura
+
+### OpenCode
+
+```
+Orchestrator → Builder → Reviewer → Tester
+       ↓
+   Debugger (se falhar)
+```
+
+### Claude Code
+
+```
+Claude Code (agente único)
+```
+
+## Quando usar cada um
+
+### Escolha OpenCode quando:
+
+- Precisa de múltiplos agentes especializados
+- Quer usar diferentes modelos (GPT, Claude, Gemini)
+- Deseja um sistema de plugins extensível
+- Prefere uma solução open source
+
+### Escolha Claude Code quando:
+
+- Prefere simplicidade (agente único)
+- Já usa o ecossistema Anthropic
+- Precisa de integração direta com Claude
+
+## Veredito
+
+Ambas as ferramentas são excelentes. O OpenCode se destaca pela flexibilidade e arquitetura multi-agente, enquanto o Claude Code oferece uma experiência mais simples e integrada.
+
+Para equipes que precisam de automação complexa e customização, o OpenCode é a melhor escolha. Para uso individual e simplicidade, o Claude Code pode ser mais adequado.

@@ -1,0 +1,171 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Heart, Trash2, Puzzle, Server, Code, Users, Wrench, Brain, ArrowLeft } from "lucide-react";
+
+const iconMap: Record<string, any> = {
+  plugin: Puzzle,
+  mcp: Server,
+  script: Code,
+  agente: Users,
+  ferramenta: Wrench,
+  modelo: Brain,
+};
+---
+
+<MainLayout title="Favoritos — OpenDex" description="Seus itens salvos nos favoritos do OpenDex.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Heart class="h-4 w-4 text-red-500" />
+        <span>Favoritos</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Favoritos
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Itens que você salvou para acessar rapidamente depois.
+      </p>
+    </div>
+  </section>
+
+  <!-- List -->
+  <section class="px-4 py-12 md:py-16">
+    <div class="container mx-auto max-w-4xl">
+      <div id="favorites-list">
+        <!-- Empty state (shown by JS when no favorites) -->
+        <div id="favorites-empty" class="hidden text-center py-16">
+          <Heart class="mx-auto h-12 w-12 text-muted-foreground/40 mb-4" />
+          <p class="text-lg text-muted-foreground">
+            Nenhum favorito salvo ainda. Navegue pelo site e salve o que mais gostar!
+          </p>
+        </div>
+
+        <!-- Favorites grid -->
+        <div id="favorites-grid" class="grid gap-4 sm:grid-cols-2">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  import { getFavorites, removeFavorite } from "../../lib/favorites";
+
+  interface FavoriteDisplay {
+    type: string;
+    slug: string;
+    title: string;
+    url: string;
+    addedAt: string;
+  }
+
+  const typeLabels: Record<string, string> = {
+    plugin: "Plugin",
+    mcp: "MCP",
+    script: "Script",
+    agente: "Agente",
+    ferramenta: "Ferramenta",
+    modelo: "Modelo",
+  };
+
+  const typeIcons: Record<string, string> = {
+    plugin: "Puzzle",
+    mcp: "Server",
+    script: "Code",
+    agente: "Users",
+    ferramenta: "Wrench",
+    modelo: "Brain",
+  };
+
+  function getIconSvg(iconName: string): string {
+    const icons: Record<string, string> = {
+      Puzzle: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.611a2.404 2.404 0 0 1-1.705.706 2.404 2.404 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.404 2.404 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.315 8.685a.98.98 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.979.979 0 0 1 .276-.837l1.611-1.611a2.404 2.404 0 0 1 1.704-.706c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.969a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.968 1.02Z"/></svg>',
+      Server: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>',
+      Code: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+      Users: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      Wrench: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+      Brain: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.56 2.87-1.48 3.92l1.75 1.75A6.97 6.97 0 0 0 18 6a6 6 0 0 0-6-6z"/><path d="M12 22a4 4 0 0 1-4-4c0-1.5.56-2.87 1.48-3.92l-1.75-1.75A6.97 6.97 0 0 0 6 18a6 6 0 0 0 6 6z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>',
+    };
+    return icons[iconName] || "";
+  }
+
+  function formatDate(iso: string): string {
+    try {
+      return new Date(iso).toLocaleDateString("pt-BR", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+    } catch {
+      return iso;
+    }
+  }
+
+  function render() {
+    const grid = document.getElementById("favorites-grid");
+    const empty = document.getElementById("favorites-empty");
+    if (!grid || !empty) return;
+
+    const favorites = getFavorites();
+
+    if (favorites.length === 0) {
+      grid.innerHTML = "";
+      empty.classList.remove("hidden");
+      return;
+    }
+
+    empty.classList.add("hidden");
+    grid.innerHTML = favorites
+      .map(
+        (fav) => `
+        <div class="group rounded-lg border border-border/50 bg-card p-5 transition-all hover:border-primary/30 hover:shadow-sm">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-3 min-w-0">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                ${getIconSvg(typeIcons[fav.type] || "Puzzle")}
+              </div>
+              <div class="min-w-0">
+                <span class="inline-flex items-center rounded-full border border-border/50 bg-muted/50 px-2 py-0.5 text-[10px] font-medium text-muted-foreground mb-1.5">
+                  ${typeLabels[fav.type] || fav.type}
+                </span>
+                <h3 class="font-semibold text-card-foreground truncate">
+                  <a href="${fav.url}" class="hover:text-primary transition-colors">${fav.title}</a>
+                </h3>
+                <p class="mt-1 text-xs text-muted-foreground">
+                  Salvo em ${formatDate(fav.addedAt)}
+                </p>
+              </div>
+            </div>
+            <button
+              class="remove-fav shrink-0 inline-flex items-center justify-center rounded-lg p-2 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-red-500 hover:bg-red-500/10 transition-all"
+              data-type="${fav.type}"
+              data-slug="${fav.slug}"
+              title="Remover"
+              aria-label="Remover dos favoritos"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            </button>
+          </div>
+        </div>
+      `
+      )
+      .join("");
+
+    // Attach remove handlers
+    grid.querySelectorAll<HTMLButtonElement>(".remove-fav").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const type = btn.getAttribute("data-type") || "";
+        const slug = btn.getAttribute("data-slug") || "";
+        removeFavorite(type, slug);
+        render(); // re-render
+      });
+    });
+  }
+
+  // Initial render
+  document.addEventListener("DOMContentLoaded", render);
+</script>

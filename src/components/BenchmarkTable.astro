@@ -1,0 +1,52 @@
+---
+import type { BenchmarkModel } from '@/data/comparisons/types';
+
+interface Props {
+  models: BenchmarkModel[];
+}
+
+const { models } = Astro.props;
+
+function renderStars(count: number): string {
+  return '★'.repeat(count) + '☆'.repeat(5 - count);
+}
+---
+
+<div class="overflow-hidden rounded-lg border border-border">
+  <table class="w-full">
+    <thead>
+      <tr class="border-b border-border bg-muted/50">
+        <th class="px-4 py-3 text-left text-sm font-semibold text-foreground">Modelo</th>
+        <th class="px-4 py-3 text-center text-sm font-semibold text-foreground">Velocidade</th>
+        <th class="px-4 py-3 text-center text-sm font-semibold text-foreground">Custo</th>
+        <th class="px-4 py-3 text-center text-sm font-semibold text-foreground">Qualidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      {models.map((model, i) => (
+        <tr class={i < models.length - 1 ? 'border-b border-border' : ''}>
+          <td class="px-4 py-3 text-sm font-medium text-foreground">{model.name}</td>
+          <td class="px-4 py-3 text-center text-sm">
+            <span class="text-yellow-500" title={`${model.speed}/5`}>
+              {renderStars(model.speed)}
+            </span>
+          </td>
+          <td class="px-4 py-3 text-center text-sm font-medium">
+            <span class:list={{
+              'text-emerald-500': model.cost === '$',
+              'text-amber-500': model.cost === '$$',
+              'text-red-500': model.cost === '$$$',
+            }}>
+              {model.cost}
+            </span>
+          </td>
+          <td class="px-4 py-3 text-center text-sm">
+            <span class="text-yellow-500" title={`${model.quality}/5`}>
+              {renderStars(model.quality)}
+            </span>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

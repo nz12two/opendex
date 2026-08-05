@@ -1,0 +1,280 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import {
+  BookOpen,
+  Download,
+  Settings,
+  HelpCircle,
+  BookMarked,
+  Code,
+  Box,
+  Workflow,
+  Compass,
+  Star,
+  Play,
+  BarChart3,
+  FileText,
+  Palette,
+  Lightbulb,
+  Newspaper,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
+
+interface SectionCard {
+  title: string;
+  description: string;
+  href: string;
+  icon: any;
+}
+
+interface Section {
+  title: string;
+  description: string;
+  icon: any;
+  cards: SectionCard[];
+}
+
+const sections: Section[] = [
+  {
+    title: "Guia Inicial",
+    description: "Primeiros passos para começar com OpenCode — instalação, configuração e fundamentos.",
+    icon: BookOpen,
+    cards: [
+      {
+        title: "Documentação",
+        description: "Guia completo de todos os recursos, comandos e funcionalidades do OpenCode.",
+        href: "/opendex/docs/",
+        icon: BookOpen,
+      },
+      {
+        title: "Instalação",
+        description: "Aprenda a instalar o OpenCode no seu sistema Windows, macOS ou Linux.",
+        href: "/opendex/docs/instalacao/",
+        icon: Download,
+      },
+      {
+        title: "Configuração",
+        description: "Personalize o OpenCode com temas, modelos, agentes e plugins.",
+        href: "/opendex/configuracao/",
+        icon: Settings,
+      },
+      {
+        title: "FAQ",
+        description: "Respostas rápidas para as perguntas mais comuns sobre o OpenCode.",
+        href: "/opendex/faq/",
+        icon: HelpCircle,
+      },
+    ],
+  },
+  {
+    title: "Referência",
+    description: "Materiais de consulta rápida para dominar conceitos e APIs do OpenCode.",
+    icon: BookMarked,
+    cards: [
+      {
+        title: "API",
+        description: "Documentação técnica da API do OpenCode para integrações e automações.",
+        href: "/opendex/docs/api/",
+        icon: Code,
+      },
+      {
+        title: "Modelos",
+        description: "Catálogo comparativo de modelos de linguagem com specs, preços e benchmarks.",
+        href: "/opendex/modelos/",
+        icon: Box,
+      },
+      {
+        title: "Workflows",
+        description: "Workflows prontos para desenvolvimento web, refatoração, deploy e mais.",
+        href: "/opendex/workflows/",
+        icon: Workflow,
+      },
+    ],
+  },
+  {
+    title: "Explorar",
+    description: "Descubra ferramentas interativas para encontrar o setup ideal para seu projeto.",
+    icon: Compass,
+    cards: [
+      {
+        title: "Descobrir Setup Ideal",
+        description: "Questionário interativo que recomenda a configuração perfeita para você.",
+        href: "/opendex/descobrir/",
+        icon: Compass,
+      },
+      {
+        title: "Recomendação Inteligente",
+        description: "Algoritmo que analisa seu perfil e sugere as melhores combinações.",
+        href: "/opendex/recomendacao/",
+        icon: Star,
+      },
+      {
+        title: "Playground",
+        description: "Ambiente interativo para testar agentes, prompts e fluxos de trabalho.",
+        href: "/opendex/playground/",
+        icon: Play,
+      },
+      {
+        title: "Comparações",
+        description: "Compare modelos lado a lado: desempenho, preço, contexto e recursos.",
+        href: "/opendex/comparacoes/",
+        icon: BarChart3,
+      },
+    ],
+  },
+  {
+    title: "Comunidade & Conteúdo",
+    description: "Conteúdos criados pela comunidade, cases reais e novidades do ecossistema.",
+    icon: FileText,
+    cards: [
+      {
+        title: "Blog",
+        description: "Artigos, tutoriais e lançamentos — fique por dentro de tudo do OpenCode.",
+        href: "/opendex/blog/",
+        icon: FileText,
+      },
+      {
+        title: "Showcase",
+        description: "Projetos reais criados com OpenCode — inspire-se com cases da comunidade.",
+        href: "/opendex/showcase/",
+        icon: Palette,
+      },
+      {
+        title: "Curiosidades",
+        description: "Fatos interessantes e descobertas surpreendentes sobre IA e OpenCode.",
+        href: "/opendex/curiosidades/",
+        icon: Lightbulb,
+      },
+      {
+        title: "News",
+        description: "Últimas novidades, atualizações e roadmap do ecossistema OpenCode.",
+        href: "/opendex/news/",
+        icon: Newspaper,
+      },
+    ],
+  },
+];
+
+const totalLinks = sections.reduce((acc, s) => acc + s.cards.length, 0);
+---
+
+<MainLayout
+  title="Aprenda — OpenDex"
+  description="Do básico ao avançado — tutoriais, guias e referências para dominar o OpenCode."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <BookOpen class="h-4 w-4 text-primary" />
+        <span>Aprenda OpenCode</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+        Aprenda <span class="text-gradient">OpenCode</span>
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+        Do básico ao avançado — tutoriais, guias e referências para dominar o ecossistema.
+      </p>
+
+      <div class="mx-auto mt-8 flex items-center justify-center gap-6">
+        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+          <BookOpen class="h-4 w-4 text-primary" />
+          <span><strong class="text-foreground">{sections.length}</strong> categorias</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+          <Sparkles class="h-4 w-4 text-primary" />
+          <span><strong class="text-foreground">{totalLinks}</strong> recursos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <div class="container mx-auto max-w-6xl px-4 py-12 md:py-16">
+    {sections.map((section, sIndex) => (
+      <section class="mb-14 last:mb-0">
+        <!-- Section Header -->
+        <div class="mb-8">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 ring-1 ring-primary/20">
+              <section.icon class="h-5 w-5 text-primary" />
+            </div>
+            <h2 class="text-2xl font-bold tracking-tight">{section.title}</h2>
+          </div>
+          <p class="ml-[3.25rem] text-muted-foreground max-w-2xl">
+            {section.description}
+          </p>
+        </div>
+
+        <!-- Card Grid -->
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {section.cards.map((card, cIndex) => (
+            <a
+              href={card.href}
+              class="group relative flex flex-col rounded-xl border border-border/50 bg-card p-5 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden animate-in"
+              class:list={[`stagger-${Math.min(cIndex + sIndex * 4 + 1, 8)}`]}
+            >
+              <!-- Gradient background on hover -->
+              <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+              <div class="relative flex flex-col h-full">
+                <!-- Icon -->
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 shrink-0 ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all mb-3">
+                  <card.icon class="h-5 w-5 text-primary" />
+                </div>
+
+                <!-- Content -->
+                <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors text-base">
+                  {card.title}
+                </h3>
+                <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed flex-1">
+                  {card.description}
+                </p>
+
+                <!-- Arrow -->
+                <div class="mt-3 flex items-center gap-1 text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">
+                  <span>Acessar</span>
+                  <ArrowRight class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <!-- CTA Section -->
+  <section class="border-t border-border/40 px-4 py-14">
+    <div class="container mx-auto max-w-6xl">
+      <div class="rounded-xl border border-border/50 bg-gradient-card p-8 md:p-10 text-center">
+        <div class="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-4">
+          <Sparkles class="h-6 w-6 text-primary" />
+        </div>
+        <h2 class="text-2xl font-bold tracking-tight">Ainda tem dúvidas?</h2>
+        <p class="mx-auto mt-3 max-w-lg text-muted-foreground">
+          Explore a documentação completa ou pergunte na comunidade — estamos aqui para ajudar.
+        </p>
+        <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="/opendex/docs/"
+            class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
+          >
+            <BookOpen class="h-4 w-4" />
+            Ver Documentação
+          </a>
+          <a
+            href="/opendex/faq/"
+            class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+          >
+            <HelpCircle class="h-4 w-4" />
+            FAQ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

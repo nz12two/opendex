@@ -1,0 +1,94 @@
+---
+title: FAQ — Perguntas Frequentes
+description: Respostas para as perguntas mais comuns sobre OpenCode e OpenDex.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+
+## Geral
+
+### O que é OpenCode?
+
+<Callout type="note">
+  OpenCode é uma plataforma de desenvolvimento assistida por IA que utiliza múltiplos agentes especializados para automatizar tarefas de desenvolvimento de software.
+</Callout>
+
+### O que é OpenDex?
+
+<Callout type="note">
+  OpenDex é o catálogo oficial do ecossistema OpenCode, onde você encontra scripts, agentes, plugins, MCPs e documentação.
+</Callout>
+
+### OpenCode é gratuito?
+
+<Callout type="note">
+  OpenCode é open source e gratuito para uso. Você só paga pelos tokens dos modelos de linguagem que utilizar.
+</Callout>
+
+## Instalação
+
+### Preciso de GPU para rodar o OpenCode?
+
+<Callout type="note">
+  Não. O OpenCode funciona como um cliente que se conecta a APIs de modelos de linguagem. GPUs são necessárias apenas se você quiser rodar modelos localmente com Ollama.
+</Callout>
+
+### O OpenCode funciona no Windows?
+
+<Callout type="note">
+  Sim. O OpenCode é compatível com Windows (PowerShell 7+), macOS e Linux.
+</Callout>
+
+## Agentes
+
+### Quantos agentes posso ter?
+
+<Callout type="note">
+  Não há limite. Você pode criar quantos agentes precisar, cada um especializado em uma tarefa diferente.
+</Callout>
+
+### Posso usar modelos diferentes para cada agente?
+
+<Callout type="note">
+  Sim. Cada agente pode ser configurado com um provedor e modelo diferente.
+</Callout>
+
+## MCP
+
+### O que significa MCP?
+
+<Callout type="note">
+  Model Context Protocol — um protocolo aberto que permite que modelos de linguagem acessem ferramentas e recursos externos.
+</Callout>
+
+### Preciso criar meus próprios MCPs?
+
+<Callout type="note">
+  Não necessariamente. O OpenDex oferece vários MCPs prontos para uso. Você pode criar os seus se precisar de funcionalidades específicas.
+</Callout>
+
+## Solução de problemas
+
+<Callout type="caution">
+  <strong>Solução de Problemas</strong>
+</Callout>
+
+### O comando `opencode` não é encontrado
+
+<Callout type="note">
+  Verifique se o Node.js está instalado e se o diretório global do npm está no PATH:
+
+  ```bash
+  npm list -g --depth=0
+  ```
+</Callout>
+
+### Erro de conexão com a API
+
+<Callout type="note">
+  Verifique suas chaves de API e a conectividade de rede:
+
+  ```bash
+  opencode doctor
+  ```
+</Callout>

@@ -1,0 +1,100 @@
+---
+title: Instalação
+description: Guia completo de instalação do OpenCode e configuração do ambiente.
+---
+
+import Callout from '../../../components/ui/Callout.astro';
+import Steps from '../../../components/ui/Steps.astro';
+import FileTree from '../../../components/ui/FileTree.astro';
+
+## Requisitos
+
+<Callout type="tip">
+Antes de instalar o OpenCode, certifique-se de ter:
+
+- **Node.js** 18.x ou superior
+- **npm** 9.x ou superior (ou yarn/pnpm)
+- **Git** 2.30+ (opcional, mas recomendado)
+- Um terminal compatível (PowerShell 7+, bash, zsh)
+</Callout>
+
+## Instalação
+
+<Steps>
+<li>
+
+### npm
+
+```bash
+npm install -g opencode
+```
+
+</li>
+<li>
+
+### Verificar versão
+
+Após a instalação, verifique se tudo funcionou:
+
+```bash
+opencode --version
+```
+
+</li>
+<li>
+
+### yarn/pnpm alternativas
+
+```bash
+yarn global add opencode
+```
+
+```bash
+pnpm add -g opencode
+```
+
+</li>
+</Steps>
+
+## Configuração inicial
+
+Após instalar, execute o comando de inicialização:
+
+```bash
+opencode init
+```
+
+Isso criará o diretório `.opencode/` no seu projeto com a estrutura padrão:
+
+<FileTree structure={[
+  {name: '.opencode', type: 'directory', children: [
+    {name: 'state', type: 'directory', children: [
+      {name: 'tasks', type: 'directory', children: []},
+      {name: 'checkpoints', type: 'directory', children: []}
+    ]},
+    {name: 'config.json', type: 'file'},
+    {name: 'prompts', type: 'directory', children: []}
+  ]}
+]} />
+
+## Verificação da instalação
+
+<Callout type="note">
+Para confirmar que tudo está funcionando:
+
+```bash
+opencode doctor
+```
+
+Este comando verifica:
+- Versão do Node.js
+- Permissões de diretório
+- Configurações de rede
+- Dependências opcionais
+</Callout>
+
+## Próximos passos
+
+<Callout type="note">
+Agora que o OpenCode está instalado, veja o guia de [Configuração](/opendex/docs/configuracao) para personalizar seu ambiente.
+</Callout>

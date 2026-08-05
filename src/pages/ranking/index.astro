@@ -1,0 +1,49 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import RankingList from "../../components/ranking/RankingList";
+import { Trophy } from "lucide-react";
+
+// Import real data
+import ecosystemRepos from "../../data/github/ecosystem-repos.json";
+
+// Map data to the format expected by RankingList
+const rankingItems = ecosystemRepos.map((repo: any) => ({
+  full_name: repo.full_name,
+  description: repo.description || "",
+  stargazers_count: repo.stargazers_count ?? 0,
+  topics: repo.topics ?? [],
+  html_url: repo.html_url,
+  pushed_at: repo.pushed_at ?? null,
+  score: repo.score ?? 50,
+  source: "github",
+}));
+
+// Sort by score descending initially
+rankingItems.sort((a: any, b: any) => (b.score ?? 0) - (a.score ?? 0));
+---
+
+<MainLayout
+  title="Ranking — OpenDex"
+  description="Ranking de relevância do ecossistema OpenCode baseado em estrelas, atividade e match."
+>
+  <section class="px-4 pt-16 pb-12 border-b border-border/40">
+    <div class="container mx-auto max-w-6xl text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground mb-6">
+        <Trophy class="h-4 w-4 text-yellow-500" />
+        <span>Ranking</span>
+      </div>
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
+        Ranking do Ecossistema
+      </h1>
+      <p class="mx-auto mt-2 max-w-2xl text-lg text-muted-foreground">
+        Projetos, plugins, agentes e ferramentas ordenados por relevância — estrelas, atividade e match com OpenCode.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-6xl">
+      <RankingList items={rankingItems} client:load />
+    </div>
+  </section>
+</MainLayout>

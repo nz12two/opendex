@@ -1,0 +1,64 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import ContributorCard from "../../components/ContributorCard.astro";
+import { contributors, getContributorsByContributions } from "../../data/community";
+import { Users, GitCommit } from "lucide-react";
+
+const sortedContributors = getContributorsByContributions();
+const totalContributions = sortedContributors.reduce((acc, c) => acc + c.contributions, 0);
+---
+
+<MainLayout
+  title="Contribuidores — OpenDex"
+  description="Contribuidores verificados do ecossistema OpenCode."
+>
+  <Breadcrumb items={[
+    { label: "Comunidade", href: "/opendex/community/" },
+    { label: "Contribuidores" },
+  ]} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-12 pb-10 md:pt-16 md:pb-12">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-6xl text-center relative">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+        Contribuidores
+      </h1>
+      <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
+        Contribuidores verificados do ecossistema OpenCode.
+      </p>
+      <div class="mt-4 flex items-center justify-center gap-4 text-sm text-muted-foreground">
+        <span class="flex items-center gap-1.5">
+          <Users class="h-4 w-4 text-primary" />
+          {sortedContributors.length} contribuidores verificados
+        </span>
+        <span class="flex items-center gap-1.5">
+          <GitCommit class="h-4 w-4 text-primary" />
+          {totalContributions} contribuições verificadas
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contributors Grid -->
+  <section class="px-4 py-10">
+    <div class="container mx-auto max-w-6xl">
+      {sortedContributors.length > 0 ? (
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {sortedContributors.map((contributor) => (
+            <ContributorCard contributor={contributor} />
+          ))}
+        </div>
+      ) : (
+        <div class="mx-auto max-w-2xl rounded-lg border border-border/50 bg-card p-10 text-center">
+          <p class="text-sm font-medium text-card-foreground">Dados em breve</p>
+          <p class="mt-1 text-sm text-muted-foreground">
+            A lista é gerada pela API do GitHub do repositório oficial (anomalyco/opencode).
+            Nenhum dado não verificado é exibido.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,192 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ComparisonGrid from "../../../components/ComparisonGrid.astro";
+import { ArrowLeft, FileText, Zap, DollarSign, AlertTriangle, Check } from "lucide-react";
+---
+
+<MainLayout title="Janela de Contexto — Comparações — OpenDex" description="Guia completo sobre janela de contexto em LLMs: como funciona, quando usar, impacto no custo e performance.">
+  <!-- Breadcrumb -->
+  <div class="border-b border-border/40 px-4 py-3">
+    <div class="container mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-sm text-muted-foreground">
+        <a href="/opendex/comparacoes/" class="hover:text-foreground transition-colors">Comparações</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="text-foreground font-medium">Janela de Contexto</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-border/40 px-4 pt-10 pb-12 md:pt-16 md:pb-16">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+    <div class="container mx-auto max-w-4xl relative">
+      <a href="/opendex/comparacoes/" class="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
+        <ArrowLeft class="h-4 w-4" />
+        Voltar para Comparações
+      </a>
+
+      <div class="flex items-center gap-4 mb-4">
+        <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <FileText class="h-7 w-7 text-primary" />
+        </div>
+        <div>
+          <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Janela de Contexto
+          </h1>
+        </div>
+      </div>
+      <p class="mt-2 text-lg text-muted-foreground max-w-2xl">
+        Entenda como funciona a janela de contexto dos LLMs, seu impacto no custo, performance e qualidade das respostas. Guia completo para escolher o modelo ideal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container mx-auto max-w-4xl px-4 py-10 space-y-12">
+    <!-- O que é -->
+    <section class="rounded-lg border border-border bg-card p-6">
+      <h2 class="text-xl font-bold mb-3">O que é Janela de Contexto?</h2>
+      <p class="text-muted-foreground leading-relaxed">
+        A janela de contexto é a quantidade máxima de tokens (palavras, partes de palavras) que um modelo de IA pode processar de uma vez. Isso inclui todo o prompt, histórico de conversa e o código/arquivos enviados. Pense nela como a "memória de trabalho" do modelo.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2 class="text-xl font-bold mb-6">Comparação por Tamanho de Contexto</h2>
+      <ComparisonGrid
+        headers={["32K-64K", "128K-200K", "1M-2M"]}
+        rows={[
+          { feature: "Modelos", values: [
+            { label: "32K", value: "Mistral, Llama 4, Ollama (local)" },
+            { label: "128K", value: "GPT-4o Mini, DeepSeek, Qwen, GLM" },
+            { label: "1M+", value: "Gemini Flash/Pro, GPT-5.5" }
+          ]},
+          { feature: "Equivalente em texto", values: [
+            { label: "32K", value: "~24 páginas" },
+            { label: "128K", value: "~96 páginas" },
+            { label: "1M+", value: "~750+ páginas" }
+          ]},
+          { feature: "Custo relativo", values: [
+            { label: "32K", value: "$" },
+            { label: "128K", value: "$$" },
+            { label: "1M+", value: "$$$$" }
+          ]},
+          { feature: "Velocidade", values: [
+            { label: "32K", value: "Muito rápida" },
+            { label: "128K", value: "Rápida" },
+            { label: "1M+", value: "Moderada" }
+          ]},
+          { feature: "Ideal para", values: [
+            { label: "32K", value: "Chats, tarefas simples" },
+            { label: "128K", value: "Coding, análise de documentos" },
+            { label: "1M+", value: "Codebases grandes, livros inteiros" }
+          ]},
+        ]}
+      />
+    </section>
+
+    <!-- Impacto -->
+    <section>
+      <h2 class="text-xl font-bold mb-6">Impacto do Contexto no Custo</h2>
+      <div class="rounded-lg border border-border bg-card p-6">
+        <p class="text-muted-foreground mb-4">
+          O custo de uma chamada de API escala com o número de tokens de entrada. Contextos maiores significam custos mais altos:
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between rounded-md bg-muted/50 p-3 text-sm">
+            <span class="text-muted-foreground">Prompt curto (1K tokens)</span>
+            <span class="text-foreground font-medium">~$0.001</span>
+          </div>
+          <div class="flex items-center justify-between rounded-md bg-muted/50 p-3 text-sm">
+            <span class="text-muted-foreground">Documento médio (50K tokens)</span>
+            <span class="text-foreground font-medium">~$0.05</span>
+          </div>
+          <div class="flex items-center justify-between rounded-md bg-muted/50 p-3 text-sm">
+            <span class="text-muted-foreground">Codebase grande (500K tokens)</span>
+            <span class="text-foreground font-medium">~$0.50 - $2.50</span>
+          </div>
+          <div class="flex items-center justify-between rounded-md bg-muted/50 p-3 text-sm">
+            <span class="text-muted-foreground">Contexto máximo (2M tokens)</span>
+            <span class="text-foreground font-medium">~$2.00 - $10.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quando usar -->
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-6">
+        <h3 class="font-semibold mb-4 flex items-center gap-2">
+          <Check class="h-5 w-5 text-emerald-500" />
+          Quando usar contexto GRANDE
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Analisar um projeto inteiro de código de uma vez</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Processar documentos muito extensos (livros, manuais)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Conversas longas sem perder o fio da meada</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+            <span class="text-sm text-muted-foreground">Pesquisa acadêmica com múltiplos papers</span>
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-amber-500/20 bg-amber-500/5 p-6">
+        <h3 class="font-semibold mb-4 flex items-center gap-2">
+          <AlertTriangle class="h-5 w-5 text-amber-500" />
+          Cuidados com contexto GRANDE
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Custo muito mais alto por chamada</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Latência maior (processar mais tokens leva tempo)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">"Lost in the middle" — modelo pode ignorar informações no meio</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+            <span class="text-sm text-muted-foreground">Nem sempre mais contexto = melhor resultado</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Estratégia -->
+    <section class="rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
+      <h2 class="text-xl font-bold mb-3">Estratégia Recomendada</h2>
+      <ol class="space-y-3 text-muted-foreground">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-sm font-bold text-primary">1</span>
+          <span><strong class="text-foreground">Comece pequeno:</strong> Use 32K-128K para a maioria das tarefas. É mais rápido e barato.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-sm font-bold text-primary">2</span>
+          <span><strong class="text-foreground">Escalone quando necessário:</strong> Só use 1M+ quando realmente precisar de todo o contexto.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-sm font-bold text-primary">3</span>
+          <span><strong class="text-foreground">Use RAG:</strong> Em vez de mandar tudo no contexto, use Retrieval-Augmented Generation para buscar apenas o relevante.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-sm font-bold text-primary">4</span>
+          <span><strong class="text-foreground">Teste ambos:</strong> Compare o resultado de um modelo com contexto grande vs um pipeline RAG com contexto médio.</span>
+        </li>
+      </ol>
+    </section>
+  </div>
+</MainLayout>

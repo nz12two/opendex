@@ -1,0 +1,153 @@
+---
+import { mainNavigation } from '@/data/navigation';
+import ThemeToggle from './ThemeToggle';
+import { X, Menu, ChevronDown } from 'lucide-react';
+
+const navItems = mainNavigation;
+---
+
+<header class="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40">
+  <div class="container flex h-16 items-center justify-between">
+    <!-- Logo -->
+    <a href="/opendex/" class="flex items-center gap-2 font-bold text-xl group">
+      <span class="bg-primary text-primary-foreground rounded-lg p-1.5 text-sm transition-transform group-hover:scale-105">OD</span>
+      <span class="hidden sm:inline-block bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">OpenDex</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-6">
+      {
+        navItems.slice(0, 8).map((item) => (
+          <a
+            href={item.href}
+            class="text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-foreground hover:brightness-110"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+
+      <!-- More Dropdown -->
+      <div class="relative" id="more-dropdown">
+        <button
+          id="more-button"
+          class="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-foreground hover:brightness-110"
+        >
+          Mais
+          <ChevronDown class="h-4 w-4 transition-transform duration-200" id="more-chevron" />
+        </button>
+        <div
+          id="more-menu"
+          class="hidden absolute right-0 top-full mt-2 w-48 rounded-lg border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg"
+        >
+          <div class="flex flex-col gap-1 p-2">
+            {
+              navItems.slice(8).map((item) => (
+                <a
+                  href={item.href}
+                  class="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
+                >
+                  {item.label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Theme Toggle -->
+      <ThemeToggle client:idle />
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <Menu id="menu-icon-open" class="h-5 w-5" />
+        <X id="menu-icon-close" class="h-5 w-5 hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="md:hidden hidden border-t border-border/40 bg-background/95 backdrop-blur-xl">
+    <nav class="container flex flex-col gap-1 px-4 py-4">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("mobile-menu-toggle")!;
+  const menu = document.getElementById("mobile-menu")!;
+  const iconOpen = document.getElementById("menu-icon-open")!;
+  const iconClose = document.getElementById("menu-icon-close")!;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("hidden");
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    iconOpen.classList.toggle("hidden");
+    iconClose.classList.toggle("hidden");
+  });
+
+  // Close on link click
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      toggle.setAttribute("aria-expanded", "false");
+      iconOpen.classList.remove("hidden");
+      iconClose.classList.add("hidden");
+    });
+  });
+
+  // More dropdown
+  const moreButton = document.getElementById("more-button");
+  const moreMenu = document.getElementById("more-menu");
+  const moreChevron = document.getElementById("more-chevron");
+
+  if (moreButton && moreMenu) {
+    moreButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !moreMenu.classList.contains("hidden");
+      moreMenu.classList.toggle("hidden");
+      if (moreChevron) {
+        moreChevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      }
+    });
+
+    // Close on link click inside dropdown
+    moreMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        moreMenu.classList.add("hidden");
+        if (moreChevron) {
+          moreChevron.style.transform = "rotate(0deg)";
+        }
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+      const dropdown = document.getElementById("more-dropdown");
+      if (dropdown && !dropdown.contains(e.target)) {
+        moreMenu.classList.add("hidden");
+        if (moreChevron) {
+          moreChevron.style.transform = "rotate(0deg)";
+        }
+      }
+    });
+  }
+</script>

@@ -1,0 +1,17 @@
+---
+export interface Props {
+  keys: string[];  // ex: ['Ctrl', 'K']
+  size?: 'sm' | 'md';
+}
+
+const { keys, size = 'md' } = Astro.props;
+const sizeClasses = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-1';
+---
+<kbd class={`inline-flex items-center gap-0.5 rounded-md border border-border bg-muted font-mono font-medium text-muted-foreground shadow-sm ${sizeClasses}`}>
+  {keys.map((key, i) => (
+    <>
+      {i > 0 && <span class="text-xs text-muted-foreground/50">+</span>}
+      <span>{key}</span>
+    </>
+  ))}
+</kbd>

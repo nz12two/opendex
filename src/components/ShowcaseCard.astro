@@ -1,0 +1,86 @@
+---
+import type { ShowcaseProject } from '@/data/showcase/types';
+import TagBadge from './TagBadge.astro';
+import { FolderKanban, User, ArrowRight, Star, GitFork } from 'lucide-react';
+
+interface Props {
+  project: ShowcaseProject;
+}
+
+const { project } = Astro.props;
+
+function formatCount(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, '')}K`;
+  return String(n);
+}
+---
+
+<a
+  href={`/opendex/showcase/${project.slug}/`}
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover"
+>
+  <!-- Featured Badge -->
+  {project.featured && (
+    <div class="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-yellow-500/10 px-2 py-0.5 text-[10px] font-medium text-yellow-500 border border-yellow-500/20">
+      <Star class="h-3 w-3 fill-yellow-500" />
+      Destaque
+    </div>
+  )}
+
+  <!-- Header -->
+  <div class="flex items-start gap-4">
+    {project.avatar ? (
+      <img
+        src={project.avatar}
+        alt={`Avatar de ${project.author}`}
+        class="h-12 w-12 rounded-lg ring-1 ring-border shrink-0"
+      />
+    ) : (
+      <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
+        <FolderKanban class="h-6 w-6 text-primary" />
+      </div>
+    )}
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+        {project.name}
+      </h3>
+      <p class="mt-1 text-sm text-muted-foreground line-clamp-2">
+        {project.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- Author -->
+  <div class="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
+    <User class="h-3 w-3" />
+    <span>{project.author}</span>
+    <span class="mx-1.5">·</span>
+    <span class="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium">{project.type}</span>
+  </div>
+
+  <!-- Stats -->
+  <div class="mt-3 flex items-center gap-3 text-xs text-muted-foreground">
+    <span class="inline-flex items-center gap-1">
+      <Star class="h-3.5 w-3.5 fill-yellow-500 text-yellow-500" />
+      {formatCount(project.stars)}
+    </span>
+    <span class="inline-flex items-center gap-1">
+      <GitFork class="h-3.5 w-3.5" />
+      {formatCount(project.forks)}
+    </span>
+    {project.language && (
+      <span class="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium">{project.language}</span>
+    )}
+  </div>
+
+  <!-- Tags -->
+  <div class="mt-4 flex items-center justify-between">
+    <div class="flex flex-wrap gap-1.5">
+      {project.tags.slice(0, 3).map((tag) => (
+        <TagBadge tag={tag} />
+      ))}
+    </div>
+    <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+  </div>
+</a>

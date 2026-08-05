@@ -1,0 +1,42 @@
+---
+import { List } from 'lucide-react';
+
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter((h) => h.depth <= 3);
+---
+
+<nav class="space-y-4">
+  <h4 class="flex items-center gap-2 text-sm font-semibold">
+    <List class="h-4 w-4" />
+    Nesta página
+  </h4>
+
+  {filtered.length > 0 ? (
+    <ul class="space-y-1">
+      {filtered.map((heading) => (
+        <li>
+          <a
+            href={`#${heading.slug}`}
+            class={`block text-xs transition-colors hover:text-foreground ${
+              heading.depth === 3 ? 'pl-4 text-muted-foreground/70' : 'text-muted-foreground'
+            }`}
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="text-xs text-muted-foreground">Nenhum heading encontrado</p>
+  )}
+</nav>
+
+<style>
+  a {
+    scroll-margin-top: 6rem;
+  }
+</style>

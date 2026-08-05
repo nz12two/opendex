@@ -1,0 +1,60 @@
+---
+import readingTime from 'reading-time';
+import { CalendarDays, Clock, ArrowRight } from 'lucide-react';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const readingStats = readingTime(post.body ?? '');
+---
+
+<a
+  href={`/opendex/blog/${post.id.replace(/^blog\//, "")}/`}
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/50 hover:shadow-md hover:shadow-primary/5"
+>
+  <!-- Tags -->
+  {data.categories.length > 0 && (
+    <div class="flex flex-wrap gap-1.5 mb-3">
+      {data.categories.slice(0, 2).map((cat) => (
+        <span class="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">
+          {cat}
+        </span>
+      ))}
+    </div>
+  )}
+
+  <!-- Title -->
+  <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors line-clamp-2">
+    {data.title}
+  </h3>
+
+  <!-- Description -->
+  <p class="mt-2 flex-1 text-sm text-muted-foreground line-clamp-3">
+    {data.description}
+  </p>
+
+  <!-- Meta -->
+  <div class="mt-4 flex items-center justify-between">
+    <div class="flex items-center gap-3 text-xs text-muted-foreground">
+      <span class="inline-flex items-center gap-1">
+        <CalendarDays class="h-3.5 w-3.5" />
+        {data.pubDate.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })}
+      </span>
+      <span class="inline-flex items-center gap-1">
+        <Clock class="h-3.5 w-3.5" />
+        {Math.max(1, Math.round(readingStats.minutes))} min
+      </span>
+      {data.tags.length > 0 && (
+        <span class="inline-flex items-center gap-1">
+          <Clock class="h-3.5 w-3.5" />
+          {data.tags.slice(0, 2).join(', ')}
+        </span>
+      )}
+    </div>
+    <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+  </div>
+</a>
