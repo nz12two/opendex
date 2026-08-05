@@ -7,7 +7,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://opencode-community.github.io/opendex',
+  site: 'https://na12two.github.io/opendex',
   base: '/opendex',
   trailingSlash: 'ignore',
   integrations: [
@@ -20,7 +20,7 @@ export default defineConfig({
       description: 'Documentação do ecossistema OpenCode',
       favicon: '/favicon.ico',
       social: [
-        { label: 'GitHub', href: 'https://github.com/opencode-community/opendex', icon: 'github' },
+        { label: 'GitHub', href: 'https://github.com/na12two/opendex', icon: 'github' },
       ],
       sidebar: [
         { label: 'Guia de Início Rápido', slug: 'docs/quickstart' },

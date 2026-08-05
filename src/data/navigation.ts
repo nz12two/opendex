@@ -35,7 +35,7 @@ export interface FooterColumn {
 export const siteConfig = {
   name: 'OpenDex',
   description: 'Ecossistema OpenCode — descubra scripts, agentes, plugins e ferramentas.',
-  url: 'https://opencode-community.github.io/opendex',  footerColumns: [
+  url: 'https://na12two.github.io/opendex',  footerColumns: [
     {
       title: 'Produto',
       links: [
@@ -49,7 +49,7 @@ export const siteConfig = {
       links: [
         { label: 'Discord', href: 'https://discord.gg/opencode' },
         { label: 'GitHub', href: 'https://github.com/anomalyco/opencode' },
-        { label: 'Twitter', href: 'https://twitter.com/opencode' },
+        { label: 'X', href: 'https://x.com/opencode' },
       ],
     },
     {
@@ -69,7 +69,7 @@ export const siteConfig = {
 // repoId e categoryId são gerados em https://giscus.app — preencher lá antes de habilitar.
 export const giscusConfig = {
   enabled: false, // mude pra true quando o dono configurar no giscus.app
-  repo: 'opencode-community/opendex',
+  repo: 'na12two/opendex',
   repoId: '',  // preencher via https://giscus.app
   category: 'General',
   categoryId: '', // preencher via https://giscus.app
