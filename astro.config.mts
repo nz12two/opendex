@@ -1,26 +1,22 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://na12two.github.io/opendex',
+  site: 'https://nz12two.github.io/opendex',
   base: '/opendex',
   trailingSlash: 'ignore',
   integrations: [
     react(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
     starlight({
       title: 'OpenDex',
       description: 'Documentação do ecossistema OpenCode',
       favicon: '/favicon.ico',
       social: [
-        { label: 'GitHub', href: 'https://github.com/na12two/opendex', icon: 'github' },
+        { label: 'GitHub', href: 'https://github.com/nz12two/opendex', icon: 'github' },
       ],
       sidebar: [
         { label: 'Guia de Início Rápido', slug: 'docs/quickstart' },
