@@ -4223,8 +4223,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.00000034"
+      "prompt": "0.00000012",
+      "completion": "0.0000004",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -4241,7 +4242,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -4946,7 +4947,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000002",
-      "completion": "0.0000008"
+      "completion": "0.000000696"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -4961,8 +4962,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 16384,
+      "context_length": 128000,
+      "max_completion_tokens": null,
       "is_moderated": false
     }
   },
@@ -6425,7 +6426,7 @@
     "pricing": {
       "prompt": "0.00000005",
       "completion": "0.0000002",
-      "input_cache_read": "0.00000003"
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -6440,7 +6441,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 228000,
       "is_moderated": false
     },
     "reasoning": {
@@ -6516,8 +6517,8 @@
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000009"
+      "prompt": "0.000000085",
+      "completion": "0.0000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -6532,7 +6533,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": null,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -11012,8 +11013,8 @@
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000002275",
-      "completion": "0.00000091"
+      "prompt": "0.00000012",
+      "completion": "0.00000024"
     },
     "architecture": {
       "modality": "text->text",
@@ -11027,8 +11028,8 @@
       "instruct_type": "qwen3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 8192,
+      "context_length": 40960,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -11569,8 +11570,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -11875,9 +11876,8 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000036",
-      "input_cache_read": "0.0000003"
+      "prompt": "0.00000039",
+      "completion": "0.00000234"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11894,7 +11894,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
