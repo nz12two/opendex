@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000079996",
-      "completion": "0.000000252",
-      "input_cache_read": "0.0000000252"
+      "prompt": "0.000000072",
+      "completion": "0.000000144",
+      "input_cache_read": "0.0000000144"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": null,
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -2138,6 +2138,50 @@
     },
     "reasoning": {
       "mandatory": false
+    }
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-code",
+    "name": "ByteDance Seed: Seed-2.0-Code",
+    "description": "Seed 2.0 Code is a model from ByteDance Seed optimized for agentic coding. It is suited for frontend development, multilingual programming tasks, and coding-agent workflows in tools such as Claude...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000005",
+      "completion": "0.000003",
+      "overrides": [
+        {
+          "min_prompt_tokens": 128000,
+          "prompt": "0.000001",
+          "completion": "0.000006"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
     }
   },
   {
@@ -6105,9 +6149,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000005795",
+      "completion": "0.00000244",
+      "input_cache_read": "0.0000000976"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6762,6 +6806,65 @@
     "reasoning": {
       "mandatory": false,
       "default_enabled": true
+    }
+  },
+  {
+    "id": "nvidia/nemotron-3.5-lightning",
+    "name": "NVIDIA: Nemotron 3.5 Lightning",
+    "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.00000025",
+      "input_cache_read": "0.00000005"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "nvidia/nemotron-3.5-lightning:free",
+    "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+    "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
     }
   },
   {
@@ -13583,9 +13686,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000011"
+      "prompt": "0.0000005",
+      "completion": "0.000002",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -13599,7 +13702,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
+      "context_length": 202752,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -13769,9 +13872,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000014",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.000000952",
+      "completion": "0.000002992",
+      "input_cache_read": "0.0000001768"
     },
     "architecture": {
       "modality": "text->text",
@@ -13800,9 +13903,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000076",
-      "completion": "0.00000242",
-      "input_cache_read": "0.00000014"
+      "prompt": "0.0000004886",
+      "completion": "0.0000015356",
+      "input_cache_read": "0.00000009074"
     },
     "architecture": {
       "modality": "text->text",
@@ -13816,8 +13919,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
