@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000798",
-      "completion": "0.0000001596",
-      "input_cache_read": "0.00000001596"
+      "prompt": "0.000000079996",
+      "completion": "0.000000252",
+      "input_cache_read": "0.0000000252"
     },
     "architecture": {
       "modality": "text->text",
@@ -188,7 +188,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
@@ -317,10 +317,11 @@
       "input_cache_read": "0.00000029"
     },
     "architecture": {
-      "modality": "text+image->text",
+      "modality": "text+image+video->text",
       "input_modalities": [
         "text",
-        "image"
+        "image",
+        "video"
       ],
       "output_modalities": [
         "text"
@@ -2784,9 +2785,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000064432",
-      "completion": "0.00000128864",
-      "input_cache_read": "0.0000000543645"
+      "prompt": "0.00000063168",
+      "completion": "0.00000126336",
+      "input_cache_read": "0.000000053298"
     },
     "architecture": {
       "modality": "text->text",
@@ -6205,10 +6206,11 @@
       "input_cache_read": "0.0000003"
     },
     "architecture": {
-      "modality": "text+image->text",
+      "modality": "text+image+video->text",
       "input_modalities": [
         "text",
-        "image"
+        "image",
+        "video"
       ],
       "output_modalities": [
         "text"
@@ -12559,6 +12561,45 @@
         "high"
       ],
       "default_effort": "xhigh"
+    }
+  },
+  {
+    "id": "sakana/sakana-namazu",
+    "name": "Sakana: Sakana Namazu",
+    "description": "Sakana Namazu is a Japanese-specialized reasoning model from Sakana AI, based on Kimi K2.6 with additional training for Japanese language and business contexts. It is suited for Japanese instruction following,...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "web_search": "0.007",
+      "input_cache_read": "0.00000015"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "none"
+      ],
+      "default_effort": "high"
     }
   },
   {
