@@ -2784,9 +2784,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000435",
-      "completion": "0.00000087",
-      "input_cache_read": "0.000000003625"
+      "prompt": "0.00000064432",
+      "completion": "0.00000128864",
+      "input_cache_read": "0.0000000543645"
     },
     "architecture": {
       "modality": "text->text",
@@ -2801,7 +2801,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5022,6 +5022,44 @@
     }
   },
   {
+    "id": "meta/muse-glimmer-30b",
+    "name": "Meta: Muse Glimmer 30B",
+    "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.00000035",
+      "completion": "0.0000015",
+      "input_cache_read": "0.00000004"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "meta/muse-spark-1.1",
     "name": "Meta: Muse Spark 1.1",
     "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context...",
@@ -6066,9 +6104,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005795",
-      "completion": "0.00000244",
-      "input_cache_read": "0.0000000976"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -11268,7 +11306,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.00000007",
-      "completion": "0.00000027"
+      "completion": "0.00000028"
     },
     "architecture": {
       "modality": "text->text",
@@ -11282,8 +11320,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 160000,
-      "max_completion_tokens": 32768,
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     }
   },
@@ -11540,8 +11578,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 32768,
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -11846,8 +11884,9 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000039",
-      "completion": "0.00000234"
+      "prompt": "0.0000005",
+      "completion": "0.0000036",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11864,7 +11903,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -13059,6 +13098,36 @@
     }
   },
   {
+    "id": "upstage/solar-pro4",
+    "name": "Upstage: Solar Pro 4",
+    "description": "Solar Pro 4 is a large language model from Upstage. It is suited for agentic workflows, office productivity, document-intensive work, and coding.",
+    "context_length": 524288,
+    "pricing": {
+      "prompt": "0.00000003",
+      "completion": "0.00000012",
+      "input_cache_read": "0.000000006"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 524288,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
     "id": "writer/palmyra-x5",
     "name": "Writer: Palmyra X5",
     "description": "Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million...",
@@ -13659,9 +13728,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.000000952",
-      "completion": "0.000002992",
-      "input_cache_read": "0.0000001768"
+      "prompt": "0.0000014",
+      "completion": "0.0000044",
+      "input_cache_read": "0.00000026"
     },
     "architecture": {
       "modality": "text->text",
@@ -13690,9 +13759,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000532",
-      "completion": "0.000001672",
-      "input_cache_read": "0.0000000988"
+      "prompt": "0.00000076",
+      "completion": "0.00000242",
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text->text",
@@ -13706,8 +13775,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
