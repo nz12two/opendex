@@ -2668,8 +2668,8 @@
     "context_length": 163840,
     "pricing": {
       "prompt": "0.00000027",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000135"
+      "completion": "0.00000095",
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -2683,7 +2683,7 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 163840,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -4797,6 +4797,35 @@
     }
   },
   {
+    "id": "liquid/lfm-2.5-2.6b:free",
+    "name": "LiquidAI: LFM2.5-2.6B (free)",
+    "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
     "id": "mancer/weaver",
     "name": "Mancer: Weaver (alpha)",
     "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
@@ -6149,9 +6178,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005795",
-      "completion": "0.00000244",
-      "input_cache_read": "0.0000000976"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -9769,8 +9798,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.000000037",
-      "completion": "0.00000017"
+      "prompt": "0.00000003",
+      "completion": "0.00000017",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -11697,9 +11727,8 @@
     "description": "Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies strong text generation with visual understanding across images and video. The Instruct model targets general vision-language use (VQA, document parsing, chart/table...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000021",
-      "completion": "0.0000019",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000026",
+      "completion": "0.00000104"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -13686,9 +13715,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.000002",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "input_cache_read": "0.00000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -13702,7 +13731,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
+      "context_length": 204800,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -13872,9 +13901,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.000000952",
-      "completion": "0.000002992",
-      "input_cache_read": "0.0000001768"
+      "prompt": "0.0000014",
+      "completion": "0.0000044",
+      "input_cache_read": "0.00000026"
     },
     "architecture": {
       "modality": "text->text",
@@ -13903,9 +13932,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000004886",
-      "completion": "0.0000015356",
-      "input_cache_read": "0.00000009074"
+      "prompt": "0.0000005586",
+      "completion": "0.0000017556",
+      "input_cache_read": "0.00000010374"
     },
     "architecture": {
       "modality": "text->text",
