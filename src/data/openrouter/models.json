@@ -449,13 +449,13 @@
       "prompt": "0.000002",
       "completion": "0.000006",
       "web_search": "0.005",
-      "input_cache_read": "0.0000003",
+      "input_cache_read": "0.0000005",
       "overrides": [
         {
           "min_prompt_tokens": 200000,
           "prompt": "0.000004",
           "completion": "0.000012",
-          "input_cache_read": "0.0000006"
+          "input_cache_read": "0.000001"
         }
       ]
     },
@@ -481,6 +481,7 @@
       "mandatory": true,
       "default_enabled": true,
       "supported_efforts": [
+        "xhigh",
         "high",
         "medium",
         "low"
@@ -2141,6 +2142,37 @@
     }
   },
   {
+    "id": "bytedance-seed/seed-2-1-turbo",
+    "name": "ByteDance Seed: Seed 2.1 Turbo",
+    "description": "Seed 2.1 Turbo is a multimodal model from ByteDance Seed for coding and long-horizon agent workflows. It is suited for end-to-end software delivery, multi-step task execution, and understanding visual and...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000005",
+      "completion": "0.0000025"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
     "id": "bytedance-seed/seed-2.0-code",
     "name": "ByteDance Seed: Seed-2.0-Code",
     "description": "Seed 2.0 Code is a model from ByteDance Seed optimized for agentic coding. It is suited for frontend development, multilingual programming tasks, and coding-agent workflows in tools such as Claude...",
@@ -2789,7 +2821,7 @@
   {
     "id": "deepseek/deepseek-v4-flash-0731",
     "name": "DeepSeek: DeepSeek V4 Flash 0731",
-    "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows.",
+    "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000008",
@@ -2854,6 +2886,42 @@
       "supported_efforts": [
         "xhigh",
         "high"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "deepseek/deepseek-v4-pro-0813",
+    "name": "DeepSeek: DeepSeek V4 Pro 0813",
+    "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000000435",
+      "completion": "0.00000087",
+      "input_cache_read": "0.000000003625"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "DeepSeek",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 384000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
       ],
       "default_effort": "high"
     }
@@ -4797,35 +4865,6 @@
     }
   },
   {
-    "id": "liquid/lfm-2.5-2.6b:free",
-    "name": "LiquidAI: LFM2.5-2.6B (free)",
-    "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "mancer/weaver",
     "name": "Mancer: Weaver (alpha)",
     "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
@@ -6178,9 +6217,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000005795",
+      "completion": "0.00000244",
+      "input_cache_read": "0.0000000976"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6210,8 +6249,8 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000007",
-      "completion": "0.0000035",
+      "prompt": "0.00000067",
+      "completion": "0.0000034",
       "input_cache_read": "0.00000015"
     },
     "architecture": {
@@ -12495,6 +12534,44 @@
     }
   },
   {
+    "id": "qwen/qwen3.8-2.4t-a95b",
+    "name": "Qwen: Qwen3.8 2.4T A95B",
+    "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.000006",
+      "input_cache_read": "0.0000002"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 52429,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "xhigh"
+    }
+  },
+  {
     "id": "qwen/qwen3.8-max",
     "name": "Qwen: Qwen3.8 Max",
     "description": "Qwen3.8 Max is the flagship model in Alibaba's Qwen3.8 series, the general-availability successor to the Qwen3.8 Max Preview. It is a multimodal reasoning model intended for complex reasoning, visual understanding,...",
@@ -13469,7 +13546,7 @@
   {
     "id": "x-ai/grok-4.5",
     "name": "SpaceXAI: Grok 4.5",
-    "description": "Grok 4.5 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM.",
+    "description": "Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM.",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.000002",
@@ -13507,6 +13584,55 @@
       "mandatory": true,
       "default_enabled": true,
       "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "x-ai/grok-4.6",
+    "name": "SpaceXAI: Grok 4.6",
+    "description": "Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM.",
+    "context_length": 500000,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.000006",
+      "web_search": "0.005",
+      "input_cache_read": "0.0000005",
+      "overrides": [
+        {
+          "min_prompt_tokens": 200000,
+          "prompt": "0.000004",
+          "completion": "0.000012",
+          "input_cache_read": "0.000001"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Grok",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 500000,
+      "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
         "high",
         "medium",
         "low"
@@ -13932,9 +14058,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.00000315",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000049",
+      "completion": "0.00000154",
+      "input_cache_read": "0.000000091"
     },
     "architecture": {
       "modality": "text->text",
