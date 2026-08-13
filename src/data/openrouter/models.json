@@ -11710,8 +11710,9 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000011"
+      "prompt": "0.0000001",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text->text",
@@ -11726,7 +11727,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     }
   },
@@ -11751,8 +11752,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -12541,7 +12542,7 @@
     "pricing": {
       "prompt": "0.000002",
       "completion": "0.000006",
-      "input_cache_read": "0.0000002"
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -12555,8 +12556,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 52429,
+      "context_length": 1000000,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -13349,7 +13350,7 @@
   {
     "id": "upstage/solar-pro4",
     "name": "Upstage: Solar Pro 4",
-    "description": "Solar Pro 4 is a large language model from Upstage. It is suited for agentic workflows, office productivity, document-intensive work, and coding.",
+    "description": "Solar Pro 4 is Upstage's cost-efficient large language model, featuring a 524K context window. It is built for long-horizon tasks and agentic workflows, with strong capabilities in office productivity, document-intensive...",
     "context_length": 524288,
     "pricing": {
       "prompt": "0.00000003",
@@ -14057,9 +14058,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.00000315",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000063",
+      "completion": "0.00000198",
+      "input_cache_read": "0.0000000945"
     },
     "architecture": {
       "modality": "text->text",
@@ -14073,8 +14074,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 262144,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
