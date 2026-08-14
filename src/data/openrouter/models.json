@@ -5152,7 +5152,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000002",
-      "completion": "0.000000696"
+      "completion": "0.0000008"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5167,8 +5167,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": null,
+      "context_length": 1048576,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -6341,8 +6341,8 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000067",
-      "completion": "0.0000034",
+      "prompt": "0.00000071",
+      "completion": "0.0000035",
       "input_cache_read": "0.00000015"
     },
     "architecture": {
@@ -12119,9 +12119,9 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000125",
-      "input_cache_read": "0.00000025"
+      "prompt": "0.000000225",
+      "completion": "0.0000018",
+      "input_cache_read": "0.000000225"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12138,7 +12138,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
