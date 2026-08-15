@@ -36,7 +36,8 @@ export default defineConfig({
         { label: 'FAQ', slug: 'docs/faq' },
       ],
       components: {
-        // Herdará componentes padrão do Starlight
+        Header: './src/overrides/Header.astro',
+        Footer: './src/overrides/Footer.astro',
       },
       customCss: [
         './src/styles/starlight-theme.css',

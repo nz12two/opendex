@@ -212,7 +212,7 @@ function NewsCard({ item }: { item: NewsItem }) {
                 </span>
               ))}
               {item.tags.length > 3 && (
-                <span className="text-[10px] text-muted-foreground/60">
+                <span className="text-[10px] text-muted-foreground/70">
                   +{item.tags.length - 3}
                 </span>
               )}

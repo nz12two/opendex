@@ -534,7 +534,7 @@ export default function LiveGitHubStats() {
           </span>
           <span className="text-xs font-medium text-green-500">Ao vivo</span>
         </div>
-        <span className="text-[10px] text-muted-foreground/60">
+        <span className="text-[10px] text-muted-foreground/70">
           Atualizado a cada 5 min
         </span>
       </div>
@@ -695,7 +695,7 @@ export default function LiveGitHubStats() {
                     {repo.open_issues_count}
                   </span>
                 )}
-                <span className="hidden text-[10px] text-muted-foreground/60 shrink-0 sm:block">
+                <span className="hidden text-[10px] text-muted-foreground/70 shrink-0 sm:block">
                   {timeAgo(repo.updated_at)}
                 </span>
                 <ExternalLink className="h-3 w-3 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />

@@ -140,7 +140,7 @@ export default function EcosystemStats() {
           </span>
           <span className="text-xs font-medium text-emerald-500">Estatísticas do ecossistema</span>
         </div>
-        <span className="text-[10px] text-muted-foreground/60">
+        <span className="text-[10px] text-muted-foreground/70">
           Atualizado em {formatDate(pkg.generatedAt || ecosystemStats.generatedAt)}
         </span>
       </div>

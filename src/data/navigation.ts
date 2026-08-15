@@ -9,22 +9,11 @@ export const mainNavigation: NavItem[] = [
   { label: 'Home', href: '/opendex/', icon: 'House' },
   { label: 'Ecossistema', href: '/opendex/ecossistema/', icon: 'Globe' },
   { label: 'Docs', href: '/opendex/docs/', icon: 'BookOpen' },
-  { label: 'Descobrir', href: '/opendex/descobrir/', icon: 'Compass' },
-  { label: 'FAQ', href: '/opendex/faq/', icon: 'HelpCircle' },
   { label: 'Modelos', href: '/opendex/modelos/', icon: 'Brain' },
-  { label: 'Configuração', href: '/opendex/configuracao/', icon: 'Wrench' },
-  { label: 'Vale a Pena?', href: '/opendex/vale-a-pena/', icon: 'Sparkles' },
-  { label: 'Busca', href: '/opendex/busca/', icon: 'Search' },
-  { label: 'Ranking', href: '/opendex/ranking/', icon: 'Trophy' },
-  { label: 'Favoritos', href: '/opendex/favoritos/', icon: 'Heart' },
-  { label: 'Scripts', href: '/opendex/scripts/', icon: 'Code' },
-  { label: 'Plugins', href: '/opendex/plugins/', icon: 'Puzzle' },
-  { label: 'MCPs', href: '/opendex/mcps/', icon: 'Server' },
-  { label: 'Showcase', href: '/opendex/showcase/', icon: 'FolderKanban' },
-  { label: 'Comparações', href: '/opendex/comparacoes/', icon: 'GitCompare' },
+  { label: 'Ferramentas', href: '/opendex/ferramentas/', icon: 'Hammer' },
   { label: 'Playground', href: '/opendex/playground/', icon: 'Workflow' },
   { label: 'Blog', href: '/opendex/blog/', icon: 'Newspaper' },
-  { label: 'Ferramentas', href: '/opendex/ferramentas/', icon: 'Hammer' },
+  { label: 'FAQ', href: '/opendex/faq/', icon: 'HelpCircle' },
 ];
 
 export interface FooterColumn {
@@ -35,7 +24,7 @@ export interface FooterColumn {
 export const siteConfig = {
   name: 'OpenDex',
   description: 'Ecossistema OpenCode — descubra scripts, agentes, plugins e ferramentas.',
-  url: 'https://nz12two.github.io/opendex',  footerColumns: [
+  url: 'https://opencode-community.github.io/opendex',  footerColumns: [
     {
       title: 'Produto',
       links: [

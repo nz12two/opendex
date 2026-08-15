@@ -78,13 +78,13 @@ export async function collect() {
       return [];
     }
 
-    const packages = relevant.map(({ package: pkg }) => ({
+    const packages = relevant.map(({ package: pkg, downloads }) => ({
       name: pkg.name || '',
       version: pkg.version || '',
       description: pkg.description || '',
       keywords: pkg.keywords || [],
       publisher: pkg.publisher ? pkg.publisher.username : null,
-      downloads: pkg.downloads ? pkg.downloads.monthly : 0,
+      downloads: downloads ? downloads.monthly : 0,
       date: pkg.date || null,
       repository: pkg.links ? pkg.links.repository || pkg.links.npm : null,
       npm: pkg.links ? pkg.links.npm : null,

@@ -27,33 +27,39 @@ const navItems = mainNavigation;
         ))
       }
 
-      <!-- More Dropdown -->
-      <div class="relative" id="more-dropdown">
-        <button
-          id="more-button"
-          class="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-foreground hover:brightness-110"
-        >
-          Mais
-          <ChevronDown class="h-4 w-4 transition-transform duration-200" id="more-chevron" />
-        </button>
-        <div
-          id="more-menu"
-          class="hidden absolute right-0 top-full mt-2 w-48 rounded-lg border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg"
-        >
-          <div class="flex flex-col gap-1 p-2">
-            {
-              navItems.slice(8).map((item) => (
-                <a
-                  href={item.href}
-                  class="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
-                >
-                  {item.label}
-                </a>
-              ))
-            }
+      <!-- More Dropdown (só se houver itens além dos 8 principais) -->
+      {
+        navItems.length > 8 && (
+          <div class="relative" id="more-dropdown">
+            <button
+              id="more-button"
+              class="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-foreground hover:brightness-110"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Mais
+              <ChevronDown class="h-4 w-4 transition-transform duration-200" id="more-chevron" />
+            </button>
+            <div
+              id="more-menu"
+              class="hidden absolute right-0 top-full mt-2 w-48 rounded-lg border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg"
+            >
+              <div class="flex flex-col gap-1 p-2">
+                {
+                  navItems.slice(8).map((item) => (
+                    <a
+                      href={item.href}
+                      class="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
+                    >
+                      {item.label}
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )
+      }
     </nav>
 
     <!-- Right Actions -->
@@ -120,33 +126,29 @@ const navItems = mainNavigation;
   const moreChevron = document.getElementById("more-chevron");
 
   if (moreButton && moreMenu) {
+    const setMoreOpen = (open: boolean) => {
+      moreMenu.classList.toggle("hidden", !open);
+      moreButton.setAttribute("aria-expanded", String(open));
+      if (moreChevron) {
+        moreChevron.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    };
+
     moreButton.addEventListener("click", (e) => {
       e.stopPropagation();
-      const isOpen = !moreMenu.classList.contains("hidden");
-      moreMenu.classList.toggle("hidden");
-      if (moreChevron) {
-        moreChevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-      }
+      setMoreOpen(moreMenu.classList.contains("hidden"));
     });
 
     // Close on link click inside dropdown
     moreMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        moreMenu.classList.add("hidden");
-        if (moreChevron) {
-          moreChevron.style.transform = "rotate(0deg)";
-        }
-      });
+      link.addEventListener("click", () => setMoreOpen(false));
     });
 
     // Close on click outside
     document.addEventListener("click", (e) => {
       const dropdown = document.getElementById("more-dropdown");
       if (dropdown && !dropdown.contains(e.target)) {
-        moreMenu.classList.add("hidden");
-        if (moreChevron) {
-          moreChevron.style.transform = "rotate(0deg)";
-        }
+        setMoreOpen(false);
       }
     });
   }

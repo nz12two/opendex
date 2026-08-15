@@ -143,7 +143,7 @@ function ResultCard({ item }: { item: SearchItem }) {
             </span>
           ))}
           {item.tags.length > 3 && (
-            <span className="text-[10px] text-muted-foreground/60 self-center">
+            <span className="text-[10px] text-muted-foreground/70 self-center">
               +{item.tags.length - 3}
             </span>
           )}

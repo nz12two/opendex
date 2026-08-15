@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils';
-import { Github, Package, Brain, ExternalLink, Clock } from 'lucide-react';
+import { Github, Package, Brain, ExternalLink, Clock, Wrench } from 'lucide-react';
 
 interface SourceBadgeProps {
-  source: 'github' | 'npm' | 'openrouter' | 'community';
+  source: 'github' | 'npm' | 'openrouter' | 'community' | 'local';
   url?: string;
   lastUpdated?: string;
   className?: string;
@@ -13,6 +13,7 @@ const sourceConfig = {
   npm: { icon: Package, label: 'npm', color: 'text-red-400 bg-red-500/10 border-red-500/20' },
   openrouter: { icon: Brain, label: 'OpenRouter API', color: 'text-blue-400 bg-blue-500/10 border-blue-500/20' },
   community: { icon: ExternalLink, label: 'Dados da Comunidade', color: 'text-green-400 bg-green-500/10 border-green-500/20' },
+  local: { icon: Wrench, label: 'Ferramenta local', color: 'text-purple-400 bg-purple-500/10 border-purple-500/20' },
 };
 
 export function SourceBadge({ source, url, lastUpdated, className }: SourceBadgeProps) {

@@ -93,7 +93,7 @@ export default function ExportDialog({ open, onOpenChange, nodes, edges }: Expor
         </div>
 
         {/* Preview */}
-        <div className="relative max-h-[300px] overflow-auto rounded-lg border border-border bg-[#0f172a] p-4">
+        <div className="relative max-h-[300px] overflow-auto rounded-lg border border-border bg-background p-4">
           <pre className="text-xs text-gray-300 leading-relaxed">
             <code>{content}</code>
           </pre>

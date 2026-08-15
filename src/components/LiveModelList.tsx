@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getCachedData } from '@/lib/api';
+import SkeletonCard from './ui/SkeletonCard';
 
 /* ------------------------------------------------------------------ */
 /*  Types — OpenRouter API shape                                      */
@@ -161,28 +162,6 @@ const FILTER_ICONS: Record<FilterKey, React.ReactNode> = {
 /*  Skeleton                                                          */
 /* ------------------------------------------------------------------ */
 
-function SkeletonCard() {
-  return (
-    <div className="rounded-lg border border-border/50 bg-card p-5 animate-pulse">
-      <div className="flex items-start gap-3">
-        <div className="h-10 w-10 rounded-lg bg-muted" />
-        <div className="flex-1 space-y-2">
-          <div className="h-4 w-3/4 rounded bg-muted" />
-          <div className="h-3 w-1/2 rounded bg-muted" />
-        </div>
-      </div>
-      <div className="mt-4 space-y-2">
-        <div className="h-3 w-full rounded bg-muted" />
-        <div className="h-3 w-2/3 rounded bg-muted" />
-      </div>
-      <div className="mt-4 flex gap-2">
-        <div className="h-6 w-16 rounded-full bg-muted" />
-        <div className="h-6 w-20 rounded-full bg-muted" />
-      </div>
-    </div>
-  );
-}
-
 function LoadingSkeleton() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -288,7 +267,7 @@ function ModelCard({ model }: { model: OpenRouterModel }) {
       </div>
 
       {/* Model ID */}
-      <div className="mt-2 text-[10px] text-muted-foreground/60 truncate" title={model.id}>
+      <div className="mt-2 text-[10px] text-muted-foreground/70 truncate" title={model.id}>
         <Cpu className="mr-1 inline-block h-3 w-3" />
         {model.id}
       </div>
@@ -534,6 +513,7 @@ export default function LiveModelList() {
         {search && (
           <button
             onClick={() => setSearch('')}
+            aria-label="Limpar busca"
             className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <X className="h-4 w-4" />
@@ -565,7 +545,7 @@ export default function LiveModelList() {
         {/* Active filter tags */}
         {activeFilters.size > 0 && (
           <>
-            <span className="text-xs text-muted-foreground/50 mx-1">|</span>
+            <span className="text-xs text-muted-foreground/70 mx-1">|</span>
             <button
               onClick={() => {
                 setActiveFilters(new Set());
@@ -626,7 +606,7 @@ export default function LiveModelList() {
       )}
 
       {/* Footer info */}
-      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/50 pt-2">
+      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/70 pt-2">
         <ExternalLink className="h-3 w-3" />
         <span>
           Mostrando {filteredModels.length} modelo{filteredModels.length !== 1 ? 's' : ''} — Fonte:{' '}

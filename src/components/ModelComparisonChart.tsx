@@ -232,7 +232,7 @@ function BarChart({
         return (
           <div key={model.id} className="group flex items-center gap-3 rounded-md px-2 py-1.5 transition-colors hover:bg-muted/40">
             {/* Rank */}
-            <span className="w-5 text-right text-[11px] font-mono text-muted-foreground/60">
+            <span className="w-5 text-right text-[11px] font-mono text-muted-foreground/70">
               {i + 1}
             </span>
 
@@ -861,7 +861,7 @@ export default function ModelComparisonChart() {
       </section>
 
       {/* Footer */}
-      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/50">
+      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/70">
         <ExternalLink className="h-3 w-3" />
         <span>
           Dados via{' '}

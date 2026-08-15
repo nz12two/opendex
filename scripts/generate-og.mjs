@@ -225,6 +225,21 @@ async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
   await generateImage('OpenDex — Ecossistema OpenCode', path.join(OUT_DIR, 'home.png'), fonts);
+  // og.png = fallback genérico usado pelo BaseLayout quando a página não tem OG própria
+  await generateImage('OpenDex — Ecossistema OpenCode', path.join(OUT_DIR, 'og.png'), fonts);
+
+  // OG por seção principal (usadas pelas páginas de catálogo)
+  const sections = {
+    'modelos.png': 'Modelos de IA — OpenDex',
+    'ferramentas.png': 'Ferramentas interativas — OpenDex',
+    'ecossistema.png': 'Ecossistema OpenCode — OpenDex',
+    'docs.png': 'Documentação — OpenDex',
+    'blog.png': 'Blog — OpenDex',
+    'playground.png': 'Playground de Agentes — OpenDex',
+  };
+  for (const [file, title] of Object.entries(sections)) {
+    await generateImage(title, path.join(OUT_DIR, file), fonts);
+  }
 
   const files = fs
     .readdirSync(BLOG_DIR)

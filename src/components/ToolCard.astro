@@ -1,6 +1,18 @@
 ---
 import type { Tool } from '@/data/tools/types';
-import { ArrowRight, Bot, FileJson, MessageSquare, Calculator, Workflow } from 'lucide-react';
+import {
+  ArrowRight,
+  Bot,
+  FileJson,
+  MessageSquare,
+  Calculator,
+  Workflow,
+  WandSparkles,
+  FileCheck,
+  Settings2,
+  DollarSign,
+  BrainCircuit,
+} from 'lucide-react';
 
 interface Props {
   tool: Tool;
@@ -14,48 +26,38 @@ const iconMap: Record<string, any> = {
   MessageSquare,
   Calculator,
   Workflow,
+  WandSparkles,
+  FileCheck,
+  Settings2,
+  DollarSign,
+  BrainCircuit,
 };
 
 const IconComponent = iconMap[tool.icon] || Bot;
-const colorMap: Record<string, string> = {
-  '#7c3aed': 'from-purple-500/20 to-purple-600/5',
-  '#2563eb': 'from-blue-500/20 to-blue-600/5',
-  '#059669': 'from-emerald-500/20 to-emerald-600/5',
-  '#d97706': 'from-amber-500/20 to-amber-600/5',
-  '#dc2626': 'from-red-500/20 to-red-600/5',
-};
-const gradientClass = colorMap[tool.color] || 'from-primary/20 to-primary/5';
 ---
 
 <a
   href={`/opendex/ferramentas/${tool.slug}/`}
-  class="group relative flex flex-col rounded-xl border border-border/50 bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden"
+  class="group relative flex flex-col rounded-lg border border-border/50 bg-card p-6 card-hover overflow-hidden"
 >
-  <!-- Gradient background -->
-  <div class={`absolute inset-0 bg-gradient-to-br ${gradientClass} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
-
-  <div class="relative">
-    <!-- Header -->
-    <div class="flex items-start gap-4">
-      <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0 ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all">
-        <IconComponent class="h-6 w-6 text-primary" />
-      </div>
-      <div class="min-w-0 flex-1">
-        <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
-          {tool.name}
-        </h3>
-        <p class="mt-1 text-sm text-muted-foreground">
-          {tool.description}
-        </p>
-      </div>
+  <div class="flex items-start gap-4">
+    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0 ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all">
+      <IconComponent class="h-6 w-6 text-primary" />
     </div>
-
-    <!-- Category tag -->
-    <div class="mt-4 flex items-center justify-between">
-      <span class="inline-flex items-center rounded-full border border-border/50 bg-muted/50 px-2.5 py-0.5 text-[10px] font-medium text-muted-foreground">
-        {tool.category}
-      </span>
-      <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-all group-hover:translate-x-0.5" />
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+        {tool.name}
+      </h3>
+      <p class="mt-1 text-sm text-muted-foreground">
+        {tool.description}
+      </p>
     </div>
+  </div>
+
+  <div class="mt-4 flex items-center justify-between">
+    <span class="inline-flex items-center rounded-full border border-border/50 bg-muted/50 px-2.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+      {tool.category}
+    </span>
+    <ArrowRight class="h-4 w-4 text-muted-foreground group-hover:text-primary transition-all group-hover:translate-x-0.5" />
   </div>
 </a>

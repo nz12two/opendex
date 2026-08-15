@@ -58,7 +58,7 @@ export default function AgentPalette({ onDragStart }: AgentPaletteProps) {
         <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           Agentes
         </h3>
-        <p className="mt-0.5 text-[10px] text-muted-foreground/60">
+        <p className="mt-0.5 text-[10px] text-muted-foreground/70">
           Arraste para o canvas
         </p>
       </div>
@@ -89,7 +89,7 @@ export default function AgentPalette({ onDragStart }: AgentPaletteProps) {
         {filteredAgents.length === 0 ? (
           <div className="flex flex-col items-center gap-2 py-8 text-center">
             <SearchX className="h-8 w-8 text-muted-foreground/30" />
-            <p className="text-xs text-muted-foreground/50">
+            <p className="text-xs text-muted-foreground/70">
               Nenhum agente encontrado
             </p>
           </div>

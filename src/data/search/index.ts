@@ -22,6 +22,20 @@ export interface SearchItem {
   icon?: string;
 }
 
+const DOCS: { title: string; description: string; slug: string; tags: string[] }[] = [
+  { title: 'Quickstart', description: 'Comece a usar o OpenCode em minutos', slug: 'quickstart', tags: ['instalação', 'início'] },
+  { title: 'Instalação', description: 'Instale o OpenCode no seu ambiente', slug: 'instalacao', tags: ['instalação', 'setup'] },
+  { title: 'Configuração', description: 'Configure o OpenCode com opencode.json', slug: 'configuracao', tags: ['config', 'opencode.json'] },
+  { title: 'Modelos', description: 'Modelos de IA suportados e como configurá-los', slug: 'modelos', tags: ['modelos', 'ia'] },
+  { title: 'Plugins', description: 'Criação e uso de plugins no OpenCode', slug: 'plugins', tags: ['plugins', 'extensões'] },
+  { title: 'MCP', description: 'Servidores MCP e integração de ferramentas', slug: 'mcp', tags: ['mcp', 'ferramentas'] },
+  { title: 'Agentes', description: 'Crie e configure agentes no OpenCode', slug: 'agentes', tags: ['agentes'] },
+  { title: 'Workflows', description: 'Automatize tarefas com workflows', slug: 'workflows', tags: ['workflows', 'automação'] },
+  { title: 'API', description: 'Referência da API do OpenCode', slug: 'api', tags: ['api', 'referência'] },
+  { title: 'opencode.json', description: 'Referência completa do schema opencode.json', slug: 'opencode-json', tags: ['schema', 'config'] },
+  { title: 'FAQ', description: 'Perguntas frequentes sobre o OpenCode', slug: 'faq', tags: ['faq', 'dúvidas'] },
+];
+
 /**
  * Agrega todos os itens pesquisáveis das fontes de dados.
  */
@@ -137,6 +151,16 @@ export const searchIndex: SearchItem[] = [
     type: 'blog',
     url: `/opendex/news/`,
     tags: n.tags || [],
+  })),
+
+  // Docs (Starlight) — unifica a busca do site com a documentação
+  ...DOCS.map((d): SearchItem => ({
+    title: d.title,
+    description: d.description,
+    slug: d.slug,
+    type: 'doc',
+    url: `/opendex/docs/${d.slug}/`,
+    tags: ['docs', ...d.tags],
   })),
 ];
 

@@ -34,6 +34,7 @@ const publishedBlogPosts = blogPosts.filter(
 
 const pluginCount = npmPackages.filter(p => p.keywords?.includes?.('plugin')).length || 0;
 const mcpCount = npmPackages.filter(p => p.keywords?.includes?.('mcp')).length || 0;
+const scriptCount = npmPackages.filter(p => p.keywords?.some?.(k => ['automation','script','cli','agent','skill'].includes(k))).length || 0;
 
 interface CategoryCard {
   title: string;
@@ -50,8 +51,8 @@ const categories: CategoryCard[] = [
     description: "Como npm, mas para OpenCode. Descubra e compartilhe scripts prontos para usar.",
     href: "/opendex/scripts/",
     icon: Code,
-    count: ecosystemStats.packages.total.toLocaleString() + "+",
-    label: "pacotes npm",
+    count: scriptCount,
+    label: "scripts",
   },
   {
     title: "Agentes",
@@ -82,7 +83,7 @@ const categories: CategoryCard[] = [
     description: "Modelos de linguagem compatíveis com o OpenCode, do gratuito ao premium.",
     href: "/opendex/modelos/",
     icon: Brain,
-    count: "342+",
+    count: models.length,
     label: "modelos",
   },
   {
@@ -131,6 +132,7 @@ const categories: CategoryCard[] = [
 <MainLayout
   title="Ecossistema — OpenDex"
   description="Explore todo o ecossistema OpenCode em um só lugar: scripts, agentes, plugins, MCPs, modelos e muito mais."
+  image="/opendex/og/ecossistema.png"
 >
   <!-- Hero -->
   <section class="relative overflow-hidden border-b border-border/40 px-4 pt-16 pb-12 md:pt-24 md:pb-16 bg-gradient-hero">
@@ -149,7 +151,7 @@ const categories: CategoryCard[] = [
       <div class="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
         <Sparkles class="h-4 w-4 text-primary" />
         <span>
-          {ecosystemStats.packages.total.toLocaleString()} pacotes npm · 342+ modelos · {ecosystemStats.github.totalEcosystemStars.toLocaleString()} ⭐ no GitHub
+          {ecosystemStats.packages.total.toLocaleString()} pacotes npm · {models.length} modelos · {ecosystemStats.github.totalEcosystemStars.toLocaleString()} ⭐ no GitHub
         </span>
       </div>
     </div>
@@ -158,6 +160,7 @@ const categories: CategoryCard[] = [
   <!-- Grid de Categorias -->
   <section class="px-4 py-12 md:py-16">
     <div class="container mx-auto max-w-6xl">
+      <h2 class="sr-only">Categorias do ecossistema</h2>
       <div class="grid gap-6 sm:grid-cols-2">
         {categories.map((cat) => (
           <a

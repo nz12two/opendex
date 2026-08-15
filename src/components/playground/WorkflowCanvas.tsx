@@ -31,8 +31,8 @@ const nodeTypes = {
 const defaultEdgeOptions = {
   type: 'smoothstep',
   animated: false,
-  style: { stroke: '#475569', strokeWidth: 2 },
-  markerEnd: { type: 'arrowclosed', color: '#475569', width: 20, height: 20 },
+  style: { stroke: 'var(--border)', strokeWidth: 2 },
+  markerEnd: { type: 'arrowclosed', color: 'var(--border)', width: 20, height: 20 },
 };
 
 let nodeIdCounter = 0;
@@ -372,7 +372,7 @@ export default function WorkflowCanvas() {
         )}
 
         {/* React Flow Canvas */}
-        <div ref={canvasRef} className="flex-1 bg-[#0f172a]" onDragOver={onDragOver} onDrop={onDrop}>
+        <div ref={canvasRef} className="flex-1 bg-background" onDragOver={onDragOver} onDrop={onDrop}>
           <ReactFlow
             nodes={nodes}
             edges={edges}
@@ -393,7 +393,7 @@ export default function WorkflowCanvas() {
             fitView
             deleteKeyCode={['Backspace', 'Delete']}
             multiSelectionKeyCode="Shift"
-            className="bg-[#0f172a]"
+            className="bg-background"
             minZoom={0.1}
             maxZoom={4}
             snapToGrid
@@ -403,7 +403,7 @@ export default function WorkflowCanvas() {
               variant={BackgroundVariant.Dots}
               gap={24}
               size={1}
-              color="#1e293b"
+              color="var(--border)"
             />
             <Controls
               showInteractive={false}

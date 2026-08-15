@@ -13,7 +13,7 @@ export default function WorkflowMiniMap() {
   return (
     <div className="absolute bottom-4 right-4 z-10 overflow-hidden rounded-lg border border-border bg-card shadow-xl">
       <MiniMap
-        nodeStrokeColor="#1e293b"
+        nodeStrokeColor="var(--border)"
         nodeColor={(node) => {
           const agentType = node.data?.agent as string;
           const colorMap: Record<string, string> = {
@@ -28,7 +28,7 @@ export default function WorkflowMiniMap() {
         }}
         nodeBorderRadius={8}
         maskColor="rgba(0,0,0,0.6)"
-        style={{ backgroundColor: '#0f172a' }}
+        style={{ backgroundColor: 'var(--background)' }}
         className="!h-[120px] !w-[180px]"
       />
     </div>

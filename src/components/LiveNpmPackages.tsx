@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { packages, type NpmPackage } from '@/data/npm';
+import SkeletonCard from './ui/SkeletonCard';
 
 /* ------------------------------------------------------------------ */
 /*  Types — npm registry API shape                                    */
@@ -55,12 +56,14 @@ const PAGE_SIZE = 20;
 /*  Category definitions                                               */
 /* ------------------------------------------------------------------ */
 
-type CategoryKey = 'all' | 'sdk' | 'plugin' | 'ferramenta';
+type CategoryKey = 'all' | 'sdk' | 'plugin' | 'mcp' | 'script' | 'ferramenta';
 
 const CATEGORIES: { key: CategoryKey; label: string }[] = [
   { key: 'all', label: 'Todos' },
-  { key: 'sdk', label: 'SDK' },
   { key: 'plugin', label: 'Plugin' },
+  { key: 'mcp', label: 'MCP' },
+  { key: 'script', label: 'Script' },
+  { key: 'sdk', label: 'SDK' },
   { key: 'ferramenta', label: 'Ferramenta' },
 ];
 
@@ -121,18 +124,31 @@ function getPackageCategories(pkg: NpmPackage): CategoryKey[] {
   const cats: CategoryKey[] = [];
   const kw = pkg.keywords.map((k) => k.toLowerCase());
 
-  if (kw.includes('sdk') || kw.includes('api') || kw.includes('client')) {
-    cats.push('sdk');
+  if (kw.includes('mcp') || kw.includes('model-context-protocol')) {
+    cats.push('mcp');
   }
   if (kw.includes('plugin') || kw.includes('extension')) {
     cats.push('plugin');
   }
   if (
+    kw.includes('automation') ||
+    kw.includes('script') ||
+    kw.includes('cli') ||
+    kw.includes('agent') ||
+    kw.includes('skill')
+  ) {
+    cats.push('script');
+  }
+  if (kw.includes('sdk') || kw.includes('api') || kw.includes('client')) {
+    cats.push('sdk');
+  }
+  if (
     !cats.includes('sdk') &&
     !cats.includes('plugin') &&
+    !cats.includes('mcp') &&
+    !cats.includes('script') &&
     kw.some((k) =>
       [
-        'automation',
         'tool',
         'manager',
         'orchestration',
@@ -142,10 +158,8 @@ function getPackageCategories(pkg: NpmPackage): CategoryKey[] {
         'router',
         'terminal',
         'scheduler',
-        'skill',
         'telemetry',
         'observability',
-        'cli',
         'binary',
         'browser',
         'cdp',
@@ -195,34 +209,11 @@ function sortPackages(list: NpmPackage[], sort: SortKey): NpmPackage[] {
 /*  Skeleton                                                          */
 /* ------------------------------------------------------------------ */
 
-function SkeletonCard() {
-  return (
-    <div className="rounded-lg border border-border/50 bg-card p-5 animate-pulse">
-      <div className="flex items-start gap-3">
-        <div className="h-10 w-10 rounded-lg bg-muted" />
-        <div className="flex-1 space-y-2">
-          <div className="h-4 w-3/4 rounded bg-muted" />
-          <div className="h-3 w-1/2 rounded bg-muted" />
-        </div>
-      </div>
-      <div className="mt-4 space-y-2">
-        <div className="h-3 w-full rounded bg-muted" />
-        <div className="h-3 w-2/3 rounded bg-muted" />
-      </div>
-      <div className="mt-4 flex gap-2">
-        <div className="h-6 w-16 rounded-full bg-muted" />
-        <div className="h-6 w-20 rounded-full bg-muted" />
-        <div className="h-6 w-14 rounded-full bg-muted" />
-      </div>
-    </div>
-  );
-}
-
 function LoadingSkeleton() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {Array.from({ length: 6 }).map((_, i) => (
-        <SkeletonCard key={i} />
+        <SkeletonCard key={i} badges={3} />
       ))}
     </div>
   );
@@ -292,7 +283,7 @@ function PackageCard({ pkg }: { pkg: NpmPackage }) {
             </span>
           ))}
           {extraKeywords > 0 && (
-            <span className="text-[10px] text-muted-foreground/60">
+            <span className="text-[10px] text-muted-foreground/70">
               +{extraKeywords}
             </span>
           )}
@@ -314,6 +305,10 @@ function PackageCard({ pkg }: { pkg: NpmPackage }) {
                     'bg-sky-500/10 text-sky-400 border border-sky-500/20',
                   cat === 'plugin' &&
                     'bg-violet-500/10 text-violet-400 border border-violet-500/20',
+                  cat === 'mcp' &&
+                    'bg-teal-500/10 text-teal-400 border border-teal-500/20',
+                  cat === 'script' &&
+                    'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
                   cat === 'ferramenta' &&
                     'bg-amber-500/10 text-amber-400 border border-amber-500/20',
                 )}
@@ -360,13 +355,17 @@ function PackageCard({ pkg }: { pkg: NpmPackage }) {
 /*  Main Component                                                     */
 /* ------------------------------------------------------------------ */
 
-export default function LiveNpmPackages() {
+export default function LiveNpmPackages({
+  defaultCategory = 'all',
+}: {
+  defaultCategory?: CategoryKey;
+}) {
   const [livePackages, setLivePackages] = useState<NpmPackage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [source, setSource] = useState<'static' | 'live' | 'none'>('none');
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState<CategoryKey>('all');
+  const [category, setCategory] = useState<CategoryKey>(defaultCategory);
   const [sort, setSort] = useState<SortKey>('downloads');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [showSortMenu, setShowSortMenu] = useState(false);
@@ -572,6 +571,7 @@ export default function LiveNpmPackages() {
           {search && (
             <button
               onClick={() => setSearch('')}
+              aria-label="Limpar busca"
               className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <X className="h-4 w-4" />
@@ -692,7 +692,7 @@ export default function LiveNpmPackages() {
       )}
 
       {/* Footer info */}
-      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/50 pt-2">
+      <div className="flex items-center justify-center gap-2 text-[10px] text-muted-foreground/70 pt-2">
         <ExternalLink className="h-3 w-3" />
         <span>
           Dados do npm registry —{' '}
