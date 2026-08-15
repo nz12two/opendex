@@ -1,69 +1,220 @@
 ---
 title: Configuração
-description: Personalize o OpenCode com temas, atalhos, preferências e integrações.
+description: O schema real do opencode.json — formato, ordem de precedência e todos os campos de configuração.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 
-## Arquivo de configuração
+O OpenCode é configurado através do arquivo `opencode.json` (ou `opencode.jsonc`). Ele suporta **JSON** e **JSONC** (JSON com comentários).
 
-O OpenCode é configurado através do arquivo `opencode.json` na raiz do seu projeto:
+## Formato básico
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-5",
+  "autoupdate": true,
+  "server": { "port": 4096 }
+}
+```
+
+## Ordem de precedência
+
+Os configs são **mesclados**, não substituídos. A ordem de precedência (o que vem depois sobrescreve o que vem antes):
+
+1. **Remote config** (`.well-known/opencode`) — defaults organizacionais
+2. **Global config** (`~/.config/opencode/opencode.json`) — preferências do usuário
+3. **Custom config** (`OPENCODE_CONFIG` env var)
+4. **Project config** (`opencode.json` no projeto)
+5. **`.opencode` directories** — agents, commands, plugins
+6. **Inline config** (`OPENCODE_CONFIG_CONTENT` env var)
+7. **Managed config files** (`/Library/Application Support/opencode/` no macOS, `/etc/opencode/` no Linux, `%ProgramData%\opencode` no Windows)
+8. **macOS managed preferences** (`.mobileconfig` via MDM) — maior prioridade
+
+<Callout type="note">
+Os diretórios `.opencode` e `~/.config/opencode` usam nomes **plurais**: `agents/`, `commands/`, `modes/`, `plugins/`, `skills/`, `tools/`, `themes/`. O singular (ex: `agent/`) é suportado por retrocompatibilidade.
+</Callout>
+
+## Campos principais
+
+### Modelo
 
 ```json
+{ "model": "anthropic/claude-sonnet-4-5", "small_model": "anthropic/claude-haiku-4-5" }
+```
+
+- `small_model`: modelo separado para tarefas leves (ex: gerar títulos). Faz fallback para o modelo principal.
+- Opções de provider: `timeout` (default `300000`ms, `false` desliga), `chunkTimeout`, `setCacheKey`.
+
+### Agentes
+
+```jsonc
 {
-  "name": "meu-projeto",
-  "version": "1.0.0",
-  "agents": {
-    "orchestrator": {
-      "model": "gpt-4",
-      "temperature": 0.3
-    },
-    "builder": {
-      "model": "gpt-4",
-      "temperature": 0.2
+  "agent": {
+    "code-reviewer": {
+      "description": "...",
+      "model": "anthropic/claude-sonnet-4-5",
+      "prompt": "...",
+      "tools": { "write": false, "edit": false }
     }
-  },
-  "plugins": [],
-  "mcp": {
-    "servers": []
   }
 }
 ```
 
-## Temas
+### Plugins
 
-<Callout type="tip">
-O OpenCode suporta temas claro e escuro:
+```json
+{ "plugin": ["opencode-helicone-session", "@my-org/custom-plugin"] }
+```
+
+### MCP servers
+
+```json
+{ "mcp": {} }
+```
+
+### Permissões
+
+```json
+{ "permission": { "edit": "ask", "bash": "ask" } }
+```
+
+Por padrão, tudo é permitido. Veja a página de [Plugins](/opendex/docs/plugins/) e [Agentes](/opendex/docs/agentes/) para detalhes.
+
+### Server (para `opencode serve` e `opencode web`)
+
+```json
+{ "server": { "port": 4096, "hostname": "0.0.0.0", "mdns": true, "mdnsDomain": "myproject.local", "cors": ["http://localhost:5173"] } }
+```
+
+- `port`, `hostname`, `mdns`, `mdnsDomain` (default `opencode.local`), `cors` (origens completas).
+
+### Shell
+
+```json
+{ "shell": "pwsh" }
+```
+
+Auto-detecta (pwsh/cmd.exe no Windows, `/bin/zsh` ou `/bin/bash` no macOS/Linux). Aceita caminho absoluto ou nome curto.
+
+### Formatters
+
+```json
+{ "formatter": true }
+```
+
+ou objeto:
 
 ```json
 {
-  "theme": "dark",
-  "accentColor": "#6366f1"
+  "formatter": {
+    "prettier": { "disabled": true },
+    "custom-prettier": {
+      "command": ["npx", "prettier", "--write", "$FILE"],
+      "environment": { "NODE_ENV": "development" },
+      "extensions": [".js", ".ts", ".jsx", ".tsx"]
+    }
+  }
 }
 ```
-</Callout>
 
-## Atalhos de teclado
+### LSP Servers
 
-| Atalho | Ação |
-|--------|------|
-| `Ctrl+K` | Abrir busca |
-| `Ctrl+B` | Alternar sidebar |
-| `Ctrl+J` | Abrir terminal |
-| `Ctrl+Shift+P` | Paleta de comandos |
-
-## Variáveis de ambiente
-
-Configure variáveis de ambiente para APIs e serviços externos:
-
-```bash
-OPENAI_API_KEY=sk-...
-ANTHROPIC_API_KEY=sk-ant-...
+```json
+{ "lsp": true }
 ```
 
-## Integrações
+ou `{ "lsp": { "typescript": { "disabled": true } } }`
 
-| Integração | Descrição |
-|------------|-----------|
-| GitHub | `github.token`, `github.repository` para integração com repositórios |
-| Discord | `discord.webhook` para notificações no Discord |
+### Compaction
+
+```json
+{ "compaction": { "auto": true, "prune": false, "reserved": 10000 } }
+```
+
+- `auto` (default `true`), `prune` (default `false`), `reserved` (buffer de tokens).
+
+### Instruções
+
+```json
+{ "instructions": ["CONTRIBUTING.md", "docs/guidelines.md", ".cursor/rules/*.md"] }
+```
+
+### Provedores
+
+```json
+{ "disabled_providers": ["openai", "gemini"] }
+```
+
+```json
+{ "enabled_providers": ["anthropic", "openai"] }
+```
+
+`disabled_providers` tem prioridade sobre `enabled_providers`.
+
+### Default agent
+
+```json
+{ "default_agent": "plan" }
+```
+
+Deve ser um primary agent (não subagent). Faz fallback para `"build"` com warning se não existir.
+
+### Subagent depth
+
+```json
+{ "subagent_depth": 2 }
+```
+
+Default `1` (primary pode lançar subagents, mas subagents não lançam mais). `0` bloqueia tudo.
+
+### Compartilhamento
+
+```json
+{ "share": "manual" }
+```
+
+Valores: `"manual"` (default), `"auto"`, `"disabled"`.
+
+### Snapshot
+
+```json
+{ "snapshot": false }
+```
+
+Snapshots são habilitados por padrão (undo/revert). Desabilitar = não pode reverter via UI.
+
+### Autoupdate
+
+```json
+{ "autoupdate": false }
+```
+
+`"notify"` = notifica mas não atualiza (só se não instalado via package manager).
+
+### Comandos
+
+```jsonc
+{
+  "command": {
+    "test": { "template": "...", "description": "...", "agent": "build", "model": "anthropic/claude-haiku-4-5" }
+  }
+}
+```
+
+### Experimental
+
+```json
+{ "experimental": {} }
+```
+
+Não é estável — pode mudar ou ser removido sem aviso.
+
+## Variáveis
+
+- **Env vars**: `{env:VARIABLE_NAME}` → substitui pela env var (vazio se não setada).
+- **Files**: `{file:path/to/file}` → substitui pelo conteúdo do arquivo (relativo ao config ou absoluto `/` ou `~`).
+
+## TUI, temas e keybinds
+
+Temas, keybinds e outras preferências de interface ficam no arquivo `tui.json` (schema `https://opencode.ai/tui.json`), não no `opencode.json`. Veja a página [opencode.json](/opendex/docs/opencode-json/) para a referência completa do schema.

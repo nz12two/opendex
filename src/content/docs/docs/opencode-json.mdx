@@ -1,90 +1,102 @@
 ---
-title: Padrão opencode.json
-description: Como criar metadados para descoberta automática no OpenDex
+title: opencode.json
+description: Referência do schema real do opencode.json — o arquivo de configuração do OpenCode.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
-import Steps from '../../../components/ui/Steps.astro';
 
-## O que é?
-
-O `opencode.json` é um arquivo de metadados que permite que seu plugin, agente, MCP ou skill seja **descoberto automaticamente** pelo OpenDex.
-
-## Onde colocar
-
-O arquivo pode estar em dois locais:
-
-- `opencode.json` — raiz do repositório
-- `.github/opendex.json` — pasta oculta do GitHub
+O `opencode.json` é o arquivo de configuração do **OpenCode** (o agente de IA), não um arquivo de metadados do OpenDex. Ele define modelo, agentes, plugins, MCPs, permissões e muito mais.
 
 ## Formato
 
+Suporta **JSON** e **JSONC** (JSON com comentários). O schema oficial fica em `https://opencode.ai/config.json`.
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-5",
+  "autoupdate": true,
+  "server": { "port": 4096 }
+}
+```
+
+## Campos principais
+
+| Campo | Descrição |
+|-------|-----------|
+| `model` | Modelo default no formato `provider/model` |
+| `small_model` | Modelo separado para tarefas leves (ex: títulos) |
+| `agent` | Configuração de agentes (primary e subagents) |
+| `plugin` | Lista de plugins npm |
+| `mcp` | Configuração de servidores MCP |
+| `permission` | Regras de permissão (`allow`/`ask`/`deny`) |
+| `server` | Configuração do servidor headless (`port`, `hostname`, etc) |
+| `shell` | Shell a ser usado |
+| `formatter` | Configuração de formatação de código |
+| `lsp` | Configuração de servidores LSP |
+| `compaction` | Configuração de compactação de contexto |
+| `instructions` | Arquivos de instruções adicionais |
+| `disabled_providers` | Provedores desabilitados |
+| `enabled_providers` | Provedores habilitados |
+| `autoupdate` | Controle de atualização automática |
+| `share` | Modo de compartilhamento (`manual`/`auto`/`disabled`) |
+| `default_agent` | Agente primary default |
+| `subagent_depth` | Profundidade máxima de subagents |
+| `snapshot` | Habilita/desabilita snapshots (undo/revert) |
+
+## Exemplos
+
+### Modelo e autoupdate
+
 ```json
 {
-  "type": "agent",
-  "name": "Research Agent",
-  "version": "1.2.0",
-  "description": "Agente de pesquisa que busca informações na web.",
-  "author": {
-    "name": "Seu Nome",
-    "email": "seu@email.com"
-  },
-  "license": "MIT",
-  "category": "research",
-  "tags": ["agent", "planner", "web", "search"],
-  "compatibility": {
-    "opencode": ">=1.3.0",
-    "os": ["windows", "macos", "linux"]
-  },
-  "source": {
-    "github": "https://github.com/seu-user/research-agent"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-5",
+  "small_model": "anthropic/claude-haiku-4-5",
+  "autoupdate": true
+}
+```
+
+### Agentes
+
+```jsonc
+{
+  "agent": {
+    "code-reviewer": {
+      "description": "Revisa código",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-5",
+      "permission": { "edit": "deny" }
+    }
   }
 }
 ```
 
-## Campos obrigatórios
+### Plugins e MCP
 
-| Campo | Descrição |
-|-------|-----------|
-| `type` | agent, plugin, mcp, skill, template, tool, theme |
-| `name` | Nome do ativo |
-| `version` | Versão semântica |
-| `description` | Descrição curta (máx 280 caracteres) |
-| `author` | Nome do autor |
-| `category` | Categoria principal |
-| `tags` | Array de tags |
-| `source.github` | URL do repositório GitHub |
+```json
+{
+  "plugin": ["opencode-helicone-session"],
+  "mcp": {
+    "context7": { "type": "remote", "url": "https://mcp.context7.com/mcp" }
+  }
+}
+```
 
-## Score de Relevância
+### Permissões
 
-O OpenDex calcula automaticamente um score (0-100) para cada ativo:
+```json
+{ "permission": { "edit": "ask", "bash": "ask" } }
+```
 
-- ⭐ **Stars** (0-30): Quantas estrelas no GitHub
-- 📅 **Recência** (0-20): Quando foi o último commit
-- 📦 **Downloads** (0-20): Downloads mensais (se for npm)
-- 🎯 **Match** (0-20): Qualidade do match com "opencode"
-- 👥 **Comunidade** (0-10): Interação (issues, forks)
+## Ordem de precedência
 
-<Callout type="tip" title="Dica">
-  Para maximizar seu score, mantenha o repositório ativo e marque com `topic:opencode` no GitHub!
+Os configs são **mesclados**, não substituídos. A ordem de precedência (o que vem depois sobrescreve o que vem antes): remote config → global config → `OPENCODE_CONFIG` → project config → `.opencode` directories → `OPENCODE_CONFIG_CONTENT` → managed config files → macOS managed preferences.
+
+<Callout type="note">
+Para a explicação completa de cada campo, exemplos e a ordem de precedência detalhada, veja a página [Configuração](/opendex/docs/configuracao/).
 </Callout>
 
-## Exemplos
+## Sobre o OpenDex
 
-<Steps title="Agente">
-```json
-{ "type": "agent", "name": "Code Reviewer", "version": "0.5.0", "category": "reviewer" }
-```
-</Steps>
-
-<Steps title="Plugin">
-```json
-{ "type": "plugin", "name": "Git Automator", "version": "1.0.0", "category": "git" }
-```
-</Steps>
-
-<Steps title="MCP">
-```json
-{ "type": "mcp", "name": "File System", "version": "2.1.0", "category": "filesystem" }
-```
-</Steps>
+O OpenDex é um catálogo que indexa o ecossistema OpenCode (plugins, agentes, MCPs, scripts) a partir de fontes reais como o npm e o GitHub. Ele não usa um `opencode.json` de metadados para descoberta — os dados vêm de coletores reais. Para publicar seu projeto no OpenDex, basta publicá-lo no npm ou no GitHub com os tópicos apropriados.

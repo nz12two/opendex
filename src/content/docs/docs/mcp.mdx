@@ -1,100 +1,116 @@
 ---
 title: MCP — Model Context Protocol
-description: Guia completo sobre servidores MCP no OpenCode — criação, configuração e uso.
+description: Como conectar servidores MCP (Model Context Protocol) ao OpenCode — configuração local e remota.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
-import Mermaid from '../../../components/ui/Mermaid.astro';
 
 <Callout type="note">
 MCP (Model Context Protocol) é um padrão aberto que permite que modelos de linguagem se conectem a ferramentas externas de forma segura e padronizada. Pense nele como um "USB-C para IAs" — um único protocolo que conecta LLMs a qualquer ferramenta.
+</Callout>
+
+<Callout type="caution">
+**Atenção ao contexto:** MCP adiciona ferramentas externas, mas cada MCP também adiciona **tokens de contexto**. Por exemplo, o GitHub MCP pode estourar o limite de contexto. Habilite apenas os MCPs que você realmente usa.
 </Callout>
 
 ## O que é MCP?
 
 MCP (Model Context Protocol) é um protocolo que permite que modelos de linguagem acessem ferramentas e recursos externos de forma padronizada. No OpenCode, MCPs são servidores que expõem ferramentas que os agentes podem usar.
 
-## Arquitetura
+## Habilitar um MCP
 
-<Mermaid
-  chart={`
-    graph LR
-      A[Agente LLM] --> B[MCP Client OpenCode]
-      B --> C[MCP Server]
-      C --> D[Ferramenta Externa]
-  `}
-  caption="Fluxo de comunicação entre agente LLM, cliente MCP e servidor de ferramentas"
-/>
+No `opencode.json`, use a chave `mcp`:
 
-## Configurando um MCP Server
+```jsonc
+{ "mcp": { "name-of-mcp-server": { "enabled": true } } }
+```
 
-No `opencode.json`:
+## MCP local
 
-```json
+Um MCP local é um processo executado na sua máquina:
+
+```jsonc
 {
   "mcp": {
-    "servers": [
-      {
-        "name": "meu-servidor",
-        "command": "node",
-        "args": ["servidor-mcp.js"],
-        "env": {
-          "API_KEY": "${API_KEY}"
-        }
-      }
-    ]
+    "my-local-mcp-server": {
+      "type": "local",
+      "command": ["npx", "-y", "my-mcp-command"],
+      "enabled": true,
+      "environment": { "MY_ENV_VAR": "value" }
+    }
   }
 }
 ```
 
-## Criando um MCP Server
+Opções local: `type` (obrigatório, `"local"`), `command` (obrigatório, array), `cwd`, `environment`, `enabled`, `timeout` (default `5000`ms).
 
-Um servidor MCP minimalista em Node.js:
+## MCP remoto
 
-```javascript
-import { Server } from '@modelcontextprotocol/sdk/server/index.js';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+Um MCP remoto é um servidor HTTP acessível por URL:
 
-const server = new Server({
-  name: 'meu-servidor',
-  version: '1.0.0',
-}, {
-  capabilities: { tools: {} },
-});
-
-server.setRequestHandler('tools/list', async () => ({
-  tools: [{
-    name: 'saudacao',
-    description: 'Retorna uma saudação personalizada',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        nome: { type: 'string' },
-      },
-    },
-  }],
-}));
-
-server.setRequestHandler('tools/call', async (request) => {
-  if (request.params.name === 'saudacao') {
-    return {
-      content: [{
-        type: 'text',
-        text: `Olá, ${request.params.arguments.nome}!`,
-      }],
-    };
+```json
+{
+  "mcp": {
+    "my-remote-mcp": {
+      "type": "remote",
+      "url": "https://my-mcp-server.com",
+      "enabled": true,
+      "headers": { "Authorization": "Bearer MY_API_KEY" }
+    }
   }
-});
-
-const transport = new StdioServerTransport();
-await server.connect(transport);
+}
 ```
 
-## MCPs disponíveis no OpenDex
+Opções remote: `type` (obrigatório, `"remote"`), `url` (obrigatório), `enabled`, `headers`, `oauth`, `timeout` (default `5000`ms).
 
-| Nome | Descrição | Tipo |
-|------|-----------|------|
-| Filesystem | Operações seguras de arquivo | Sistema |
-| Playwright | Automação de browser | Navegação |
-| Sequential Thinking | Raciocínio estruturado | Cognitivo |
-| Memory | Memória persistente (knowledge graph) | Dados |
+## OAuth
+
+- **Automático:** o OpenCode detecta um `401`, inicia o fluxo OAuth, faz Dynamic Client Registration (RFC 7591) e armazena os tokens em `~/.local/share/opencode/mcp-auth.json`.
+- **Pré-registrado:** `oauth: { clientId, clientSecret, scope }`.
+- **Desabilitar:** `oauth: false`.
+
+## Gerenciar via CLI
+
+```bash
+opencode mcp add <server>
+opencode mcp list
+opencode mcp ls
+opencode mcp auth <server>
+opencode mcp auth list
+opencode mcp logout <server>
+opencode mcp debug <server>
+```
+
+## Desabilitar tools de um MCP
+
+- **Global:** `tools: { "my-mcp-foo": false }` ou glob `"my-mcp*": false`.
+- **Per agent:** desabilite globalmente e habilite no agent via `tools`.
+- As tools MCP são registradas com o prefixo do nome do servidor: `"mymcpservername_*": false`.
+
+## Exemplos reais
+
+### Sentry
+
+```json
+{ "sentry": { "type": "remote", "url": "https://mcp.sentry.dev/mcp", "oauth": {} } }
+```
+
+Depois, autentique com `opencode mcp auth sentry`.
+
+### Context7
+
+```json
+{ "context7": { "type": "remote", "url": "https://mcp.context7.com/mcp" } }
+```
+
+Opcional: header `CONTEXT7_API_KEY`.
+
+### Grep by Vercel
+
+```json
+{ "gh_grep": { "type": "remote", "url": "https://mcp.grep.app" } }
+```
+
+<Callout type="tip">
+Para mais detalhes sobre como criar servidores MCP, consulte a documentação oficial do protocolo. No OpenCode, o foco é **configurar** MCPs prontos, não criar servidores do zero.
+</Callout>

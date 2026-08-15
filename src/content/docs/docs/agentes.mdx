@@ -1,69 +1,107 @@
 ---
 title: Agentes
-description: Guia completo sobre agentes OpenCode — criação, configuração e boas práticas.
+description: Agentes built-in do OpenCode e como criar e configurar os seus próprios.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 
-
-
 ## O que são agentes?
 
-Agentes no OpenCode são entidades especializadas que executam tarefas específicas usando modelos de linguagem. Cada agente tem um propósito, um conjunto de ferramentas e um comportamento definido.
+Agentes no OpenCode são entidades especializadas que executam tarefas usando modelos de linguagem. Existem dois tipos:
 
-## Agentes padrão
+- **Primary agents**: assistentes principais, que você alterna com a tecla **Tab** ou o keybind `switch_agent`. O `build` tem todas as tools; o `plan` é restrito.
+- **Subagents**: especializados, invocados por primary agents ou manualmente via **@ mention** (ex: `@general help me search for this function`).
 
-O OpenCode vem com os seguintes agentes pré-configurados:
+## Agentes built-in reais
 
-| Agente | Função | Modelo recomendado |
-|--------|--------|-------------------|
-| Orchestrator | Coordena o fluxo SDD | GPT-4o / Claude 3.5 |
-| Builder | Implementa código | GPT-4o |
-| Reviewer | Revisa código | Claude 3.5 Sonnet |
-| Tester | Gera e executa testes | GPT-4o |
-| Debugger | Diagnostica falhas | Claude 3.5 Sonnet |
-| Researcher | Pesquisa externa | GPT-4o / Gemini |
+| Agente | Mode | Descrição |
+|--------|------|-----------|
+| `build` | primary | **Default**, todas as tools habilitadas |
+| `plan` | primary | Restrito para planejamento/análise. `file edits` e `bash` = `ask` por padrão |
+| `general` | subagent | Propósito geral, full tool access (exceto todo), pode fazer mudanças. Roda unidades de trabalho em paralelo |
+| `explore` | subagent | Rápido, read-only, explora codebases. Não modifica arquivos |
+| `scout` | subagent | Read-only para docs externas e pesquisa de dependências (clona repo no cache gerenciado) |
+| `compaction` | primary | Sistema oculto, compacta contexto longo. Automático, não selecionável |
+| `title` | primary | Sistema oculto, gera títulos de sessão. Automático |
+| `summary` | primary | Sistema oculto, cria resumos de sessão. Automático |
 
-## Criando um agente customizado
+<Callout type="note">
+Os agentes `compaction`, `title` e `summary` são de sistema e ocultos — eles rodam automaticamente e não podem ser selecionados.
+</Callout>
 
-Crie um arquivo na pasta `agentes/` do seu projeto:
-
-```markdown
-# .opencode/agentes/meu-agente.json
-
-{
-  "name": "meu-agente",
-  "description": "Descrição do meu agente",
-  "model": "gpt-4o",
-  "temperature": 0.3,
-  "systemPrompt": "Você é um assistente especializado em...",
-  "tools": ["filesystem", "search"],
-  "maxTokens": 4096
-}
-```
-
-## Boas práticas
-
-> **Especialização:** cada agente deve ter um propósito claro
-
-> **System prompt:** seja específico sobre o comportamento esperado
-
-> **Ferramentas:** forneça apenas as ferramentas necessárias
-
-> **Temperatura:** use valores baixos (0.1-0.3) para tarefas determinísticas
-
-> **Contexto:** limite o tamanho do contexto para evitar custos excessivos
-
-## Exemplo: Agente de documentação
+## Configurar em JSON (opencode.json)
 
 ```json
 {
-  "name": "doc-writer",
-  "description": "Escreve documentação técnica",
-  "model": "claude-3-5-sonnet-20241022",
-  "temperature": 0.2,
-  "systemPrompt": "Você é um escritor técnico especializado em documentação de software. Gere documentação clara, concisa e bem estruturada.",
-  "tools": ["filesystem"],
-  "maxTokens": 8192
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "anthropic/claude-sonnet-4-20250514",
+      "prompt": "{file:./prompts/build.txt}",
+      "permission": { "edit": "allow", "bash": "allow" }
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "anthropic/claude-haiku-4-20250514",
+      "permission": { "edit": "deny", "bash": "deny" }
+    },
+    "code-reviewer": {
+      "description": "...",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-20250514",
+      "prompt": "...",
+      "permission": { "edit": "deny" }
+    }
+  }
 }
 ```
+
+## Configurar em Markdown
+
+Arquivos em `~/.config/opencode/agents/` (global) ou `.opencode/agents/` (projeto). O nome do arquivo é o nome do agente.
+
+```markdown
+---
+description: Reviews code for quality and best practices
+mode: subagent
+model: anthropic/claude-sonnet-4-20250514
+temperature: 0.1
+permission:
+  edit: deny
+  bash: deny
+---
+You are in code review mode. Focus on:
+- Code quality and best practices
+- Potential bugs and edge cases
+```
+
+## Opções reais
+
+- **description** — obrigatória
+- **temperature** — 0.0 a 1.0. Default: 0 para a maioria, 0.55 para Qwen
+- **steps** — máximo de iterações agentic (o legacy `maxSteps` é deprecated, use `steps`)
+- **disable** — `true` desabilita o agente
+- **prompt** — caminho do arquivo de system prompt (`{file:...}`)
+- **model** — override do modelo. Formato `provider/model-id`. Subagents usam o modelo do primary que os invocou
+- **tools** (deprecated) — `true` = `{"*":"allow"}`, `false` = `{"*":"deny"}`
+- **permission** — `ask`/`allow`/`deny`. Chaves: `read`, `edit` (cobre write/edit/apply_patch), `glob`, `grep`, `list`, `bash`, `task`, `external_directory`, `todowrite`, `webfetch`, `websearch`, `lsp`, `skill`, `question`, `doom_loop`. Aceitam objeto glob→ação: `read`, `edit`, `glob`, `grep`, `list`, `bash`, `task`, `external_directory`, `lsp`, `skill`
+- **mode** — `primary`, `subagent`, ou `all` (default `all`)
+- **hidden** — `true` esconde o subagent do menu `@` (só para `mode: subagent`)
+- **permission.task** — controla quais subagents o agente pode invocar via Task tool (glob patterns, última regra vence)
+- **color** — hex (`#FF5733`) ou tema: `primary`, `secondary`, `accent`, `success`, `warning`, `error`, `info`
+- **top_p** — 0.0 a 1.0
+- **additional** — qualquer outra opção passa direto para o provider (ex: `reasoningEffort`, `textVerbosity`)
+
+## Criar um agente
+
+```bash
+opencode agent create
+```
+
+O comando é interativo: onde salvar → descrição → gera prompt → seleciona permissões → cria o markdown.
+
+Para listar agentes: `opencode agent list`.
+
+<Callout type="tip">
+Para entender como combinar agentes em fluxos de trabalho, veja a página [Workflows](/opendex/docs/workflows/).
+</Callout>

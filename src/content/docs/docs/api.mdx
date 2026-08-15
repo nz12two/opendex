@@ -1,89 +1,132 @@
 ---
 title: API Reference
-description: Documentação completa da API do OpenCode para integração e automação.
+description: O SDK oficial @opencode-ai/sdk e o servidor headless do OpenCode.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 
-## Visão geral
-
-O OpenCode expõe uma API REST para integração com ferramentas externas e automação de workflows.
-
-## Endpoints
-
-### `POST /api/agents/:agent/execute`
-
-Executa um agente com um prompt personalizado.
-
-**Parâmetros:**
-
-| Campo | Tipo | Descrição |
-|-------|------|-----------|
-| prompt | string | O prompt para o agente |
-| context | object | Contexto adicional (opcional) |
-| files | string[] | Arquivos para incluir no contexto (opcional) |
-
-**Exemplo:**
-
-```bash
-curl -X POST https://api.opencode.ai/api/agents/builder/execute \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Crie uma função de validação de email",
-    "context": { "language": "typescript" }
-  }'
-```
-
-### `GET /api/agents`
-
-Lista todos os agentes disponíveis.
-
-### `GET /api/plugins`
-
-Lista todos os plugins instalados.
-
-### `POST /api/workflows/run`
-
-Executa um workflow definido no projeto.
-
-## Autenticação
-
-<Callout type="caution">
-  <strong>Autenticação</strong>
-  <p>Todas as requisições à API requerem um token de autenticação:</p>
-
-  ```bash
-  Authorization: Bearer <seu-token>
-  ```
-</Callout>
-
-## Rate limiting
-
-| Plano | Limite |
-|-------|--------|
-| Gratuito | 100 req/min |
-| Pro | 1000 req/min |
-| Enterprise | Ilimitado |
-
-## SDKs
-
 <Callout type="note">
-  <strong>SDKs</strong>
-  <p>Integre o OpenCode em sua aplicação com nossos SDKs oficiais.</p>
+O OpenCode não expõe uma API REST pública (como `api.opencode.ai`). Em vez disso, ele oferece um **SDK oficial** (`@opencode-ai/sdk`) que se conecta a um **servidor headless** local (`opencode serve`). Este guia documenta o SDK real.
 </Callout>
 
-### JavaScript/TypeScript
+## O servidor headless
+
+O OpenCode pode rodar como um servidor headless:
 
 ```bash
-npm install @opencode/sdk
+opencode serve
 ```
 
-```javascript
-import { OpenCode } from '@opencode/sdk';
+Por padrão, o servidor escuta na porta **4096**. Você pode configurar a porta e o hostname no `opencode.json`:
 
-const client = new OpenCode({ apiKey: 'seu-token' });
-const result = await client.agents.execute('builder', {
-  prompt: 'Crie um componente React',
-});
+```json
+{ "server": { "port": 4096, "hostname": "0.0.0.0" } }
 ```
+
+Também existe o `opencode web`, que sobe uma interface web, e o `opencode attach [url]`, que anexa o TUI a um servidor backend.
+
+## Instalar o SDK
+
+```bash
+npm install @opencode-ai/sdk
+```
+
+## Criar um client
+
+O SDK oferece duas formas de criar um client:
+
+### `createOpencode` — cria e conecta
+
+```js
+import { createOpencode } from "@opencode-ai/sdk"
+
+const { client } = await createOpencode()
+```
+
+Options: `hostname` (default `127.0.0.1`), `port` (default `4096`), `signal`, `timeout` (default `5000`), `config`.
+
+### `createOpencodeClient` — conectar a um servidor existente
+
+```js
+import { createOpencodeClient } from "@opencode-ai/sdk"
+
+const client = createOpencodeClient({ baseUrl: "http://localhost:4096" })
+```
+
+Options: `baseUrl`, `fetch`, `parseAs`, `responseStyle` (`data`/`fields`), `throwOnError`.
+
+## Types
+
+Os types são gerados a partir da OpenAPI spec:
+
+```ts
+import type { Session, Message, Part } from "@opencode-ai/sdk"
+```
+
+## APIs principais
+
+### Sessions
+
+- `session.list()`, `session.get()`, `session.children()`
+- `session.create()`, `session.delete()`, `session.update()`
+- `session.init()` — cria o `AGENTS.md`
+- `session.abort()`, `session.share()`, `session.unshare()`, `session.summarize()`
+- `session.messages()`, `session.message()`
+- `session.prompt()` — envia um prompt
+- `session.command()`, `session.shell()`
+- `session.revert()`, `session.unrevert()`
+
+### Files
+
+- `find.text()`, `find.files()`, `find.symbols()`
+- `file.read()`, `file.status()`
+
+### Config
+
+- `config.get()`, `config.providers()`
+
+### Project
+
+- `project.list()`, `project.current()`
+
+### Global / App
+
+- `global.health()`
+- `app.log()`, `app.agents()`
+
+### Path
+
+- `path.get()`
+
+### TUI
+
+- `tui.appendPrompt()`, `tui.openHelp()`, `tui.openSessions()`, `tui.openThemes()`, `tui.openModels()`
+- `tui.submitPrompt()`, `tui.clearPrompt()`, `tui.executeCommand()`, `tui.showToast()`
+
+### Auth
+
+- `auth.set()`
+
+### Events
+
+- `event.subscribe()` — server-sent events
+
+## Structured Output
+
+Você pode pedir saída estruturada no `session.prompt` usando `format`:
+
+```js
+await client.session.prompt({
+  sessionId,
+  prompt: "Extract the data",
+  format: { type: "json_schema", schema: { /* seu schema */ } }
+})
+```
+
+- Tipos: `text` (default), `json_schema`
+- Campos: `type`, `schema`, `retryCount` (default `2`)
+- Erro: `StructuredOutputError`
+
+<Callout type="tip">
+Para mais detalhes sobre o SDK, consulte a documentação oficial do OpenCode. O SDK é type-safe e gerado a partir da OpenAPI spec do servidor.
+</Callout>

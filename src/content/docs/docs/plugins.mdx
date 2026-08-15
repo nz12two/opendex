@@ -1,97 +1,112 @@
 ---
 title: Plugins
-description: Criação e uso de plugins no OpenCode para estender funcionalidades.
+description: Como usar e criar plugins no OpenCode — API real, eventos e exemplos.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 
 <Callout type="note">
-**Plugins vs MCPs:** Enquanto plugins estendem o próprio OpenCode adicionando comandos, hooks e integrações, MCPs conectam agentes a ferramentas externas de forma padronizada. Plugins modificam o comportamento do OpenCode; MCPs expandem o que os agentes podem acessar.
+**Plugins vs MCPs:** enquanto plugins estendem o próprio OpenCode adicionando hooks, ferramentas e integrações, MCPs conectam agentes a ferramentas externas de forma padronizada. Plugins modificam o comportamento do OpenCode; MCPs expandem o que os agentes podem acessar.
 </Callout>
 
 ## O que são plugins?
 
-Plugins são pacotes que estendem as funcionalidades do OpenCode. Eles podem adicionar novos comandos, integrações, provedores de modelo, e muito mais.
+Plugins são módulos JS/TS que estendem as funcionalidades do OpenCode. Eles podem adicionar ferramentas customizadas, reagir a eventos, fazer logging e muito mais.
 
-## Instalando plugins
+## Usar um plugin
 
-```bash
-opencode plugin add nome-do-plugin
-```
+### Local
 
-Ou manualmente no `opencode.json`:
+Coloque o plugin em `.opencode/plugins/` (projeto) ou `~/.config/opencode/plugins/` (global). Eles são carregados automaticamente no startup.
+
+### npm
+
+Via config `plugin` no `opencode.json`:
 
 ```json
-{
-  "plugins": [
-    "opencode-plugin-eslint",
-    "opencode-plugin-prettier",
-    "opencode-plugin-docker"
-  ]
+{ "plugin": ["opencode-helicone-session", "opencode-wakatime", "@my-org/custom-plugin"] }
+```
+
+Plugins npm são instalados com **Bun** no startup, com cache em `~/.cache/opencode/node_modules/`.
+
+**Load order:** global config → project config → global plugin dir → project plugin dir.
+
+## Criar um plugin
+
+Um plugin é um módulo que exporta uma ou mais funções. Cada função recebe um contexto e retorna hooks.
+
+```js
+export const MyPlugin = async ({ project, client, $, directory, worktree }) => {
+  console.log("Plugin initialized!")
+  return { /* hooks */ }
 }
 ```
 
-## Criando um plugin
+O contexto inclui: `project`, `directory`, `worktree`, `client` (SDK client) e `$` (Bun shell API).
 
-Estrutura básica de um plugin:
+### Dependências
 
-```
-meu-plugin/
-├── package.json
-├── index.js
-└── README.md
-```
+Se o plugin tiver dependências, coloque um `package.json` no diretório de config. O OpenCode roda `bun install` no startup.
 
-```javascript
-// index.js
-export default {
-  name: 'meu-plugin',
-  version: '1.0.0',
-  
-  hooks: {
-    'app:init': async (context) => {
-      console.log('Plugin inicializado!');
-    },
-    
-    'command:before': async (command, args) => {
-      // Executa antes de cada comando
-    },
-    
-    'agent:before': async (agent, prompt) => {
-      // Modifica o prompt antes de enviar ao agente
-      return prompt;
-    },
-  },
-  
-  commands: {
-    'meu-comando': {
-      description: 'Descrição do comando',
-      handler: async (args) => {
-        return 'Resultado do comando';
-      },
-    },
-  },
-};
+### TypeScript
+
+```ts
+import type { Plugin } from "@opencode-ai/plugin"
+
+export const MyPlugin: Plugin = async ({ project, client, $, directory, worktree }) => {
+  return {}
+}
 ```
 
-## Plugins recomendados
+## Eventos reais
 
-| Plugin | Descrição |
-|--------|-----------|
-| eslint | Integração com ESLint para linting automático |
-| prettier | Formatação de código com Prettier |
-| docker | Comandos Docker integrados |
-| jest | Execução de testes com Jest |
-| github | Integração com GitHub Issues e PRs |
+- **Command**: `command.executed`
+- **File**: `file.edited`, `file.watcher.updated`
+- **Installation**: `installation.updated`
+- **LSP**: `lsp.client.diagnostics`, `lsp.updated`
+- **Message**: `message.part.removed`, `message.part.updated`, `message.removed`, `message.updated`
+- **Permission**: `permission.asked`, `permission.replied`
+- **Server**: `server.connected`
+- **Session**: `session.created`, `session.compacted`, `session.deleted`, `session.diff`, `session.error`, `session.idle`, `session.status`, `session.updated`
+- **Todo**: `todo.updated`
+- **Shell**: `shell.env`
+- **Tool**: `tool.execute.after`, `tool.execute.before`
+- **TUI**: `tui.prompt.append`, `tui.command.execute`, `tui.toast.show`
+
+## Exemplos reais
+
+### Custom tool (via `tool` helper + Zod)
+
+```ts
+import { type Plugin, tool } from "@opencode-ai/plugin"
+
+export const CustomToolsPlugin: Plugin = async (ctx) => {
+  return {
+    tool: {
+      mytool: tool({
+        description: "This is a custom tool",
+        args: { foo: tool.schema.string() },
+        async execute(args, context) {
+          return `Hello ${args.foo}`
+        }
+      })
+    }
+  }
+}
+```
+
+### Logging
+
+```ts
+client.app.log({ body: { service, level, message, extra } })
+```
+
+Níveis: `debug`, `info`, `warn`, `error`.
+
+### Compaction hook
+
+`experimental.session.compacting` — injeta contexto em `output.context` ou substitui o prompt com `output.prompt`.
 
 <Callout type="tip">
 **Criou um plugin interessante?** Publique no npm e submeta para o catálogo do OpenDex para compartilhar com a comunidade!
 </Callout>
-
-## Publicando plugins
-
-Para publicar seu plugin no OpenDex:
-
-1. Crie o plugin seguindo o template acima
-2. Publique no npm
-3. Submeta para o catálogo do OpenDex

@@ -1,85 +1,99 @@
 ---
 title: Modelos de Linguagem
-description: Modelos suportados pelo OpenCode, configuração e boas práticas.
+description: Provedores, modelos recomendados e como selecionar e configurar modelos no OpenCode.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 
-## Modelos suportados
+## Provedores
 
-O OpenCode suporta múltiplos provedores de modelos de linguagem:
+O OpenCode usa o **AI SDK** e o **Models.dev**, o que dá suporte a **75+ provedores** de modelos de linguagem, além de modelos locais. Os provedores populares vêm pré-carregados, e as credenciais são configuradas via `/connect`.
 
-| Provedor | Modelos | Uso recomendado |
-|----------|---------|-----------------|
-| OpenAI | GPT-4, GPT-4o, GPT-4o-mini | Agentes gerais, orquestração |
-| Anthropic | Claude 3.5 Sonnet, Claude 3 Opus | Revisão de código, análise |
-| Google | Gemini 1.5 Pro, Gemini 1.5 Flash | Pesquisa, sumarização |
-| Local | Ollama (Llama 3, Mistral) | Desenvolvimento offline |
+## Formato de modelo
 
-## Configuração de modelo por agente
+Os modelos são referenciados no formato `provider_id/model_id`. Exemplos:
 
-Cada agente pode usar um modelo diferente:
+- `anthropic/claude-sonnet-4-5`
+- `openai/gpt-4.1`
+- `lmstudio/google/gemma-3n-e4b`
+- `opencode/gpt-5.1-codex` (via OpenCode Zen)
+
+## Modelos recomendados
+
+A documentação oficial recomenda (lista não exaustiva):
+
+- GPT 5.2
+- GPT 5.1 Codex
+- Claude Opus 4.5
+- Claude Sonnet 4.5
+- Minimax M2.1
+- Gemini 3 Pro
+
+## Selecionar modelo
+
+No TUI, use o comando `/models` para selecionar o modelo ativo.
+
+## Definir modelo default
+
+No `opencode.json`:
 
 ```json
+{ "model": "lmstudio/google/gemma-3n-e4b" }
+```
+
+## Configurar modelos por provider
+
+Você pode configurar opções específicas de cada modelo no `opencode.json`:
+
+```jsonc
 {
-  "agents": {
-    "orchestrator": {
-      "model": "gpt-4o",
-      "temperature": 0.3,
-      "maxTokens": 4096
+  "provider": {
+    "openai": {
+      "models": {
+        "gpt-5": {
+          "options": {
+            "reasoningEffort": "high",
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+            "include": ["reasoning.encrypted_content"]
+          }
+        }
+      }
     },
-    "reviewer": {
-      "model": "claude-3-5-sonnet-20241022",
-      "temperature": 0.1
-    },
-    "builder": {
-      "model": "gpt-4o",
-      "temperature": 0.2
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-5-20250929": {
+          "options": {
+            "thinking": { "type": "enabled", "budgetTokens": 16000 }
+          }
+        }
+      }
     }
   }
 }
 ```
 
-## Modelos locais (Ollama)
+## Variantes
 
-Para usar modelos locais com Ollama:
+- **Built-in**: Anthropic (`high` default, `max`); OpenAI (`none`, `minimal`, `low`, `medium`, `high`, `xhigh`); Google (`low`, `high`).
+- **Custom**: você pode fazer override ou adicionar variantes via `variants` (ex: `"fast": { "disabled": true }`).
+- **Cycle**: use o keybind `variant_cycle` (default `ctrl+t`) para alternar entre variantes.
 
-```bash
-# Instale o Ollama
-curl -fsSL https://ollama.com/install.sh | sh
+## Ordem de carregamento do modelo
 
-# Baixe um modelo
-ollama pull llama3
+1. Flag CLI `--model`/`-m` (formato `provider_id/model_id`)
+2. Model list no config (`model` key, formato `provider/model`)
+3. Último modelo usado
+4. Primeiro modelo por prioridade interna
 
-# Configure no opencode.json
-```
+## small_model
+
+O `small_model` é um modelo separado para tarefas leves (ex: gerar títulos de sessão). Ele faz fallback para o modelo principal se não estiver configurado.
 
 ```json
-{
-  "agents": {
-    "builder": {
-      "provider": "ollama",
-      "model": "llama3",
-      "baseUrl": "http://localhost:11434"
-    }
-  }
-}
+{ "small_model": "anthropic/claude-haiku-4-5" }
 ```
 
-## Boas práticas
-
 <Callout type="tip">
-**Modelos mais capazes** — Utilize modelos como GPT-4o e Claude 3.5 Sonnet para orquestração e revisão de código, onde precisão e profundidade são essenciais.
-</Callout>
-
-<Callout type="tip">
-**Modelos mais rápidos** — Prefira modelos como GPT-4o-mini e Gemini 1.5 Flash para tarefas simples e repetitivas, onde velocidade é mais importante que capacidade.
-</Callout>
-
-<Callout type="tip">
-**Modelos locais** — Use Ollama com Llama 3 ou Mistral para desenvolvimento offline ou quando trabalhar com dados sensíveis que não podem sair do ambiente local.
-</Callout>
-
-<Callout type="tip">
-**Ajuste de temperatura** — Configure 0.1-0.3 para tarefas determinísticas (código, análise) e 0.7-0.9 para tarefas criativas (geração de texto, brainstorming).
+Para listar os modelos disponíveis de um provedor, use `opencode models [provider]` no terminal (com `--refresh` e `--verbose` para mais detalhes).
 </Callout>

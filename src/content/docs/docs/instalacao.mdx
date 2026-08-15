@@ -1,21 +1,18 @@
 ---
 title: Instalação
-description: Guia completo de instalação do OpenCode e configuração do ambiente.
+description: Guia completo de instalação do OpenCode em todas as plataformas e configuração do ambiente.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 import Steps from '../../../components/ui/Steps.astro';
-import FileTree from '../../../components/ui/FileTree.astro';
 
-## Requisitos
+## Pré-requisitos
 
 <Callout type="tip">
 Antes de instalar o OpenCode, certifique-se de ter:
 
-- **Node.js** 18.x ou superior
-- **npm** 9.x ou superior (ou yarn/pnpm)
-- **Git** 2.30+ (opcional, mas recomendado)
-- Um terminal compatível (PowerShell 7+, bash, zsh)
+- Um **terminal moderno**: WezTerm (cross-platform), Alacritty (cross-platform), Ghostty (Linux/macOS) ou Kitty (Linux/macOS)
+- As **API keys** dos provedores LLM que você quiser usar
 </Callout>
 
 ## Instalação
@@ -23,78 +20,110 @@ Antes de instalar o OpenCode, certifique-se de ter:
 <Steps>
 <li>
 
-### npm
+### Script de instalação (mais fácil)
 
 ```bash
-npm install -g opencode
+curl -fsSL https://opencode.ai/install | bash
 ```
 
 </li>
 <li>
 
-### Verificar versão
-
-Após a instalação, verifique se tudo funcionou:
+### Node.js (npm, bun, pnpm, yarn)
 
 ```bash
-opencode --version
+npm install -g opencode-ai
+```
+
+```bash
+bun install -g opencode-ai
+```
+
+```bash
+pnpm install -g opencode-ai
+```
+
+```bash
+yarn global add opencode-ai
 ```
 
 </li>
 <li>
 
-### yarn/pnpm alternativas
+### Homebrew (macOS/Linux)
 
 ```bash
-yarn global add opencode
+brew install anomalyco/tap/opencode
 ```
 
+</li>
+<li>
+
+### Arch Linux
+
 ```bash
-pnpm add -g opencode
+sudo pacman -S opencode   # Stable
+paru -S opencode-bin      # Latest do AUR
+```
+
+</li>
+<li>
+
+### Windows
+
+```bash
+choco install opencode
+scoop install opencode
+npm install -g opencode-ai
+mise use -g github:anomalyco/opencode
+```
+
+</li>
+<li>
+
+### Docker
+
+```bash
+docker run -it --rm ghcr.io/anomalyco/opencode
 ```
 
 </li>
 </Steps>
 
-## Configuração inicial
+<Callout type="note">
+**Windows:** é recomendado usar **WSL**. O suporte a Bun no Windows ainda está em progresso.
+</Callout>
 
-Após instalar, execute o comando de inicialização:
+## Configurar um provedor
+
+No TUI do OpenCode, use o comando `/connect`. Ele abre o fluxo de autenticação: selecione o provedor, vá em `opencode.ai/auth` e cole a API key.
+
+<Callout type="tip">
+Para novatos, o **OpenCode Zen** é recomendado — uma lista curada de modelos testados.
+</Callout>
+
+## Inicializar um projeto
 
 ```bash
-opencode init
+cd /path/to/project
+opencode
+/init   # analisa o projeto e cria AGENTS.md na raiz
 ```
-
-Isso criará o diretório `.opencode/` no seu projeto com a estrutura padrão:
-
-<FileTree structure={[
-  {name: '.opencode', type: 'directory', children: [
-    {name: 'state', type: 'directory', children: [
-      {name: 'tasks', type: 'directory', children: []},
-      {name: 'checkpoints', type: 'directory', children: []}
-    ]},
-    {name: 'config.json', type: 'file'},
-    {name: 'prompts', type: 'directory', children: []}
-  ]}
-]} />
-
-## Verificação da instalação
 
 <Callout type="note">
-Para confirmar que tudo está funcionando:
+É recomendado commitar o `AGENTS.md` no Git.
+</Callout>
+
+## Verificar a instalação
+
+Confirme que tudo funcionou:
 
 ```bash
-opencode doctor
+opencode --version
 ```
-
-Este comando verifica:
-- Versão do Node.js
-- Permissões de diretório
-- Configurações de rede
-- Dependências opcionais
-</Callout>
 
 ## Próximos passos
 
 <Callout type="note">
-Agora que o OpenCode está instalado, veja o guia de [Configuração](/opendex/docs/configuracao) para personalizar seu ambiente.
+Agora que o OpenCode está instalado, veja o guia de [Configuração](/opendex/docs/configuracao/) para personalizar seu ambiente e o [Quickstart](/opendex/docs/quickstart/) para um primeiro uso rápido.
 </Callout>

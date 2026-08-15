@@ -10,19 +10,19 @@ import Callout from '../../../components/ui/Callout.astro';
 ### O que é OpenCode?
 
 <Callout type="note">
-  OpenCode é uma plataforma de desenvolvimento assistida por IA que utiliza múltiplos agentes especializados para automatizar tarefas de desenvolvimento de software.
+OpenCode é um agente de IA **open source** para desenvolvimento de software. Disponível como interface de terminal, app desktop ou extensão de IDE, ele se conecta a dezenas de provedores de modelos de linguagem para ajudar você a escrever, revisar e manter código.
 </Callout>
 
 ### O que é OpenDex?
 
 <Callout type="note">
-  OpenDex é o catálogo oficial do ecossistema OpenCode, onde você encontra scripts, agentes, plugins, MCPs e documentação.
+OpenDex é o catálogo oficial do ecossistema OpenCode, onde você encontra scripts, agentes, plugins, MCPs e documentação.
 </Callout>
 
 ### OpenCode é gratuito?
 
 <Callout type="note">
-  OpenCode é open source e gratuito para uso. Você só paga pelos tokens dos modelos de linguagem que utilizar.
+Sim. O OpenCode é open source e gratuito para uso. Você só paga pelos **tokens** dos modelos de linguagem que utilizar (as API keys dos provedores).
 </Callout>
 
 ## Instalação
@@ -30,65 +30,75 @@ import Callout from '../../../components/ui/Callout.astro';
 ### Preciso de GPU para rodar o OpenCode?
 
 <Callout type="note">
-  Não. O OpenCode funciona como um cliente que se conecta a APIs de modelos de linguagem. GPUs são necessárias apenas se você quiser rodar modelos localmente com Ollama.
+Não. O OpenCode funciona como um cliente que se conecta a APIs de modelos de linguagem. GPUs são necessárias apenas se você quiser rodar modelos localmente.
 </Callout>
 
 ### O OpenCode funciona no Windows?
 
 <Callout type="note">
-  Sim. O OpenCode é compatível com Windows (PowerShell 7+), macOS e Linux.
+Sim. O OpenCode é compatível com Windows, mas o **WSL** é recomendado. O suporte a Bun no Windows ainda está em progresso.
 </Callout>
 
-## Agentes
-
-### Quantos agentes posso ter?
+### Como instalar?
 
 <Callout type="note">
-  Não há limite. Você pode criar quantos agentes precisar, cada um especializado em uma tarefa diferente.
+O jeito mais fácil é o script oficial: `curl -fsSL https://opencode.ai/install | bash`. Você também pode usar `npm install -g opencode-ai`, `brew install anomalyco/tap/opencode`, `choco install opencode`, `scoop install opencode` ou Docker. Veja o guia de [Instalação](/opendex/docs/instalacao/).
 </Callout>
 
-### Posso usar modelos diferentes para cada agente?
+## Modelos
+
+### Como configuro um provedor?
 
 <Callout type="note">
-  Sim. Cada agente pode ser configurado com um provedor e modelo diferente.
+Use o comando `/connect` no TUI. Ele abre o fluxo de autenticação: selecione o provedor, vá em `opencode.ai/auth` e cole a API key. Para novatos, o OpenCode Zen é recomendado.
 </Callout>
 
-## MCP
-
-### O que significa MCP?
+### Como seleciono um modelo?
 
 <Callout type="note">
-  Model Context Protocol — um protocolo aberto que permite que modelos de linguagem acessem ferramentas e recursos externos.
-</Callout>
-
-### Preciso criar meus próprios MCPs?
-
-<Callout type="note">
-  Não necessariamente. O OpenDex oferece vários MCPs prontos para uso. Você pode criar os seus se precisar de funcionalidades específicas.
+Use o comando `/models` no TUI para selecionar o modelo ativo. Para definir um default, configure a chave `model` no `opencode.json` no formato `provider/model`.
 </Callout>
 
 ## Solução de problemas
 
-<Callout type="caution">
-  <strong>Solução de Problemas</strong>
-</Callout>
-
 ### O comando `opencode` não é encontrado
 
 <Callout type="note">
-  Verifique se o Node.js está instalado e se o diretório global do npm está no PATH:
-
-  ```bash
-  npm list -g --depth=0
-  ```
+Isso geralmente significa que o diretório de binários globais não está no **PATH**. Verifique onde o pacote foi instalado e adicione o diretório ao PATH. Você também pode tentar `opencode upgrade` para garantir que está na versão mais recente.
 </Callout>
 
-### Erro de conexão com a API
+### Erro `ProviderModelNotFoundError`
 
 <Callout type="note">
-  Verifique suas chaves de API e a conectividade de rede:
+Esse erro indica uma referência de modelo errada. O formato correto é `<providerId>/<modelId>` (ex: `openai/gpt-4.1`, `openrouter/google/gemini-2.5-flash`, `opencode/kimi-k2`). Rode `opencode models` para ver os modelos disponíveis.
+</Callout>
 
-  ```bash
-  opencode doctor
-  ```
+### Erro `ProviderInitError`
+
+<Callout type="note">
+Indica config inválida ou corrompida. Tente remover o diretório de dados (`rm -rf ~/.local/share/opencode`) e re-autenticar.
+</Callout>
+
+### Erro `AI_APICallError`
+
+<Callout type="note">
+Indica pacotes de provider desatualizados. Tente remover o cache (`rm -rf ~/.cache/opencode`) e reiniciar.
+</Callout>
+
+### Onde ficam os logs?
+
+<Callout type="note">
+- macOS/Linux: `~/.local/share/opencode/log/`
+- Windows: `%USERPROFILE%\.local\share\opencode\log`
+
+Os logs são nomeados com timestamp e mantêm os 10 mais recentes. Para mais detalhes, rode `opencode --log-level DEBUG`.
+</Callout>
+
+### Onde ficam os dados?
+
+<Callout type="note">
+- macOS/Linux: `~/.local/share/opencode/`
+- Windows: `%USERPROFILE%\.local\share\opencode`
+
+Contém `auth.json` (API keys/OAuth), `log/` e `project/` (dados de sessão).
 </Callout>

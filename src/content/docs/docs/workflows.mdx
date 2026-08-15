@@ -1,122 +1,82 @@
 ---
 title: Workflows
-description: Automação de fluxos de trabalho com OpenCode — CI/CD, revisão, deploy e mais.
+description: Como o OpenCode orquestra trabalho via agentes, sessions e o fluxo build/plan.
 ---
 
-import Mermaid from '../../../components/ui/Mermaid.astro';
 import Callout from '../../../components/ui/Callout.astro';
 
-## O que são workflows?
-
-Workflows no OpenCode são sequências automatizadas de passos que orquestram múltiplos agentes e ferramentas para realizar tarefas complexas.
-
-## Workflow de desenvolvimento SDD
-
-O fluxo SDD (Spec-Driven Development) é o workflow principal do OpenCode:
-
-<Mermaid
-  chart={`graph LR
-    O[Orchestrator] -->|Spec| B[Builder]
-    B -->|Código| R[Reviewer]
-    R -->|Aprovado| T[Tester]
-    T -->|Falha| D[Debugger]
-    D -->|Correção| B`}
-  title="Fluxo SDD"
-/>
-
-## Workflow de CI/CD
-
 <Callout type="note">
-  Configure a integração contínua com o OpenCode usando GitHub Actions:
-
-  ```yaml
-  # .github/workflows/opencode.yml
-  name: OpenCode CI
-  on: [push, pull_request]
-
-  jobs:
-    review:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: opencode/action@v1
-          with:
-            command: review
-
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: opencode/action@v1
-          with:
-            command: test
-  ```
+O OpenCode **não** possui um sistema de "workflows" em YAML (como `.opencode/workflows/` ou uma action `opencode/action@v1`). Em vez disso, ele orquestra trabalho através de **agentes** (primary + subagents), **sessions** e o fluxo **build/plan**. Este guia explica como combinar esses recursos para montar fluxos de trabalho.
 </Callout>
 
-## Workflow de deploy
+## Como o OpenCode orquestra trabalho
 
-<Callout type="note">
-  Automatize o deploy contínuo com o workflow abaixo:
+O OpenCode organiza o desenvolvimento em torno de **sessions** (conversas persistentes) e **agentes**. Um fluxo típico combina:
 
-  ```yaml
-  name: Deploy
-  on:
-    push:
-      branches: [main]
+- **Primary agents** (`build` e `plan`) — o assistente principal que você alterna com **Tab**.
+- **Subagents** (`general`, `explore`, `scout`) — especializados, invocados via **@ mention** ou pela Task tool.
+- **Sessions** — cada sessão guarda o contexto e o histórico de uma tarefa.
 
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: opencode/action@v1
-          with:
-            command: deploy
-            args: --env production
-  ```
-</Callout>
+## O fluxo build/plan
 
-## Criando workflows customizados
+O fluxo mais comum é alternar entre os dois primary agents:
 
-Workflows são definidos em arquivos YAML no diretório `.opencode/workflows/`:
+1. **Plan mode** (tecla **Tab**): o agente `plan` analisa o problema e **sugere** mudanças sem aplicá-las. Ideal para planejar antes de agir.
+2. **Build mode** (tecla **Tab** de novo): o agente `build` aplica as mudanças de fato, com todas as tools habilitadas.
 
-```yaml
-# .opencode/workflows/meu-workflow.yaml
-name: Meu Workflow
-description: Descrição do workflow
+Esse ciclo "planeja → implementa" é a base de qualquer fluxo de desenvolvimento no OpenCode.
 
-steps:
-  - name: passo-1
-    agent: builder
-    prompt: "Implemente a funcionalidade X"
+## Combinando agentes para fluxos
 
-  - name: passo-2
-    agent: reviewer
-    prompt: "Revise o código implementado"
+Você pode montar fluxos mais complexos combinando agentes:
 
-  - name: passo-3
-    agent: tester
-    prompt: "Teste a funcionalidade implementada"
+- **Planejar:** use o agente `plan` para analisar o problema e propor uma abordagem.
+- **Implementar:** mude para o agente `build` para aplicar as mudanças.
+- **Tarefas paralelas:** use o subagente `general` para rodar unidades de trabalho em paralelo.
+- **Explorar o código:** use o subagente `explore` (read-only) para entender uma codebase sem modificar nada.
+- **Pesquisar dependências:** use o subagente `scout` para consultar docs externas e dependências.
+
+## Usando sessions
+
+Cada sessão mantém o contexto de uma tarefa. Você pode:
+
+- Criar uma nova sessão com `<leader>n` (leader key default é `ctrl+x`).
+- Listar sessões com `<leader>l`.
+- Renomear com `ctrl+r`, deletar com `ctrl+d`, compactar com `<leader>c`.
+- Interromper com `escape`.
+
+Via CLI:
+
+```bash
+opencode session list
+opencode session delete <id>
 ```
+
+## Automação de CI/CD
+
+Para automação (CI/CD, scripts, tarefas não-interativas), o OpenCode oferece o modo **run** via CLI, em vez de um sistema de workflows YAML:
+
+```bash
+opencode run "Refactor this module"
+opencode run --auto "Run tests and fix failures"
+```
+
+O `opencode run` executa o OpenCode em modo não-interativo, o que permite integrá-lo a pipelines de CI/CD e scripts.
+
+<Callout type="tip">
+Combine `opencode run` com o modo `--auto` (auto-aprovação) para automação headless. Lembre-se de que permissões `deny` explícitas ainda são respeitadas.
+</Callout>
 
 ## Boas práticas
 
 <Callout type="tip">
-  <strong>Idempotência:</strong> workflows devem poder ser executados múltiplas vezes
+**Planeje antes de agir:** use o `plan` para validar a abordagem antes de deixar o `build` aplicar mudanças.
 </Callout>
 
 <Callout type="tip">
-  <strong>Checkpoints:</strong> salve estado entre passos para retomada
+**Use subagents para paralelismo:** o `general` roda unidades de trabalho em paralelo, acelerando tarefas independentes.
 </Callout>
 
 <Callout type="tip">
-  <strong>Paralelismo:</strong> use passos paralelos quando possível
-</Callout>
-
-<Callout type="tip">
-  <strong>Notificações:</strong> configure alertas para falhas
-</Callout>
-
-<Callout type="tip">
-  <strong>Versionamento:</strong> mantenha workflows no controle de versão
+**Mantenha sessions organizadas:** use uma sessão por tarefa e compacte (`<leader>c`) quando o contexto ficar longo.
 </Callout>

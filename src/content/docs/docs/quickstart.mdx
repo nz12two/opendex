@@ -1,128 +1,86 @@
 ---
 title: Quickstart
-description: Comece aqui — exemplo completo com todos os componentes de documentação.
+description: Guia real de primeiros passos — instale o OpenCode, configure um provedor e faça seu primeiro uso.
 ---
 
 import Callout from '../../../components/ui/Callout.astro';
 import CodeGroup from '../../../components/ui/CodeGroup.tsx';
 
-Bem-vindo ao **Quickstart** do OpenDex! Este guia mostra todos os componentes visuais disponíveis para a documentação.
+Este guia mostra como instalar o OpenCode, configurar um provedor de modelo e fazer seu primeiro uso em poucos minutos.
 
----
-
-## Instalação Rápida
+## Instalação
 
 <Callout type="tip">
-  Você pode instalar o OpenCode com apenas um comando. Escolha seu gerenciador de pacotes favorito.
+O jeito mais fácil é usar o script de instalação oficial. Você também pode instalar via gerenciador de pacotes do Node.js.
 </Callout>
 
 <CodeGroup client:load
   items={[
     {
-      language: "npm",
-      title: "npm",
-      code: "npm install -g opencode"
+      language: "bash",
+      title: "Script oficial",
+      code: "curl -fsSL https://opencode.ai/install | bash"
     },
     {
-      language: "yarn",
-      title: "yarn",
-      code: "yarn global add opencode"
+      language: "npm",
+      title: "npm",
+      code: "npm install -g opencode-ai"
+    },
+    {
+      language: "bun",
+      title: "bun",
+      code: "bun install -g opencode-ai"
     },
     {
       language: "pnpm",
       title: "pnpm",
-      code: "pnpm add -g opencode"
+      code: "pnpm install -g opencode-ai"
+    },
+    {
+      language: "yarn",
+      title: "yarn",
+      code: "yarn global add opencode-ai"
     }
   ]}
 />
 
-## Configuração
-
 <Callout type="note">
-  Certifique-se de ter **Node.js 18+** instalado antes de continuar.
+**Pré-requisitos:** um terminal moderno (WezTerm, Alacritty, Ghostty ou Kitty) e as API keys dos provedores LLM que você quiser usar.
 </Callout>
 
-### Passo 1: Inicialize
+## Configurar um provedor
 
-Abra o terminal e execute:
-
-```bash
-opencode init
-```
-
-Isso criará a estrutura inicial do projeto:
-
-```
-.opencode/
-├── state/
-│   ├── tasks/
-│   └── checkpoints/
-├── config.json
-└── prompts/
-```
-
-### Passo 2: Configure
-
-Edite o arquivo `opencode.json` na raiz do seu projeto:
-
-```json
-{
-  "name": "meu-projeto",
-  "version": "1.0.0",
-  "agent": {
-    "model": "claude-sonnet-4-20260514",
-    "temperature": 0.7
-  }
-}
-```
-
----
-
-## Próximos Passos
+No terminal, rode o comando `/connect` dentro do TUI do OpenCode. Ele abre o fluxo de autenticação: selecione o provedor, vá em `opencode.ai/auth` e cole a API key.
 
 <Callout type="tip">
-  Agora que você já instalou e configurou, explore os guias abaixo para dominar o OpenCode.
+Para quem está começando, o **OpenCode Zen** é recomendado — é uma lista curada de modelos testados e prontos para uso.
 </Callout>
 
-| Recurso | Descrição | Nível |
-|---------|-----------|-------|
-| [Instalação](/opendex/docs/instalacao) | Guia completo de instalação | Iniciante |
-| [Configuração](/opendex/docs/configuracao) | Personalização avançada | Intermediário |
-| [Agentes](/opendex/docs/agentes) | Criação de agentes | Avançado |
-| [Plugins](/opendex/docs/plugins) | Extensões do ecossistema | Intermediário |
+## Iniciar o OpenCode
 
-<Callout type="caution">
-  Lembre-se de configurar suas chaves de API antes de usar recursos que exigem modelos de linguagem.
-</Callout>
+Navegue até o diretório do seu projeto e inicie o OpenCode:
 
-## Dicas de Uso
-
-### Code blocks com linguagem específica
-
-```typescript
-import { defineConfig } from 'opencode';
-
-export default defineConfig({
-  agent: {
-    model: 'gpt-4o',
-    temperature: 0.3,
-  },
-});
+```bash
+cd /path/to/project
+opencode
 ```
 
-### Listas de tarefas
+Dentro do TUI, use o comando `/init` para analisar o projeto e criar um `AGENTS.md` na raiz. É recomendado commitar esse arquivo no Git.
 
-- [x] Instalar OpenCode
-- [x] Configurar projeto
-- [ ] Criar primeiro agente
-- [ ] Publicar plugin
+## Uso básico
 
----
+- **Perguntar sobre arquivos:** use `@` para busca fuzzy de arquivos. Ex: `How is authentication handled in @packages/functions/src/api/index.ts`
+- **Plan mode:** pressione **Tab** para desabilitar mudanças e apenas sugerir.
+- **Build mode:** pressione **Tab** de novo para voltar a aplicar mudanças.
+- **Desfazer:** `/undo` (pode rodar múltiplas vezes). **Refazer:** `/redo`.
+- **Compartilhar:** `/share` cria um link e copia para a área de transferência. Conversas **não** são compartilhadas por padrão.
+- **Imagens:** arraste e solte imagens no terminal para adicioná-las ao prompt.
 
-## Referência Rápida
+## Próximos passos
 
 | Recurso | Descrição |
 |---------|-----------|
-| [Documentação](/opendex/docs) | Guia completo de todos os recursos |
-| [Instalação](/opendex/docs/instalacao) | Como instalar e configurar |
-| [FAQ](/opendex/docs/faq) | Perguntas frequentes |
+| [Instalação](/opendex/docs/instalacao/) | Guia completo de instalação em todas as plataformas |
+| [Configuração](/opendex/docs/configuracao/) | O schema real do `opencode.json` |
+| [Agentes](/opendex/docs/agentes/) | Agentes built-in e como criar os seus |
+| [Plugins](/opendex/docs/plugins/) | Como estender o OpenCode com plugins |
