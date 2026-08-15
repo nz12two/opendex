@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000798",
-      "completion": "0.0000001596",
-      "input_cache_read": "0.00000001596"
+      "prompt": "0.00000007826",
+      "completion": "0.00000015652",
+      "input_cache_read": "0.000000015652"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -2788,9 +2788,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008106",
-      "completion": "0.00000016212",
-      "input_cache_read": "0.000000016212"
+      "prompt": "0.00000007546",
+      "completion": "0.00000015092",
+      "input_cache_read": "0.000000015092"
     },
     "architecture": {
       "modality": "text->text",
@@ -2923,6 +2923,36 @@
         "low"
       ],
       "default_effort": "high"
+    }
+  },
+  {
+    "id": "dots-studio/dots-3-note-preview:free",
+    "name": "Dots Studio: Dots3-Note Preview (free)",
+    "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
+    "context_length": 512000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 512000,
+      "max_completion_tokens": 512000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
     }
   },
   {
@@ -9996,6 +10026,41 @@
     }
   },
   {
+    "id": "openai/gpt-oss-20b:free",
+    "name": "OpenAI: gpt-oss-20b (free)",
+    "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-oss-safeguard-20b",
     "name": "OpenAI: gpt-oss-safeguard-20b",
     "description": "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust...",
@@ -12629,6 +12694,44 @@
     }
   },
   {
+    "id": "qwen/qwen3.8-27b",
+    "name": "Qwen: Qwen3.8 27B",
+    "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000045",
+      "completion": "0.0000032"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "medium",
+        "low"
+      ],
+      "default_effort": "xhigh"
+    }
+  },
+  {
     "id": "qwen/qwen3.8-max",
     "name": "Qwen: Qwen3.8 Max",
     "description": "Qwen3.8 Max is the flagship model in Alibaba's Qwen3.8 series, the general-availability successor to the Qwen3.8 Max Preview. It is a multimodal reasoning model intended for complex reasoning, visual understanding,...",
@@ -13085,9 +13188,9 @@
     "description": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000063",
-      "completion": "0.00000021",
-      "input_cache_read": "0.000000021"
+      "prompt": "0.00000018",
+      "completion": "0.0000006",
+      "input_cache_read": "0.00000006"
     },
     "architecture": {
       "modality": "text->text",
