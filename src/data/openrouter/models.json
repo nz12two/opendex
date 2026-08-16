@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000675",
-      "completion": "0.000000135",
-      "input_cache_read": "0.0000000135"
+      "prompt": "0.00000006706",
+      "completion": "0.00000013412",
+      "input_cache_read": "0.000000013412"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -2788,9 +2788,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006426",
-      "completion": "0.00000012852",
-      "input_cache_read": "0.000000012852"
+      "prompt": "0.00000006146",
+      "completion": "0.00000012292",
+      "input_cache_read": "0.000000012292"
     },
     "architecture": {
       "modality": "text->text",
@@ -5465,7 +5465,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000055",
+      "prompt": "0.0000004",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -7271,7 +7271,7 @@
     "top_provider": {
       "context_length": 8191,
       "max_completion_tokens": 4096,
-      "is_moderated": false
+      "is_moderated": true
     }
   },
   {
@@ -11428,8 +11428,8 @@
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000012",
-      "completion": "0.0000005"
+      "prompt": "0.00000013",
+      "completion": "0.00000052"
     },
     "architecture": {
       "modality": "text->text",
@@ -11443,8 +11443,8 @@
       "instruct_type": "qwen3"
     },
     "top_provider": {
-      "context_length": 40960,
-      "max_completion_tokens": 16384,
+      "context_length": 131072,
+      "max_completion_tokens": 8192,
       "is_moderated": false
     },
     "reasoning": {
@@ -12350,9 +12350,9 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000036",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.0000003",
+      "completion": "0.000002",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12369,7 +12369,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -14216,9 +14216,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000462",
-      "completion": "0.000001452",
-      "input_cache_read": "0.0000000858"
+      "prompt": "0.000000308",
+      "completion": "0.000000968",
+      "input_cache_read": "0.0000000572"
     },
     "architecture": {
       "modality": "text->text",
@@ -14232,8 +14232,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1024000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
