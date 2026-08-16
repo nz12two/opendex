@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006706",
-      "completion": "0.00000013412",
-      "input_cache_read": "0.000000013412"
+      "prompt": "0.000000063",
+      "completion": "0.000000126",
+      "input_cache_read": "0.0000000126"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -5465,7 +5465,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000004",
+      "prompt": "0.00000055",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -7271,7 +7271,7 @@
     "top_provider": {
       "context_length": 8191,
       "max_completion_tokens": 4096,
-      "is_moderated": true
+      "is_moderated": false
     }
   },
   {
@@ -12350,9 +12350,9 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000006",
+      "completion": "0.0000036",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12369,7 +12369,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
