@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000063",
-      "completion": "0.000000126",
-      "input_cache_read": "0.0000000126"
+      "prompt": "0.0000000603",
+      "completion": "0.0000001206",
+      "input_cache_read": "0.00000001206"
     },
     "architecture": {
       "modality": "text->text",
@@ -2856,7 +2856,7 @@
   },
   {
     "id": "deepseek/deepseek-v4-pro",
-    "name": "DeepSeek: DeepSeek V4 Pro",
+    "name": "DeepSeek: DeepSeek V4 Pro 0423",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
@@ -2895,9 +2895,39 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000435",
-      "completion": "0.00000087",
-      "input_cache_read": "0.000000003625"
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
+      "overrides": [
+        {
+          "utc_start": 1000,
+          "utc_end": 100,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        },
+        {
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        }
+      ]
     },
     "architecture": {
       "modality": "text->text",
@@ -7004,9 +7034,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000025",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000008",
+      "completion": "0.0000002",
+      "input_cache_read": "0.00000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -7021,7 +7051,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -11288,8 +11318,9 @@
     "description": "Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, fish, and insects. It is also highly capable of analyzing texts, charts, icons, graphics, and layouts within images.",
     "context_length": 128000,
     "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000075"
+      "prompt": "0.0000008",
+      "completion": "0.000001",
+      "input_cache_read": "0.0000004"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -11304,8 +11335,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 32000,
-      "max_completion_tokens": null,
+      "context_length": 128000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -12350,9 +12381,9 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000036",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.0000003",
+      "completion": "0.000002",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12369,7 +12400,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -12383,7 +12414,7 @@
     "description": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000015",
+      "prompt": "0.00000014",
       "completion": "0.000001",
       "input_cache_read": "0.00000005"
     },
@@ -12698,7 +12729,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.00000045",
-      "completion": "0.0000032"
+      "completion": "0.0000032",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
