@@ -169,11 +169,11 @@
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek V4 Flash Latest",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
-    "context_length": 1048576,
+    "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000000675",
-      "completion": "0.000000135",
-      "input_cache_read": "0.0000000135"
+      "prompt": "0.0000000603",
+      "completion": "0.0000001206",
+      "input_cache_read": "0.00000001206"
     },
     "architecture": {
       "modality": "text->text",
@@ -311,8 +311,8 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000028",
-      "completion": "0.000014",
+      "prompt": "0.0000026",
+      "completion": "0.000013",
       "input_cache_read": "0.00000029"
     },
     "architecture": {
@@ -329,8 +329,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 1048576,
+      "context_length": 974842,
+      "max_completion_tokens": 974842,
       "is_moderated": false
     },
     "reasoning": {
@@ -2788,9 +2788,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006426",
-      "completion": "0.00000012852",
-      "input_cache_read": "0.000000012852"
+      "prompt": "0.0000000826",
+      "completion": "0.0000001652",
+      "input_cache_read": "0.00000001652"
     },
     "architecture": {
       "modality": "text->text",
@@ -2821,7 +2821,7 @@
     "id": "deepseek/deepseek-v4-flash-0731",
     "name": "DeepSeek: DeepSeek V4 Flash 0731",
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
-    "context_length": 1048576,
+    "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000014",
       "completion": "0.00000028",
@@ -2856,13 +2856,43 @@
   },
   {
     "id": "deepseek/deepseek-v4-pro",
-    "name": "DeepSeek: DeepSeek V4 Pro",
+    "name": "DeepSeek: DeepSeek V4 Pro 0423",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000435",
-      "completion": "0.00000087",
-      "input_cache_read": "0.000000003625"
+      "prompt": "0.00000132",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000044",
+      "overrides": [
+        {
+          "utc_start": 1000,
+          "utc_end": 100,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        },
+        {
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        }
+      ]
     },
     "architecture": {
       "modality": "text->text",
@@ -2895,9 +2925,39 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000435",
-      "completion": "0.00000087",
-      "input_cache_read": "0.000000003625"
+      "prompt": "0.00000132",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000044",
+      "overrides": [
+        {
+          "utc_start": 1000,
+          "utc_end": 100,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        },
+        {
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        }
+      ]
     },
     "architecture": {
       "modality": "text->text",
@@ -4508,7 +4568,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 262144,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -6338,9 +6398,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005415",
-      "completion": "0.00000228",
-      "input_cache_read": "0.0000000912"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -9083,7 +9143,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -12699,7 +12759,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.00000045",
-      "completion": "0.0000032"
+      "completion": "0.0000032",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14000,9 +14061,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.000002",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "input_cache_read": "0.00000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -14016,7 +14077,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
+      "context_length": 204800,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14217,9 +14278,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000462",
-      "completion": "0.000001452",
-      "input_cache_read": "0.0000000858"
+      "prompt": "0.00000119",
+      "completion": "0.00000374",
+      "input_cache_read": "0.000000221"
     },
     "architecture": {
       "modality": "text->text",
@@ -14234,7 +14295,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -14271,6 +14332,41 @@
     "top_provider": {
       "context_length": 512000,
       "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "z-ai/glm-5.2:free",
+    "name": "Z.ai: GLM 5.2 (free)",
+    "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
