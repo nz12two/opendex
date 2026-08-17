@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000000603",
-      "completion": "0.0000001206",
-      "input_cache_read": "0.00000001206"
+      "prompt": "0.000000078596",
+      "completion": "0.000000157192",
+      "input_cache_read": "0.0000000157192"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -2860,9 +2860,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
       "overrides": [
         {
           "utc_start": 1000,
@@ -2925,9 +2925,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
       "overrides": [
         {
           "utc_start": 1000,
@@ -12411,9 +12411,8 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000289",
+      "completion": "0.0000024"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12429,8 +12428,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "context_length": 131072,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14061,9 +14060,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000011"
+      "prompt": "0.0000005",
+      "completion": "0.000002",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -14077,7 +14076,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
+      "context_length": 202752,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
