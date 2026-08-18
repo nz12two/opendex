@@ -2787,9 +2787,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000826",
-      "completion": "0.0000001652",
-      "input_cache_read": "0.00000001652"
+      "prompt": "0.0000000798",
+      "completion": "0.0000001596",
+      "input_cache_read": "0.00000001596"
     },
     "architecture": {
       "modality": "text->text",
@@ -5016,6 +5016,35 @@
     }
   },
   {
+    "id": "liquid/lfm-2.5-2.6b:free",
+    "name": "LiquidAI: LFM2.5-2.6B (free)",
+    "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 8192,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
     "id": "mancer/weaver",
     "name": "Mancer: Weaver (alpha)",
     "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
@@ -6368,9 +6397,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000005605",
+      "completion": "0.00000236",
+      "input_cache_read": "0.0000000944"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -14247,9 +14276,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000119",
-      "completion": "0.00000374",
-      "input_cache_read": "0.000000221"
+      "prompt": "0.00000049",
+      "completion": "0.00000154",
+      "input_cache_read": "0.000000091"
     },
     "architecture": {
       "modality": "text->text",
@@ -14264,7 +14293,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14301,6 +14330,41 @@
     "top_provider": {
       "context_length": 512000,
       "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "z-ai/glm-5.2:free",
+    "name": "Z.ai: GLM 5.2 (free)",
+    "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+    "context_length": 256000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 256000,
+      "max_completion_tokens": 256000,
       "is_moderated": false
     },
     "reasoning": {
