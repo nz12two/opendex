@@ -50,6 +50,17 @@
     "npm": "https://www.npmjs.com/package/@opencode-ai/schema"
   },
   {
+    "name": "@opencode-ai/client",
+    "version": "0.0.0",
+    "description": "Reserved for the OpenCode client package",
+    "keywords": [],
+    "publisher": "thdxr",
+    "downloads": 122502,
+    "date": "2026-07-05T22:22:53.768Z",
+    "repository": "https://www.npmjs.com/package/@opencode-ai/client",
+    "npm": "https://www.npmjs.com/package/@opencode-ai/client"
+  },
+  {
     "name": "@ai-sdk/harness-opencode",
     "version": "1.0.74",
     "description": "The OpenCode harness connects `HarnessAgent` to OpenCode through a sandboxed bridge.",
@@ -87,17 +98,6 @@
     "date": "2026-05-08T14:15:21.383Z",
     "repository": "git+https://github.com/poe-platform/poe-code.git",
     "npm": "https://www.npmjs.com/package/opencode-poe-auth"
-  },
-  {
-    "name": "@opencode-ai/client",
-    "version": "0.0.0",
-    "description": "Reserved for the OpenCode client package",
-    "keywords": [],
-    "publisher": "thdxr",
-    "downloads": 122502,
-    "date": "2026-07-05T22:22:53.768Z",
-    "repository": "https://www.npmjs.com/package/@opencode-ai/client",
-    "npm": "https://www.npmjs.com/package/@opencode-ai/client"
   },
   {
     "name": "opencode-gitlab-auth",
@@ -476,6 +476,23 @@
     "npm": "https://www.npmjs.com/package/@defend-tech/opencode-optima"
   },
   {
+    "name": "opencode-multi-account-core",
+    "version": "0.2.122",
+    "description": "Shared core for OpenCode Plugin Mode",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "multi-account",
+      "core",
+      "shared"
+    ],
+    "publisher": "other-yuka",
+    "downloads": 5610,
+    "date": "2026-08-16T15:37:55.824Z",
+    "repository": "git+https://github.com/other-yuka/kyoli-gam.git",
+    "npm": "https://www.npmjs.com/package/opencode-multi-account-core"
+  },
+  {
     "name": "@plannotator/opencode",
     "version": "0.27.4",
     "description": "Plannotator plugin for OpenCode - interactive plan review with visual annotation",
@@ -492,23 +509,6 @@
     "date": "2026-08-17T18:19:39.826Z",
     "repository": "git+https://github.com/backnotprop/plannotator.git",
     "npm": "https://www.npmjs.com/package/@plannotator/opencode"
-  },
-  {
-    "name": "opencode-multi-account-core",
-    "version": "0.2.122",
-    "description": "Shared core for OpenCode Plugin Mode",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "multi-account",
-      "core",
-      "shared"
-    ],
-    "publisher": "other-yuka",
-    "downloads": 5610,
-    "date": "2026-08-16T15:37:55.824Z",
-    "repository": "git+https://github.com/other-yuka/kyoli-gam.git",
-    "npm": "https://www.npmjs.com/package/opencode-multi-account-core"
   },
   {
     "name": "@langchain/langsmith-opencode",
@@ -557,23 +557,6 @@
     "npm": "https://www.npmjs.com/package/opencode-readseek"
   },
   {
-    "name": "@aryaminus/controlkeel-opencode",
-    "version": "0.3.91",
-    "description": "ControlKeel OpenCode adapter bundle",
-    "keywords": [
-      "controlkeel",
-      "opencode",
-      "plugin",
-      "governance",
-      "mcp"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 3696,
-    "date": "2026-08-16T08:50:33.778Z",
-    "repository": "git+https://github.com/aryaminus/controlkeel.git",
-    "npm": "https://www.npmjs.com/package/@aryaminus/controlkeel-opencode"
-  },
-  {
     "name": "opencode-cron",
     "version": "0.0.7",
     "description": "A cron job scheduler for OpenCode sessions that triggers messages at scheduled intervals",
@@ -607,6 +590,83 @@
     "date": "2026-08-18T00:33:25.792Z",
     "repository": "git+https://github.com/FrancoStino/opencode-skills-collection.git",
     "npm": "https://www.npmjs.com/package/opencode-skills-collection"
+  },
+  {
+    "name": "@aryaminus/controlkeel-opencode",
+    "version": "0.3.91",
+    "description": "ControlKeel OpenCode adapter bundle",
+    "keywords": [
+      "controlkeel",
+      "opencode",
+      "plugin",
+      "governance",
+      "mcp"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 3696,
+    "date": "2026-08-16T08:50:33.778Z",
+    "repository": "git+https://github.com/aryaminus/controlkeel.git",
+    "npm": "https://www.npmjs.com/package/@aryaminus/controlkeel-opencode"
+  },
+  {
+    "name": "@cortexkit/opencode-magic-context",
+    "version": "0.38.0",
+    "description": "OpenCode plugin for Magic Context — cross-session memory and context management",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "context",
+      "memory",
+      "ai",
+      "llm",
+      "prompt-caching",
+      "session-history"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 17316,
+    "date": "2026-08-17T18:45:01.531Z",
+    "repository": "git+https://github.com/cortexkit/magic-context.git",
+    "npm": "https://www.npmjs.com/package/@cortexkit/opencode-magic-context"
+  },
+  {
+    "name": "opencode-scheduler",
+    "version": "1.3.0",
+    "description": "OpenCode plugin for scheduling recurring jobs using launchd (Mac) or systemd (Linux)",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "scheduler",
+      "cron",
+      "launchd",
+      "systemd",
+      "automation",
+      "jobs"
+    ],
+    "publisher": "different-ai-xyz",
+    "downloads": 10814,
+    "date": "2026-02-17T04:01:09.038Z",
+    "repository": "git+https://github.com/different-ai/opencode-scheduler.git",
+    "npm": "https://www.npmjs.com/package/opencode-scheduler"
+  },
+  {
+    "name": "opencode-swarm",
+    "version": "7.141.2",
+    "description": "Architect-centric agentic swarm plugin for OpenCode - hub-and-spoke orchestration with SME consultation, code generation, and QA review",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "ai",
+      "agents",
+      "orchestration",
+      "swarm",
+      "multi-agent",
+      "llm"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 19427,
+    "date": "2026-08-18T02:40:23.417Z",
+    "repository": "git+https://github.com/ZaxbyHub/opencode-swarm.git",
+    "npm": "https://www.npmjs.com/package/opencode-swarm"
   },
   {
     "name": "opencode-supermemory",
@@ -655,26 +715,6 @@
     "npm": "https://www.npmjs.com/package/opencode-magi"
   },
   {
-    "name": "@cortexkit/opencode-magic-context",
-    "version": "0.38.0",
-    "description": "OpenCode plugin for Magic Context — cross-session memory and context management",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "context",
-      "memory",
-      "ai",
-      "llm",
-      "prompt-caching",
-      "session-history"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 17316,
-    "date": "2026-08-17T18:45:01.531Z",
-    "repository": "git+https://github.com/cortexkit/magic-context.git",
-    "npm": "https://www.npmjs.com/package/@cortexkit/opencode-magic-context"
-  },
-  {
     "name": "opencode-mem",
     "version": "2.24.3",
     "description": "OpenCode plugin that gives coding agents persistent memory using local Turso/libSQL vector search",
@@ -719,26 +759,6 @@
     "npm": "https://www.npmjs.com/package/opencode-termux"
   },
   {
-    "name": "opencode-swarm",
-    "version": "7.141.1",
-    "description": "Architect-centric agentic swarm plugin for OpenCode - hub-and-spoke orchestration with SME consultation, code generation, and QA review",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "ai",
-      "agents",
-      "orchestration",
-      "swarm",
-      "multi-agent",
-      "llm"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 19427,
-    "date": "2026-08-16T22:36:58.660Z",
-    "repository": "git+https://github.com/ZaxbyHub/opencode-swarm.git",
-    "npm": "https://www.npmjs.com/package/opencode-swarm"
-  },
-  {
     "name": "opencode-pty",
     "version": "0.3.6",
     "description": "OpenCode plugin for interactive PTY management - run background processes, send input, read output with regex filtering",
@@ -760,25 +780,6 @@
     "date": "2026-07-05T14:51:10.130Z",
     "repository": "git+https://github.com/shekohex/opencode-pty.git",
     "npm": "https://www.npmjs.com/package/opencode-pty"
-  },
-  {
-    "name": "opencode-langgraph",
-    "version": "0.7.6",
-    "description": "Explicit LangGraph connector for OpenCode",
-    "keywords": [
-      "ai",
-      "agents",
-      "langgraph",
-      "opencode",
-      "connector",
-      "code-generation",
-      "tui"
-    ],
-    "publisher": "1suo",
-    "downloads": 2936,
-    "date": "2026-08-17T06:14:17.555Z",
-    "repository": "git+https://github.com/1suo/opencode-langgraph.git",
-    "npm": "https://www.npmjs.com/package/opencode-langgraph"
   },
   {
     "name": "@langfuse/opencode-observability-plugin",
@@ -816,23 +817,23 @@
     "npm": "https://www.npmjs.com/package/opencode-plugin-langfuse"
   },
   {
-    "name": "@tarquinen/opencode-dcp",
-    "version": "3.1.15",
-    "description": "OpenCode plugin that optimizes token usage by pruning obsolete tool outputs from conversation context",
+    "name": "opencode-langgraph",
+    "version": "0.7.6",
+    "description": "Explicit LangGraph connector for OpenCode",
     "keywords": [
+      "ai",
+      "agents",
+      "langgraph",
       "opencode",
-      "opencode-plugin",
-      "plugin",
-      "context",
-      "pruning",
-      "optimization",
-      "tokens"
+      "connector",
+      "code-generation",
+      "tui"
     ],
-    "publisher": "GitHub Actions",
-    "downloads": 23239,
-    "date": "2026-08-16T04:07:48.405Z",
-    "repository": "git+https://github.com/Opencode-DCP/opencode-dynamic-context-pruning.git",
-    "npm": "https://www.npmjs.com/package/@tarquinen/opencode-dcp"
+    "publisher": "1suo",
+    "downloads": 2936,
+    "date": "2026-08-17T06:14:17.555Z",
+    "repository": "git+https://github.com/1suo/opencode-langgraph.git",
+    "npm": "https://www.npmjs.com/package/opencode-langgraph"
   },
   {
     "name": "@oguzkaganozt/opencode-studio",
@@ -854,6 +855,25 @@
     "npm": "https://www.npmjs.com/package/@oguzkaganozt/opencode-studio"
   },
   {
+    "name": "@tarquinen/opencode-dcp",
+    "version": "3.1.15",
+    "description": "OpenCode plugin that optimizes token usage by pruning obsolete tool outputs from conversation context",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "plugin",
+      "context",
+      "pruning",
+      "optimization",
+      "tokens"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 23239,
+    "date": "2026-08-16T04:07:48.405Z",
+    "repository": "git+https://github.com/Opencode-DCP/opencode-dynamic-context-pruning.git",
+    "npm": "https://www.npmjs.com/package/@tarquinen/opencode-dcp"
+  },
+  {
     "name": "opencode-claude-auth",
     "version": "2.1.6",
     "description": "OpenCode plugin that uses your Claude Code credentials — no separate login needed.",
@@ -871,24 +891,20 @@
     "npm": "https://www.npmjs.com/package/opencode-claude-auth"
   },
   {
-    "name": "opencode-scheduler",
-    "version": "1.3.0",
-    "description": "OpenCode plugin for scheduling recurring jobs using launchd (Mac) or systemd (Linux)",
+    "name": "opencode-telegram",
+    "version": "0.3.0",
+    "description": "OpenCode plugin for Telegram notifications - get notified when tasks complete, respond to permission requests via Telegram",
     "keywords": [
       "opencode",
       "plugin",
-      "scheduler",
-      "cron",
-      "launchd",
-      "systemd",
-      "automation",
-      "jobs"
+      "telegram",
+      "notification"
     ],
-    "publisher": "different-ai-xyz",
-    "downloads": 9402,
-    "date": "2026-02-17T04:01:09.038Z",
-    "repository": "git+https://github.com/different-ai/opencode-scheduler.git",
-    "npm": "https://www.npmjs.com/package/opencode-scheduler"
+    "publisher": "andrewsong",
+    "downloads": 11243,
+    "date": "2026-02-15T06:35:21.366Z",
+    "repository": "git+https://github.com/lifening/opencode-telegram.git",
+    "npm": "https://www.npmjs.com/package/opencode-telegram"
   },
   {
     "name": "@arnilo/prism-provider-opencode-go",
@@ -927,20 +943,56 @@
     "npm": "https://www.npmjs.com/package/@katahq/adapter-opencode"
   },
   {
-    "name": "opencode-telegram",
-    "version": "0.3.0",
-    "description": "OpenCode plugin for Telegram notifications - get notified when tasks complete, respond to permission requests via Telegram",
+    "name": "opencode-with-claude",
+    "version": "1.8.0",
+    "description": "OpenCode plugin to use your Claude Max subscription via Meridian proxy",
     "keywords": [
       "opencode",
-      "plugin",
-      "telegram",
-      "notification"
+      "opencode-plugin",
+      "claude",
+      "claude-max",
+      "proxy"
     ],
-    "publisher": "andrewsong",
-    "downloads": 11243,
-    "date": "2026-02-15T06:35:21.366Z",
-    "repository": "git+https://github.com/lifening/opencode-telegram.git",
-    "npm": "https://www.npmjs.com/package/opencode-telegram"
+    "publisher": "ianjwhite99",
+    "downloads": 6762,
+    "date": "2026-08-04T18:26:34.027Z",
+    "repository": "git+https://github.com/ianjwhite99/opencode-with-claude.git",
+    "npm": "https://www.npmjs.com/package/opencode-with-claude"
+  },
+  {
+    "name": "@warp-dot-dev/opencode-warp",
+    "version": "0.1.7",
+    "description": "Warp terminal integration for OpenCode — native notifications and more",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "warp",
+      "terminal",
+      "notifications"
+    ],
+    "publisher": "harry_at_warp",
+    "downloads": 7012,
+    "date": "2026-06-05T14:58:22.232Z",
+    "repository": "git+https://github.com/warpdotdev/opencode-warp.git",
+    "npm": "https://www.npmjs.com/package/@warp-dot-dev/opencode-warp"
+  },
+  {
+    "name": "opencode-plugin-auto-maintain",
+    "version": "0.6.63",
+    "description": "Gitee repo trigger plugin for opencode — event-driven triage, implement, review handlers",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "gitee",
+      "automation",
+      "maintenance",
+      "ci-cd"
+    ],
+    "publisher": "xieyucheng123",
+    "downloads": 14531,
+    "date": "2026-07-17T09:26:31.259Z",
+    "repository": "https://gitee.com/xie-yucheng2/auto-maintain.git",
+    "npm": "https://www.npmjs.com/package/opencode-plugin-auto-maintain"
   },
   {
     "name": "@mastra/opencode",
@@ -977,23 +1029,6 @@
     "npm": "https://www.npmjs.com/package/@assistant-ui/react-opencode"
   },
   {
-    "name": "opencode-with-claude",
-    "version": "1.8.0",
-    "description": "OpenCode plugin to use your Claude Max subscription via Meridian proxy",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "claude",
-      "claude-max",
-      "proxy"
-    ],
-    "publisher": "ianjwhite99",
-    "downloads": 6762,
-    "date": "2026-08-04T18:26:34.027Z",
-    "repository": "git+https://github.com/ianjwhite99/opencode-with-claude.git",
-    "npm": "https://www.npmjs.com/package/opencode-with-claude"
-  },
-  {
     "name": "@opencode-ai/core",
     "version": "0.0.0-reserved.0",
     "description": "Reserved for OpenCode core runtime services",
@@ -1005,39 +1040,24 @@
     "npm": "https://www.npmjs.com/package/@opencode-ai/core"
   },
   {
-    "name": "@warp-dot-dev/opencode-warp",
-    "version": "0.1.7",
-    "description": "Warp terminal integration for OpenCode — native notifications and more",
+    "name": "@metaharness/host-opencode",
+    "version": "0.1.2",
+    "description": "OpenCode (sst/opencode) host adapter for agent-harness-generator. Emits .opencode/opencode.json (ADR-036).",
     "keywords": [
+      "agent-harness",
       "opencode",
-      "opencode-plugin",
-      "warp",
-      "terminal",
-      "notifications"
+      "sst-opencode",
+      "tui",
+      "mcp",
+      "host-adapter",
+      "ruflo",
+      "ADR-036"
     ],
-    "publisher": "harry_at_warp",
-    "downloads": 7012,
-    "date": "2026-06-05T14:58:22.232Z",
-    "repository": "git+https://github.com/warpdotdev/opencode-warp.git",
-    "npm": "https://www.npmjs.com/package/@warp-dot-dev/opencode-warp"
-  },
-  {
-    "name": "opencode-plugin-auto-maintain",
-    "version": "0.6.63",
-    "description": "Gitee repo trigger plugin for opencode — event-driven triage, implement, review handlers",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "gitee",
-      "automation",
-      "maintenance",
-      "ci-cd"
-    ],
-    "publisher": "xieyucheng123",
-    "downloads": 14531,
-    "date": "2026-07-17T09:26:31.259Z",
-    "repository": "https://gitee.com/xie-yucheng2/auto-maintain.git",
-    "npm": "https://www.npmjs.com/package/opencode-plugin-auto-maintain"
+    "publisher": "ruvnet",
+    "downloads": 1050,
+    "date": "2026-06-17T22:41:50.884Z",
+    "repository": "git+https://github.com/ruvnet/agent-harness-generator.git",
+    "npm": "https://www.npmjs.com/package/@metaharness/host-opencode"
   },
   {
     "name": "opencode-remotty",
@@ -1076,6 +1096,23 @@
     "npm": "https://www.npmjs.com/package/opencode-notify"
   },
   {
+    "name": "@signetai/connector-opencode",
+    "version": "0.157.3",
+    "description": "Signet connector for OpenCode - installs hooks and generates config",
+    "keywords": [
+      "signet",
+      "opencode",
+      "connector",
+      "ai-memory",
+      "agent-identity"
+    ],
+    "publisher": "nicholai.exe",
+    "downloads": 35239,
+    "date": "2026-08-02T07:52:52.086Z",
+    "repository": "git+https://github.com/Signet-AI/signetai.git",
+    "npm": "https://www.npmjs.com/package/@signetai/connector-opencode"
+  },
+  {
     "name": "@tanstack/ai-opencode",
     "version": "0.2.5",
     "description": "OpenCode harness adapter for TanStack AI — run OpenCode as a chat backend with local tool execution and stateful sessions.",
@@ -1098,23 +1135,6 @@
     "npm": "https://www.npmjs.com/package/@tanstack/ai-opencode"
   },
   {
-    "name": "@signetai/connector-opencode",
-    "version": "0.157.3",
-    "description": "Signet connector for OpenCode - installs hooks and generates config",
-    "keywords": [
-      "signet",
-      "opencode",
-      "connector",
-      "ai-memory",
-      "agent-identity"
-    ],
-    "publisher": "nicholai.exe",
-    "downloads": 35239,
-    "date": "2026-08-02T07:52:52.086Z",
-    "repository": "git+https://github.com/Signet-AI/signetai.git",
-    "npm": "https://www.npmjs.com/package/@signetai/connector-opencode"
-  },
-  {
     "name": "offrouter-adapter-opencode",
     "version": "0.34.0",
     "description": "opencode adapter for OffRouter. Installs the OffRouter MCP server into an opencode profile's `opencode.json` so `offrouter install opencode` works, with rollback.",
@@ -1124,26 +1144,6 @@
     "date": "2026-08-06T00:29:53.378Z",
     "repository": "https://www.npmjs.com/package/offrouter-adapter-opencode",
     "npm": "https://www.npmjs.com/package/offrouter-adapter-opencode"
-  },
-  {
-    "name": "@metaharness/host-opencode",
-    "version": "0.1.2",
-    "description": "OpenCode (sst/opencode) host adapter for agent-harness-generator. Emits .opencode/opencode.json (ADR-036).",
-    "keywords": [
-      "agent-harness",
-      "opencode",
-      "sst-opencode",
-      "tui",
-      "mcp",
-      "host-adapter",
-      "ruflo",
-      "ADR-036"
-    ],
-    "publisher": "ruvnet",
-    "downloads": 1050,
-    "date": "2026-06-17T22:41:50.884Z",
-    "repository": "git+https://github.com/ruvnet/agent-harness-generator.git",
-    "npm": "https://www.npmjs.com/package/@metaharness/host-opencode"
   },
   {
     "name": "@kompassdev/opencode",
@@ -1221,6 +1221,24 @@
     "npm": "https://www.npmjs.com/package/@a5c-ai/hooks-adapter-opencode"
   },
   {
+    "name": "opencode-websearch",
+    "version": "0.6.0",
+    "description": "Web search plugin for OpenCode",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "web-search",
+      "anthropic",
+      "openai",
+      "ai"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 1333,
+    "date": "2026-05-07T19:31:54.249Z",
+    "repository": "git+https://github.com/emilsvennesson/opencode-websearch.git",
+    "npm": "https://www.npmjs.com/package/opencode-websearch"
+  },
+  {
     "name": "opencode-studio-server",
     "version": "2.4.4",
     "description": "Backend server for OpenCode Studio - manages opencode configurations",
@@ -1280,24 +1298,6 @@
     "npm": "https://www.npmjs.com/package/opencode-mcp"
   },
   {
-    "name": "opencode-websearch",
-    "version": "0.6.0",
-    "description": "Web search plugin for OpenCode",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "web-search",
-      "anthropic",
-      "openai",
-      "ai"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 1333,
-    "date": "2026-05-07T19:31:54.249Z",
-    "repository": "git+https://github.com/emilsvennesson/opencode-websearch.git",
-    "npm": "https://www.npmjs.com/package/opencode-websearch"
-  },
-  {
     "name": "pantheon-opencode",
     "version": "1.3.4",
     "description": "Multi-agent orchestration for OpenCode — 14 specialized agents, TDD, Themis review gates.",
@@ -1314,6 +1314,27 @@
     "date": "2026-08-13T14:44:24.731Z",
     "repository": "git+https://github.com/ils15/pantheon-opencode.git",
     "npm": "https://www.npmjs.com/package/pantheon-opencode"
+  },
+  {
+    "name": "vite-plugin-opencode-assistant",
+    "version": "1.1.68",
+    "description": "Embed OpenCode Web UI in your Vite dev server for real-time code modification and preview",
+    "keywords": [
+      "vite",
+      "plugin",
+      "opencode",
+      "ai",
+      "assistant",
+      "chat",
+      "hmr",
+      "real-time",
+      "code-modification"
+    ],
+    "publisher": "ckang1229",
+    "downloads": 12358,
+    "date": "2026-08-17T08:05:55.248Z",
+    "repository": "git+https://github.com/your-username/vite-plugin-opencode.git",
+    "npm": "https://www.npmjs.com/package/vite-plugin-opencode-assistant"
   },
   {
     "name": "@hiai-gg/hiai-opencode",
@@ -1350,6 +1371,17 @@
     "npm": "https://www.npmjs.com/package/@hiai-gg/hiai-opencode"
   },
   {
+    "name": "@freestyle-sh/with-opencode",
+    "version": "0.0.14",
+    "description": "[OpenCode](https://opencode.ai) integration for [Freestyle](https://freestyle.sh) VMs. Provides a fully configured OpenCode AI coding assistant server in your Freestyle VM.",
+    "keywords": [],
+    "publisher": "theswerd",
+    "downloads": 8108,
+    "date": "2026-04-21T19:25:34.733Z",
+    "repository": "https://www.npmjs.com/package/@freestyle-sh/with-opencode",
+    "npm": "https://www.npmjs.com/package/@freestyle-sh/with-opencode"
+  },
+  {
     "name": "opencode-plugin-flow",
     "version": "7.3.2",
     "description": "Small durable planning, validation, and review workflow for OpenCode",
@@ -1365,17 +1397,6 @@
     "date": "2026-08-17T22:33:45.549Z",
     "repository": "git+https://github.com/ddv1982/flow-opencode.git",
     "npm": "https://www.npmjs.com/package/opencode-plugin-flow"
-  },
-  {
-    "name": "@freestyle-sh/with-opencode",
-    "version": "0.0.14",
-    "description": "[OpenCode](https://opencode.ai) integration for [Freestyle](https://freestyle.sh) VMs. Provides a fully configured OpenCode AI coding assistant server in your Freestyle VM.",
-    "keywords": [],
-    "publisher": "theswerd",
-    "downloads": 8108,
-    "date": "2026-04-21T19:25:34.733Z",
-    "repository": "https://www.npmjs.com/package/@freestyle-sh/with-opencode",
-    "npm": "https://www.npmjs.com/package/@freestyle-sh/with-opencode"
   },
   {
     "name": "opencode-anthropic-multi-account",
@@ -1407,6 +1428,24 @@
     "npm": "https://www.npmjs.com/package/kimi-chat-opencode"
   },
   {
+    "name": "@gramatr/opencode-plugin",
+    "version": "0.32.27",
+    "description": "grāmatr lifecycle plugin for OpenCode — maps OpenCode plugin events to grāmatr hooks via the connected MCP client (route_request injection, session continuity, git-gate).",
+    "keywords": [
+      "opencode",
+      "mcp",
+      "intelligence",
+      "routing",
+      "context",
+      "gramatr"
+    ],
+    "publisher": "bhandrigan",
+    "downloads": 5756,
+    "date": "2026-08-16T20:54:02.945Z",
+    "repository": "git+https://github.com/gramatr/opencode-plugin.git",
+    "npm": "https://www.npmjs.com/package/@gramatr/opencode-plugin"
+  },
+  {
     "name": "opencode-acp",
     "version": "1.14.21",
     "description": "Active Context Pruning — model-driven context management for OpenCode (hardened fork of DCP with 35 bug fixes)",
@@ -1426,45 +1465,6 @@
     "date": "2026-08-17T14:38:13.412Z",
     "repository": "git+https://github.com/ranxianglei/opencode-acp.git",
     "npm": "https://www.npmjs.com/package/opencode-acp"
-  },
-  {
-    "name": "@gramatr/opencode-plugin",
-    "version": "0.32.27",
-    "description": "grāmatr lifecycle plugin for OpenCode — maps OpenCode plugin events to grāmatr hooks via the connected MCP client (route_request injection, session continuity, git-gate).",
-    "keywords": [
-      "opencode",
-      "mcp",
-      "intelligence",
-      "routing",
-      "context",
-      "gramatr"
-    ],
-    "publisher": "bhandrigan",
-    "downloads": 5756,
-    "date": "2026-08-16T20:54:02.945Z",
-    "repository": "git+https://github.com/gramatr/opencode-plugin.git",
-    "npm": "https://www.npmjs.com/package/@gramatr/opencode-plugin"
-  },
-  {
-    "name": "vite-plugin-opencode-assistant",
-    "version": "1.1.68",
-    "description": "Embed OpenCode Web UI in your Vite dev server for real-time code modification and preview",
-    "keywords": [
-      "vite",
-      "plugin",
-      "opencode",
-      "ai",
-      "assistant",
-      "chat",
-      "hmr",
-      "real-time",
-      "code-modification"
-    ],
-    "publisher": "ckang1229",
-    "downloads": 12358,
-    "date": "2026-08-17T08:05:55.248Z",
-    "repository": "git+https://github.com/your-username/vite-plugin-opencode.git",
-    "npm": "https://www.npmjs.com/package/vite-plugin-opencode-assistant"
   },
   {
     "name": "@velum-labs/routekit-tool-opencode",
@@ -1495,22 +1495,6 @@
     "npm": "https://www.npmjs.com/package/@caplets/opencode"
   },
   {
-    "name": "opencode-caveman",
-    "version": "0.1.4",
-    "description": "Caveman token-compression plugin for OpenCode",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "caveman",
-      "token-compression"
-    ],
-    "publisher": "dxvapor",
-    "downloads": 1758,
-    "date": "2026-04-13T06:45:23.663Z",
-    "repository": "https://www.npmjs.com/package/opencode-caveman",
-    "npm": "https://www.npmjs.com/package/opencode-caveman"
-  },
-  {
     "name": "@multiwoven-user/opencode-plugin-otel",
     "version": "1.4.1",
     "description": "OpenTelemetry telemetry plugin for opencode CLI",
@@ -1527,6 +1511,62 @@
     "date": "2026-07-27T12:11:12.666Z",
     "repository": "git+https://github.com/DEVtheOPS/opencode-plugin-otel.git",
     "npm": "https://www.npmjs.com/package/@multiwoven-user/opencode-plugin-otel"
+  },
+  {
+    "name": "opencode-caveman",
+    "version": "0.1.4",
+    "description": "Caveman token-compression plugin for OpenCode",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "caveman",
+      "token-compression"
+    ],
+    "publisher": "dxvapor",
+    "downloads": 1758,
+    "date": "2026-04-13T06:45:23.663Z",
+    "repository": "https://www.npmjs.com/package/opencode-caveman",
+    "npm": "https://www.npmjs.com/package/opencode-caveman"
+  },
+  {
+    "name": "opencode-browser",
+    "version": "1.2.3",
+    "description": "OpenCode plugin that integrates Browser MCP for browser automation",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "plugin",
+      "browser",
+      "browser-automation",
+      "mcp",
+      "model-context-protocol",
+      "automation",
+      "browser-control",
+      "web-automation",
+      "puppeteer-alternative"
+    ],
+    "publisher": "michaljach",
+    "downloads": 1936,
+    "date": "2026-04-29T15:56:30.182Z",
+    "repository": "git+https://github.com/michaljach/opencode-browser.git",
+    "npm": "https://www.npmjs.com/package/opencode-browser"
+  },
+  {
+    "name": "@khalilgharbaoui/opencode-claude-code-plugin",
+    "version": "0.12.0",
+    "description": "Claude Code CLI provider plugin for opencode",
+    "keywords": [
+      "opencode",
+      "claude",
+      "claude-code",
+      "ai-sdk",
+      "provider"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 3531,
+    "date": "2026-07-26T13:43:05.392Z",
+    "repository": "git+https://github.com/khalilgharbaoui/opencode-claude-code-plugin.git",
+    "npm": "https://www.npmjs.com/package/@khalilgharbaoui/opencode-claude-code-plugin"
   },
   {
     "name": "opencode-drive",
@@ -1555,23 +1595,6 @@
     "date": "2026-07-14T14:32:47.823Z",
     "repository": "git+https://github.com/karthiknish/devin-opencode.git",
     "npm": "https://www.npmjs.com/package/opencode-devin-plugin"
-  },
-  {
-    "name": "@khalilgharbaoui/opencode-claude-code-plugin",
-    "version": "0.12.0",
-    "description": "Claude Code CLI provider plugin for opencode",
-    "keywords": [
-      "opencode",
-      "claude",
-      "claude-code",
-      "ai-sdk",
-      "provider"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 3531,
-    "date": "2026-07-26T13:43:05.392Z",
-    "repository": "git+https://github.com/khalilgharbaoui/opencode-claude-code-plugin.git",
-    "npm": "https://www.npmjs.com/package/@khalilgharbaoui/opencode-claude-code-plugin"
   },
   {
     "name": "opencode-sdd-engram-manage",
@@ -1673,29 +1696,6 @@
     "npm": "https://www.npmjs.com/package/opencode-dir"
   },
   {
-    "name": "opencode-browser",
-    "version": "1.2.3",
-    "description": "OpenCode plugin that integrates Browser MCP for browser automation",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "plugin",
-      "browser",
-      "browser-automation",
-      "mcp",
-      "model-context-protocol",
-      "automation",
-      "browser-control",
-      "web-automation",
-      "puppeteer-alternative"
-    ],
-    "publisher": "michaljach",
-    "downloads": 1936,
-    "date": "2026-04-29T15:56:30.182Z",
-    "repository": "git+https://github.com/michaljach/opencode-browser.git",
-    "npm": "https://www.npmjs.com/package/opencode-browser"
-  },
-  {
     "name": "opencode-wt",
     "version": "1.6.4",
     "description": "Create git worktrees and open opencode in them",
@@ -1778,20 +1778,21 @@
     "npm": "https://www.npmjs.com/package/opencode-rag-plugin"
   },
   {
-    "name": "@wekisas/opencode-git-tui",
-    "version": "0.5.0",
-    "description": "OpenCode Git TUI Plugin - Visual Git operations in OpenCode TUI",
+    "name": "@otto-assistant/opencode-cursor-oauth",
+    "version": "2.2.0",
+    "description": "OpenCode plugin that connects Cursor's API to OpenCode via OAuth, model discovery, and a local OpenAI-compatible proxy.",
     "keywords": [
       "opencode",
-      "plugin",
-      "git",
-      "tui"
+      "opencode-plugin",
+      "cursor",
+      "oauth",
+      "openai-compatible"
     ],
-    "publisher": "wekisas",
-    "downloads": 1184,
-    "date": "2026-07-23T07:03:10.257Z",
-    "repository": "https://www.npmjs.com/package/@wekisas/opencode-git-tui",
-    "npm": "https://www.npmjs.com/package/@wekisas/opencode-git-tui"
+    "publisher": "makeittech",
+    "downloads": 3166,
+    "date": "2026-08-05T14:17:17.492Z",
+    "repository": "git+https://github.com/otto-assistant/opencode-cursor.git",
+    "npm": "https://www.npmjs.com/package/@otto-assistant/opencode-cursor-oauth"
   },
   {
     "name": "opencode-skill-creator",
@@ -1819,23 +1820,6 @@
     "npm": "https://www.npmjs.com/package/opencode-skill-creator"
   },
   {
-    "name": "@otto-assistant/opencode-cursor-oauth",
-    "version": "2.2.0",
-    "description": "OpenCode plugin that connects Cursor's API to OpenCode via OAuth, model discovery, and a local OpenAI-compatible proxy.",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "cursor",
-      "oauth",
-      "openai-compatible"
-    ],
-    "publisher": "makeittech",
-    "downloads": 3166,
-    "date": "2026-08-05T14:17:17.492Z",
-    "repository": "git+https://github.com/otto-assistant/opencode-cursor.git",
-    "npm": "https://www.npmjs.com/package/@otto-assistant/opencode-cursor-oauth"
-  },
-  {
     "name": "opencode-codex-usage",
     "version": "1.1.1",
     "description": "Codex quota probe and OpenCode toast plugin",
@@ -1851,6 +1835,22 @@
     "date": "2026-07-30T15:59:02.267Z",
     "repository": "git+https://github.com/jasonmit/opencode-codex-usage.git",
     "npm": "https://www.npmjs.com/package/opencode-codex-usage"
+  },
+  {
+    "name": "@wekisas/opencode-git-tui",
+    "version": "0.5.0",
+    "description": "OpenCode Git TUI Plugin - Visual Git operations in OpenCode TUI",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "git",
+      "tui"
+    ],
+    "publisher": "wekisas",
+    "downloads": 1184,
+    "date": "2026-07-23T07:03:10.257Z",
+    "repository": "https://www.npmjs.com/package/@wekisas/opencode-git-tui",
+    "npm": "https://www.npmjs.com/package/@wekisas/opencode-git-tui"
   },
   {
     "name": "opencode-loader",
@@ -1869,20 +1869,15 @@
     "npm": "https://www.npmjs.com/package/opencode-loader"
   },
   {
-    "name": "@leonardmeagher2/opencode-tasksmd",
-    "version": "0.11.0",
-    "description": "Background task queue for OpenCode projects, powered by TASKS.md",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "tasks",
-      "automation"
-    ],
-    "publisher": "leonardmeagher2",
-    "downloads": 3203,
-    "date": "2026-08-05T14:54:47.434Z",
-    "repository": "https://github.com/LeonardMeagher2/tasksmd.git",
-    "npm": "https://www.npmjs.com/package/@leonardmeagher2/opencode-tasksmd"
+    "name": "oh-my-opencode-linux-x64",
+    "version": "4.19.4",
+    "description": "Platform-specific binary for oh-my-opencode (linux-x64)",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 27406,
+    "date": "2026-08-01T09:44:46.551Z",
+    "repository": "git+https://github.com/code-yeongyu/oh-my-openagent.git",
+    "npm": "https://www.npmjs.com/package/oh-my-opencode-linux-x64"
   },
   {
     "name": "@codemem/opencode-plugin",
@@ -1902,6 +1897,22 @@
     "date": "2026-08-15T18:54:24.508Z",
     "repository": "git+https://github.com/kunickiaj/codemem.git",
     "npm": "https://www.npmjs.com/package/@codemem/opencode-plugin"
+  },
+  {
+    "name": "@leonardmeagher2/opencode-tasksmd",
+    "version": "0.11.0",
+    "description": "Background task queue for OpenCode projects, powered by TASKS.md",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "tasks",
+      "automation"
+    ],
+    "publisher": "leonardmeagher2",
+    "downloads": 3203,
+    "date": "2026-08-05T14:54:47.434Z",
+    "repository": "https://github.com/LeonardMeagher2/tasksmd.git",
+    "npm": "https://www.npmjs.com/package/@leonardmeagher2/opencode-tasksmd"
   },
   {
     "name": "@maestria/opencode",
@@ -1973,7 +1984,7 @@
   },
   {
     "name": "@evident-ai/cli",
-    "version": "3.3.0",
+    "version": "3.4.0",
     "description": "Evident CLI - Run OpenCode locally and connect to Evident",
     "keywords": [
       "evident",
@@ -1984,7 +1995,7 @@
     ],
     "publisher": "GitHub Actions",
     "downloads": 41183,
-    "date": "2026-08-14T10:56:15.476Z",
+    "date": "2026-08-18T05:23:34.950Z",
     "repository": "git+https://github.com/sroze/evident.git",
     "npm": "https://www.npmjs.com/package/@evident-ai/cli"
   },
@@ -2028,15 +2039,23 @@
     "npm": "https://www.npmjs.com/package/opencode-better-hashline"
   },
   {
-    "name": "oh-my-opencode-linux-x64",
-    "version": "4.19.4",
-    "description": "Platform-specific binary for oh-my-opencode (linux-x64)",
-    "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 27406,
-    "date": "2026-08-01T09:44:46.551Z",
-    "repository": "git+https://github.com/code-yeongyu/oh-my-openagent.git",
-    "npm": "https://www.npmjs.com/package/oh-my-opencode-linux-x64"
+    "name": "opencode-codex-multi-account",
+    "version": "0.2.122",
+    "description": "OpenCode plugin for Codex (OpenAI) multi-account management with automatic rate limit switching",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "openai",
+      "codex",
+      "chatgpt",
+      "multi-account",
+      "rate-limit"
+    ],
+    "publisher": "other-yuka",
+    "downloads": 5347,
+    "date": "2026-08-16T15:37:55.243Z",
+    "repository": "git+https://github.com/other-yuka/kyoli-gam.git",
+    "npm": "https://www.npmjs.com/package/opencode-codex-multi-account"
   },
   {
     "name": "opencode-anthropic-console",
@@ -2061,25 +2080,6 @@
     "npm": "https://www.npmjs.com/package/opencode-anthropic-console"
   },
   {
-    "name": "opencode-codex-multi-account",
-    "version": "0.2.122",
-    "description": "OpenCode plugin for Codex (OpenAI) multi-account management with automatic rate limit switching",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "openai",
-      "codex",
-      "chatgpt",
-      "multi-account",
-      "rate-limit"
-    ],
-    "publisher": "other-yuka",
-    "downloads": 5347,
-    "date": "2026-08-16T15:37:55.243Z",
-    "repository": "git+https://github.com/other-yuka/kyoli-gam.git",
-    "npm": "https://www.npmjs.com/package/opencode-codex-multi-account"
-  },
-  {
     "name": "opencode-background-agents",
     "version": "0.1.1",
     "description": "Persistent background delegation for OpenCode.",
@@ -2095,6 +2095,22 @@
     "date": "2026-03-13T17:28:46.458Z",
     "repository": "https://www.npmjs.com/package/opencode-background-agents",
     "npm": "https://www.npmjs.com/package/opencode-background-agents"
+  },
+  {
+    "name": "@leohenon/opencode-vim-plugin",
+    "version": "0.1.6",
+    "description": "Vim mode plugin for OpenCode.",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "tui",
+      "vim"
+    ],
+    "publisher": "leohenon",
+    "downloads": 1094,
+    "date": "2026-08-08T13:22:02.570Z",
+    "repository": "git+https://github.com/leohenon/opencode-vim-plugin.git",
+    "npm": "https://www.npmjs.com/package/@leohenon/opencode-vim-plugin"
   },
   {
     "name": "opencode-worktree",
@@ -2144,22 +2160,6 @@
     "date": "2026-08-05T20:15:20.975Z",
     "repository": "https://www.npmjs.com/package/@eleboucher/opencode-memini",
     "npm": "https://www.npmjs.com/package/@eleboucher/opencode-memini"
-  },
-  {
-    "name": "@leohenon/opencode-vim-plugin",
-    "version": "0.1.6",
-    "description": "Vim mode plugin for OpenCode.",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "tui",
-      "vim"
-    ],
-    "publisher": "leohenon",
-    "downloads": 1094,
-    "date": "2026-08-08T13:22:02.570Z",
-    "repository": "git+https://github.com/leohenon/opencode-vim-plugin.git",
-    "npm": "https://www.npmjs.com/package/@leohenon/opencode-vim-plugin"
   },
   {
     "name": "greprag",
@@ -2285,6 +2285,27 @@
     "npm": "https://www.npmjs.com/package/@agentapprove/opencode"
   },
   {
+    "name": "opencode-fractal-memory",
+    "version": "0.8.0",
+    "description": "Fractal memory system for OpenCode with semantic search and automatic compression.",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "memory",
+      "embeddings",
+      "semantic-search",
+      "hnsw",
+      "vector-search",
+      "bm25",
+      "agent-memory"
+    ],
+    "publisher": "holgerreppert",
+    "downloads": 2677,
+    "date": "2026-08-18T00:05:40.052Z",
+    "repository": "git+https://github.com/holgerreppert/opencode-fractal-memory.git",
+    "npm": "https://www.npmjs.com/package/opencode-fractal-memory"
+  },
+  {
     "name": "@rynfar/meridian-plugin-opencode-scrub",
     "version": "0.2.0",
     "description": "Meridian plugin: strip opencode-identifying fingerprints from the system prompt before it reaches Claude.",
@@ -2347,6 +2368,23 @@
     "npm": "https://www.npmjs.com/package/opencode-agent-memory"
   },
   {
+    "name": "opencode-lightpanda",
+    "version": "0.2.2",
+    "description": "Lightpanda-powered web fetching for OpenCode",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "lightpanda",
+      "headless-browser",
+      "ai-agents"
+    ],
+    "publisher": "skatkov",
+    "downloads": 766,
+    "date": "2026-07-18T10:06:45.460Z",
+    "repository": "https://www.npmjs.com/package/opencode-lightpanda",
+    "npm": "https://www.npmjs.com/package/opencode-lightpanda"
+  },
+  {
     "name": "opencode-conductor-plugin",
     "version": "1.32.0",
     "description": "Conductor plugin for OpenCode",
@@ -2362,27 +2400,6 @@
     "date": "2026-03-02T04:55:38.856Z",
     "repository": "git+https://github.com/derekbar90/opencode-conductor.git",
     "npm": "https://www.npmjs.com/package/opencode-conductor-plugin"
-  },
-  {
-    "name": "opencode-fractal-memory",
-    "version": "0.8.0",
-    "description": "Fractal memory system for OpenCode with semantic search and automatic compression.",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "memory",
-      "embeddings",
-      "semantic-search",
-      "hnsw",
-      "vector-search",
-      "bm25",
-      "agent-memory"
-    ],
-    "publisher": "holgerreppert",
-    "downloads": 2677,
-    "date": "2026-08-18T00:05:40.052Z",
-    "repository": "git+https://github.com/holgerreppert/opencode-fractal-memory.git",
-    "npm": "https://www.npmjs.com/package/opencode-fractal-memory"
   },
   {
     "name": "opencode-sonarqube",
@@ -2402,26 +2419,6 @@
     "date": "2026-01-29T20:50:51.757Z",
     "repository": "git+https://github.com/mguttmann/opencode-sonarqube.git",
     "npm": "https://www.npmjs.com/package/opencode-sonarqube"
-  },
-  {
-    "name": "opencode-mem0",
-    "version": "2.23.0",
-    "description": "OpenCode plugin that gives coding agents persistent memory using local vector database",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "memory",
-      "vector-database",
-      "ai",
-      "coding-agent",
-      "local",
-      "standalone"
-    ],
-    "publisher": "zer020",
-    "downloads": 2399,
-    "date": "2026-08-05T14:14:09.236Z",
-    "repository": "git+https://github.com/ZeR020/opencode-mem0.git",
-    "npm": "https://www.npmjs.com/package/opencode-mem0"
   },
   {
     "name": "opencode-sdlc-system",
@@ -2445,6 +2442,26 @@
     "date": "2026-07-23T13:30:21.396Z",
     "repository": "git+https://github.com/RCarribero/opencode-sdlc-system.git",
     "npm": "https://www.npmjs.com/package/opencode-sdlc-system"
+  },
+  {
+    "name": "opencode-mem0",
+    "version": "2.23.0",
+    "description": "OpenCode plugin that gives coding agents persistent memory using local vector database",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "memory",
+      "vector-database",
+      "ai",
+      "coding-agent",
+      "local",
+      "standalone"
+    ],
+    "publisher": "zer020",
+    "downloads": 2399,
+    "date": "2026-08-05T14:14:09.236Z",
+    "repository": "git+https://github.com/ZeR020/opencode-mem0.git",
+    "npm": "https://www.npmjs.com/package/opencode-mem0"
   },
   {
     "name": "@witness-ai/opencode-linux-x64",
@@ -2476,6 +2493,17 @@
     "npm": "https://www.npmjs.com/package/cursor-opencode-provider"
   },
   {
+    "name": "@witness-ai/opencode-darwin-arm64",
+    "version": "0.7.9",
+    "description": "witness binary for OpenCode on macOS Apple Silicon.",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 2890,
+    "date": "2026-08-09T03:47:14.570Z",
+    "repository": "git+https://github.com/IngTian/witness.git",
+    "npm": "https://www.npmjs.com/package/@witness-ai/opencode-darwin-arm64"
+  },
+  {
     "name": "@grinev/opencode-telegram-bot",
     "version": "0.24.0",
     "description": "Telegram bot client for OpenCode to run and monitor coding tasks from chat.",
@@ -2494,34 +2522,6 @@
     "npm": "https://www.npmjs.com/package/@grinev/opencode-telegram-bot"
   },
   {
-    "name": "@witness-ai/opencode-darwin-arm64",
-    "version": "0.7.9",
-    "description": "witness binary for OpenCode on macOS Apple Silicon.",
-    "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 2890,
-    "date": "2026-08-09T03:47:14.570Z",
-    "repository": "git+https://github.com/IngTian/witness.git",
-    "npm": "https://www.npmjs.com/package/@witness-ai/opencode-darwin-arm64"
-  },
-  {
-    "name": "opencode-lightpanda",
-    "version": "0.2.2",
-    "description": "Lightpanda-powered web fetching for OpenCode",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "lightpanda",
-      "headless-browser",
-      "ai-agents"
-    ],
-    "publisher": "skatkov",
-    "downloads": 766,
-    "date": "2026-07-18T10:06:45.460Z",
-    "repository": "https://www.npmjs.com/package/opencode-lightpanda",
-    "npm": "https://www.npmjs.com/package/opencode-lightpanda"
-  },
-  {
     "name": "opencode-dash",
     "version": "1.0.7",
     "description": "Dashboard for opencode CLI usage analytics",
@@ -2531,6 +2531,48 @@
     "date": "2026-07-31T11:12:03.963Z",
     "repository": "git+https://github.com/MuhammadOmarMuhdhar/opencode-dash.git",
     "npm": "https://www.npmjs.com/package/opencode-dash"
+  },
+  {
+    "name": "@hoyeon0722/opencode-setup",
+    "version": "0.4.1",
+    "description": "OpenCode 환경 세팅 CLI + Plugin.",
+    "keywords": [
+      "opencode",
+      "setup",
+      "cli",
+      "developer-tools",
+      "ai-coding",
+      "claude-code",
+      "cursor",
+      "aider",
+      "configuration",
+      "automation"
+    ],
+    "publisher": "hoyeon0722",
+    "downloads": 731,
+    "date": "2026-04-16T05:28:40.766Z",
+    "repository": "git+https://github.com/mercuryPark/oc-setup.git",
+    "npm": "https://www.npmjs.com/package/@hoyeon0722/opencode-setup"
+  },
+  {
+    "name": "@zhafron/opencode-kiro-auth",
+    "version": "2.0.0",
+    "description": "OpenCode plugin for AWS Kiro (CodeWhisperer) providing access to Claude models",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "kiro",
+      "codewhisperer",
+      "aws",
+      "claude",
+      "ai",
+      "auth"
+    ],
+    "publisher": "zhafron",
+    "downloads": 2253,
+    "date": "2026-07-28T10:59:24.196Z",
+    "repository": "git+https://github.com/tickernelz/opencode-kiro-auth.git",
+    "npm": "https://www.npmjs.com/package/@zhafron/opencode-kiro-auth"
   },
   {
     "name": "opencode-plugin-gitea",
@@ -2547,6 +2589,30 @@
     "date": "2026-07-17T19:47:09.198Z",
     "repository": "https://www.npmjs.com/package/opencode-plugin-gitea",
     "npm": "https://www.npmjs.com/package/opencode-plugin-gitea"
+  },
+  {
+    "name": "opencode-resolve",
+    "version": "0.3.8",
+    "description": "OpenCode plugin that adds a lightweight resolver/coder harness for continuous agentic coding.",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "agents",
+      "agentic-coding",
+      "autonomous-coding",
+      "harness",
+      "taskflow",
+      "resolve",
+      "task-resolution",
+      "context7",
+      "glm",
+      "gpt"
+    ],
+    "publisher": "jshsakura",
+    "downloads": 1735,
+    "date": "2026-08-05T03:54:29.751Z",
+    "repository": "git+https://github.com/jshsakura/opencode-resolve.git",
+    "npm": "https://www.npmjs.com/package/opencode-resolve"
   },
   {
     "name": "@mlflow/opencode",
@@ -2601,23 +2667,6 @@
     "npm": "https://www.npmjs.com/package/sortie-dogs"
   },
   {
-    "name": "@mohak34/opencode-notifier",
-    "version": "0.2.8",
-    "description": "OpenCode plugin that sends system notifications and plays sounds when permission is needed, generation completes, or errors occur",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "notifications",
-      "sound",
-      "alerts"
-    ],
-    "publisher": "mohak34",
-    "downloads": 5783,
-    "date": "2026-06-05T08:39:06.279Z",
-    "repository": "git+https://github.com/mohak34/opencode-notifier.git",
-    "npm": "https://www.npmjs.com/package/@mohak34/opencode-notifier"
-  },
-  {
     "name": "opencode-plugin-litellm",
     "version": "0.8.0",
     "description": "OpenCode plugin for LiteLLM proxy support with auto-detection and dynamic model discovery",
@@ -2636,26 +2685,21 @@
     "npm": "https://www.npmjs.com/package/opencode-plugin-litellm"
   },
   {
-    "name": "@hoyeon0722/opencode-setup",
-    "version": "0.4.1",
-    "description": "OpenCode 환경 세팅 CLI + Plugin.",
+    "name": "@mohak34/opencode-notifier",
+    "version": "0.2.8",
+    "description": "OpenCode plugin that sends system notifications and plays sounds when permission is needed, generation completes, or errors occur",
     "keywords": [
       "opencode",
-      "setup",
-      "cli",
-      "developer-tools",
-      "ai-coding",
-      "claude-code",
-      "cursor",
-      "aider",
-      "configuration",
-      "automation"
+      "opencode-plugin",
+      "notifications",
+      "sound",
+      "alerts"
     ],
-    "publisher": "hoyeon0722",
-    "downloads": 731,
-    "date": "2026-04-16T05:28:40.766Z",
-    "repository": "git+https://github.com/mercuryPark/oc-setup.git",
-    "npm": "https://www.npmjs.com/package/@hoyeon0722/opencode-setup"
+    "publisher": "mohak34",
+    "downloads": 5783,
+    "date": "2026-06-05T08:39:06.279Z",
+    "repository": "git+https://github.com/mohak34/opencode-notifier.git",
+    "npm": "https://www.npmjs.com/package/@mohak34/opencode-notifier"
   },
   {
     "name": "@dzhechkov/adapter-opencode",
@@ -2674,48 +2718,49 @@
     "npm": "https://www.npmjs.com/package/@dzhechkov/adapter-opencode"
   },
   {
-    "name": "@zhafron/opencode-kiro-auth",
-    "version": "2.0.0",
-    "description": "OpenCode plugin for AWS Kiro (CodeWhisperer) providing access to Claude models",
+    "name": "opencode-bytheway",
+    "version": "0.8.0-beta.5",
+    "description": "OpenCode TUI plugin based on Claude Code's \"btw\" feature",
     "keywords": [
       "opencode",
       "plugin",
-      "kiro",
-      "codewhisperer",
-      "aws",
-      "claude",
-      "ai",
-      "auth"
+      "tui",
+      "btw"
     ],
-    "publisher": "zhafron",
-    "downloads": 2253,
-    "date": "2026-07-28T10:59:24.196Z",
-    "repository": "git+https://github.com/tickernelz/opencode-kiro-auth.git",
-    "npm": "https://www.npmjs.com/package/@zhafron/opencode-kiro-auth"
+    "publisher": "GitHub Actions",
+    "downloads": 942,
+    "date": "2026-08-13T00:38:46.952Z",
+    "repository": "git+https://github.com/timrichardson/opencode-btw.git",
+    "npm": "https://www.npmjs.com/package/opencode-bytheway"
   },
   {
-    "name": "opencode-resolve",
-    "version": "0.3.8",
-    "description": "OpenCode plugin that adds a lightweight resolver/coder harness for continuous agentic coding.",
+    "name": "@weaveio/weave-adapter-opencode",
+    "version": "0.0.0-preview-20260721191623",
+    "description": "OpenCode plugin adapter for the Weave orchestration framework",
+    "keywords": [],
+    "publisher": "pgermishuys81",
+    "downloads": 1509,
+    "date": "2026-07-21T19:16:30.468Z",
+    "repository": "https://github.com/weave-io/weave",
+    "npm": "https://www.npmjs.com/package/@weaveio/weave-adapter-opencode"
+  },
+  {
+    "name": "opencode-rpc",
+    "version": "1.2.4",
+    "description": "Discord Rich Presence plugin for OpenCode",
     "keywords": [
       "opencode",
-      "opencode-plugin",
-      "agents",
-      "agentic-coding",
-      "autonomous-coding",
-      "harness",
-      "taskflow",
-      "resolve",
-      "task-resolution",
-      "context7",
-      "glm",
-      "gpt"
+      "discord",
+      "rich-presence",
+      "discord-rpc",
+      "rpc",
+      "plugin"
     ],
-    "publisher": "jshsakura",
-    "downloads": 1735,
-    "date": "2026-08-05T03:54:29.751Z",
-    "repository": "git+https://github.com/jshsakura/opencode-resolve.git",
-    "npm": "https://www.npmjs.com/package/opencode-resolve"
+    "publisher": "butterbrodskiy",
+    "downloads": 895,
+    "date": "2026-08-01T16:57:04.158Z",
+    "repository": "git+https://github.com/butterbrodskiy/opencode-rpc.git",
+    "npm": "https://www.npmjs.com/package/opencode-rpc"
   },
   {
     "name": "opencode-background-panel",
@@ -2735,24 +2780,6 @@
     "date": "2026-07-15T16:59:35.910Z",
     "repository": "https://www.npmjs.com/package/opencode-background-panel",
     "npm": "https://www.npmjs.com/package/opencode-background-panel"
-  },
-  {
-    "name": "opencode-rpc",
-    "version": "1.2.4",
-    "description": "Discord Rich Presence plugin for OpenCode",
-    "keywords": [
-      "opencode",
-      "discord",
-      "rich-presence",
-      "discord-rpc",
-      "rpc",
-      "plugin"
-    ],
-    "publisher": "butterbrodskiy",
-    "downloads": 895,
-    "date": "2026-08-01T16:57:04.158Z",
-    "repository": "git+https://github.com/butterbrodskiy/opencode-rpc.git",
-    "npm": "https://www.npmjs.com/package/opencode-rpc"
   },
   {
     "name": "@different-ai/opencode-browser",
@@ -2806,6 +2833,24 @@
     "npm": "https://www.npmjs.com/package/@sveltejs/opencode"
   },
   {
+    "name": "@navopw/opencode-notch",
+    "version": "0.6.1",
+    "description": "Dynamic Island-style macOS notch notifications for OpenCode",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "macos",
+      "notch",
+      "dynamic-island",
+      "notifications"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 996,
+    "date": "2026-08-08T10:51:01.926Z",
+    "repository": "git+https://github.com/navopw/opencode-notch.git",
+    "npm": "https://www.npmjs.com/package/@navopw/opencode-notch"
+  },
+  {
     "name": "opencode-dev-team",
     "version": "0.0.1-alpha018",
     "description": "An opencode agentic dev team.",
@@ -2817,22 +2862,6 @@
     "npm": "https://www.npmjs.com/package/opencode-dev-team"
   },
   {
-    "name": "opencode-bytheway",
-    "version": "0.8.0-beta.5",
-    "description": "OpenCode TUI plugin based on Claude Code's \"btw\" feature",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "tui",
-      "btw"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 942,
-    "date": "2026-08-13T00:38:46.952Z",
-    "repository": "git+https://github.com/timrichardson/opencode-btw.git",
-    "npm": "https://www.npmjs.com/package/opencode-bytheway"
-  },
-  {
     "name": "@andoai/opencode",
     "version": "0.2.5",
     "description": "Official Ando Wallet integration for OpenCode",
@@ -2842,17 +2871,6 @@
     "date": "2026-08-04T13:24:59.504Z",
     "repository": "https://www.npmjs.com/package/@andoai/opencode",
     "npm": "https://www.npmjs.com/package/@andoai/opencode"
-  },
-  {
-    "name": "@weaveio/weave-adapter-opencode",
-    "version": "0.0.0-preview-20260721191623",
-    "description": "OpenCode plugin adapter for the Weave orchestration framework",
-    "keywords": [],
-    "publisher": "pgermishuys81",
-    "downloads": 1509,
-    "date": "2026-07-21T19:16:30.468Z",
-    "repository": "https://github.com/weave-io/weave",
-    "npm": "https://www.npmjs.com/package/@weaveio/weave-adapter-opencode"
   },
   {
     "name": "opencode-usage-coach",
@@ -2892,27 +2910,8 @@
     "npm": "https://www.npmjs.com/package/opencode-debate"
   },
   {
-    "name": "@audaxic/memory-opencode",
-    "version": "1.1.1",
-    "description": "OpenCode plugin for Audaxic Memory - automatically saves conversation facts to your persistent memory layer",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "memory",
-      "audaxic",
-      "ai",
-      "context",
-      "conversation"
-    ],
-    "publisher": "efebilici",
-    "downloads": 3483,
-    "date": "2026-08-10T12:21:00.386Z",
-    "repository": "git+https://github.com/Audaxic/audaxic-memory-opencode.git",
-    "npm": "https://www.npmjs.com/package/@audaxic/memory-opencode"
-  },
-  {
     "name": "@geohar/opencode-sharedserver",
-    "version": "0.6.9",
+    "version": "0.8.0",
     "description": "OpenCode plugin: manage shared backend processes via the sharedserver CLI.",
     "keywords": [
       "opencode",
@@ -2923,7 +2922,7 @@
     ],
     "publisher": "GitHub Actions",
     "downloads": 2033,
-    "date": "2026-08-17T21:35:38.259Z",
+    "date": "2026-08-18T02:32:43.339Z",
     "repository": "git+https://github.com/georgeharker/sharedserver.git",
     "npm": "https://www.npmjs.com/package/@geohar/opencode-sharedserver"
   },
@@ -2937,6 +2936,23 @@
     "date": "2026-08-17T08:05:35.574Z",
     "repository": "https://www.npmjs.com/package/@vite-plugin-opencode-assistant/components",
     "npm": "https://www.npmjs.com/package/@vite-plugin-opencode-assistant/components"
+  },
+  {
+    "name": "@adrouter/opencode",
+    "version": "0.1.0-beta.9",
+    "description": "AdRouter provider and disclosed sponsorship footer for OpenCode",
+    "keywords": [
+      "opencode",
+      "ai-sdk",
+      "adrouter",
+      "provider",
+      "integration"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 1038,
+    "date": "2026-08-10T09:30:45.360Z",
+    "repository": "git+https://github.com/adrouter/adrouter-opencode.git",
+    "npm": "https://www.npmjs.com/package/@adrouter/opencode"
   },
   {
     "name": "@prevalentware/opencode-goal-plugin",
@@ -2964,21 +2980,23 @@
     "npm": "https://www.npmjs.com/package/@prevalentware/opencode-goal-plugin"
   },
   {
-    "name": "@adrouter/opencode",
-    "version": "0.1.0-beta.9",
-    "description": "AdRouter provider and disclosed sponsorship footer for OpenCode",
+    "name": "@audaxic/memory-opencode",
+    "version": "1.1.1",
+    "description": "OpenCode plugin for Audaxic Memory - automatically saves conversation facts to your persistent memory layer",
     "keywords": [
       "opencode",
-      "ai-sdk",
-      "adrouter",
-      "provider",
-      "integration"
+      "opencode-plugin",
+      "memory",
+      "audaxic",
+      "ai",
+      "context",
+      "conversation"
     ],
-    "publisher": "GitHub Actions",
-    "downloads": 1038,
-    "date": "2026-08-10T09:30:45.360Z",
-    "repository": "git+https://github.com/adrouter/adrouter-opencode.git",
-    "npm": "https://www.npmjs.com/package/@adrouter/opencode"
+    "publisher": "efebilici",
+    "downloads": 3483,
+    "date": "2026-08-10T12:21:00.386Z",
+    "repository": "git+https://github.com/Audaxic/audaxic-memory-opencode.git",
+    "npm": "https://www.npmjs.com/package/@audaxic/memory-opencode"
   },
   {
     "name": "@slkiser/opencode-quota",
@@ -3025,41 +3043,6 @@
     "npm": "https://www.npmjs.com/package/opencode-openai-codex-auth"
   },
   {
-    "name": "@navopw/opencode-notch",
-    "version": "0.6.1",
-    "description": "Dynamic Island-style macOS notch notifications for OpenCode",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "macos",
-      "notch",
-      "dynamic-island",
-      "notifications"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 996,
-    "date": "2026-08-08T10:51:01.926Z",
-    "repository": "git+https://github.com/navopw/opencode-notch.git",
-    "npm": "https://www.npmjs.com/package/@navopw/opencode-notch"
-  },
-  {
-    "name": "opencode-session-store",
-    "version": "1.2.1",
-    "description": "Persist all OpenCode session data to .opencode/sessions/ as structured JSON files",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "sessions",
-      "storage",
-      "persistence"
-    ],
-    "publisher": "warl",
-    "downloads": 762,
-    "date": "2026-08-05T12:16:48.048Z",
-    "repository": "https://github.com/emyasnikov/opencode-session-storage",
-    "npm": "https://www.npmjs.com/package/opencode-session-store"
-  },
-  {
     "name": "opencode-feishu",
     "version": "1.10.10",
     "description": "OpenCode 飞书插件 — 通过飞书 WebSocket 长连接接入 OpenCode AI 对话",
@@ -3080,6 +3063,70 @@
     "npm": "https://www.npmjs.com/package/opencode-feishu"
   },
   {
+    "name": "opencode-session-store",
+    "version": "1.2.1",
+    "description": "Persist all OpenCode session data to .opencode/sessions/ as structured JSON files",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "sessions",
+      "storage",
+      "persistence"
+    ],
+    "publisher": "warl",
+    "downloads": 762,
+    "date": "2026-08-05T12:16:48.048Z",
+    "repository": "https://github.com/emyasnikov/opencode-session-storage",
+    "npm": "https://www.npmjs.com/package/opencode-session-store"
+  },
+  {
+    "name": "@shodocan/opencode-workflows",
+    "version": "0.3.1",
+    "description": "Main-session workflow orchestration runtime for OpenCode v0.2 — the main LLM orchestrates native subagent chains via the built-in task tool.",
+    "keywords": [],
+    "publisher": "shodocan",
+    "downloads": 5861,
+    "date": "2026-08-17T22:06:32.846Z",
+    "repository": "git+https://github.com/Shodocan/opencode-workflows.git",
+    "npm": "https://www.npmjs.com/package/@shodocan/opencode-workflows"
+  },
+  {
+    "name": "@opencode-compat/facade-plugin",
+    "version": "0.3.0",
+    "description": "Install-override stand-in for @opencode-ai/plugin (classic + v2/promise)",
+    "keywords": [
+      "opencode",
+      "ocp",
+      "facade",
+      "plugin"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 1626,
+    "date": "2026-08-17T21:59:18.075Z",
+    "repository": "git+https://github.com/oakimov/opencode-plugin-compat.git",
+    "npm": "https://www.npmjs.com/package/@opencode-compat/facade-plugin"
+  },
+  {
+    "name": "@lux-tech/opencode-ai",
+    "version": "1.18.76",
+    "description": "opencodev2 — AI-powered development tool. Community fork of opencode (MCP auto-reconnect, hot reload, eval pipeline, memory consolidation, unified prompt); installs the opencodev2 CLI alongside the official opencode.",
+    "keywords": [
+      "opencode",
+      "opencodev2",
+      "ai",
+      "coding-agent",
+      "cli",
+      "agent",
+      "llm",
+      "fork"
+    ],
+    "publisher": "lux-tech",
+    "downloads": 1885,
+    "date": "2026-08-14T07:22:58.009Z",
+    "repository": "git+https://github.com/menoxz/opencode.git",
+    "npm": "https://www.npmjs.com/package/@lux-tech/opencode-ai"
+  },
+  {
     "name": "opencode-subagents-view",
     "version": "0.3.0",
     "description": "Terminal UI plugin for OpenCode that adds a live \"Subagents\" panel to the session sidebar. Unofficial, not affiliated with the OpenCode team.",
@@ -3095,22 +3142,48 @@
     "npm": "https://www.npmjs.com/package/opencode-subagents-view"
   },
   {
-    "name": "opencode-taskflow",
-    "version": "0.2.10",
-    "description": "Run taskflow on OpenCode: an OpenCode subagent runner plus an MCP server (and an opencode.json config scaffold) that exposes the taskflow_* tools to OpenCode users.",
+    "name": "@nawc/provider-opencode",
+    "version": "0.1.3",
+    "description": "Connect NAWC conversations to OpenCode.",
+    "keywords": [
+      "coding-agents",
+      "nawc",
+      "notebook",
+      "specification-driven-development"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 646,
+    "date": "2026-07-31T14:02:28.424Z",
+    "repository": "git+https://github.com/Narwhster/nawc.git",
+    "npm": "https://www.npmjs.com/package/@nawc/provider-opencode"
+  },
+  {
+    "name": "@qrafty-ai/opencode-kanban",
+    "version": "0.6.2",
+    "description": "Terminal kanban board for managing OpenCode tmux sessions",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 1947,
+    "date": "2026-08-04T05:38:11.291Z",
+    "repository": "git+https://github.com/TomCC7/opencode-kanban.git",
+    "npm": "https://www.npmjs.com/package/@qrafty-ai/opencode-kanban"
+  },
+  {
+    "name": "opencode-mobile",
+    "version": "1.4.0",
+    "description": "Mobile push notification plugin for OpenCode - enables push notifications via Expo for mobile devices",
     "keywords": [
       "opencode",
-      "mcp",
-      "taskflow",
-      "orchestration",
-      "subagents",
-      "workflow"
+      "plugin",
+      "push-notifications",
+      "mobile",
+      "expo"
     ],
-    "publisher": "heggria",
-    "downloads": 1239,
-    "date": "2026-08-12T05:41:58.980Z",
-    "repository": "git+https://github.com/heggria/taskflow.git",
-    "npm": "https://www.npmjs.com/package/opencode-taskflow"
+    "publisher": "doza",
+    "downloads": 1510,
+    "date": "2026-02-25T16:43:52.954Z",
+    "repository": "git+https://github.com/doza62/opencode-mobile.git",
+    "npm": "https://www.npmjs.com/package/opencode-mobile"
   },
   {
     "name": "opencode-auto-translate",
@@ -3141,6 +3214,24 @@
     "npm": "https://www.npmjs.com/package/opencode-supabase"
   },
   {
+    "name": "opencode-taskflow",
+    "version": "0.2.10",
+    "description": "Run taskflow on OpenCode: an OpenCode subagent runner plus an MCP server (and an opencode.json config scaffold) that exposes the taskflow_* tools to OpenCode users.",
+    "keywords": [
+      "opencode",
+      "mcp",
+      "taskflow",
+      "orchestration",
+      "subagents",
+      "workflow"
+    ],
+    "publisher": "heggria",
+    "downloads": 1239,
+    "date": "2026-08-12T05:41:58.980Z",
+    "repository": "git+https://github.com/heggria/taskflow.git",
+    "npm": "https://www.npmjs.com/package/opencode-taskflow"
+  },
+  {
     "name": "@uniqbit/mate-opencode-plugin",
     "version": "0.15.5",
     "description": "OpenCode plugin integration for Mate.",
@@ -3152,15 +3243,19 @@
     "npm": "https://www.npmjs.com/package/@uniqbit/mate-opencode-plugin"
   },
   {
-    "name": "@zenobius/opencode-skillful",
-    "version": "1.2.5",
-    "description": "OpenCode Skills Plugin - Anthropic Agent Skills Specification implementation",
-    "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 1631,
-    "date": "2026-02-13T09:32:58.734Z",
-    "repository": "git+https://github.com/zenobi-us/opencode-skillful.git",
-    "npm": "https://www.npmjs.com/package/@zenobius/opencode-skillful"
+    "name": "@velocirouter/opencode-auth",
+    "version": "1.0.3",
+    "description": "OpenCode auth helper for VelociRouter — prints your rt-… API key to stdout for `opencode auth login`.",
+    "keywords": [
+      "opencode",
+      "velocirouter",
+      "auth"
+    ],
+    "publisher": "lwlee2608",
+    "downloads": 677,
+    "date": "2026-07-11T08:40:39.200Z",
+    "repository": "https://www.npmjs.com/package/@velocirouter/opencode-auth",
+    "npm": "https://www.npmjs.com/package/@velocirouter/opencode-auth"
   },
   {
     "name": "@intisy-ai/opencode-loader",
@@ -3177,6 +3272,17 @@
     "date": "2026-08-07T13:53:54.180Z",
     "repository": "git+https://github.com/intisy-ai/opencode-loader.git",
     "npm": "https://www.npmjs.com/package/@intisy-ai/opencode-loader"
+  },
+  {
+    "name": "@zenobius/opencode-skillful",
+    "version": "1.2.5",
+    "description": "OpenCode Skills Plugin - Anthropic Agent Skills Specification implementation",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 1631,
+    "date": "2026-02-13T09:32:58.734Z",
+    "repository": "git+https://github.com/zenobi-us/opencode-skillful.git",
+    "npm": "https://www.npmjs.com/package/@zenobius/opencode-skillful"
   },
   {
     "name": "@kl-c/matrixos",
@@ -3242,6 +3348,17 @@
     "npm": "https://www.npmjs.com/package/oh-my-opencode-darwin-arm64"
   },
   {
+    "name": "@codemieai/codemie-opencode-linux-x64",
+    "version": "0.0.47",
+    "description": "Platform-specific binary for @codemieai/codemie-opencode",
+    "keywords": [],
+    "publisher": "codemieai",
+    "downloads": 1196,
+    "date": "2026-03-03T09:06:51.481Z",
+    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
+    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-linux-x64"
+  },
+  {
     "name": "@aeon-memory/opencode",
     "version": "0.7.2",
     "description": "Automatic Aeon Memory lifecycle integration for OpenCode",
@@ -3256,33 +3373,6 @@
     "date": "2026-07-16T07:39:34.042Z",
     "repository": "git+https://github.com/HuChundong/aeon-memory.git",
     "npm": "https://www.npmjs.com/package/@aeon-memory/opencode"
-  },
-  {
-    "name": "@opencode-compat/facade-plugin",
-    "version": "0.3.0",
-    "description": "Install-override stand-in for @opencode-ai/plugin (classic + v2/promise)",
-    "keywords": [
-      "opencode",
-      "ocp",
-      "facade",
-      "plugin"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 1626,
-    "date": "2026-08-17T21:59:18.075Z",
-    "repository": "git+https://github.com/oakimov/opencode-plugin-compat.git",
-    "npm": "https://www.npmjs.com/package/@opencode-compat/facade-plugin"
-  },
-  {
-    "name": "@shodocan/opencode-workflows",
-    "version": "0.3.1",
-    "description": "Main-session workflow orchestration runtime for OpenCode v0.2 — the main LLM orchestrates native subagent chains via the built-in task tool.",
-    "keywords": [],
-    "publisher": "shodocan",
-    "downloads": 5861,
-    "date": "2026-08-17T22:06:32.846Z",
-    "repository": "git+https://github.com/Shodocan/opencode-workflows.git",
-    "npm": "https://www.npmjs.com/package/@shodocan/opencode-workflows"
   },
   {
     "name": "opencode-presets",
@@ -3304,57 +3394,15 @@
     "npm": "https://www.npmjs.com/package/opencode-presets"
   },
   {
-    "name": "@lux-tech/opencode-ai",
-    "version": "1.18.76",
-    "description": "opencodev2 — AI-powered development tool. Community fork of opencode (MCP auto-reconnect, hot reload, eval pipeline, memory consolidation, unified prompt); installs the opencodev2 CLI alongside the official opencode.",
-    "keywords": [
-      "opencode",
-      "opencodev2",
-      "ai",
-      "coding-agent",
-      "cli",
-      "agent",
-      "llm",
-      "fork"
-    ],
-    "publisher": "lux-tech",
-    "downloads": 1885,
-    "date": "2026-08-14T07:22:58.009Z",
-    "repository": "git+https://github.com/menoxz/opencode.git",
-    "npm": "https://www.npmjs.com/package/@lux-tech/opencode-ai"
-  },
-  {
-    "name": "@nawc/provider-opencode",
-    "version": "0.1.3",
-    "description": "Connect NAWC conversations to OpenCode.",
-    "keywords": [
-      "coding-agents",
-      "nawc",
-      "notebook",
-      "specification-driven-development"
-    ],
+    "name": "opencode-adaptive-thinking",
+    "version": "0.1.6",
+    "description": "Adaptive Thinking Plugin for OpenCode",
+    "keywords": [],
     "publisher": "GitHub Actions",
-    "downloads": 646,
-    "date": "2026-07-31T14:02:28.424Z",
-    "repository": "git+https://github.com/Narwhster/nawc.git",
-    "npm": "https://www.npmjs.com/package/@nawc/provider-opencode"
-  },
-  {
-    "name": "opencode-mobile",
-    "version": "1.4.0",
-    "description": "Mobile push notification plugin for OpenCode - enables push notifications via Expo for mobile devices",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "push-notifications",
-      "mobile",
-      "expo"
-    ],
-    "publisher": "doza",
-    "downloads": 1510,
-    "date": "2026-02-25T16:43:52.954Z",
-    "repository": "git+https://github.com/doza62/opencode-mobile.git",
-    "npm": "https://www.npmjs.com/package/opencode-mobile"
+    "downloads": 648,
+    "date": "2026-08-02T08:58:07.864Z",
+    "repository": "git+https://github.com/ian-pascoe/opencode-adaptive-thinking.git",
+    "npm": "https://www.npmjs.com/package/opencode-adaptive-thinking"
   },
   {
     "name": "opencode-handoff",
@@ -3394,19 +3442,15 @@
     "npm": "https://www.npmjs.com/package/opencode-kimi-full"
   },
   {
-    "name": "@velocirouter/opencode-auth",
-    "version": "1.0.3",
-    "description": "OpenCode auth helper for VelociRouter — prints your rt-… API key to stdout for `opencode auth login`.",
-    "keywords": [
-      "opencode",
-      "velocirouter",
-      "auth"
-    ],
-    "publisher": "lwlee2608",
-    "downloads": 677,
-    "date": "2026-07-11T08:40:39.200Z",
-    "repository": "https://www.npmjs.com/package/@velocirouter/opencode-auth",
-    "npm": "https://www.npmjs.com/package/@velocirouter/opencode-auth"
+    "name": "@codemieai/codemie-opencode-windows-x64",
+    "version": "0.0.47",
+    "description": "Platform-specific binary for @codemieai/codemie-opencode",
+    "keywords": [],
+    "publisher": "codemieai",
+    "downloads": 1699,
+    "date": "2026-03-03T09:06:51.517Z",
+    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
+    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-windows-x64"
   },
   {
     "name": "nonoka-opencode-provider",
@@ -3425,17 +3469,6 @@
     "date": "2026-08-02T02:29:53.129Z",
     "repository": "git+https://github.com/fyerfyer/nonoka-cli.git",
     "npm": "https://www.npmjs.com/package/nonoka-opencode-provider"
-  },
-  {
-    "name": "@codemieai/codemie-opencode-windows-x64",
-    "version": "0.0.47",
-    "description": "Platform-specific binary for @codemieai/codemie-opencode",
-    "keywords": [],
-    "publisher": "codemieai",
-    "downloads": 1699,
-    "date": "2026-03-03T09:06:51.517Z",
-    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
-    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-windows-x64"
   },
   {
     "name": "opencode-gpt-imagegen",
@@ -3520,35 +3553,6 @@
     "npm": "https://www.npmjs.com/package/@ranger-testing/opencode-plugin"
   },
   {
-    "name": "@codemieai/codemie-opencode-linux-x64",
-    "version": "0.0.47",
-    "description": "Platform-specific binary for @codemieai/codemie-opencode",
-    "keywords": [],
-    "publisher": "codemieai",
-    "downloads": 1196,
-    "date": "2026-03-03T09:06:51.481Z",
-    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
-    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-linux-x64"
-  },
-  {
-    "name": "@neriousy/opencode-browser",
-    "version": "0.5.0",
-    "description": "An Electron browser surface for the OpenCode v2 TUI",
-    "keywords": [
-      "opencode",
-      "tui",
-      "browser",
-      "electron",
-      "mcp",
-      "opentui"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 1310,
-    "date": "2026-08-01T18:23:18.470Z",
-    "repository": "git+https://github.com/neriousy/opencode-browser.git",
-    "npm": "https://www.npmjs.com/package/@neriousy/opencode-browser"
-  },
-  {
     "name": "opencode-lore",
     "version": "0.40.0",
     "description": "Three-tier memory architecture for OpenCode — distillation, not summarization",
@@ -3565,6 +3569,24 @@
     "date": "2026-07-31T19:46:20.211Z",
     "repository": "git+https://github.com/BYK/loreai.git",
     "npm": "https://www.npmjs.com/package/opencode-lore"
+  },
+  {
+    "name": "job-forge",
+    "version": "2.14.82",
+    "description": "AI-powered job search pipeline for Codex and OpenCode",
+    "keywords": [
+      "ai",
+      "job-search",
+      "opencode",
+      "codex",
+      "career",
+      "automation"
+    ],
+    "publisher": "razroo",
+    "downloads": 8289,
+    "date": "2026-07-29T18:27:59.547Z",
+    "repository": "git+https://github.com/Agent-Pattern-Labs/JobForge.git",
+    "npm": "https://www.npmjs.com/package/job-forge"
   },
   {
     "name": "@vectorize-io/opencode-hindsight",
@@ -3587,15 +3609,22 @@
     "npm": "https://www.npmjs.com/package/@vectorize-io/opencode-hindsight"
   },
   {
-    "name": "opencode-adaptive-thinking",
-    "version": "0.1.6",
-    "description": "Adaptive Thinking Plugin for OpenCode",
-    "keywords": [],
+    "name": "@neriousy/opencode-browser",
+    "version": "0.5.0",
+    "description": "An Electron browser surface for the OpenCode v2 TUI",
+    "keywords": [
+      "opencode",
+      "tui",
+      "browser",
+      "electron",
+      "mcp",
+      "opentui"
+    ],
     "publisher": "GitHub Actions",
-    "downloads": 648,
-    "date": "2026-08-02T08:58:07.864Z",
-    "repository": "git+https://github.com/ian-pascoe/opencode-adaptive-thinking.git",
-    "npm": "https://www.npmjs.com/package/opencode-adaptive-thinking"
+    "downloads": 1310,
+    "date": "2026-08-01T18:23:18.470Z",
+    "repository": "git+https://github.com/neriousy/opencode-browser.git",
+    "npm": "https://www.npmjs.com/package/@neriousy/opencode-browser"
   },
   {
     "name": "opencode-plugin-loop",
@@ -3617,174 +3646,15 @@
     "npm": "https://www.npmjs.com/package/opencode-plugin-loop"
   },
   {
-    "name": "@qrafty-ai/opencode-kanban",
-    "version": "0.6.2",
-    "description": "Terminal kanban board for managing OpenCode tmux sessions",
+    "name": "@codemieai/codemie-opencode-linux-x64-baseline",
+    "version": "0.0.47",
+    "description": "Platform-specific binary for @codemieai/codemie-opencode",
     "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 1647,
-    "date": "2026-08-04T05:38:11.291Z",
-    "repository": "git+https://github.com/TomCC7/opencode-kanban.git",
-    "npm": "https://www.npmjs.com/package/@qrafty-ai/opencode-kanban"
-  },
-  {
-    "name": "@opeoginni/opencode-copilot-auto",
-    "version": "0.1.8",
-    "description": "Add GitHub Copilot Auto model routing to OpenCode",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "github-copilot",
-      "copilot",
-      "auto-model"
-    ],
-    "publisher": "opeoginni",
-    "downloads": 1224,
-    "date": "2026-07-17T07:05:41.731Z",
-    "repository": "git+https://github.com/OpeOginni/opencode-copilot-auto.git",
-    "npm": "https://www.npmjs.com/package/@opeoginni/opencode-copilot-auto"
-  },
-  {
-    "name": "opencode-agent-skills-md",
-    "version": "2.0.1",
-    "description": "OpenCode plugin for agent skills — single-package Bun layout.",
-    "keywords": [],
-    "publisher": "metalbolicx",
-    "downloads": 1957,
-    "date": "2026-07-30T19:36:45.864Z",
-    "repository": "https://github.com/MetalbolicX/opencode-agent-skills-md.git",
-    "npm": "https://www.npmjs.com/package/opencode-agent-skills-md"
-  },
-  {
-    "name": "litopencode",
-    "version": "0.1.68",
-    "description": "LitOpenCode OpenCode plugin bootstrap package.",
-    "keywords": [],
-    "publisher": "wjgoarxiv",
-    "downloads": 4198,
-    "date": "2026-08-15T14:47:48.029Z",
-    "repository": "https://www.npmjs.com/package/litopencode",
-    "npm": "https://www.npmjs.com/package/litopencode"
-  },
-  {
-    "name": "@opencode-manager/ocm-cli",
-    "version": "0.2.6",
-    "description": "OpenCode Manager CLI: attach a local OpenCode TUI to a Manager-hosted repo.",
-    "keywords": [],
-    "publisher": "chriswritescode",
-    "downloads": 858,
-    "date": "2026-07-28T20:38:47.425Z",
-    "repository": "git+https://github.com/chriswritescode-dev/opencode-manager.git",
-    "npm": "https://www.npmjs.com/package/@opencode-manager/ocm-cli"
-  },
-  {
-    "name": "opencode-rules-md",
-    "version": "0.10.3",
-    "description": "OpenCode plugin that discovers and injects markdown rules into system prompts",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "rules",
-      "system-prompt",
-      "typescript"
-    ],
-    "publisher": "metalbolicx",
-    "downloads": 1786,
-    "date": "2026-08-13T13:19:39.145Z",
-    "repository": "git+https://github.com/MetalbolicX/opencode-rules-md.git",
-    "npm": "https://www.npmjs.com/package/opencode-rules-md"
-  },
-  {
-    "name": "@navopw/opencode-memory",
-    "version": "0.4.4",
-    "description": "Persistent semantic memory for OpenCode",
-    "keywords": [
-      "opencode",
-      "opencode-plugin",
-      "memory",
-      "semantic-search",
-      "embeddings",
-      "local-first"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 638,
-    "date": "2026-07-29T10:54:00.560Z",
-    "repository": "git+https://github.com/navopw/opencode-memory.git",
-    "npm": "https://www.npmjs.com/package/@navopw/opencode-memory"
-  },
-  {
-    "name": "@opencode-cloud/cli-node-linux-arm64",
-    "version": "25.1.3",
-    "description": "opencode-cloud CLI binary for Linux ARM64 (glibc)",
-    "keywords": [],
-    "publisher": "prizz",
-    "downloads": 11109,
-    "date": "2026-02-12T17:06:50.389Z",
-    "repository": "git+https://github.com/pRizz/opencode-cloud.git",
-    "npm": "https://www.npmjs.com/package/@opencode-cloud/cli-node-linux-arm64"
-  },
-  {
-    "name": "opencode-cache-injector",
-    "version": "1.0.0",
-    "description": "OpenCode plugin that enables prompt caching for multiple API providers by injecting metadata.user_id",
-    "keywords": [
-      "opencode",
-      "anthropic",
-      "claude",
-      "cache",
-      "prompt-caching",
-      "plugin"
-    ],
-    "publisher": "dabing_bigpawn",
-    "downloads": 2380,
-    "date": "2026-01-23T16:00:51.631Z",
-    "repository": "https://www.npmjs.com/package/opencode-cache-injector",
-    "npm": "https://www.npmjs.com/package/opencode-cache-injector"
-  },
-  {
-    "name": "opencode-subagent-watch",
-    "version": "0.4.0",
-    "description": "OpenCode TUI plugin for monitoring subagent activity",
-    "keywords": [
-      "opencode",
-      "plugin",
-      "subagent",
-      "tui"
-    ],
-    "publisher": "GitHub Actions",
-    "downloads": 860,
-    "date": "2026-08-06T07:29:27.709Z",
-    "repository": "git+https://github.com/darcien/opencode-subagent-watch.git",
-    "npm": "https://www.npmjs.com/package/opencode-subagent-watch"
-  },
-  {
-    "name": "job-forge",
-    "version": "2.14.82",
-    "description": "AI-powered job search pipeline for Codex and OpenCode",
-    "keywords": [
-      "ai",
-      "job-search",
-      "opencode",
-      "codex",
-      "career",
-      "automation"
-    ],
-    "publisher": "razroo",
-    "downloads": 8289,
-    "date": "2026-07-29T18:27:59.547Z",
-    "repository": "git+https://github.com/Agent-Pattern-Labs/JobForge.git",
-    "npm": "https://www.npmjs.com/package/job-forge"
-  },
-  {
-    "name": "@snack-ai/opencode",
-    "version": "1.0.3",
-    "description": "Fail-open OpenCode metadata capture for SNACK",
-    "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 1309,
-    "date": "2026-08-02T20:47:09.944Z",
-    "repository": "git+https://github.com/Duck1201/snack.git",
-    "npm": "https://www.npmjs.com/package/@snack-ai/opencode"
+    "publisher": "codemieai",
+    "downloads": 1211,
+    "date": "2026-03-03T09:06:51.099Z",
+    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
+    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-linux-x64-baseline"
   },
   {
     "name": "opencode-peek",
@@ -3804,84 +3674,21 @@
     "npm": "https://www.npmjs.com/package/opencode-peek"
   },
   {
-    "name": "opencode-swarm-plugin",
-    "version": "0.63.2",
-    "description": "Multi-agent swarm coordination for OpenCode with learning capabilities, beads integration, and Agent Mail",
+    "name": "@opeoginni/opencode-copilot-auto",
+    "version": "0.1.8",
+    "description": "Add GitHub Copilot Auto model routing to OpenCode",
     "keywords": [
       "opencode",
-      "plugin",
-      "swarm",
-      "agent-mail",
-      "beads",
-      "multi-agent",
-      "ai-agents",
-      "machine-learning",
-      "task-decomposition",
-      "coordination"
+      "opencode-plugin",
+      "github-copilot",
+      "copilot",
+      "auto-model"
     ],
-    "publisher": "joelhooks",
-    "downloads": 2147,
-    "date": "2026-02-06T17:04:38.073Z",
-    "repository": "git+https://github.com/joelhooks/swarm-tools.git",
-    "npm": "https://www.npmjs.com/package/opencode-swarm-plugin"
-  },
-  {
-    "name": "@remembrance-ai/opencode-plugin",
-    "version": "0.1.74",
-    "description": "opencode plugin for Remembrance session hooks, tool observation, and contribution nudges.",
-    "keywords": [],
-    "publisher": "CircleCI",
-    "downloads": 2554,
-    "date": "2026-08-16T22:25:37.104Z",
-    "repository": "https://www.npmjs.com/package/@remembrance-ai/opencode-plugin",
-    "npm": "https://www.npmjs.com/package/@remembrance-ai/opencode-plugin"
-  },
-  {
-    "name": "@codemieai/codemie-opencode-linux-x64-baseline",
-    "version": "0.0.47",
-    "description": "Platform-specific binary for @codemieai/codemie-opencode",
-    "keywords": [],
-    "publisher": "codemieai",
-    "downloads": 1211,
-    "date": "2026-03-03T09:06:51.099Z",
-    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
-    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-linux-x64-baseline"
-  },
-  {
-    "name": "@codemieai/codemie-opencode-windows-x64-baseline",
-    "version": "0.0.47",
-    "description": "Platform-specific binary for @codemieai/codemie-opencode",
-    "keywords": [],
-    "publisher": "codemieai",
-    "downloads": 1724,
-    "date": "2026-03-03T09:06:51.863Z",
-    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
-    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-windows-x64-baseline"
-  },
-  {
-    "name": "opencode-miniterm",
-    "version": "1.0.31",
-    "description": "A small front-end terminal UI for OpenCode",
-    "keywords": [
-      "opencode",
-      "terminal"
-    ],
-    "publisher": "andrewjk",
-    "downloads": 805,
-    "date": "2026-08-07T03:22:00.291Z",
-    "repository": "https://www.npmjs.com/package/opencode-miniterm",
-    "npm": "https://www.npmjs.com/package/opencode-miniterm"
-  },
-  {
-    "name": "oh-my-opencode-linux-x64-musl",
-    "version": "4.19.4",
-    "description": "Platform-specific binary for oh-my-opencode (linux-x64-musl)",
-    "keywords": [],
-    "publisher": "GitHub Actions",
-    "downloads": 21864,
-    "date": "2026-08-01T09:45:11.309Z",
-    "repository": "git+https://github.com/code-yeongyu/oh-my-openagent.git",
-    "npm": "https://www.npmjs.com/package/oh-my-opencode-linux-x64-musl"
+    "publisher": "opeoginni",
+    "downloads": 1224,
+    "date": "2026-07-17T07:05:41.731Z",
+    "repository": "git+https://github.com/OpeOginni/opencode-copilot-auto.git",
+    "npm": "https://www.npmjs.com/package/@opeoginni/opencode-copilot-auto"
   },
   {
     "name": "@nguyenthdat/opencode-memory",
@@ -3918,23 +3725,214 @@
     "npm": "https://www.npmjs.com/package/@nguyenthdat/opencode-memory"
   },
   {
-    "name": "opencode-supertask",
-    "version": "0.1.41",
-    "description": "AI Agent 任务调度系统 — OpenCode 插件 + CLI + Gateway 常驻进程",
+    "name": "opencode-agent-skills-md",
+    "version": "2.0.1",
+    "description": "OpenCode plugin for agent skills — single-package Bun layout.",
+    "keywords": [],
+    "publisher": "metalbolicx",
+    "downloads": 1957,
+    "date": "2026-07-30T19:36:45.864Z",
+    "repository": "https://github.com/MetalbolicX/opencode-agent-skills-md.git",
+    "npm": "https://www.npmjs.com/package/opencode-agent-skills-md"
+  },
+  {
+    "name": "opencode-code-review",
+    "version": "1.0.9",
+    "description": "A review agent plugin for OpenCode CLI - structured code review with configurable dimensions",
     "keywords": [
       "opencode",
       "plugin",
-      "task",
-      "queue",
-      "agent",
-      "scheduler",
-      "supertask"
+      "review",
+      "code-review",
+      "agent"
+    ],
+    "publisher": "metalbolicx",
+    "downloads": 1463,
+    "date": "2026-07-21T22:20:07.096Z",
+    "repository": "git+https://github.com/MetalbolicX/opencode-code-review.git",
+    "npm": "https://www.npmjs.com/package/opencode-code-review"
+  },
+  {
+    "name": "litopencode",
+    "version": "0.1.68",
+    "description": "LitOpenCode OpenCode plugin bootstrap package.",
+    "keywords": [],
+    "publisher": "wjgoarxiv",
+    "downloads": 4198,
+    "date": "2026-08-15T14:47:48.029Z",
+    "repository": "https://www.npmjs.com/package/litopencode",
+    "npm": "https://www.npmjs.com/package/litopencode"
+  },
+  {
+    "name": "@opencode-manager/ocm-cli",
+    "version": "0.2.6",
+    "description": "OpenCode Manager CLI: attach a local OpenCode TUI to a Manager-hosted repo.",
+    "keywords": [],
+    "publisher": "chriswritescode",
+    "downloads": 858,
+    "date": "2026-07-28T20:38:47.425Z",
+    "repository": "git+https://github.com/chriswritescode-dev/opencode-manager.git",
+    "npm": "https://www.npmjs.com/package/@opencode-manager/ocm-cli"
+  },
+  {
+    "name": "opencode-cache-injector",
+    "version": "1.0.0",
+    "description": "OpenCode plugin that enables prompt caching for multiple API providers by injecting metadata.user_id",
+    "keywords": [
+      "opencode",
+      "anthropic",
+      "claude",
+      "cache",
+      "prompt-caching",
+      "plugin"
+    ],
+    "publisher": "dabing_bigpawn",
+    "downloads": 2380,
+    "date": "2026-01-23T16:00:51.631Z",
+    "repository": "https://www.npmjs.com/package/opencode-cache-injector",
+    "npm": "https://www.npmjs.com/package/opencode-cache-injector"
+  },
+  {
+    "name": "@opencode-cloud/cli-node-linux-arm64",
+    "version": "25.1.3",
+    "description": "opencode-cloud CLI binary for Linux ARM64 (glibc)",
+    "keywords": [],
+    "publisher": "prizz",
+    "downloads": 11109,
+    "date": "2026-02-12T17:06:50.389Z",
+    "repository": "git+https://github.com/pRizz/opencode-cloud.git",
+    "npm": "https://www.npmjs.com/package/@opencode-cloud/cli-node-linux-arm64"
+  },
+  {
+    "name": "opencode-subagent-watch",
+    "version": "0.4.0",
+    "description": "OpenCode TUI plugin for monitoring subagent activity",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "subagent",
+      "tui"
     ],
     "publisher": "GitHub Actions",
-    "downloads": 2628,
-    "date": "2026-07-19T04:01:28.989Z",
-    "repository": "git+https://github.com/vbgate/opencode-supertask.git",
-    "npm": "https://www.npmjs.com/package/opencode-supertask"
+    "downloads": 860,
+    "date": "2026-08-06T07:29:27.709Z",
+    "repository": "git+https://github.com/darcien/opencode-subagent-watch.git",
+    "npm": "https://www.npmjs.com/package/opencode-subagent-watch"
+  },
+  {
+    "name": "@navopw/opencode-memory",
+    "version": "0.4.4",
+    "description": "Persistent semantic memory for OpenCode",
+    "keywords": [
+      "opencode",
+      "opencode-plugin",
+      "memory",
+      "semantic-search",
+      "embeddings",
+      "local-first"
+    ],
+    "publisher": "GitHub Actions",
+    "downloads": 638,
+    "date": "2026-07-29T10:54:00.560Z",
+    "repository": "git+https://github.com/navopw/opencode-memory.git",
+    "npm": "https://www.npmjs.com/package/@navopw/opencode-memory"
+  },
+  {
+    "name": "opencode-rules-md",
+    "version": "0.10.3",
+    "description": "OpenCode plugin that discovers and injects markdown rules into system prompts",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "rules",
+      "system-prompt",
+      "typescript"
+    ],
+    "publisher": "metalbolicx",
+    "downloads": 1786,
+    "date": "2026-08-13T13:19:39.145Z",
+    "repository": "git+https://github.com/MetalbolicX/opencode-rules-md.git",
+    "npm": "https://www.npmjs.com/package/opencode-rules-md"
+  },
+  {
+    "name": "@remembrance-ai/opencode-plugin",
+    "version": "0.1.74",
+    "description": "opencode plugin for Remembrance session hooks, tool observation, and contribution nudges.",
+    "keywords": [],
+    "publisher": "CircleCI",
+    "downloads": 2554,
+    "date": "2026-08-16T22:25:37.104Z",
+    "repository": "https://www.npmjs.com/package/@remembrance-ai/opencode-plugin",
+    "npm": "https://www.npmjs.com/package/@remembrance-ai/opencode-plugin"
+  },
+  {
+    "name": "@snack-ai/opencode",
+    "version": "1.0.3",
+    "description": "Fail-open OpenCode metadata capture for SNACK",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 1309,
+    "date": "2026-08-02T20:47:09.944Z",
+    "repository": "git+https://github.com/Duck1201/snack.git",
+    "npm": "https://www.npmjs.com/package/@snack-ai/opencode"
+  },
+  {
+    "name": "opencode-miniterm",
+    "version": "1.0.31",
+    "description": "A small front-end terminal UI for OpenCode",
+    "keywords": [
+      "opencode",
+      "terminal"
+    ],
+    "publisher": "andrewjk",
+    "downloads": 805,
+    "date": "2026-08-07T03:22:00.291Z",
+    "repository": "https://www.npmjs.com/package/opencode-miniterm",
+    "npm": "https://www.npmjs.com/package/opencode-miniterm"
+  },
+  {
+    "name": "opencode-swarm-plugin",
+    "version": "0.63.2",
+    "description": "Multi-agent swarm coordination for OpenCode with learning capabilities, beads integration, and Agent Mail",
+    "keywords": [
+      "opencode",
+      "plugin",
+      "swarm",
+      "agent-mail",
+      "beads",
+      "multi-agent",
+      "ai-agents",
+      "machine-learning",
+      "task-decomposition",
+      "coordination"
+    ],
+    "publisher": "joelhooks",
+    "downloads": 2147,
+    "date": "2026-02-06T17:04:38.073Z",
+    "repository": "git+https://github.com/joelhooks/swarm-tools.git",
+    "npm": "https://www.npmjs.com/package/opencode-swarm-plugin"
+  },
+  {
+    "name": "@codemieai/codemie-opencode-windows-x64-baseline",
+    "version": "0.0.47",
+    "description": "Platform-specific binary for @codemieai/codemie-opencode",
+    "keywords": [],
+    "publisher": "codemieai",
+    "downloads": 1724,
+    "date": "2026-03-03T09:06:51.863Z",
+    "repository": "git+https://github.com/codemie-ai/codemie-opencode.git",
+    "npm": "https://www.npmjs.com/package/@codemieai/codemie-opencode-windows-x64-baseline"
+  },
+  {
+    "name": "oh-my-opencode-linux-x64-musl",
+    "version": "4.19.4",
+    "description": "Platform-specific binary for oh-my-opencode (linux-x64-musl)",
+    "keywords": [],
+    "publisher": "GitHub Actions",
+    "downloads": 21864,
+    "date": "2026-08-01T09:45:11.309Z",
+    "repository": "git+https://github.com/code-yeongyu/oh-my-openagent.git",
+    "npm": "https://www.npmjs.com/package/oh-my-opencode-linux-x64-musl"
   },
   {
     "name": "@agentproto/adapter-opencode",
@@ -3975,21 +3973,23 @@
     "npm": "https://www.npmjs.com/package/@ramtinj95/opencode-tokenscope"
   },
   {
-    "name": "opencode-code-review",
-    "version": "1.0.9",
-    "description": "A review agent plugin for OpenCode CLI - structured code review with configurable dimensions",
+    "name": "opencode-supertask",
+    "version": "0.1.41",
+    "description": "AI Agent 任务调度系统 — OpenCode 插件 + CLI + Gateway 常驻进程",
     "keywords": [
       "opencode",
       "plugin",
-      "review",
-      "code-review",
-      "agent"
+      "task",
+      "queue",
+      "agent",
+      "scheduler",
+      "supertask"
     ],
-    "publisher": "metalbolicx",
-    "downloads": 1463,
-    "date": "2026-07-21T22:20:07.096Z",
-    "repository": "git+https://github.com/MetalbolicX/opencode-code-review.git",
-    "npm": "https://www.npmjs.com/package/opencode-code-review"
+    "publisher": "GitHub Actions",
+    "downloads": 2628,
+    "date": "2026-07-19T04:01:28.989Z",
+    "repository": "git+https://github.com/vbgate/opencode-supertask.git",
+    "npm": "https://www.npmjs.com/package/opencode-supertask"
   },
   {
     "name": "@grafana/agento11y-opencode",
@@ -4037,37 +4037,42 @@
     "npm": "https://www.npmjs.com/package/opencode-gateway"
   },
   {
-    "name": "opencode-memory-tree",
-    "version": "1.1.1",
-    "description": "OpenCode plugin: compress conversation history into a hierarchical memory tree",
+    "name": "opencode-cn",
+    "version": "1.2.27",
+    "description": "OpenCode 中文翻译插件 - OpenCode Chinese Localization Plugin",
     "keywords": [
       "opencode",
-      "plugin",
-      "memory",
-      "compression",
-      "memory-tree"
+      "chinese",
+      "localization",
+      "i18n",
+      "ai",
+      "coding",
+      "assistant",
+      "cli",
+      "tui"
     ],
-    "publisher": "bgx666",
-    "downloads": 1356,
-    "date": "2026-07-31T16:06:11.305Z",
-    "repository": "git+https://github.com/bgx666/opencode-memoryTree.git",
-    "npm": "https://www.npmjs.com/package/opencode-memory-tree"
+    "publisher": "huangzejian",
+    "downloads": 302,
+    "date": "2026-02-27T09:14:12.448Z",
+    "repository": "git+https://github.com/huangzejian365/opencode-cn.git",
+    "npm": "https://www.npmjs.com/package/opencode-cn"
   },
   {
-    "name": "opencode-subagents-sidebar-plugin",
-    "version": "0.1.6",
-    "description": "OpenCode TUI sidebar footer for active subagents.",
+    "name": "opencode-copilot-account-switcher",
+    "version": "1.0.0",
+    "description": "GitHub Copilot account switcher plugin for OpenCode",
     "keywords": [
       "opencode",
-      "opencode-plugin",
-      "tui",
-      "subagents"
+      "github",
+      "copilot",
+      "plugin",
+      "auth"
     ],
     "publisher": "GitHub Actions",
-    "downloads": 968,
-    "date": "2026-07-14T01:05:49.665Z",
-    "repository": "git+https://github.com/caoool/opencode-subagents-sidebar-plugin.git",
-    "npm": "https://www.npmjs.com/package/opencode-subagents-sidebar-plugin"
+    "downloads": 988,
+    "date": "2026-05-14T17:22:50.423Z",
+    "repository": "git+https://github.com/jiwangyihao/opencode-copilot-account-switcher.git",
+    "npm": "https://www.npmjs.com/package/opencode-copilot-account-switcher"
   },
   {
     "name": "@igovet/opencode-tui-tunnel",
@@ -4088,20 +4093,23 @@
     "npm": "https://www.npmjs.com/package/@igovet/opencode-tui-tunnel"
   },
   {
-    "name": "opencode-copilot-account-switcher",
-    "version": "1.0.0",
-    "description": "GitHub Copilot account switcher plugin for OpenCode",
+    "name": "opencode-omniroute-auth",
+    "version": "1.2.2",
+    "description": "OpenCode authentication plugin for OmniRoute API with /connect command and dynamic model fetching",
     "keywords": [
       "opencode",
-      "github",
-      "copilot",
       "plugin",
-      "auth"
+      "auth",
+      "omniroute",
+      "authentication",
+      "api-key",
+      "connect",
+      "models"
     ],
-    "publisher": "GitHub Actions",
-    "downloads": 988,
-    "date": "2026-05-14T17:22:50.423Z",
-    "repository": "git+https://github.com/jiwangyihao/opencode-copilot-account-switcher.git",
-    "npm": "https://www.npmjs.com/package/opencode-copilot-account-switcher"
+    "publisher": "alph4d0g",
+    "downloads": 1430,
+    "date": "2026-05-25T10:41:18.194Z",
+    "repository": "git+https://github.com/Alph4d0g/opencode-omniroute-auth.git",
+    "npm": "https://www.npmjs.com/package/opencode-omniroute-auth"
   }
 ]
