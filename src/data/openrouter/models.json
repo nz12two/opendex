@@ -489,13 +489,14 @@
     }
   },
   {
-    "id": "ai21/jamba-large-1.7",
-    "name": "AI21: Jamba Large 1.7",
-    "description": "Jamba Large 1.7 is the latest model in the Jamba open family, offering improvements in grounding, instruction-following, and overall efficiency. Built on a hybrid SSM-Transformer architecture with a 256K context...",
-    "context_length": 256000,
+    "id": "~z-ai/glm-latest",
+    "name": "Z.ai: GLM Latest",
+    "description": "This model always redirects to the latest GLM model from Z.ai.",
+    "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.000008"
+      "prompt": "0.0000014",
+      "completion": "0.0000044",
+      "input_cache_read": "0.00000026"
     },
     "architecture": {
       "modality": "text->text",
@@ -505,13 +506,23 @@
       "output_modalities": [
         "text"
       ],
-      "tokenizer": "Other",
+      "tokenizer": "Router",
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 4096,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
     }
   },
   {
@@ -5607,9 +5618,9 @@
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000022",
+      "prompt": "0.000000225",
       "completion": "0.0000009",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.00000006"
     },
     "architecture": {
       "modality": "text->text",
@@ -5623,8 +5634,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 196608,
-      "max_completion_tokens": 196608,
+      "context_length": 65536,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
@@ -6366,9 +6377,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000005605",
+      "completion": "0.00000236",
+      "input_cache_read": "0.0000000944"
     },
     "architecture": {
       "modality": "text+image->text",
