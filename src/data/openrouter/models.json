@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000153",
-      "input_cache_read": "0.0000000153"
+      "prompt": "0.000000065",
+      "completion": "0.00000018",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -187,8 +187,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "context_length": 1048576,
+      "max_completion_tokens": 1048576,
       "is_moderated": false
     },
     "reasoning": {
@@ -2904,39 +2904,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_start": 1000,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        }
-      ]
+      "prompt": "0.000001056",
+      "completion": "0.000003168",
+      "input_cache_read": "0.0000000352"
     },
     "architecture": {
       "modality": "text->text",
@@ -2950,8 +2920,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "context_length": 1048575,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
@@ -3707,7 +3677,7 @@
     },
     "top_provider": {
       "context_length": 65536,
-      "max_completion_tokens": 66000,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -5022,32 +4992,6 @@
     },
     "reasoning": {
       "mandatory": true
-    }
-  },
-  {
-    "id": "mancer/weaver",
-    "name": "Mancer: Weaver (alpha)",
-    "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
-    "context_length": 8000,
-    "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.00000075"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Llama2",
-      "instruct_type": "alpaca"
-    },
-    "top_provider": {
-      "context_length": 8000,
-      "max_completion_tokens": 6000,
-      "is_moderated": false
     }
   },
   {
@@ -6377,9 +6321,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005605",
-      "completion": "0.00000236",
-      "input_cache_read": "0.0000000944"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12734,7 +12678,7 @@
     "id": "qwen/qwen3.8-27b",
     "name": "Qwen: Qwen3.8 27B",
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
-    "context_length": 262144,
+    "context_length": 1000000,
     "pricing": {
       "prompt": "0.00000045",
       "completion": "0.0000032",
