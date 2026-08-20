@@ -71,7 +71,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 64000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false
@@ -424,7 +424,7 @@
     "top_provider": {
       "context_length": 400000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -2709,7 +2709,8 @@
     "context_length": 163840,
     "pricing": {
       "prompt": "0.00000027",
-      "completion": "0.000001"
+      "completion": "0.000001",
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -2723,8 +2724,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 163840,
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -2797,9 +2798,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.0000000784",
+      "completion": "0.0000001568",
+      "input_cache_read": "0.00000001568"
     },
     "architecture": {
       "modality": "text->text",
@@ -5765,6 +5766,32 @@
     }
   },
   {
+    "id": "mistralai/ministral-8b",
+    "name": "Mistral: Ministral 8B",
+    "description": "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.00000011",
+      "completion": "0.00000011"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": null,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "mistralai/ministral-8b-2512",
     "name": "Mistral: Ministral 3 8B 2512",
     "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
@@ -6321,9 +6348,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000005605",
+      "completion": "0.00000236",
+      "input_cache_read": "0.0000000944"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6984,7 +7011,7 @@
     "id": "nvidia/nemotron-3.5-lightning",
     "name": "NVIDIA: Nemotron 3.5 Lightning",
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
-    "context_length": 1000000,
+    "context_length": 262144,
     "pricing": {
       "prompt": "0.00000008",
       "completion": "0.0000002",
@@ -13125,6 +13152,58 @@
     },
     "reasoning": {
       "mandatory": false
+    }
+  },
+  {
+    "id": "tencent/hy-mt2-1.8b",
+    "name": "Tencent: Hy-MT2-1.8B",
+    "description": "Hy-MT2-1.8B is a compact 1.8B-parameter translation model from Tencent. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and style-guided...",
+    "context_length": 8192,
+    "pricing": {
+      "prompt": "0.000000044",
+      "completion": "0.000000177"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 8192,
+      "max_completion_tokens": 4096,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "tencent/hy-mt2-30b-a3b",
+    "name": "Tencent: Hy-MT2-30B-A3B",
+    "description": "Hy-MT2-30B-A3B is Tencent's flagship translation model in the Hy-MT2 family. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and...",
+    "context_length": 8192,
+    "pricing": {
+      "prompt": "0.000000074",
+      "completion": "0.000000295"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 8192,
+      "max_completion_tokens": 4096,
+      "is_moderated": false
     }
   },
   {
