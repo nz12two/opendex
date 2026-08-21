@@ -896,7 +896,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -2798,9 +2798,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000784",
-      "completion": "0.0000001568",
-      "input_cache_read": "0.00000001568"
+      "prompt": "0.0000000826",
+      "completion": "0.0000001652",
+      "input_cache_read": "0.00000001652"
     },
     "architecture": {
       "modality": "text->text",
@@ -4533,9 +4533,9 @@
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
+      "prompt": "0.0000001",
       "completion": "0.00000034",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -4552,7 +4552,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -4996,6 +4996,32 @@
     }
   },
   {
+    "id": "mancer/weaver",
+    "name": "Mancer: Weaver (alpha)",
+    "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
+    "context_length": 8000,
+    "pricing": {
+      "prompt": "0.0000005",
+      "completion": "0.00000075"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Llama2",
+      "instruct_type": "alpaca"
+    },
+    "top_provider": {
+      "context_length": 8000,
+      "max_completion_tokens": 6000,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "meituan/longcat-2.0",
     "name": "Meituan: LongCat 2.0",
     "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic...",
@@ -5245,8 +5271,8 @@
     "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000035",
-      "completion": "0.0000015",
+      "prompt": "0.0000003",
+      "completion": "0.0000011",
       "input_cache_read": "0.00000004"
     },
     "architecture": {
@@ -5263,7 +5289,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": null,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -6348,9 +6374,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005605",
-      "completion": "0.00000236",
-      "input_cache_read": "0.0000000944"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6380,9 +6406,9 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000071",
-      "completion": "0.0000035",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.00000067",
+      "completion": "0.0000034",
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12113,7 +12139,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -13059,6 +13085,44 @@
     }
   },
   {
+    "id": "stealth/ox-alpha",
+    "name": "Ox Alpha",
+    "description": "Ox Alpha is a reasoning model designed for coding, sustained agentic work, and production workloads. It is suited for long-horizon software engineering, complex reasoning, and workflows that combine text with...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
+    }
+  },
+  {
     "id": "stepfun/step-3.5-flash",
     "name": "StepFun: Step 3.5 Flash",
     "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
@@ -13432,7 +13496,7 @@
     "id": "thinkingmachines/inkling-small",
     "name": "Thinking Machines: Inkling Small",
     "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-    "context_length": 524288,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000045",
       "completion": "0.0000012",
@@ -14313,7 +14377,7 @@
     "id": "z-ai/glm-5.2:batch",
     "name": "Z.ai: GLM 5.2 (batch)",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
-    "context_length": 512000,
+    "context_length": 1048575,
     "pricing": {
       "prompt": "0.0000014",
       "completion": "0.0000044",
@@ -14331,7 +14395,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 512000,
+      "context_length": 1048575,
       "max_completion_tokens": null,
       "is_moderated": false
     },
