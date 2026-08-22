@@ -2769,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006426",
-      "completion": "0.00000012852",
-      "input_cache_read": "0.000000012852"
+      "prompt": "0.00000006006",
+      "completion": "0.00000012012",
+      "input_cache_read": "0.000000012012"
     },
     "architecture": {
       "modality": "text->text",
@@ -2843,37 +2843,7 @@
     "pricing": {
       "prompt": "0.00000022",
       "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
-      "overrides": [
-        {
-          "utc_start": 1000,
-          "utc_end": 100,
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        },
-        {
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000044",
-          "completion": "0.00000132",
-          "input_cache_read": "0.000000014"
-        },
-        {
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        },
-        {
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000044",
-          "completion": "0.00000132",
-          "input_cache_read": "0.000000014"
-        }
-      ]
+      "input_cache_read": "0.000000007"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5310,8 +5280,8 @@
     "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000011",
+      "prompt": "0.00000035",
+      "completion": "0.0000015",
       "input_cache_read": "0.00000004"
     },
     "architecture": {
@@ -5328,7 +5298,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
@@ -10080,9 +10050,8 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000003",
-      "completion": "0.00000017",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000037",
+      "completion": "0.00000017"
     },
     "architecture": {
       "modality": "text->text",
