@@ -350,18 +350,18 @@
     "description": "This model always redirects to the latest model in the OpenAI GPT family.",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.000015",
+      "prompt": "0.000002",
+      "completion": "0.00001",
       "web_search": "0.01",
-      "input_cache_read": "0.00000025",
-      "input_cache_write": "0.000003125",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.0000025",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.000005",
-          "completion": "0.0000225",
-          "input_cache_read": "0.0000005",
-          "input_cache_write": "0.00000625"
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.000005"
         }
       ]
     },
@@ -2504,35 +2504,6 @@
     }
   },
   {
-    "id": "deepcogito/cogito-v2.1-671b",
-    "name": "Deep Cogito: Cogito v2.1 671B",
-    "description": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00000125",
-      "completion": "0.00000125"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": null,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "deepseek/deepseek-chat",
     "name": "DeepSeek: DeepSeek V3",
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
@@ -2590,9 +2561,9 @@
     "description": "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000095",
-      "input_cache_read": "0.00000013"
+      "prompt": "0.00000055",
+      "completion": "0.00000165",
+      "input_cache_read": "0.00000055"
     },
     "architecture": {
       "modality": "text->text",
@@ -2606,8 +2577,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 32768,
+      "context_length": 161000,
+      "max_completion_tokens": 161000,
       "is_moderated": false
     },
     "reasoning": {
@@ -2738,9 +2709,9 @@
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.000000269",
-      "completion": "0.0000004",
-      "input_cache_read": "0.0000001345"
+      "prompt": "0.00000026",
+      "completion": "0.00000038",
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -2755,7 +2726,7 @@
     },
     "top_provider": {
       "context_length": 163840,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 163840,
       "is_moderated": false
     },
     "reasoning": {
@@ -2798,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008106",
-      "completion": "0.00000016212",
-      "input_cache_read": "0.000000016212"
+      "prompt": "0.00000007826",
+      "completion": "0.00000015652",
+      "input_cache_read": "0.000000015652"
     },
     "architecture": {
       "modality": "text->text",
@@ -2938,9 +2909,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000016",
-      "completion": "0.0000032",
-      "input_cache_read": "0.000000135"
+      "prompt": "0.00000054897",
+      "completion": "0.00000109794",
+      "input_cache_read": "0.0000000457475"
     },
     "architecture": {
       "modality": "text->text",
@@ -2954,8 +2925,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -5458,6 +5429,49 @@
     }
   },
   {
+    "id": "meta/muse-spark-1.2-contributor",
+    "name": "Meta: Muse Spark 1.2 Contributor",
+    "description": "Muse Spark 1.2 contributor tier is a reasoning model from Meta designed for developers who want to start building at an even lower cost. It’s meaningfully cheaper than Muse Spark...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000002",
+      "web_search": "0.0025",
+      "input_cache_read": "0.000000002"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": null,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "microsoft/phi-4",
     "name": "Microsoft: Phi 4",
     "description": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. At 14 billion...",
@@ -5658,8 +5672,8 @@
     "context_length": 204800,
     "pricing": {
       "prompt": "0.00000027",
-      "completion": "0.00000095",
-      "input_cache_read": "0.00000003"
+      "completion": "0.00000108",
+      "input_cache_read": "0.000000027"
     },
     "architecture": {
       "modality": "text->text",
@@ -5673,8 +5687,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 198000,
-      "max_completion_tokens": 32768,
+      "context_length": 200000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
@@ -6240,10 +6254,10 @@
     "id": "mistralai/mistral-small-3.2-24b-instruct",
     "name": "Mistral: Mistral Small 3.2 24B",
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
-    "context_length": 256000,
+    "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000009375",
-      "completion": "0.00000025"
+      "prompt": "0.000000075",
+      "completion": "0.0000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6258,7 +6272,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 256000,
+      "context_length": 128000,
       "max_completion_tokens": 16384,
       "is_moderated": false
     }
@@ -6442,9 +6456,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005795",
-      "completion": "0.00000244",
-      "input_cache_read": "0.0000000976"
+      "prompt": "0.0000005605",
+      "completion": "0.00000236",
+      "input_cache_read": "0.0000000944"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -9556,18 +9570,18 @@
     "description": "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks...",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.000015",
+      "prompt": "0.000002",
+      "completion": "0.00001",
       "web_search": "0.01",
-      "input_cache_read": "0.00000025",
-      "input_cache_write": "0.000003125",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.0000025",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.000005",
-          "completion": "0.0000225",
-          "input_cache_read": "0.0000005",
-          "input_cache_write": "0.00000625"
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.000005"
         }
       ]
     },
@@ -9609,18 +9623,18 @@
     "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.000015",
+      "prompt": "0.000002",
+      "completion": "0.00001",
       "web_search": "0.01",
-      "input_cache_read": "0.00000025",
-      "input_cache_write": "0.000003125",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.0000025",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.000005",
-          "completion": "0.0000225",
-          "input_cache_read": "0.0000005",
-          "input_cache_write": "0.00000625"
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.000005"
         }
       ]
     },
@@ -9662,16 +9676,18 @@
     "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.00000125",
-      "completion": "0.0000075",
+      "prompt": "0.000001",
+      "completion": "0.000005",
       "web_search": "0.01",
-      "input_cache_read": "0.000000125",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.0000025",
-          "completion": "0.00001125",
-          "input_cache_read": "0.00000025"
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025"
         }
       ]
     },
@@ -9713,16 +9729,18 @@
     "description": "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks...",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.00000125",
-      "completion": "0.0000075",
+      "prompt": "0.000001",
+      "completion": "0.000005",
       "web_search": "0.01",
-      "input_cache_read": "0.000000125",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.0000025",
-          "completion": "0.00001125",
-          "input_cache_read": "0.00000025"
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025"
         }
       ]
     },
@@ -10116,41 +10134,6 @@
     "top_provider": {
       "context_length": 131072,
       "max_completion_tokens": 131072,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "openai/gpt-oss-20b:free",
-    "name": "OpenAI: gpt-oss-20b (free)",
-    "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -12780,8 +12763,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 262144,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -13603,6 +13586,47 @@
     }
   },
   {
+    "id": "thinkingmachines/inkling-small:free",
+    "name": "Thinking Machines: Inkling Small (free)",
+    "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+audio->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "medium",
+        "low",
+        "minimal",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "thinkingmachines/inkling:batch",
     "name": "Thinking Machines: Inkling (batch)",
     "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
@@ -13628,6 +13652,47 @@
     "top_provider": {
       "context_length": 524288,
       "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "medium",
+        "low",
+        "minimal",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "thinkingmachines/inkling:free",
+    "name": "Thinking Machines: Inkling (free)",
+    "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+audio->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
