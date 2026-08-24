@@ -2804,9 +2804,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000028",
-      "input_cache_read": "0.000000028"
+      "prompt": "0.0000000658",
+      "completion": "0.0000001316",
+      "input_cache_read": "0.00000001316"
     },
     "architecture": {
       "modality": "text->text",
@@ -4775,60 +4775,6 @@
     }
   },
   {
-    "id": "inclusionai/ling-2.6-1t",
-    "name": "inclusionAI: Ling-2.6-1T",
-    "description": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company’s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a “fast...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.000000625",
-      "input_cache_read": "0.000000015"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "inclusionai/ling-2.6-flash",
-    "name": "inclusionAI: Ling-2.6-flash",
-    "description": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency....",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000001",
-      "completion": "0.00000003",
-      "input_cache_read": "0.000000002"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "inclusionai/ling-3.0-flash",
     "name": "Ling-3.0-flash",
     "description": "*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*. The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers...",
@@ -4857,41 +4803,6 @@
     "reasoning": {
       "mandatory": false,
       "default_enabled": true
-    }
-  },
-  {
-    "id": "inclusionai/ring-2.6-1t",
-    "name": "inclusionAI: Ring-2.6-1T",
-    "description": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.000000625",
-      "input_cache_read": "0.000000015"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "xhigh",
-        "high"
-      ],
-      "default_effort": "high"
     }
   },
   {
@@ -6460,7 +6371,7 @@
     "pricing": {
       "prompt": "0.00000067",
       "completion": "0.0000034",
-      "input_cache_read": "0.00000017"
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image->text",
