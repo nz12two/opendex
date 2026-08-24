@@ -2769,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004886",
-      "completion": "0.00000009772",
-      "input_cache_read": "0.000000009772"
+      "prompt": "0.00000005866",
+      "completion": "0.00000011732",
+      "input_cache_read": "0.000000011732"
     },
     "architecture": {
       "modality": "text->text",
@@ -2804,9 +2804,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000008",
-      "completion": "0.00000018",
-      "input_cache_read": "0.000000016"
+      "prompt": "0.00000014",
+      "completion": "0.00000028",
+      "input_cache_read": "0.000000028"
     },
     "architecture": {
       "modality": "text->text",
@@ -2821,7 +2821,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -2879,9 +2879,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000396894",
-      "completion": "0.000000793788",
-      "input_cache_read": "0.0000000330745"
+      "prompt": "0.000000519216",
+      "completion": "0.000001038432",
+      "input_cache_read": "0.000000043268"
     },
     "architecture": {
       "modality": "text->text",
@@ -6541,7 +6541,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": null,
+      "max_completion_tokens": 1048576,
       "is_moderated": false
     },
     "reasoning": {
@@ -12160,7 +12160,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -12236,8 +12236,9 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000039",
-      "completion": "0.00000234"
+      "prompt": "0.0000005",
+      "completion": "0.0000036",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12254,7 +12255,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -12407,9 +12408,8 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000036",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.00000032",
+      "completion": "0.0000032"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12426,7 +12426,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 81920,
       "is_moderated": false
     },
     "reasoning": {
@@ -13492,8 +13492,8 @@
       "instruct_type": "mistral"
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 1024000,
+      "context_length": 32768,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     }
   },
@@ -13503,9 +13503,9 @@
     "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095",
+      "prompt": "0.000001",
       "completion": "0.00000405",
-      "input_cache_read": "0.00000016"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+audio->text",
@@ -13522,7 +13522,7 @@
     },
     "top_provider": {
       "context_length": 524288,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": null,
       "is_moderated": false
     },
     "reasoning": {
