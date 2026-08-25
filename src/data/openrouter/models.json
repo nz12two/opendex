@@ -172,8 +172,8 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.000000035",
-      "completion": "0.00000012",
-      "input_cache_read": "0.00000001"
+      "completion": "0.0000001",
+      "input_cache_read": "0.000000008"
     },
     "architecture": {
       "modality": "text->text",
@@ -311,8 +311,8 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000026",
-      "completion": "0.000013",
+      "prompt": "0.0000028",
+      "completion": "0.000014",
       "input_cache_read": "0.00000029"
     },
     "architecture": {
@@ -329,8 +329,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 974842,
-      "max_completion_tokens": 974842,
+      "context_length": 1048576,
+      "max_completion_tokens": 1048576,
       "is_moderated": false
     },
     "reasoning": {
@@ -2841,9 +2841,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
+      "prompt": "0.00000044",
+      "completion": "0.00000132",
+      "input_cache_read": "0.000000014",
       "overrides": [
         {
           "utc_days": [
@@ -5688,6 +5688,35 @@
     }
   },
   {
+    "id": "minimax/minimax-m2.7:free",
+    "name": "MiniMax: MiniMax M2.7 (free)",
+    "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
+    "context_length": 196608,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 196608,
+      "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
     "id": "minimax/minimax-m3",
     "name": "MiniMax: MiniMax M3",
     "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
@@ -5744,6 +5773,37 @@
     },
     "top_provider": {
       "context_length": 524288,
+      "max_completion_tokens": null,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "minimax/minimax-m3:free",
+    "name": "MiniMax: MiniMax M3 (free)",
+    "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
       "max_completion_tokens": null,
       "is_moderated": false
     },
