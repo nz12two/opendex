@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.00000008",
-      "input_cache_read": "0.000000008"
+      "prompt": "0.000000035",
+      "completion": "0.00000012",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -1157,7 +1157,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 64000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false
@@ -2769,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000056",
-      "completion": "0.000000112",
-      "input_cache_read": "0.0000000112"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2804,9 +2804,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000000658",
-      "completion": "0.0000001316",
-      "input_cache_read": "0.00000001316"
+      "prompt": "0.00000014",
+      "completion": "0.00000028",
+      "input_cache_read": "0.000000028"
     },
     "architecture": {
       "modality": "text->text",
@@ -2843,7 +2843,88 @@
     "pricing": {
       "prompt": "0.00000022",
       "completion": "0.00000066",
-      "input_cache_read": "0.000000007"
+      "input_cache_read": "0.000000007",
+      "overrides": [
+        {
+          "utc_days": [
+            "saturday",
+            "sunday"
+          ],
+          "prompt": "0.00000022",
+          "completion": "0.00000066",
+          "input_cache_read": "0.000000007"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 0,
+          "utc_end": 100,
+          "prompt": "0.00000022",
+          "completion": "0.00000066",
+          "input_cache_read": "0.000000007"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.00000044",
+          "completion": "0.00000132",
+          "input_cache_read": "0.000000014"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000022",
+          "completion": "0.00000066",
+          "input_cache_read": "0.000000007"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.00000044",
+          "completion": "0.00000132",
+          "input_cache_read": "0.000000014"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 1000,
+          "utc_end": 0,
+          "prompt": "0.00000022",
+          "completion": "0.00000066",
+          "input_cache_read": "0.000000007"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -2879,9 +2960,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000522",
-      "completion": "0.000001044",
-      "input_cache_read": "0.0000000435"
+      "prompt": "0.000000790308",
+      "completion": "0.000001580616",
+      "input_cache_read": "0.000000065859"
     },
     "architecture": {
       "modality": "text->text",
@@ -7526,7 +7607,7 @@
     "top_provider": {
       "context_length": 128000,
       "max_completion_tokens": 4096,
-      "is_moderated": false
+      "is_moderated": true
     }
   },
   {
@@ -13353,9 +13434,9 @@
     "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001",
+      "prompt": "0.00000095",
       "completion": "0.00000405",
-      "input_cache_read": "0.00000017"
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image+audio->text",
@@ -13372,7 +13453,7 @@
     },
     "top_provider": {
       "context_length": 524288,
-      "max_completion_tokens": null,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -13435,7 +13516,7 @@
     "id": "thinkingmachines/inkling-small:free",
     "name": "Thinking Machines: Inkling Small (free)",
     "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-    "context_length": 262144,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0",
       "completion": "0"
@@ -13454,7 +13535,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 1048576,
       "max_completion_tokens": 262144,
       "is_moderated": false
     },
@@ -13518,7 +13599,7 @@
     "id": "thinkingmachines/inkling:free",
     "name": "Thinking Machines: Inkling (free)",
     "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-    "context_length": 262144,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0",
       "completion": "0"
@@ -13537,7 +13618,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 1048576,
       "max_completion_tokens": 262144,
       "is_moderated": false
     },
@@ -14291,9 +14372,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.000000966",
-      "completion": "0.000003036",
-      "input_cache_read": "0.0000001794"
+      "prompt": "0.00000126",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000234"
     },
     "architecture": {
       "modality": "text->text",
@@ -14307,8 +14388,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 128000,
+      "context_length": 202752,
+      "max_completion_tokens": 202752,
       "is_moderated": false
     },
     "reasoning": {
@@ -14322,9 +14403,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000966",
-      "completion": "0.000003036",
-      "input_cache_read": "0.0000001932"
+      "prompt": "0.00000119",
+      "completion": "0.00000374",
+      "input_cache_read": "0.000000221"
     },
     "architecture": {
       "modality": "text->text",
@@ -14339,7 +14420,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
