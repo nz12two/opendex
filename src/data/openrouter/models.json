@@ -2769,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.0000000854",
+      "completion": "0.0000001708",
+      "input_cache_read": "0.00000001708"
     },
     "architecture": {
       "modality": "text->text",
@@ -2841,9 +2841,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014",
+      "prompt": "0.00000022",
+      "completion": "0.00000066",
+      "input_cache_read": "0.000000007",
       "overrides": [
         {
           "utc_days": [
@@ -2960,9 +2960,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000790308",
-      "completion": "0.000001580616",
-      "input_cache_read": "0.000000065859"
+      "prompt": "0.000000579072",
+      "completion": "0.000001158144",
+      "input_cache_read": "0.000000048256"
     },
     "architecture": {
       "modality": "text->text",
@@ -12745,9 +12745,10 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.000000425",
+      "completion": "0.00000255",
+      "input_cache_read": "0.000000085",
+      "input_cache_write": "0.00000053125"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12763,7 +12764,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 1000000,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -12827,7 +12828,8 @@
     "context_length": 16384,
     "pricing": {
       "prompt": "0.0000001",
-      "completion": "0.0000001"
+      "completion": "0.0000001",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12858,7 +12860,8 @@
     "context_length": 65536,
     "pricing": {
       "prompt": "0.0000001",
-      "completion": "0.0000002"
+      "completion": "0.0000002",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
