@@ -2769,9 +2769,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007952",
-      "completion": "0.00000015904",
-      "input_cache_read": "0.000000015904"
+      "prompt": "0.00000007644",
+      "completion": "0.00000015288",
+      "input_cache_read": "0.000000015288"
     },
     "architecture": {
       "modality": "text->text",
@@ -2804,9 +2804,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000012",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.00000005",
+      "completion": "0.0000001",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -2841,9 +2841,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014",
+      "prompt": "0.00000022",
+      "completion": "0.00000066",
+      "input_cache_read": "0.000000007",
       "overrides": [
         {
           "utc_days": [
@@ -4861,6 +4861,36 @@
     }
   },
   {
+    "id": "inclusionai/ling-3.0-flash-fin:free",
+    "name": "Ling 3.0 Flash Fin (free)",
+    "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
     "id": "kwaipilot/kat-coder-air-v2.5",
     "name": "Kwaipilot: KAT-Coder-Air V2.5",
     "description": "KAT-Coder-Air V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make...",
@@ -5900,32 +5930,6 @@
     }
   },
   {
-    "id": "mistralai/ministral-8b",
-    "name": "Mistral: Ministral 8B",
-    "description": "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00000011",
-      "completion": "0.00000011"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 102400,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "mistralai/ministral-8b-2512",
     "name": "Mistral: Ministral 3 8B 2512",
     "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
@@ -6450,9 +6454,9 @@
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000045",
-      "completion": "0.00000225",
-      "input_cache_read": "0.00000007"
+      "prompt": "0.0000006",
+      "completion": "0.000003",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6514,9 +6518,9 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000067",
+      "prompt": "0.00000066",
       "completion": "0.0000034",
-      "input_cache_read": "0.00000019"
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12135,9 +12139,9 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000225",
-      "completion": "0.0000018",
-      "input_cache_read": "0.000000225"
+      "prompt": "0.00000025",
+      "completion": "0.00000125",
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12154,7 +12158,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -12371,8 +12375,8 @@
     "description": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.000001",
+      "prompt": "0.0000001",
+      "completion": "0.0000009",
       "input_cache_read": "0.00000005"
     },
     "architecture": {
@@ -13252,9 +13256,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -13360,32 +13364,6 @@
     "top_provider": {
       "context_length": 131072,
       "max_completion_tokens": 117964,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "thedrummer/rocinante-12b",
-    "name": "TheDrummer: Rocinante 12B",
-    "description": "Rocinante 12B is designed for engaging storytelling and rich prose. Early testers have reported: - Expanded vocabulary with unique and expressive word choices - Enhanced creativity for vivid narratives -...",
-    "context_length": 65536,
-    "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.0000005"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen",
-      "instruct_type": "chatml"
-    },
-    "top_provider": {
-      "context_length": 65536,
-      "max_completion_tokens": 58982,
       "is_moderated": false
     }
   },
