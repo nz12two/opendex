@@ -172,7 +172,7 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000003",
-      "completion": "0.000000075",
+      "completion": "0.0000001",
       "input_cache_read": "0.000000007"
     },
     "architecture": {
@@ -2841,9 +2841,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
+      "prompt": "0.00000044",
+      "completion": "0.00000132",
+      "input_cache_read": "0.000000014",
       "overrides": [
         {
           "utc_days": [
@@ -6843,7 +6843,7 @@
     "pricing": {
       "prompt": "0.00000005",
       "completion": "0.0000002",
-      "input_cache_read": "0.00000003"
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -6858,7 +6858,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 228000,
       "is_moderated": false
     },
     "reasoning": {
@@ -11359,8 +11359,9 @@
     "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.00000055"
+      "prompt": "0.0000000875",
+      "completion": "0.00000035",
+      "input_cache_read": "0.0000000175"
     },
     "architecture": {
       "modality": "text->text",
@@ -11375,7 +11376,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -12134,9 +12135,9 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000125",
-      "input_cache_read": "0.00000025"
+      "prompt": "0.000000225",
+      "completion": "0.0000018",
+      "input_cache_read": "0.000000225"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12153,7 +12154,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -12337,8 +12338,9 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000032",
-      "completion": "0.0000032"
+      "prompt": "0.0000006",
+      "completion": "0.0000036",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12355,7 +12357,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -12715,6 +12717,41 @@
         "low"
       ],
       "default_effort": "xhigh"
+    }
+  },
+  {
+    "id": "qwen/qwen3.8-flash",
+    "name": "Qwen: Qwen3.8 Flash",
+    "description": "Qwen3.8 Flash is a multimodal reasoning model from Alibaba. It is suited for coding assistance, agentic workflows, visual understanding, document and codebase analysis, desktop interaction, chart analysis, and long-video analysis.",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.00000015",
+      "completion": "0.00000047",
+      "input_cache_read": "0.000000016",
+      "input_cache_write": "0.0000002"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supports_max_tokens": true
     }
   },
   {
@@ -13215,9 +13252,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -14163,9 +14200,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.000002",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000043",
+      "completion": "0.00000175",
+      "input_cache_read": "0.00000008"
     },
     "architecture": {
       "modality": "text->text",
@@ -14179,8 +14216,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
-      "max_completion_tokens": 131072,
+      "context_length": 198000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
