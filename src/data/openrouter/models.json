@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000125",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.0000012",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000024"
     },
     "architecture": {
       "modality": "text->text",
@@ -510,8 +510,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -639,35 +639,6 @@
       "context_length": 32768,
       "max_completion_tokens": 29491,
       "is_moderated": false
-    }
-  },
-  {
-    "id": "allenai/olmo-3-32b-think",
-    "name": "AllenAI: Olmo 3 32B Think",
-    "description": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios. Its capacity enables strong performance on demanding evaluation tasks and...",
-    "context_length": 65536,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 65536,
-      "max_completion_tokens": 58982,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
     }
   },
   {
@@ -2020,32 +1991,6 @@
     }
   },
   {
-    "id": "arcee-ai/virtuoso-large",
-    "name": "Arcee AI: Virtuoso Large",
-    "description": "Virtuoso‑Large is Arcee's top‑tier general‑purpose LLM at 72 B parameters, tuned to tackle cross‑domain reasoning, creative writing and enterprise QA. Unlike many 70 B peers, it retains the 128 k...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000075",
-      "completion": "0.0000012"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 64000,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "baidu/ernie-4.5-vl-424b-a47b",
     "name": "Baidu: ERNIE 4.5 VL 424B A47B ",
     "description": "ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu’s ERNIE 4.5 series, featuring 424B total parameters with 47B active per token. It is trained jointly on text and image data...",
@@ -2709,9 +2654,9 @@
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.000000269",
-      "completion": "0.0000004",
-      "input_cache_read": "0.0000001345"
+      "prompt": "0.00000026",
+      "completion": "0.00000038",
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -2726,7 +2671,7 @@
     },
     "top_provider": {
       "context_length": 163840,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -2769,9 +2714,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000868",
-      "completion": "0.0000001736",
-      "input_cache_read": "0.00000001736"
+      "prompt": "0.00000008512",
+      "completion": "0.00000017024",
+      "input_cache_read": "0.000000017024"
     },
     "architecture": {
       "modality": "text->text",
@@ -2804,9 +2749,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.0000001",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.000000045",
+      "completion": "0.00000009",
+      "input_cache_read": "0.000000009"
     },
     "architecture": {
       "modality": "text->text",
@@ -2997,9 +2942,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000741588",
-      "completion": "0.000001483176",
-      "input_cache_read": "0.000000061799"
+      "prompt": "0.000000690954",
+      "completion": "0.000001381908",
+      "input_cache_read": "0.0000000575795"
     },
     "architecture": {
       "modality": "text->text",
@@ -6961,9 +6906,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000255",
-      "completion": "0.00001275",
-      "input_cache_read": "0.00000025599999"
+      "prompt": "0.000003",
+      "completion": "0.000015",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11808,7 +11753,7 @@
     "pricing": {
       "prompt": "0.000002",
       "completion": "0.000006",
-      "input_cache_read": "0.0000002"
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -11822,8 +11767,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "context_length": 1000000,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -11843,9 +11788,9 @@
     "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
     "context_length": 1010000,
     "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.000006",
-      "input_cache_read": "0.00000025"
+      "prompt": "0.0000025",
+      "completion": "0.00000625",
+      "input_cache_read": "0.0000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -12447,9 +12392,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
