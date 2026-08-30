@@ -172,8 +172,8 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000003",
-      "completion": "0.0000001",
-      "input_cache_read": "0.000000007"
+      "completion": "0.00000016",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -2714,9 +2714,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008204",
-      "completion": "0.00000016408",
-      "input_cache_read": "0.000000016408"
+      "prompt": "0.00000008064",
+      "completion": "0.00000016128",
+      "input_cache_read": "0.000000016128"
     },
     "architecture": {
       "modality": "text->text",
@@ -2749,9 +2749,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.0000001",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.000000065",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000016"
     },
     "architecture": {
       "modality": "text->text",
@@ -2942,9 +2942,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000054897",
-      "completion": "0.00000109794",
-      "input_cache_read": "0.0000000457475"
+      "prompt": "0.000000498336",
+      "completion": "0.000000996672",
+      "input_cache_read": "0.000000041528"
     },
     "architecture": {
       "modality": "text->text",
@@ -8813,7 +8813,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -10890,9 +10890,8 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000011",
-      "input_cache_read": "0.00000007"
+      "prompt": "0.00000009",
+      "completion": "0.0000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -10907,7 +10906,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -12392,9 +12391,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -12599,9 +12598,9 @@
     "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095",
+      "prompt": "0.000001",
       "completion": "0.00000405",
-      "input_cache_read": "0.00000016"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+audio->text",
@@ -12618,7 +12617,7 @@
     },
     "top_provider": {
       "context_length": 524288,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 471859,
       "is_moderated": false
     },
     "reasoning": {
@@ -13579,9 +13578,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000126",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000234"
+      "prompt": "0.000000966",
+      "completion": "0.000003036",
+      "input_cache_read": "0.0000001794"
     },
     "architecture": {
       "modality": "text->text",
@@ -13595,8 +13594,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
-      "max_completion_tokens": 182476,
+      "context_length": 200000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
