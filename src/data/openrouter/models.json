@@ -171,7 +171,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000003",
+      "prompt": "0.00000005",
       "completion": "0.00000016",
       "input_cache_read": "0.000000013"
     },
@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000011875",
-      "completion": "0.00000418",
-      "input_cache_read": "0.000000247"
+      "prompt": "0.00000117",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000234"
     },
     "architecture": {
       "modality": "text->text",
@@ -510,8 +510,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2714,9 +2714,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.00000007938",
+      "completion": "0.00000015876",
+      "input_cache_read": "0.000000015876"
     },
     "architecture": {
       "modality": "text->text",
@@ -2942,9 +2942,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000104226",
-      "completion": "0.00000208452",
-      "input_cache_read": "0.000000086855"
+      "prompt": "0.00000087",
+      "completion": "0.00000174",
+      "input_cache_read": "0.0000000725"
     },
     "architecture": {
       "modality": "text->text",
@@ -4923,6 +4923,43 @@
     }
   },
   {
+    "id": "ibm-granite/granite-4.2-8b",
+    "name": "IBM: Granite 4.2 8B",
+    "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.00000015",
+      "input_cache_read": "0.00000005"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 117964,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "low",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "inception/mercury-2",
     "name": "Inception: Mercury 2",
     "description": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM). Instead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving...",
@@ -5022,33 +5059,6 @@
     }
   },
   {
-    "id": "kwaipilot/kat-coder-air-v2.5",
-    "name": "Kwaipilot: KAT-Coder-Air V2.5",
-    "description": "KAT-Coder-Air V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make...",
-    "context_length": 256000,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.00000003"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 80000,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "kwaipilot/kat-coder-pro-v2",
     "name": "Kwaipilot: KAT-Coder-Pro V2",
     "description": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions,...",
@@ -5097,8 +5107,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 80000,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -7643,6 +7653,33 @@
     }
   },
   {
+    "id": "openai/gpt-3.5-turbo:batch",
+    "name": "OpenAI: GPT-3.5 Turbo (batch)",
+    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
+    "context_length": 16385,
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.00000075",
+      "web_search": "0.01"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 16385,
+      "max_completion_tokens": 4096,
+      "is_moderated": true
+    }
+  },
+  {
     "id": "openai/gpt-4",
     "name": "OpenAI: GPT-4",
     "description": "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model capable of solving difficult problems with greater accuracy than previous models due to its broader general knowledge and advanced reasoning...",
@@ -7722,6 +7759,34 @@
     }
   },
   {
+    "id": "openai/gpt-4-turbo:batch",
+    "name": "OpenAI: GPT-4 Turbo (batch)",
+    "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.000005",
+      "completion": "0.000015",
+      "web_search": "0.01"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 4096,
+      "is_moderated": true
+    }
+  },
+  {
     "id": "openai/gpt-4.1",
     "name": "OpenAI: GPT-4.1",
     "description": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and...",
@@ -7782,6 +7847,36 @@
     }
   },
   {
+    "id": "openai/gpt-4.1-mini:batch",
+    "name": "OpenAI: GPT-4.1 Mini (batch)",
+    "description": "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard...",
+    "context_length": 1047576,
+    "pricing": {
+      "prompt": "0.0000002",
+      "completion": "0.0000008",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000005"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1047576,
+      "max_completion_tokens": 32768,
+      "is_moderated": true
+    }
+  },
+  {
     "id": "openai/gpt-4.1-nano",
     "name": "OpenAI: GPT-4.1 Nano",
     "description": "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
@@ -7791,6 +7886,66 @@
       "completion": "0.0000004",
       "web_search": "0.01",
       "input_cache_read": "0.000000025"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1047576,
+      "max_completion_tokens": 32768,
+      "is_moderated": true
+    }
+  },
+  {
+    "id": "openai/gpt-4.1-nano:batch",
+    "name": "OpenAI: GPT-4.1 Nano (batch)",
+    "description": "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
+    "context_length": 1047576,
+    "pricing": {
+      "prompt": "0.00000005",
+      "completion": "0.0000002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000125"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1047576,
+      "max_completion_tokens": 32768,
+      "is_moderated": true
+    }
+  },
+  {
+    "id": "openai/gpt-4.1:batch",
+    "name": "OpenAI: GPT-4.1 (batch)",
+    "description": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and...",
+    "context_length": 1047576,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000004",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -7985,6 +8140,66 @@
     }
   },
   {
+    "id": "openai/gpt-4o-mini:batch",
+    "name": "OpenAI: GPT-4o-mini (batch)",
+    "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000375"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 16384,
+      "is_moderated": true
+    }
+  },
+  {
+    "id": "openai/gpt-4o:batch",
+    "name": "OpenAI: GPT-4o (batch)",
+    "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.00000125",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000625"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 16384,
+      "is_moderated": true
+    }
+  },
+  {
     "id": "openai/gpt-5",
     "name": "OpenAI: GPT-5",
     "description": "GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy...",
@@ -8135,6 +8350,46 @@
     }
   },
   {
+    "id": "openai/gpt-5-mini:batch",
+    "name": "OpenAI: GPT-5 Mini (batch)",
+    "description": "GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost....",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000125",
+      "completion": "0.000001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000125"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-5-nano",
     "name": "OpenAI: GPT-5 Nano",
     "description": "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger...",
@@ -8144,6 +8399,46 @@
       "completion": "0.0000004",
       "web_search": "0.01",
       "input_cache_read": "0.000000005"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5-nano:batch",
+    "name": "OpenAI: GPT-5 Nano (batch)",
+    "description": "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000025",
+      "completion": "0.0000002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -8208,6 +8503,82 @@
         "high"
       ],
       "default_effort": "high"
+    }
+  },
+  {
+    "id": "openai/gpt-5-pro:batch",
+    "name": "OpenAI: GPT-5 Pro (batch)",
+    "description": "GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.0000075",
+      "completion": "0.00006",
+      "web_search": "0.01"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "openai/gpt-5:batch",
+    "name": "OpenAI: GPT-5 (batch)",
+    "description": "GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000625",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000625"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
     }
   },
   {
@@ -8367,6 +8738,47 @@
     }
   },
   {
+    "id": "openai/gpt-5.1:batch",
+    "name": "OpenAI: GPT-5.1 (batch)",
+    "description": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000625",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000625"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "none"
+    }
+  },
+  {
     "id": "openai/gpt-5.2",
     "name": "OpenAI: GPT-5.2",
     "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly...",
@@ -8510,6 +8922,85 @@
         "xhigh",
         "high",
         "medium"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.2-pro:batch",
+    "name": "OpenAI: GPT-5.2 Pro (batch)",
+    "description": "GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reasoning,...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.0000105",
+      "completion": "0.000084",
+      "web_search": "0.01"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.2:batch",
+    "name": "OpenAI: GPT-5.2 (batch)",
+    "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000875",
+      "completion": "0.000007",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000875"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
       ],
       "default_effort": "medium"
     }
@@ -8692,6 +9183,48 @@
     }
   },
   {
+    "id": "openai/gpt-5.4-mini:batch",
+    "name": "OpenAI: GPT-5.4 Mini (batch)",
+    "description": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.000000375",
+      "completion": "0.00000225",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000000375"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-5.4-nano",
     "name": "OpenAI: GPT-5.4 Nano",
     "description": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
@@ -8701,6 +9234,48 @@
       "completion": "0.00000125",
       "web_search": "0.01",
       "input_cache_read": "0.00000002"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 400000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.4-nano:batch",
+    "name": "OpenAI: GPT-5.4 Nano (batch)",
+    "description": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
+    "context_length": 400000,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.000000625",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -8774,6 +9349,101 @@
         "xhigh",
         "high",
         "medium"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.4-pro:batch",
+    "name": "OpenAI: GPT-5.4 Pro (batch)",
+    "description": "GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000015",
+      "completion": "0.00009",
+      "web_search": "0.01",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.00003",
+          "completion": "0.000135"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.4:batch",
+    "name": "OpenAI: GPT-5.4 (batch)",
+    "description": "GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.00000125",
+      "completion": "0.0000075",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.0000025",
+          "completion": "0.00001125",
+          "input_cache_read": "0.00000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
       ],
       "default_effort": "medium"
     }
@@ -8874,6 +9544,101 @@
     }
   },
   {
+    "id": "openai/gpt-5.5-pro:batch",
+    "name": "OpenAI: GPT-5.5 Pro (batch)",
+    "description": "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000015",
+      "completion": "0.00009",
+      "web_search": "0.01",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.00003",
+          "completion": "0.000135"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.5:batch",
+    "name": "OpenAI: GPT-5.5 (batch)",
+    "description": "GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.0000025",
+      "completion": "0.000015",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000025",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000005",
+          "completion": "0.0000225",
+          "input_cache_read": "0.0000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-5.6-luna",
     "name": "OpenAI: GPT-5.6 Luna",
     "description": "GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is suited for high-volume, latency-sensitive tasks such as chat, classification, and lightweight agentic workflows, providing capable reasoning for...",
@@ -8944,6 +9709,108 @@
           "completion": "0.0000018",
           "input_cache_read": "0.00000004",
           "input_cache_write": "0.0000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-luna-pro:batch",
+    "name": "OpenAI: GPT-5.6 Luna Pro (batch)",
+    "description": "GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000006",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.0000002",
+          "completion": "0.0000009",
+          "input_cache_read": "0.00000002"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-luna:batch",
+    "name": "OpenAI: GPT-5.6 Luna (batch)",
+    "description": "GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is suited for high-volume, latency-sensitive tasks such as chat, classification, and lightweight agentic workflows, providing capable reasoning for...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000006",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.0000002",
+          "completion": "0.0000009",
+          "input_cache_read": "0.00000002"
         }
       ]
     },
@@ -9086,6 +9953,112 @@
     }
   },
   {
+    "id": "openai/gpt-5.6-sol-pro:batch",
+    "name": "OpenAI: GPT-5.6 Sol Pro (batch)",
+    "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-sol:batch",
+    "name": "OpenAI: GPT-5.6 Sol (batch)",
+    "description": "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-5.6-terra",
     "name": "OpenAI: GPT-5.6 Terra",
     "description": "GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between the flagship Sol tier and the cost-efficient Luna tier. It is suited for everyday coding, reasoning, and agentic...",
@@ -9156,6 +10129,108 @@
           "completion": "0.000018",
           "input_cache_read": "0.0000004",
           "input_cache_write": "0.000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-terra-pro:batch",
+    "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
+    "description": "GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000006",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.000009",
+          "input_cache_read": "0.0000002"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-terra:batch",
+    "name": "OpenAI: GPT-5.6 Terra (batch)",
+    "description": "GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between the flagship Sol tier and the cost-efficient Luna tier. It is suited for everyday coding, reasoning, and agentic...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000006",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.000009",
+          "input_cache_read": "0.0000002"
         }
       ]
     },
@@ -9619,6 +10694,38 @@
     }
   },
   {
+    "id": "openai/o3-mini:batch",
+    "name": "OpenAI: o3 Mini (batch)",
+    "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
+    "context_length": 200000,
+    "pricing": {
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000275"
+    },
+    "architecture": {
+      "modality": "text+file->text",
+      "input_modalities": [
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 200000,
+      "max_completion_tokens": 100000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
     "id": "openai/o3-pro",
     "name": "OpenAI: o3 Pro",
     "description": "The o-series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o3-pro model uses more compute to think harder and provide consistently...",
@@ -9634,6 +10741,39 @@
         "text",
         "file",
         "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 200000,
+      "max_completion_tokens": 100000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "openai/o3:batch",
+    "name": "OpenAI: o3 (batch)",
+    "description": "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following....",
+    "context_length": 200000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000004",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000025"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -9718,6 +10858,39 @@
         "high"
       ],
       "default_effort": "high"
+    }
+  },
+  {
+    "id": "openai/o4-mini:batch",
+    "name": "OpenAI: o4 Mini (batch)",
+    "description": "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning...",
+    "context_length": 200000,
+    "pricing": {
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001375"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "image",
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 200000,
+      "max_completion_tokens": 100000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false
     }
   },
   {
@@ -10890,8 +12063,9 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000011"
+      "prompt": "0.0000001",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text->text",
@@ -10906,7 +12080,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -12391,9 +13565,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
