@@ -8,7 +8,7 @@
       "prompt": "0.00001",
       "completion": "0.00005",
       "web_search": "0.01",
-      "input_cache_read": "0.000001",
+      "input_cache_read": "0.00000025",
       "input_cache_write": "0.0000125",
       "input_cache_write_1h": "0.00002"
     },
@@ -28,7 +28,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -893,6 +893,49 @@
       "input_cache_read": "0.0000005",
       "input_cache_write": "0.00000625",
       "input_cache_write_1h": "0.00001"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "anthropic/claude-fable-5.1",
+    "name": "Anthropic: Claude Fable 5.1",
+    "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.00001",
+      "completion": "0.00005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000025",
+      "input_cache_write": "0.0000125",
+      "input_cache_write_1h": "0.00002"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -2582,9 +2625,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000763",
-      "completion": "0.0000001526",
-      "input_cache_read": "0.00000001526"
+      "prompt": "0.00000007168",
+      "completion": "0.00000014336",
+      "input_cache_read": "0.000000014336"
     },
     "architecture": {
       "modality": "text->text",
@@ -2810,9 +2853,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000016",
-      "completion": "0.0000032",
-      "input_cache_read": "0.000000135"
+      "prompt": "0.00000102747",
+      "completion": "0.00000205494",
+      "input_cache_read": "0.0000000856225"
     },
     "architecture": {
       "modality": "text->text",
@@ -2826,8 +2869,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -13319,9 +13362,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
