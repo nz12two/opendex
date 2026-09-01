@@ -787,7 +787,7 @@
     "description": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).",
     "context_length": 32768,
     "pricing": {
-      "prompt": "0.000003",
+      "prompt": "0.0000025",
       "completion": "0.000005"
     },
     "architecture": {
@@ -2714,9 +2714,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007938",
-      "completion": "0.00000015876",
-      "input_cache_read": "0.000000015876"
+      "prompt": "0.00000008092",
+      "completion": "0.00000016184",
+      "input_cache_read": "0.000000016184"
     },
     "architecture": {
       "modality": "text->text",
@@ -2823,9 +2823,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
+      "prompt": "0.00000044",
+      "completion": "0.00000132",
+      "input_cache_read": "0.000000014",
       "overrides": [
         {
           "utc_days": [
@@ -2942,9 +2942,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000087",
-      "completion": "0.00000174",
-      "input_cache_read": "0.0000000725"
+      "prompt": "0.0000016",
+      "completion": "0.0000032",
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -2958,8 +2958,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -2977,90 +2977,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.0000011154",
+      "completion": "0.0000033462",
+      "input_cache_read": "0.00000003718"
     },
     "architecture": {
       "modality": "text->text",
@@ -3074,7 +2993,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
+      "context_length": 1024000,
       "max_completion_tokens": 384000,
       "is_moderated": false
     },
@@ -4849,8 +4768,8 @@
     "description": "One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge",
     "context_length": 8192,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000006"
+      "prompt": "0.00000035",
+      "completion": "0.0000006"
     },
     "architecture": {
       "modality": "text->text",
@@ -4864,8 +4783,8 @@
       "instruct_type": "alpaca"
     },
     "top_provider": {
-      "context_length": 4096,
-      "max_completion_tokens": 3686,
+      "context_length": 8192,
+      "max_completion_tokens": 7372,
       "is_moderated": false
     }
   },
@@ -5147,7 +5066,7 @@
     "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
     "context_length": 8000,
     "pricing": {
-      "prompt": "0.0000005",
+      "prompt": "0.0000004",
       "completion": "0.00000075"
     },
     "architecture": {
@@ -6030,9 +5949,9 @@
     "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
     "context_length": 256000,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000009",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000015",
+      "completion": "0.00000045",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+file->text",
@@ -6170,9 +6089,9 @@
     "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.00000015",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.000000075",
+      "completion": "0.000000075",
+      "input_cache_read": "0.0000000075"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6283,9 +6202,9 @@
     "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000015",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000025",
+      "completion": "0.00000075",
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -6442,9 +6361,9 @@
     "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.0000002",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -6588,9 +6507,9 @@
     "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -11604,9 +11523,8 @@
     "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000875",
-      "completion": "0.00000035",
-      "input_cache_read": "0.0000000175"
+      "prompt": "0.00000009",
+      "completion": "0.00000055"
     },
     "architecture": {
       "modality": "text->text",
@@ -11621,7 +11539,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -13565,9 +13483,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
