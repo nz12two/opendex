@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000016",
-      "input_cache_read": "0.000000013"
+      "prompt": "0.00000004998",
+      "completion": "0.00000009996",
+      "input_cache_read": "0.000000009996"
     },
     "architecture": {
       "modality": "text->text",
@@ -188,7 +188,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -1302,50 +1302,6 @@
     }
   },
   {
-    "id": "anthropic/claude-opus-4.7-fast",
-    "name": "Anthropic: Claude Opus 4.7 (Fast)",
-    "description": "Fast-mode variant of [Opus 4.7](/anthropic/claude-opus-4.7) - identical capabilities with higher output speed at premium 6x pricing.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-    "context_length": 1000000,
-    "pricing": {
-      "prompt": "0.00003",
-      "completion": "0.00015",
-      "web_search": "0.01",
-      "input_cache_read": "0.000003",
-      "input_cache_write": "0.0000375",
-      "input_cache_write_1h": "0.00006"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Claude",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 128000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": false,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "anthropic/claude-opus-4.7:batch",
     "name": "Anthropic: Claude Opus 4.7 (batch)",
     "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on...",
@@ -1434,50 +1390,6 @@
     }
   },
   {
-    "id": "anthropic/claude-opus-4.8-fast",
-    "name": "Anthropic: Claude Opus 4.8 (Fast)",
-    "description": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-    "context_length": 1000000,
-    "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00005",
-      "web_search": "0.01",
-      "input_cache_read": "0.000001",
-      "input_cache_write": "0.0000125",
-      "input_cache_write_1h": "0.00002"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Claude",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 128000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": false,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "anthropic/claude-opus-4.8:batch",
     "name": "Anthropic: Claude Opus 4.8 (batch)",
     "description": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...",
@@ -1533,50 +1445,6 @@
       "input_cache_read": "0.0000005",
       "input_cache_write": "0.00000625",
       "input_cache_write_1h": "0.00001"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Claude",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 128000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "anthropic/claude-opus-5-fast",
-    "name": "Claude Opus 5 (Fast)",
-    "description": "Fast-mode variant of [Opus 5](/anthropic/claude-opus-5) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 5.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-    "context_length": 1000000,
-    "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00005",
-      "web_search": "0.01",
-      "input_cache_read": "0.000001",
-      "input_cache_write": "0.0000125",
-      "input_cache_write_1h": "0.00002"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -2714,9 +2582,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008092",
-      "completion": "0.00000016184",
-      "input_cache_read": "0.000000016184"
+      "prompt": "0.0000000763",
+      "completion": "0.0000001526",
+      "input_cache_read": "0.00000001526"
     },
     "architecture": {
       "modality": "text->text",
@@ -4983,6 +4851,44 @@
     "top_provider": {
       "context_length": 128000,
       "max_completion_tokens": 50000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "inception/mercury-2.5-preview",
+    "name": "Inception: Mercury 2.5 Preview",
+    "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
+    "context_length": 260000,
+    "pricing": {
+      "prompt": "0.00000004",
+      "completion": "0.00000015",
+      "input_cache_read": "0.000000004"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 260000,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
