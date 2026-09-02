@@ -1007,6 +1007,49 @@
     }
   },
   {
+    "id": "anthropic/claude-fable-5.1:batch",
+    "name": "Anthropic: Claude Fable 5.1 (batch)",
+    "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000005",
+      "completion": "0.000025",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000125",
+      "input_cache_write": "0.00000625",
+      "input_cache_write_1h": "0.00001"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "anthropic/claude-haiku-4.5",
     "name": "Anthropic: Claude Haiku 4.5",
     "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance...",
@@ -2773,9 +2816,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014",
+      "prompt": "0.00000022",
+      "completion": "0.00000066",
+      "input_cache_read": "0.000000007",
       "overrides": [
         {
           "utc_days": [
