@@ -2707,9 +2707,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008554",
-      "completion": "0.00000017108",
-      "input_cache_read": "0.000000017108"
+      "prompt": "0.00000008246",
+      "completion": "0.00000016492",
+      "input_cache_read": "0.000000016492"
     },
     "architecture": {
       "modality": "text->text",
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001034256",
-      "completion": "0.000002068512",
-      "input_cache_read": "0.000000086188"
+      "prompt": "0.00000102747",
+      "completion": "0.00000205494",
+      "input_cache_read": "0.0000000856225"
     },
     "architecture": {
       "modality": "text->text",
@@ -5662,6 +5662,92 @@
     }
   },
   {
+    "id": "meta/muse-spark-1.3",
+    "name": "Meta: Muse Spark 1.3",
+    "description": "Muse Spark 1.3 is a multimodal reasoning model from Meta for long-running agentic, multi-agent, and coding workflows. It is designed to keep track of information across extended tasks, work through...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000125",
+      "completion": "0.00000425",
+      "web_search": "0.0025",
+      "input_cache_read": "0.00000015"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "meta/muse-spark-1.3-contributor",
+    "name": "Meta: Muse Spark 1.3 Contributor",
+    "description": "Muse Spark 1.3 Contributor is the cost-efficient contributor tier of Meta’s multimodal reasoning model for experimentation, learning, and early-stage agentic, multi-agent, and coding workflows. It is designed to track information...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000002",
+      "web_search": "0.0025",
+      "input_cache_read": "0.000000002"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "microsoft/phi-4",
     "name": "Microsoft: Phi 4",
     "description": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. At 14 billion...",
@@ -7246,9 +7332,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000625",
-      "completion": "0.000003125",
-      "input_cache_read": "0.0000001875"
+      "prompt": "0.0000006",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -7262,8 +7348,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 32768,
+      "context_length": 202800,
+      "max_completion_tokens": 182520,
       "is_moderated": false
     },
     "reasoning": {
@@ -13457,9 +13543,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
