@@ -533,9 +533,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000117",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000234"
+      "prompt": "0.00000115",
+      "completion": "0.0000035",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -549,8 +549,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -2707,9 +2707,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.00000008554",
+      "completion": "0.00000017108",
+      "input_cache_read": "0.000000017108"
     },
     "architecture": {
       "modality": "text->text",
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000104226",
-      "completion": "0.00000208452",
-      "input_cache_read": "0.000000086855"
+      "prompt": "0.000001034256",
+      "completion": "0.000002068512",
+      "input_cache_read": "0.000000086188"
     },
     "architecture": {
       "modality": "text->text",
@@ -2970,9 +2970,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000011154",
-      "completion": "0.0000033462",
-      "input_cache_read": "0.00000003718"
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022"
     },
     "architecture": {
       "modality": "text->text",
@@ -4389,15 +4389,109 @@
     "description": "Gemini 3.7 Flash is a multimodal model from Google for fast agentic workflows, coding, and complex multi-step reasoning. It is designed for tasks that require responsive performance and reliable multi-step...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001875",
-      "completion": "0.0000009375",
-      "image": "0.0000001875",
-      "audio": "0.0000001875",
-      "input_audio_cache": "0.00000001875",
+      "prompt": "0.000000375",
+      "completion": "0.000001875",
+      "image": "0.000000375",
+      "audio": "0.000000375",
+      "input_audio_cache": "0.0000000375",
       "web_search": "0.014",
-      "internal_reasoning": "0.0000009375",
-      "input_cache_read": "0.00000001875",
-      "input_cache_write": "0.0000000208333333333333"
+      "internal_reasoning": "0.000001875",
+      "input_cache_read": "0.0000000375",
+      "input_cache_write": "0.0000000416666666666667"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "google/gemini-3.8-flash",
+    "name": "Google: Gemini 3.8 Flash",
+    "description": "Gemini 3.8 Flash is Google's most intelligent Flash model with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning.",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000075",
+      "completion": "0.00000375",
+      "image": "0.00000075",
+      "audio": "0.00000075",
+      "input_audio_cache": "0.000000075",
+      "web_search": "0.014",
+      "internal_reasoning": "0.00000375",
+      "input_cache_read": "0.000000075",
+      "input_cache_write": "0.0000000416666666666667"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "google/gemini-3.8-flash:batch",
+    "name": "Google: Gemini 3.8 Flash (batch)",
+    "description": "Gemini 3.8 Flash is Google's most intelligent Flash model with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning.",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000000375",
+      "completion": "0.000001875",
+      "image": "0.000000375",
+      "audio": "0.000000375",
+      "input_audio_cache": "0.0000000375",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000001875",
+      "input_cache_read": "0.0000000375",
+      "input_cache_write": "0.0000000416666666666667"
     },
     "architecture": {
       "modality": "text+image+file+audio+video->text",
