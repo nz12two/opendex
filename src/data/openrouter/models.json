@@ -71,7 +71,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 64000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false
@@ -106,7 +106,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -513,7 +513,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -533,9 +533,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000115",
-      "completion": "0.0000035",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.000001092",
+      "completion": "0.000003432",
+      "input_cache_read": "0.0000001794"
     },
     "architecture": {
       "modality": "text->text",
@@ -549,8 +549,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2707,9 +2707,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008246",
-      "completion": "0.00000016492",
-      "input_cache_read": "0.000000016492"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2816,9 +2816,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
+      "prompt": "0.00000044",
+      "completion": "0.00000132",
+      "input_cache_read": "0.000000014",
       "overrides": [
         {
           "utc_days": [
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000102747",
-      "completion": "0.00000205494",
-      "input_cache_read": "0.0000000856225"
+      "prompt": "0.00000104226",
+      "completion": "0.00000208452",
+      "input_cache_read": "0.000000086855"
     },
     "architecture": {
       "modality": "text->text",
@@ -2970,9 +2970,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022"
+      "prompt": "0.0000011154",
+      "completion": "0.0000033462",
+      "input_cache_read": "0.00000003718"
     },
     "architecture": {
       "modality": "text->text",
@@ -3580,7 +3580,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 65536,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -5354,9 +5354,8 @@
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000071",
-      "completion": "0.00000071",
-      "input_cache_read": "0.00000071"
+      "prompt": "0.0000001",
+      "completion": "0.00000032"
     },
     "architecture": {
       "modality": "text->text",
@@ -5370,8 +5369,8 @@
       "instruct_type": "llama3"
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 115200,
+      "context_length": 131072,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -5463,7 +5462,7 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.0000003",
-      "completion": "0.0000012",
+      "completion": "0.0000011",
       "input_cache_read": "0.00000004"
     },
     "architecture": {
@@ -5480,7 +5479,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
@@ -7198,7 +7197,7 @@
     "pricing": {
       "prompt": "0.00000005",
       "completion": "0.0000002",
-      "input_cache_read": "0.000000025"
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -7213,7 +7212,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 228000,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -7350,43 +7349,6 @@
     "top_provider": {
       "context_length": 202800,
       "max_completion_tokens": 182520,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supports_max_tokens": true,
-      "supported_efforts": [
-        "high",
-        "medium"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "nvidia/nemotron-3-ultra-550b-a55b:batch",
-    "name": "NVIDIA: Nemotron 3 Ultra (batch)",
-    "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
-    "context_length": 512288,
-    "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000036",
-      "input_cache_read": "0.0000002"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 512288,
-      "max_completion_tokens": 461059,
       "is_moderated": false
     },
     "reasoning": {
@@ -11524,8 +11486,8 @@
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000012",
-      "completion": "0.00000024"
+      "prompt": "0.0000002275",
+      "completion": "0.00000091"
     },
     "architecture": {
       "modality": "text->text",
@@ -11539,8 +11501,8 @@
       "instruct_type": "qwen3"
     },
     "top_provider": {
-      "context_length": 40960,
-      "max_completion_tokens": 16384,
+      "context_length": 131072,
+      "max_completion_tokens": 8192,
       "is_moderated": false
     },
     "reasoning": {
@@ -12390,8 +12352,9 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000039",
-      "completion": "0.00000234"
+      "prompt": "0.00000055",
+      "completion": "0.0000035",
+      "input_cache_read": "0.000000225"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12408,7 +12371,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -12904,7 +12867,7 @@
     "pricing": {
       "prompt": "0.000002",
       "completion": "0.000006",
-      "input_cache_read": "0.0000002"
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -12918,8 +12881,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "context_length": 1000000,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -13543,9 +13506,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -14544,9 +14507,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000043",
-      "completion": "0.00000175",
-      "input_cache_read": "0.00000008"
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "input_cache_read": "0.00000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -14560,8 +14523,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 198000,
-      "max_completion_tokens": 16384,
+      "context_length": 204800,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
