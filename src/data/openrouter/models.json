@@ -311,9 +311,9 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000255",
-      "completion": "0.00001275",
-      "input_cache_read": "0.00000025599999"
+      "prompt": "0.0000025",
+      "completion": "0.000014",
+      "input_cache_read": "0.00000029"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000007125",
+      "completion": "0.0000002375",
+      "input_cache_read": "0.00000001425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -513,7 +513,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -533,9 +533,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000001134",
-      "completion": "0.000003564",
-      "input_cache_read": "0.0000001863"
+      "prompt": "0.000001148",
+      "completion": "0.000003608",
+      "input_cache_read": "0.0000001886"
     },
     "architecture": {
       "modality": "text->text",
@@ -2499,9 +2499,9 @@
     "description": "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000095",
-      "input_cache_read": "0.00000013"
+      "prompt": "0.00000055",
+      "completion": "0.00000165",
+      "input_cache_read": "0.00000055"
     },
     "architecture": {
       "modality": "text->text",
@@ -2515,8 +2515,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 32768,
+      "context_length": 161000,
+      "max_completion_tokens": 144900,
       "is_moderated": false
     },
     "reasoning": {
@@ -2707,9 +2707,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008554",
-      "completion": "0.00000017108",
-      "input_cache_read": "0.000000017108"
+      "prompt": "0.00000007938",
+      "completion": "0.00000015876",
+      "input_cache_read": "0.000000015876"
     },
     "architecture": {
       "modality": "text->text",
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001035996",
-      "completion": "0.000002071992",
-      "input_cache_read": "0.000000086333"
+      "prompt": "0.000001030776",
+      "completion": "0.000002061552",
+      "input_cache_read": "0.000000085898"
     },
     "architecture": {
       "modality": "text->text",
@@ -5065,6 +5065,37 @@
     "top_provider": {
       "context_length": 262144,
       "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-fin",
+    "name": "Ling 3.0 Flash Fin",
+    "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000006",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000012"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -12940,10 +12971,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000000425",
-      "completion": "0.00000255",
-      "input_cache_read": "0.000000085",
-      "input_cache_write": "0.00000053125"
+      "prompt": "0.00000042",
+      "completion": "0.000003",
+      "input_cache_read": "0.000000085"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13507,9 +13537,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
