@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000007125",
-      "completion": "0.0000002375",
-      "input_cache_read": "0.00000001425"
+      "prompt": "0.000000075",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -513,7 +513,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -533,9 +533,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000001148",
-      "completion": "0.000003608",
-      "input_cache_read": "0.0000001886"
+      "prompt": "0.00000115",
+      "completion": "0.0000035",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -549,8 +549,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -2707,9 +2707,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007938",
-      "completion": "0.00000015876",
-      "input_cache_read": "0.000000015876"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2816,9 +2816,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
+      "prompt": "0.00000044",
+      "completion": "0.00000132",
+      "input_cache_read": "0.000000014",
       "overrides": [
         {
           "utc_days": [
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001030776",
-      "completion": "0.000002061552",
-      "input_cache_read": "0.000000085898"
+      "prompt": "0.00000104226",
+      "completion": "0.00000208452",
+      "input_cache_read": "0.000000086855"
     },
     "architecture": {
       "modality": "text->text",
@@ -2970,9 +2970,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022"
+      "prompt": "0.0000011154",
+      "completion": "0.0000033462",
+      "input_cache_read": "0.00000003718"
     },
     "architecture": {
       "modality": "text->text",
@@ -6449,7 +6449,7 @@
     "id": "mistralai/mistral-medium-3-5:batch",
     "name": "Mistral: Mistral Medium 3.5 (batch)",
     "description": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
-    "context_length": 262144,
+    "context_length": 32768,
     "pricing": {
       "prompt": "0.00000075",
       "completion": "0.00000375"
@@ -6468,8 +6468,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 209715,
+      "context_length": 32768,
+      "max_completion_tokens": 26214,
       "is_moderated": false
     },
     "reasoning": {
@@ -7362,9 +7362,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000024",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.000000625",
+      "completion": "0.000003125",
+      "input_cache_read": "0.0000001875"
     },
     "architecture": {
       "modality": "text->text",
@@ -7378,8 +7378,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202800,
-      "max_completion_tokens": 182520,
+      "context_length": 256000,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -7427,6 +7427,37 @@
         "medium"
       ],
       "default_effort": "high"
+    }
+  },
+  {
+    "id": "nvidia/nemotron-3.5-content-safety",
+    "name": "NVIDIA: Nemotron 3.5 Content Safety",
+    "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.0000002",
+      "completion": "0.0000002"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 117964,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
     }
   },
   {
@@ -13537,9 +13568,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -13994,7 +14025,7 @@
     "description": "A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge",
     "context_length": 6144,
     "pricing": {
-      "prompt": "0.00000045",
+      "prompt": "0.00000035",
       "completion": "0.00000065"
     },
     "architecture": {
@@ -14010,7 +14041,7 @@
     },
     "top_provider": {
       "context_length": 6144,
-      "max_completion_tokens": 4096,
+      "max_completion_tokens": 5529,
       "is_moderated": false
     }
   },
@@ -14207,6 +14238,55 @@
           "prompt": "0.0000025",
           "completion": "0.000005",
           "input_cache_read": "0.0000004"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Grok",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 900000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "low"
+    }
+  },
+  {
+    "id": "x-ai/grok-4.3:batch",
+    "name": "SpaceXAI: Grok 4.3 (batch)",
+    "description": "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000002",
+      "web_search": "0.005",
+      "input_cache_read": "0.00000016",
+      "overrides": [
+        {
+          "min_prompt_tokens": 200000,
+          "prompt": "0.000002",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000032"
         }
       ]
     },
