@@ -311,9 +311,9 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000255",
-      "completion": "0.00001275",
-      "input_cache_read": "0.00000025599999"
+      "prompt": "0.0000025",
+      "completion": "0.000014",
+      "input_cache_read": "0.00000029"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6037,35 +6037,6 @@
     }
   },
   {
-    "id": "minimax/minimax-m2.7:free",
-    "name": "MiniMax: MiniMax M2.7 (free)",
-    "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
-    "context_length": 196608,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 196608,
-      "max_completion_tokens": 176947,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "minimax/minimax-m3",
     "name": "MiniMax: MiniMax M3",
     "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
@@ -6123,37 +6094,6 @@
     "top_provider": {
       "context_length": 524288,
       "max_completion_tokens": 471859,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
-    "id": "minimax/minimax-m3:free",
-    "name": "MiniMax: MiniMax M3 (free)",
-    "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
