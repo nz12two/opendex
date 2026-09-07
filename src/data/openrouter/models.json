@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000045",
-      "completion": "0.00000009",
-      "input_cache_read": "0.000000009"
+      "prompt": "0.00000005",
+      "completion": "0.00000016",
+      "input_cache_read": "0.000000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -188,7 +188,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000007125",
+      "completion": "0.0000002375",
+      "input_cache_read": "0.00000001425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -513,7 +513,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -533,9 +533,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000117",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000234"
+      "prompt": "0.00000112",
+      "completion": "0.00000352",
+      "input_cache_read": "0.000000208"
     },
     "architecture": {
       "modality": "text->text",
@@ -549,8 +549,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2816,9 +2816,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014",
+      "prompt": "0.00000022",
+      "completion": "0.00000066",
+      "input_cache_read": "0.000000007",
       "overrides": [
         {
           "utc_days": [
@@ -2935,9 +2935,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000010353",
-      "completion": "0.0000020706",
-      "input_cache_read": "0.000000086275"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -2970,9 +2970,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000112068",
-      "completion": "0.00000336204",
-      "input_cache_read": "0.000000037356"
+      "prompt": "0.0000010494",
+      "completion": "0.0000031482",
+      "input_cache_read": "0.00000003498"
     },
     "architecture": {
       "modality": "text->text",
@@ -10362,7 +10362,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
