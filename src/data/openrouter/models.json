@@ -2708,9 +2708,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008708",
-      "completion": "0.00000017416",
-      "input_cache_read": "0.000000017416"
+      "prompt": "0.000000084",
+      "completion": "0.000000168",
+      "input_cache_read": "0.0000000168"
     },
     "architecture": {
       "modality": "text->text",
@@ -2974,9 +2974,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000948126",
+      "completion": "0.000001896252",
+      "input_cache_read": "0.0000000790105"
     },
     "architecture": {
       "modality": "text->text",
@@ -5016,8 +5016,8 @@
     }
   },
   {
-    "id": "inception/mercury-2.5-preview",
-    "name": "Inception: Mercury 2.5 Preview",
+    "id": "inception/mercury-2.5",
+    "name": "Inception: Mercury 2.5",
     "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
     "context_length": 260000,
     "pricing": {
@@ -5572,9 +5572,9 @@
     "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000035",
-      "completion": "0.0000015",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.000000175",
+      "completion": "0.00000075",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5906,7 +5906,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000055",
+      "prompt": "0.0000004",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -6782,7 +6782,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000006",
-      "completion": "0.0000025"
+      "completion": "0.0000025",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -6797,7 +6798,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 100352,
       "is_moderated": false
     },
     "reasoning": {
@@ -7029,6 +7030,77 @@
       "context_length": 262144,
       "max_completion_tokens": 131072,
       "is_moderated": false
+    }
+  },
+  {
+    "id": "nex-agi/nex-n2.5-mini:free",
+    "name": "Nex AGI: Nex-N2.5-Mini (free)",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "nex-agi/nex-n2.5-pro:free",
+    "name": "Nex AGI: Nex-N2.5-Pro (free)",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
     }
   },
   {
@@ -13696,9 +13768,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15108,11 +15180,11 @@
     "id": "z-ai/glm-5.3-flash:batch",
     "name": "Z.ai: GLM 5.3 Flash (batch)",
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
-    "context_length": 1048575,
+    "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000075",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15128,8 +15200,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
