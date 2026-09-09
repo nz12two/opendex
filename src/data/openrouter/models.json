@@ -311,9 +311,9 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.000014",
-      "input_cache_read": "0.00000029"
+      "prompt": "0.0000024",
+      "completion": "0.000012",
+      "input_cache_read": "0.00000024"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -1183,7 +1183,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 32000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false
@@ -2708,9 +2708,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000084",
-      "completion": "0.000000168",
-      "input_cache_read": "0.0000000168"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2819,88 +2819,7 @@
     "pricing": {
       "prompt": "0.00000022",
       "completion": "0.00000066",
-      "input_cache_read": "0.000000007",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000044",
-          "completion": "0.00000132",
-          "input_cache_read": "0.000000014"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000044",
-          "completion": "0.00000132",
-          "input_cache_read": "0.000000014"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000022",
-          "completion": "0.00000066",
-          "input_cache_read": "0.000000007"
-        }
-      ]
+      "input_cache_read": "0.000000007"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -2916,7 +2835,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2974,9 +2893,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000948126",
-      "completion": "0.000001896252",
-      "input_cache_read": "0.0000000790105"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3011,7 +2930,7 @@
     "pricing": {
       "prompt": "0.00000057948",
       "completion": "0.00000173844",
-      "input_cache_read": "0.000000057948"
+      "input_cache_read": "0.000000018438"
     },
     "architecture": {
       "modality": "text->text",
@@ -4946,9 +4865,9 @@
     "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000015",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000006",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -5906,7 +5825,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000004",
+      "prompt": "0.00000055",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -6782,8 +6701,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000006",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000015"
+      "completion": "0.0000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -6798,7 +6716,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 100352,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -7281,7 +7199,7 @@
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "name": "NVIDIA: Nemotron 3 Super",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
-    "context_length": 1000000,
+    "context_length": 262144,
     "pricing": {
       "prompt": "0.000000085",
       "completion": "0.0000004"
@@ -12266,9 +12184,8 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000011",
-      "input_cache_read": "0.00000007"
+      "prompt": "0.00000009",
+      "completion": "0.0000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -12283,7 +12200,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -13145,7 +13062,7 @@
     },
     "top_provider": {
       "context_length": 1000000,
-      "max_completion_tokens": 262144,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -13768,9 +13685,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -14818,9 +14735,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000011"
+      "prompt": "0.00000043",
+      "completion": "0.00000175",
+      "input_cache_read": "0.00000008"
     },
     "architecture": {
       "modality": "text->text",
@@ -14834,8 +14751,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
-      "max_completion_tokens": 131072,
+      "context_length": 198000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
