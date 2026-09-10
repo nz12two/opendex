@@ -494,9 +494,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000007",
+      "completion": "0.0000002333",
+      "input_cache_read": "0.000000014"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -531,11 +531,11 @@
     "id": "~z-ai/glm-latest",
     "name": "Z.ai: GLM Latest",
     "description": "This model always redirects to the latest GLM model from Z.ai.",
-    "context_length": 1048576,
+    "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000001113",
-      "completion": "0.000003498",
-      "input_cache_read": "0.0000002067"
+      "prompt": "0.000001092",
+      "completion": "0.000003432",
+      "input_cache_read": "0.0000002028"
     },
     "architecture": {
       "modality": "text->text",
@@ -549,8 +549,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 128000,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -2447,8 +2447,8 @@
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000032",
-      "completion": "0.00000089"
+      "prompt": "0.0000002574",
+      "completion": "0.0000010287"
     },
     "architecture": {
       "modality": "text->text",
@@ -2462,8 +2462,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 16384,
+      "context_length": 128000,
+      "max_completion_tokens": 16000,
       "is_moderated": false
     }
   },
@@ -2708,9 +2708,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.00000014",
-      "input_cache_read": "0.000000014"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2893,9 +2893,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000087",
-      "completion": "0.00000174",
-      "input_cache_read": "0.0000000725"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -2928,9 +2928,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057948",
-      "completion": "0.00000173844",
-      "input_cache_read": "0.000000018438"
+      "prompt": "0.0000010494",
+      "completion": "0.0000031482",
+      "input_cache_read": "0.00000003498"
     },
     "architecture": {
       "modality": "text->text",
@@ -2944,8 +2944,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -5940,9 +5940,9 @@
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.00000108",
-      "input_cache_read": "0.000000027"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -5956,8 +5956,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 128000,
+      "context_length": 204800,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -6067,6 +6067,34 @@
       "prompt": "0.0000003",
       "completion": "0.0000009",
       "input_cache_read": "0.00000003"
+    },
+    "architecture": {
+      "modality": "text+file->text",
+      "input_modalities": [
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 256000,
+      "max_completion_tokens": 204800,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "mistralai/codestral-2508:batch",
+    "name": "Mistral: Codestral 2508 (batch)",
+    "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+    "context_length": 256000,
+    "pricing": {
+      "prompt": "0.00000015",
+      "completion": "0.00000045",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+file->text",
@@ -6199,6 +6227,34 @@
     }
   },
   {
+    "id": "mistralai/ministral-8b-2512:batch",
+    "name": "Mistral: Ministral 3 8B 2512 (batch)",
+    "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.000000075",
+      "input_cache_read": "0.0000000075"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "mistralai/mistral-large",
     "name": "Mistral Large",
     "description": "This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-2407`). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/)....",
@@ -6263,6 +6319,35 @@
       "prompt": "0.0000005",
       "completion": "0.0000015",
       "input_cache_read": "0.00000005"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "mistralai/mistral-large-2512:batch",
+    "name": "Mistral: Mistral Large 3 2512 (batch)",
+    "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.00000075",
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -6414,6 +6499,35 @@
     }
   },
   {
+    "id": "mistralai/mistral-medium-3.1:batch",
+    "name": "Mistral: Mistral Medium 3.1 (batch)",
+    "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.0000002",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000002"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 104857,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "mistralai/mistral-nemo",
     "name": "Mistral: Mistral Nemo",
     "description": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,...",
@@ -6502,6 +6616,43 @@
       "prompt": "0.00000015",
       "completion": "0.0000006",
       "input_cache_read": "0.000000015"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "high",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "mistralai/mistral-small-2603:batch",
+    "name": "Mistral: Mistral Small 4 (batch)",
+    "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6701,7 +6852,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000006",
-      "completion": "0.0000025"
+      "completion": "0.0000025",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -6716,7 +6868,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 100352,
       "is_moderated": false
     },
     "reasoning": {
@@ -11783,8 +11935,8 @@
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000004815",
-      "completion": "0.00000019305"
+      "prompt": "0.00000009",
+      "completion": "0.0000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -11798,8 +11950,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32000,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -12410,8 +12562,8 @@
     "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000029",
-      "completion": "0.0000024"
+      "prompt": "0.00000026",
+      "completion": "0.00000208"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12428,7 +12580,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -13657,9 +13809,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -13882,8 +14034,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 524288,
-      "max_completion_tokens": 471859,
+      "context_length": 1048576,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -14923,9 +15075,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000028",
-      "completion": "0.00000088",
-      "input_cache_read": "0.000000052"
+      "prompt": "0.000000966",
+      "completion": "0.000003036",
+      "input_cache_read": "0.0000001932"
     },
     "architecture": {
       "modality": "text->text",
@@ -14939,8 +15091,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 128000,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14993,7 +15145,7 @@
     "id": "z-ai/glm-5.3",
     "name": "Z.ai: GLM 5.3",
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
-    "context_length": 1048576,
+    "context_length": 1310720,
     "pricing": {
       "prompt": "0.0000014",
       "completion": "0.0000044",
@@ -15032,9 +15184,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000007",
+      "completion": "0.0000002333",
+      "input_cache_read": "0.000000014"
     },
     "architecture": {
       "modality": "text+image+video->text",
