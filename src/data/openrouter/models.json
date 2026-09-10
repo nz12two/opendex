@@ -2708,9 +2708,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008708",
-      "completion": "0.00000017416",
-      "input_cache_read": "0.000000017416"
+      "prompt": "0.000000084",
+      "completion": "0.000000168",
+      "input_cache_read": "0.0000000168"
     },
     "architecture": {
       "modality": "text->text",
@@ -2893,9 +2893,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.00000087",
+      "completion": "0.00000174",
+      "input_cache_read": "0.0000000725"
     },
     "architecture": {
       "modality": "text->text",
@@ -4715,8 +4715,8 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.00000034"
+      "prompt": "0.000000042",
+      "completion": "0.00000022"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -4732,8 +4732,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -5196,6 +5196,38 @@
       "modality": "text->text",
       "input_modalities": [
         "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
+    "id": "inclusionai/ling-3.0-flash-vl:free",
+    "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+    "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
       ],
       "output_modalities": [
         "text"
@@ -6059,9 +6091,9 @@
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000027",
+      "completion": "0.00000108",
+      "input_cache_read": "0.000000027"
     },
     "architecture": {
       "modality": "text->text",
@@ -6075,8 +6107,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
-      "max_completion_tokens": 131072,
+      "context_length": 200000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
@@ -13928,9 +13960,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
