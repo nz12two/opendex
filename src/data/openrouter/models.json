@@ -311,9 +311,9 @@
     "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000189",
-      "completion": "0.00000948",
-      "input_cache_read": "0.000000216"
+      "prompt": "0.00000230272875",
+      "completion": "0.000011550195",
+      "input_cache_read": "0.000000263169"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -1341,7 +1341,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 32000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false
@@ -2865,9 +2865,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008512",
-      "completion": "0.00000017024",
-      "input_cache_read": "0.000000017024"
+      "prompt": "0.00000006706",
+      "completion": "0.00000013412",
+      "input_cache_read": "0.000000013412"
     },
     "architecture": {
       "modality": "text->text",
@@ -3050,9 +3050,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000947778",
-      "completion": "0.000001895556",
-      "input_cache_read": "0.0000000789815"
+      "prompt": "0.000000839724",
+      "completion": "0.000001679448",
+      "input_cache_read": "0.000000069977"
     },
     "architecture": {
       "modality": "text->text",
@@ -3085,9 +3085,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057948",
-      "completion": "0.00000173844",
-      "input_cache_read": "0.000000019316"
+      "prompt": "0.00000057816",
+      "completion": "0.00000173448",
+      "input_cache_read": "0.000000018396"
     },
     "architecture": {
       "modality": "text->text",
@@ -3101,8 +3101,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5436,6 +5436,58 @@
     }
   },
   {
+    "id": "inference-net/schematron-v2-small",
+    "name": "Inference.net: Schematron V2 Small",
+    "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.00000005",
+      "completion": "0.00000023"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 4096,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "inference-net/schematron-v2-turbo",
+    "name": "Inference.net: Schematron V2 Turbo",
+    "description": "Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes throughput for high-volume extraction workloads. Extraction instructions must be supplied through a JSON schema in response_format rather...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.00000003",
+      "completion": "0.00000015"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 8192,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "kwaipilot/kat-coder-pro-v2",
     "name": "Kwaipilot: KAT-Coder-Pro V2",
     "description": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions,...",
@@ -5582,8 +5634,8 @@
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.0000004"
+      "prompt": "0.00000072",
+      "completion": "0.00000072"
     },
     "architecture": {
       "modality": "text->text",
@@ -5598,8 +5650,8 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
-      "is_moderated": false
+      "max_completion_tokens": 8192,
+      "is_moderated": true
     }
   },
   {
@@ -6281,9 +6333,9 @@
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.00000108",
-      "input_cache_read": "0.000000027"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -6297,8 +6349,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 128000,
+      "context_length": 204800,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -7053,7 +7105,7 @@
     "id": "mistralai/mistral-small-3.2-24b-instruct",
     "name": "Mistral: Mistral Small 3.2 24B",
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
-    "context_length": 131072,
+    "context_length": 256000,
     "pricing": {
       "prompt": "0.000000075",
       "completion": "0.0000002"
@@ -7319,9 +7371,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000189",
-      "completion": "0.00000948",
-      "input_cache_read": "0.000000216"
+      "prompt": "0.00000230272875",
+      "completion": "0.000011550195",
+      "input_cache_read": "0.000000263169"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -10733,7 +10785,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -12191,8 +12243,9 @@
     "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000022",
-      "completion": "0.00000088"
+      "prompt": "0.0000000875",
+      "completion": "0.00000035",
+      "input_cache_read": "0.0000000175"
     },
     "architecture": {
       "modality": "text->text",
@@ -12207,7 +12260,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -13584,9 +13637,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000042",
-      "completion": "0.000003",
-      "input_cache_read": "0.000000085"
+      "prompt": "0.000000214",
+      "completion": "0.00000255",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13602,7 +13655,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
+      "context_length": 262144,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14238,9 +14291,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
