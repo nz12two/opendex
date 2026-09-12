@@ -311,9 +311,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000002125",
-      "completion": "0.0000119",
-      "input_cache_read": "0.0000002465"
+      "prompt": "0.000002375",
+      "completion": "0.0000133",
+      "input_cache_read": "0.0000002755"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -1341,7 +1341,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 32000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false
@@ -2865,9 +2865,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006594",
-      "completion": "0.00000013188",
-      "input_cache_read": "0.000000013188"
+      "prompt": "0.00000006566",
+      "completion": "0.00000013132",
+      "input_cache_read": "0.000000013132"
     },
     "architecture": {
       "modality": "text->text",
@@ -3050,9 +3050,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000748374",
-      "completion": "0.000001496748",
-      "input_cache_read": "0.0000000623645"
+      "prompt": "0.0000016",
+      "completion": "0.0000032",
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -3066,8 +3066,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5634,8 +5634,8 @@
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000072",
-      "completion": "0.00000072"
+      "prompt": "0.0000004",
+      "completion": "0.0000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -5650,8 +5650,8 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 8192,
-      "is_moderated": true
+      "max_completion_tokens": 16384,
+      "is_moderated": false
     }
   },
   {
@@ -7370,9 +7370,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000230272875",
-      "completion": "0.000011550195",
-      "input_cache_read": "0.000000263169"
+      "prompt": "0.000002648138063",
+      "completion": "0.00001328272425",
+      "input_cache_read": "0.00000030264435"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14290,9 +14290,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15665,9 +15665,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
