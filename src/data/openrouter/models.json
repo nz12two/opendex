@@ -385,9 +385,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000021",
-      "completion": "0.00001095",
-      "input_cache_read": "0.00000023"
+      "prompt": "0.000001975",
+      "completion": "0.00001106",
+      "input_cache_read": "0.0000002291"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -765,9 +765,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000091",
-      "completion": "0.00000286",
-      "input_cache_read": "0.000000169"
+      "prompt": "0.0000009",
+      "completion": "0.000003069",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text->text",
@@ -782,7 +782,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2939,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000084",
-      "completion": "0.000000168",
-      "input_cache_read": "0.0000000168"
+      "prompt": "0.00000007784",
+      "completion": "0.00000015568",
+      "input_cache_read": "0.000000015568"
     },
     "architecture": {
       "modality": "text->text",
@@ -3661,56 +3661,6 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 65536,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
-    "id": "google/gemini-2.5-pro-preview-05-06",
-    "name": "Google: Gemini 2.5 Pro Preview 05-06",
-    "description": "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.00000125",
-      "completion": "0.00001",
-      "image": "0.00000125",
-      "audio": "0.00000125",
-      "input_audio_cache": "0.000000125",
-      "web_search": "0.014",
-      "internal_reasoning": "0.00001",
-      "input_cache_read": "0.000000125",
-      "input_cache_write": "0.000000375",
-      "overrides": [
-        {
-          "min_prompt_tokens": 200000,
-          "prompt": "0.0000025",
-          "completion": "0.000015",
-          "audio": "0.0000025",
-          "input_audio_cache": "0.00000025",
-          "input_cache_read": "0.00000025"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file+audio+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file",
-        "audio",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Gemini",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 65535,
       "is_moderated": false
     },
     "reasoning": {
@@ -8226,32 +8176,6 @@
       "input_modalities": [
         "text",
         "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 4096,
-      "is_moderated": true
-    }
-  },
-  {
-    "id": "openai/gpt-4-turbo-preview",
-    "name": "OpenAI: GPT-4 Turbo Preview",
-    "description": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00003"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
       ],
       "output_modalities": [
         "text"
