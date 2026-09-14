@@ -166,6 +166,80 @@
     }
   },
   {
+    "id": "~deepseek/deepseek-flash-latest",
+    "name": "DeepSeek: DeepSeek Flash Latest",
+    "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Router",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "~deepseek/deepseek-pro-latest",
+    "name": "DeepSeek: DeepSeek Pro Latest",
+    "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000057948",
+      "completion": "0.00000173844",
+      "input_cache_read": "0.000000018438"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Router",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "~deepseek/deepseek-v4-flash-latest",
     "name": "DeepSeek: DeepSeek V4 Flash Latest",
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -691,9 +765,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000092",
-      "completion": "0.0000031372",
-      "input_cache_read": "0.000000184"
+      "prompt": "0.00000091",
+      "completion": "0.00000286",
+      "input_cache_read": "0.000000169"
     },
     "architecture": {
       "modality": "text->text",
@@ -708,7 +782,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -1341,7 +1415,7 @@
     "top_provider": {
       "context_length": 200000,
       "max_completion_tokens": 32000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false
@@ -2865,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.000000084",
+      "completion": "0.000000168",
+      "input_cache_read": "0.0000000168"
     },
     "architecture": {
       "modality": "text->text",
@@ -3085,9 +3159,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000009834",
-      "completion": "0.0000029502",
-      "input_cache_read": "0.00000003278"
+      "prompt": "0.00000057948",
+      "completion": "0.00000173844",
+      "input_cache_read": "0.000000018438"
     },
     "architecture": {
       "modality": "text->text",
@@ -3101,8 +3175,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5768,8 +5842,8 @@
     "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.000000696"
+      "prompt": "0.0000001875",
+      "completion": "0.0000006525"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5785,7 +5859,7 @@
     },
     "top_provider": {
       "context_length": 128000,
-      "max_completion_tokens": 115200,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -7721,8 +7795,8 @@
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000085",
-      "completion": "0.0000004"
+      "prompt": "0.00000008",
+      "completion": "0.00000045"
     },
     "architecture": {
       "modality": "text->text",
@@ -7737,7 +7811,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -14291,9 +14365,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
