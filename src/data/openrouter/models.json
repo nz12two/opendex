@@ -173,23 +173,7 @@
     "pricing": {
       "prompt": "0.00000015",
       "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
-      "overrides": [
-        {
-          "utc_start": 0,
-          "utc_end": 1400,
-          "prompt": "0.0000003",
-          "completion": "0.0000012",
-          "input_cache_read": "0.00000003"
-        },
-        {
-          "utc_start": 1400,
-          "utc_end": 0,
-          "prompt": "0.00000015",
-          "completion": "0.0000006",
-          "input_cache_read": "0.000000015"
-        }
-      ]
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -204,8 +188,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 393216,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -225,9 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057948",
-      "completion": "0.00000173844",
-      "input_cache_read": "0.000000018438"
+      "prompt": "0.00000096",
+      "completion": "0.00000288",
+      "input_cache_read": "0.000000088"
     },
     "architecture": {
       "modality": "text->text",
@@ -242,7 +226,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2955,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007938",
-      "completion": "0.00000015876",
-      "input_cache_read": "0.000000015876"
+      "prompt": "0.000000088606",
+      "completion": "0.000000177212",
+      "input_cache_read": "0.0000000177212"
     },
     "architecture": {
       "modality": "text->text",
@@ -2990,9 +2974,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000012",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.000000055",
+      "completion": "0.00000011",
+      "input_cache_read": "0.000000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -3175,9 +3159,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057948",
-      "completion": "0.00000173844",
-      "input_cache_read": "0.000000018438"
+      "prompt": "0.0000009834",
+      "completion": "0.0000029502",
+      "input_cache_read": "0.00000003278"
     },
     "architecture": {
       "modality": "text->text",
@@ -3191,8 +3175,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -3247,9 +3231,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000003",
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006",
       "overrides": [
         {
           "utc_days": [
@@ -5005,38 +4989,6 @@
     }
   },
   {
-    "id": "google/gemma-4-31b-it:batch",
-    "name": "Google: Gemma 4 31B (batch)",
-    "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000039",
-      "completion": "0.00000097"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "image",
-        "text",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Gemma",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": false
-    }
-  },
-  {
     "id": "google/gemma-4-31b-it:free",
     "name": "Google: Gemma 4 31B (free)",
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
@@ -6261,7 +6213,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000055",
+      "prompt": "0.0000004",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -7150,8 +7102,8 @@
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
     "context_length": 256000,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000002"
+      "prompt": "0.00000009375",
+      "completion": "0.00000025"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7166,7 +7118,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
+      "context_length": 256000,
       "max_completion_tokens": 16384,
       "is_moderated": false
     }
@@ -7382,9 +7334,9 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000071",
-      "completion": "0.0000035",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.0000007062",
+      "completion": "0.00000321",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7833,9 +7785,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000024",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.000000625",
+      "completion": "0.000003125",
+      "input_cache_read": "0.0000001875"
     },
     "architecture": {
       "modality": "text->text",
@@ -7849,8 +7801,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202800,
-      "max_completion_tokens": 182520,
+      "context_length": 256000,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -11118,41 +11070,6 @@
     }
   },
   {
-    "id": "openai/gpt-oss-20b:batch",
-    "name": "OpenAI: gpt-oss-20b (batch)",
-    "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.0000002"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
     "id": "openai/gpt-oss-safeguard-20b",
     "name": "OpenAI: gpt-oss-safeguard-20b",
     "description": "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust...",
@@ -14304,9 +14221,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -14573,48 +14490,6 @@
     "top_provider": {
       "context_length": 524288,
       "max_completion_tokens": 262144,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "medium",
-        "low",
-        "minimal",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "thinkingmachines/inkling-small:batch",
-    "name": "Thinking Machines: Inkling Small (batch)",
-    "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-    "context_length": 524288,
-    "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000012",
-      "input_cache_read": "0.0000001"
-    },
-    "architecture": {
-      "modality": "text+image+audio->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 524288,
-      "max_completion_tokens": 471859,
       "is_moderated": false
     },
     "reasoning": {
@@ -15714,9 +15589,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.0000001",
+      "completion": "0.0000003333",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image+video->text",
