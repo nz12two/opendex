@@ -173,7 +173,23 @@
     "pricing": {
       "prompt": "0.00000015",
       "completion": "0.0000006",
-      "input_cache_read": "0.000000015"
+      "input_cache_read": "0.000000015",
+      "overrides": [
+        {
+          "utc_start": 0,
+          "utc_end": 1400,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003"
+        },
+        {
+          "utc_start": 1400,
+          "utc_end": 0,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000015"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -188,8 +204,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1000000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -209,90 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.00000057948",
+      "completion": "0.00000173844",
+      "input_cache_read": "0.000000018438"
     },
     "architecture": {
       "modality": "text->text",
@@ -307,7 +242,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -3020,9 +2955,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.00000007",
+      "completion": "0.00000014",
+      "input_cache_read": "0.000000014"
     },
     "architecture": {
       "modality": "text->text",
@@ -3240,90 +3175,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.00000057948",
+      "completion": "0.00000173844",
+      "input_cache_read": "0.000000018438"
     },
     "architecture": {
       "modality": "text->text",
@@ -3338,7 +3192,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -14409,9 +14263,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15417,9 +15271,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.000002",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.00000043",
+      "completion": "0.00000175",
+      "input_cache_read": "0.00000008"
     },
     "architecture": {
       "modality": "text->text",
@@ -15433,8 +15287,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
-      "max_completion_tokens": 131072,
+      "context_length": 198000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
