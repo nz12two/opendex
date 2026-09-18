@@ -173,7 +173,23 @@
     "pricing": {
       "prompt": "0.00000015",
       "completion": "0.0000006",
-      "input_cache_read": "0.000000015"
+      "input_cache_read": "0.000000015",
+      "overrides": [
+        {
+          "utc_start": 0,
+          "utc_end": 1400,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.00000003"
+        },
+        {
+          "utc_start": 1400,
+          "utc_end": 0,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000015"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -188,8 +204,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1000000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -209,90 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.00000057816",
+      "completion": "0.00000173448",
+      "input_cache_read": "0.000000018396"
     },
     "architecture": {
       "modality": "text->text",
@@ -307,7 +242,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -326,9 +261,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000000558",
-      "completion": "0.0000001767",
-      "input_cache_read": "0.0000000088"
+      "prompt": "0.000000055",
+      "completion": "0.000000165",
+      "input_cache_read": "0.00000000175"
     },
     "architecture": {
       "modality": "text->text",
@@ -342,8 +277,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -846,9 +781,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000008775",
-      "completion": "0.00000297",
-      "input_cache_read": "0.0000001755"
+      "prompt": "0.0000009",
+      "completion": "0.000003",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -862,8 +797,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 1000000,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3020,9 +2955,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.00000004984",
+      "completion": "0.00000009968",
+      "input_cache_read": "0.000000009968"
     },
     "architecture": {
       "modality": "text->text",
@@ -3276,90 +3211,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.00000057816",
+      "completion": "0.00000173448",
+      "input_cache_read": "0.000000018396"
     },
     "architecture": {
       "modality": "text->text",
@@ -3374,7 +3228,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -6039,8 +5893,8 @@
     "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000011",
+      "prompt": "0.00000035",
+      "completion": "0.0000015",
       "input_cache_read": "0.00000004"
     },
     "architecture": {
@@ -15680,9 +15534,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000005625",
-      "completion": "0.0000018",
-      "input_cache_read": "0.000000105"
+      "prompt": "0.0000005544",
+      "completion": "0.0000017424",
+      "input_cache_read": "0.00000010296"
     },
     "architecture": {
       "modality": "text->text",
@@ -15697,7 +15551,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 163840,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
