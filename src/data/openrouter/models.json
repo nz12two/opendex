@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000135",
-      "completion": "0.00000054",
-      "input_cache_read": "0.00000000405"
+      "prompt": "0.00000013",
+      "completion": "0.00000052",
+      "input_cache_read": "0.0000000026"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -245,9 +245,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000004928",
-      "completion": "0.00000014784",
-      "input_cache_read": "0.000000001568"
+      "prompt": "0.00000004",
+      "completion": "0.00000008",
+      "input_cache_read": "0.000000016"
     },
     "architecture": {
       "modality": "text->text",
@@ -261,8 +261,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -385,9 +385,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000021",
-      "completion": "0.00001095",
-      "input_cache_read": "0.00000023"
+      "prompt": "0.0000017",
+      "completion": "0.0000085",
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -2939,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004844",
-      "completion": "0.00000009688",
-      "input_cache_read": "0.000000009688"
+      "prompt": "0.00000004508",
+      "completion": "0.00000009016",
+      "input_cache_read": "0.000000009016"
     },
     "architecture": {
       "modality": "text->text",
@@ -2974,8 +2974,8 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000065",
-      "completion": "0.00000018",
+      "prompt": "0.00000004",
+      "completion": "0.00000008",
       "input_cache_read": "0.000000016"
     },
     "architecture": {
@@ -3160,9 +3160,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000655458",
-      "completion": "0.000001310916",
-      "input_cache_read": "0.0000000546215"
+      "prompt": "0.00000049329",
+      "completion": "0.00000098658",
+      "input_cache_read": "0.0000000411075"
     },
     "architecture": {
       "modality": "text->text",
@@ -7373,9 +7373,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000021",
-      "completion": "0.00001095",
-      "input_cache_read": "0.00000023"
+      "prompt": "0.0000017",
+      "completion": "0.0000085",
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15777,6 +15777,45 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
+    }
+  },
+  {
+    "id": "z-ai/glm-5.3-flashx",
+    "name": "Z.ai: GLM 5.3 FlashX",
+    "description": "GLM-5.3-FlashX is the high-speed variant of Z.ai's GLM-5.3-Flash, a native multimodal model delivering inference speeds of up to 200 tokens/s. Built on the same hybrid sparse and linear attention architecture...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000037",
+      "completion": "0.00000125",
+      "input_cache_read": "0.000000075"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
