@@ -171,9 +171,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000042",
-      "input_cache_read": "0.0000000042"
+      "prompt": "0.000000135",
+      "completion": "0.00000054",
+      "input_cache_read": "0.00000000405"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -189,7 +189,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -245,9 +245,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000055",
-      "completion": "0.000000165",
-      "input_cache_read": "0.00000000175"
+      "prompt": "0.00000004928",
+      "completion": "0.00000014784",
+      "input_cache_read": "0.000000001568"
     },
     "architecture": {
       "modality": "text->text",
@@ -385,9 +385,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000195",
-      "completion": "0.00001092",
-      "input_cache_read": "0.0000002262"
+      "prompt": "0.0000021",
+      "completion": "0.00001095",
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -2939,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004872",
-      "completion": "0.00000009744",
-      "input_cache_read": "0.000000009744"
+      "prompt": "0.00000004844",
+      "completion": "0.00000009688",
+      "input_cache_read": "0.000000009688"
     },
     "architecture": {
       "modality": "text->text",
@@ -2974,9 +2974,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000012",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.000000065",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000016"
     },
     "architecture": {
       "modality": "text->text",
@@ -3160,9 +3160,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000016",
-      "completion": "0.0000032",
-      "input_cache_read": "0.000000135"
+      "prompt": "0.000000655458",
+      "completion": "0.000001310916",
+      "input_cache_read": "0.0000000546215"
     },
     "architecture": {
       "modality": "text->text",
@@ -3176,8 +3176,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -7373,9 +7373,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000195",
-      "completion": "0.00001092",
-      "input_cache_read": "0.0000002262"
+      "prompt": "0.0000021",
+      "completion": "0.00001095",
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7791,9 +7791,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000625",
-      "completion": "0.000003125",
-      "input_cache_read": "0.0000001875"
+      "prompt": "0.0000006",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -7807,8 +7807,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 32768,
+      "context_length": 202800,
+      "max_completion_tokens": 182520,
       "is_moderated": false
     },
     "reasoning": {
@@ -7926,7 +7926,7 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000008",
+      "prompt": "0.00000007",
       "completion": "0.0000002",
       "input_cache_read": "0.00000004"
     },
@@ -7943,7 +7943,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -12789,8 +12789,8 @@
     "description": "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Instruct variant optimizes instruction-following for general multimodal tasks. It excels in perception...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000013",
-      "completion": "0.00000052"
+      "prompt": "0.0000002",
+      "completion": "0.0000007"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -14302,9 +14302,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
