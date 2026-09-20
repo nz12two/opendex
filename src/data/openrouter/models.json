@@ -209,9 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057816",
-      "completion": "0.00000173448",
-      "input_cache_read": "0.000000018396"
+      "prompt": "0.00000057684",
+      "completion": "0.00000173052",
+      "input_cache_read": "0.000000019228"
     },
     "architecture": {
       "modality": "text->text",
@@ -225,8 +225,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -2939,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000003976",
-      "completion": "0.00000007952",
-      "input_cache_read": "0.000000007952"
+      "prompt": "0.00000003696",
+      "completion": "0.00000007392",
+      "input_cache_read": "0.000000007392"
     },
     "architecture": {
       "modality": "text->text",
@@ -3195,9 +3195,90 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000057816",
-      "completion": "0.00000173448",
-      "input_cache_read": "0.000000018396"
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
+      "overrides": [
+        {
+          "utc_days": [
+            "saturday",
+            "sunday"
+          ],
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 0,
+          "utc_end": 100,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.00000132",
+          "completion": "0.00000396",
+          "input_cache_read": "0.000000044"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 1000,
+          "utc_end": 0,
+          "prompt": "0.00000066",
+          "completion": "0.00000198",
+          "input_cache_read": "0.000000022"
+        }
+      ]
     },
     "architecture": {
       "modality": "text->text",
@@ -3212,7 +3293,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -8133,7 +8214,7 @@
     "top_provider": {
       "context_length": 8191,
       "max_completion_tokens": 4096,
-      "is_moderated": true
+      "is_moderated": false
     }
   },
   {
@@ -10553,7 +10634,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -12992,8 +13073,9 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001625",
-      "completion": "0.0000013"
+      "prompt": "0.0000003125",
+      "completion": "0.00000125",
+      "input_cache_read": "0.00000015625"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13009,8 +13091,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "context_length": 256000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -13072,8 +13154,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 256000,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -13610,9 +13692,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000000214",
-      "completion": "0.00000255",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.00000042",
+      "completion": "0.000003",
+      "input_cache_read": "0.000000085"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13628,7 +13710,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 1000000,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14302,9 +14384,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15681,9 +15763,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000091",
-      "completion": "0.00000286",
-      "input_cache_read": "0.000000169"
+      "prompt": "0.000000896",
+      "completion": "0.000002816",
+      "input_cache_read": "0.0000001664"
     },
     "architecture": {
       "modality": "text->text",
