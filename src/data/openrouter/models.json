@@ -209,9 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000056628",
-      "completion": "0.00000169884",
-      "input_cache_read": "0.000000018876"
+      "prompt": "0.0000005478",
+      "completion": "0.0000016434",
+      "input_cache_read": "0.00000001826"
     },
     "architecture": {
       "modality": "text->text",
@@ -2939,9 +2939,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000364",
-      "completion": "0.0000000728",
-      "input_cache_read": "0.00000000728"
+      "prompt": "0.00000003556",
+      "completion": "0.00000007112",
+      "input_cache_read": "0.000000007112"
     },
     "architecture": {
       "modality": "text->text",
@@ -3159,90 +3159,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.0000005478",
+      "completion": "0.0000016434",
+      "input_cache_read": "0.00000001826"
     },
     "architecture": {
       "modality": "text->text",
@@ -3256,7 +3175,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
+      "context_length": 1024000,
       "max_completion_tokens": 384000,
       "is_moderated": false
     },
@@ -13656,8 +13575,8 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000042",
-      "completion": "0.000003",
+      "prompt": "0.0000002",
+      "completion": "0.00000255",
       "input_cache_read": "0.000000085"
     },
     "architecture": {
@@ -13674,7 +13593,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
+      "context_length": 262144,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -15727,9 +15646,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000896",
-      "completion": "0.000002816",
-      "input_cache_read": "0.0000001664"
+      "prompt": "0.00000091",
+      "completion": "0.00000286",
+      "input_cache_read": "0.000000169"
     },
     "architecture": {
       "modality": "text->text",
