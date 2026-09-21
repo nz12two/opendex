@@ -106,7 +106,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -209,90 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.00000054384",
+      "completion": "0.00000163152",
+      "input_cache_read": "0.000000018128"
     },
     "architecture": {
       "modality": "text->text",
@@ -306,7 +225,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
+      "context_length": 1024000,
       "max_completion_tokens": 384000,
       "is_moderated": false
     },
@@ -327,7 +246,7 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000004",
-      "completion": "0.00000016",
+      "completion": "0.00000032",
       "input_cache_read": "0.000000016"
     },
     "architecture": {
@@ -466,9 +385,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000017",
-      "completion": "0.0000085",
-      "input_cache_read": "0.00000017"
+      "prompt": "0.0000015",
+      "completion": "0.0000075",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -758,16 +677,16 @@
     "description": "This model always redirects to the latest Grok model from xAI.",
     "context_length": 500000,
     "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.000006",
+      "prompt": "0.0000016",
+      "completion": "0.0000048",
       "web_search": "0.005",
-      "input_cache_read": "0.0000005",
+      "input_cache_read": "0.0000004",
       "overrides": [
         {
           "min_prompt_tokens": 200000,
-          "prompt": "0.000004",
-          "completion": "0.000012",
-          "input_cache_read": "0.000001"
+          "prompt": "0.0000032",
+          "completion": "0.0000096",
+          "input_cache_read": "0.0000008"
         }
       ]
     },
@@ -809,7 +728,7 @@
     "pricing": {
       "prompt": "0.000000075",
       "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -826,7 +745,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 102400,
       "is_moderated": false
     },
     "reasoning": {
@@ -846,9 +765,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000007735",
-      "completion": "0.000002431",
-      "input_cache_read": "0.000000127075"
+      "prompt": "0.0000007728",
+      "completion": "0.0000024288",
+      "input_cache_read": "0.00000014352"
     },
     "architecture": {
       "modality": "text->text",
@@ -863,7 +782,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -1433,41 +1352,6 @@
     }
   },
   {
-    "id": "anthropic/claude-opus-4",
-    "name": "Anthropic: Claude Opus 4",
-    "description": "Claude Opus 4 is benchmarked as the world’s best coding model, at time of release, bringing sustained performance on complex, long-running tasks and agent workflows. It sets new benchmarks in...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.000015",
-      "completion": "0.000075",
-      "web_search": "0.01",
-      "input_cache_read": "0.0000015",
-      "input_cache_write": "0.00001875",
-      "input_cache_write_1h": "0.00003"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Claude",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 32000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "anthropic/claude-opus-4.1",
     "name": "Anthropic: Claude Opus 4.1",
     "description": "Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable gains...",
@@ -1963,7 +1847,7 @@
     "id": "anthropic/claude-sonnet-4",
     "name": "Anthropic: Claude Sonnet 4",
     "description": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),...",
-    "context_length": 1000000,
+    "context_length": 200000,
     "pricing": {
       "prompt": "0.000003",
       "completion": "0.000015",
@@ -3020,9 +2904,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.00000005544",
+      "completion": "0.00000011088",
+      "input_cache_read": "0.000000011088"
     },
     "architecture": {
       "modality": "text->text",
@@ -3056,7 +2940,7 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000004",
-      "completion": "0.00000016",
+      "completion": "0.00000032",
       "input_cache_read": "0.000000016"
     },
     "architecture": {
@@ -3205,9 +3089,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000899058",
+      "completion": "0.000001798116",
+      "input_cache_read": "0.0000000749215"
     },
     "architecture": {
       "modality": "text->text",
@@ -5296,9 +5180,9 @@
     "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000015",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000006",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -5791,8 +5675,8 @@
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000072",
-      "completion": "0.00000072"
+      "prompt": "0.0000004",
+      "completion": "0.0000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -5807,8 +5691,8 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 8192,
-      "is_moderated": true
+      "max_completion_tokens": 16384,
+      "is_moderated": false
     }
   },
   {
@@ -6570,38 +6454,6 @@
     "top_provider": {
       "context_length": 524288,
       "max_completion_tokens": 512000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
-    "id": "minimax/minimax-m3:batch",
-    "name": "MiniMax: MiniMax M3 (batch)",
-    "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
-    "context_length": 524288,
-    "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.00000006"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 524288,
-      "max_completion_tokens": 471859,
       "is_moderated": false
     },
     "reasoning": {
@@ -7499,45 +7351,6 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000017",
-      "completion": "0.0000085",
-      "input_cache_read": "0.00000017"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "low"
-      ],
-      "default_effort": "max"
-    }
-  },
-  {
-    "id": "moonshotai/kimi-k3:batch",
-    "name": "MoonshotAI: Kimi K3 (batch)",
-    "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
-    "context_length": 1048576,
-    "pricing": {
       "prompt": "0.000003",
       "completion": "0.000015",
       "input_cache_read": "0.0000003"
@@ -7782,8 +7595,9 @@
     "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000024"
+      "prompt": "0.00000005",
+      "completion": "0.0000002",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -11132,41 +10946,6 @@
     }
   },
   {
-    "id": "openai/gpt-oss-120b:batch",
-    "name": "OpenAI: gpt-oss-120b (batch)",
-    "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
     "id": "openai/gpt-oss-20b",
     "name": "OpenAI: gpt-oss-20b",
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
@@ -13208,37 +12987,6 @@
     }
   },
   {
-    "id": "qwen/qwen3.5-9b:batch",
-    "name": "Qwen: Qwen3.5-9B (batch)",
-    "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000017",
-      "completion": "0.00000025"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "qwen/qwen3.5-flash-02-23",
     "name": "Qwen: Qwen3.5-Flash",
     "description": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the...",
@@ -13695,51 +13443,14 @@
     }
   },
   {
-    "id": "qwen/qwen3.8-2.4t-a95b:batch",
-    "name": "Qwen: Qwen3.8 2.4T A95B (batch)",
-    "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
-    "context_length": 1010000,
-    "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.000006",
-      "input_cache_read": "0.00000025"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1010000,
-      "max_completion_tokens": 909000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "default_enabled": true,
-      "supported_efforts": [
-        "xhigh",
-        "medium",
-        "low"
-      ],
-      "default_effort": "xhigh"
-    }
-  },
-  {
     "id": "qwen/qwen3.8-27b",
     "name": "Qwen: Qwen3.8 27B",
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000042",
+      "completion": "0.000003",
+      "input_cache_read": "0.000000085"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13755,7 +13466,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 1000000,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14429,9 +14140,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -14739,48 +14450,6 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 262144,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "medium",
-        "low",
-        "minimal",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "thinkingmachines/inkling:batch",
-    "name": "Thinking Machines: Inkling (batch)",
-    "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-    "context_length": 524288,
-    "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.00000405",
-      "input_cache_read": "0.00000017"
-    },
-    "architecture": {
-      "modality": "text+image+audio->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 524288,
-      "max_completion_tokens": 471859,
       "is_moderated": false
     },
     "reasoning": {
@@ -15238,7 +14907,7 @@
   {
     "id": "x-ai/grok-4.6",
     "name": "SpaceXAI: Grok 4.6",
-    "description": "Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM.",
+    "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.000002",
@@ -15251,6 +14920,55 @@
           "prompt": "0.000004",
           "completion": "0.000012",
           "input_cache_read": "0.000001"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Grok",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 500000,
+      "max_completion_tokens": 450000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "x-ai/grok-4.7",
+    "name": "SpaceXAI: Grok 4.7",
+    "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
+    "context_length": 500000,
+    "pricing": {
+      "prompt": "0.0000016",
+      "completion": "0.0000048",
+      "web_search": "0.005",
+      "input_cache_read": "0.0000004",
+      "overrides": [
+        {
+          "min_prompt_tokens": 200000,
+          "prompt": "0.0000032",
+          "completion": "0.0000096",
+          "input_cache_read": "0.0000008"
         }
       ]
     },
@@ -15372,6 +15090,105 @@
       "modality": "text->text",
       "input_modalities": [
         "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-flash",
+    "name": "Xiaomi: MiMo-V2.6-Flash",
+    "description": "MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000014",
+      "completion": "0.00000028",
+      "input_cache_read": "0.0000000028"
+    },
+    "architecture": {
+      "modality": "text+image+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-pro",
+    "name": "Xiaomi: MiMo-V2.6-Pro",
+    "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000000435",
+      "completion": "0.00000087",
+      "input_cache_read": "0.0000000036"
+    },
+    "architecture": {
+      "modality": "text+image+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+    "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
+    "description": "MiMo-V2.6-Pro-UltraSpeed is the fast speed edition of Xiaomi's flagship foundation model, MiMo-V2.6-Pro. Built from the same 1T MiMo-V2.6-Pro checkpoint, it matches the original model in quality while delivering roughly 10x...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000435",
+      "completion": "0.0000087",
+      "input_cache_read": "0.000000036"
+    },
+    "architecture": {
+      "modality": "text+image+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
       ],
       "output_modalities": [
         "text"
@@ -15845,9 +15662,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.000000018"
+      "prompt": "0.000000075",
+      "completion": "0.00000025",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15864,7 +15681,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 102400,
       "is_moderated": false
     },
     "reasoning": {
