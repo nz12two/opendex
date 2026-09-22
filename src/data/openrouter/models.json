@@ -209,9 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000558624",
-      "completion": "0.000001675872",
-      "input_cache_read": "0.0000000186208"
+      "prompt": "0.000000624",
+      "completion": "0.00000288",
+      "input_cache_read": "0.000000088"
     },
     "architecture": {
       "modality": "text->text",
@@ -225,8 +225,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -246,7 +246,7 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.00000003",
-      "completion": "0.0000008",
+      "completion": "0.000001",
       "input_cache_read": "0.000000008"
     },
     "architecture": {
@@ -728,7 +728,7 @@
     "pricing": {
       "prompt": "0.000000075",
       "completion": "0.00000025",
-      "input_cache_read": "0.00000002"
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -745,7 +745,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 102400,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -765,9 +765,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000007826",
-      "completion": "0.0000024596",
-      "input_cache_read": "0.00000014534"
+      "prompt": "0.0000006545",
+      "completion": "0.000002057",
+      "input_cache_read": "0.000000107525"
     },
     "architecture": {
       "modality": "text->text",
@@ -782,7 +782,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3124,9 +3124,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
       "overrides": [
         {
           "utc_days": [
@@ -3277,9 +3277,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
       "overrides": [
         {
           "utc_days": [
@@ -5529,33 +5529,6 @@
     }
   },
   {
-    "id": "kwaipilot/kat-coder-pro-v2",
-    "name": "Kwaipilot: KAT-Coder-Pro V2",
-    "description": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions,...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.00000006"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 144000,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "kwaipilot/kat-coder-pro-v2.5",
     "name": "Kwaipilot: KAT-Coder-Pro V2.5",
     "description": "KAT-Coder-Pro V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make...",
@@ -7320,7 +7293,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000007062",
-      "completion": "0.00000321",
+      "completion": "0.0000033",
       "input_cache_read": "0.00000018"
     },
     "architecture": {
@@ -7437,6 +7410,43 @@
     }
   },
   {
+    "id": "nex-agi/nex-n2.5-mini",
+    "name": "Nex AGI: Nex-N2.5-Mini",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000025",
+      "completion": "0.0000001",
+      "input_cache_read": "0.0000000025"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "nex-agi/nex-n2.5-mini:free",
     "name": "Nex AGI: Nex-N2.5-Mini (free)",
     "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
@@ -7444,6 +7454,43 @@
     "pricing": {
       "prompt": "0",
       "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "nex-agi/nex-n2.5-pro",
+    "name": "Nex AGI: Nex-N2.5-Pro",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12622,8 +12669,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 32768,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
