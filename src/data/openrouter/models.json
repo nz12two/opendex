@@ -209,9 +209,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000624",
-      "completion": "0.00000288",
-      "input_cache_read": "0.000000088"
+      "prompt": "0.00000056364",
+      "completion": "0.00000169092",
+      "input_cache_read": "0.000000018788"
     },
     "architecture": {
       "modality": "text->text",
@@ -225,8 +225,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -765,9 +765,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000006545",
-      "completion": "0.000002057",
-      "input_cache_read": "0.000000107525"
+      "prompt": "0.0000006538",
+      "completion": "0.0000020548",
+      "input_cache_read": "0.00000012142"
     },
     "architecture": {
       "modality": "text->text",
@@ -782,7 +782,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -800,7 +800,7 @@
     "id": "aion-labs/aion-2.0",
     "name": "AionLabs: Aion-2.0",
     "description": "Aion-2.0 is a variant of DeepSeek V3.2 optimized for immersive roleplaying and storytelling. It is particularly strong at introducing tension, crises, and conflict into stories, making narratives feel more engaging....",
-    "context_length": 131072,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000008",
       "completion": "0.0000016",
@@ -818,7 +818,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 1048576,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -830,7 +830,7 @@
     "id": "aion-labs/aion-3.0",
     "name": "AionLabs: Aion-3.0",
     "description": "Aion-3.0 is a multi-model roleplaying and storytelling system from AionLabs, built on the GLM family of models. It uses a collaborative generation process in which multiple specialized models each contribute...",
-    "context_length": 131072,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.000003",
       "completion": "0.000006",
@@ -848,7 +848,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 1048576,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -860,7 +860,7 @@
     "id": "aion-labs/aion-3.0-mini",
     "name": "AionLabs: Aion-3.0-Mini",
     "description": "Aion-3.0 Mini is a multi-model roleplaying and storytelling system from AionLabs, built on the DeepSeek family of models. It uses a collaborative generation process in which multiple specialized models each...",
-    "context_length": 131072,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000007",
       "completion": "0.0000014",
@@ -878,7 +878,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 1048576,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -2904,9 +2904,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000088606",
-      "completion": "0.000000177212",
-      "input_cache_read": "0.0000000177212"
+      "prompt": "0.000000049",
+      "completion": "0.000000098",
+      "input_cache_read": "0.0000000098"
     },
     "architecture": {
       "modality": "text->text",
@@ -2942,43 +2942,6 @@
       "prompt": "0.00000004",
       "completion": "0.00000064",
       "input_cache_read": "0.000000016"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "DeepSeek",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "deepseek/deepseek-v4-flash-0731:batch",
-    "name": "DeepSeek: DeepSeek V4 Flash 0731 (batch)",
-    "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.00000011",
-      "completion": "0.00000033",
-      "input_cache_read": "0.0000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -3046,52 +3009,14 @@
     }
   },
   {
-    "id": "deepseek/deepseek-v4-flash-vision-exp:batch",
-    "name": "DeepSeek: DeepSeek V4 Flash Vision Exp (batch)",
-    "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.00000011",
-      "completion": "0.00000033",
-      "input_cache_read": "0.0000000035"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "DeepSeek",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "deepseek/deepseek-v4-pro",
     "name": "DeepSeek: DeepSeek V4 Pro 0423",
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000927768",
+      "completion": "0.000001855536",
+      "input_cache_read": "0.000000077314"
     },
     "architecture": {
       "modality": "text->text",
@@ -3236,42 +3161,6 @@
     }
   },
   {
-    "id": "deepseek/deepseek-v4-pro-0813:batch",
-    "name": "DeepSeek: DeepSeek V4 Pro 0813 (batch)",
-    "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "DeepSeek",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "supported_efforts": [
-        "max",
-        "high",
-        "low"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "deepseek/deepseek-v4.1-flash",
     "name": "DeepSeek: DeepSeek V4.1 Flash",
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
@@ -3377,6 +3266,44 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 384000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash:batch",
+    "name": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+    "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000000112",
+      "completion": "0.000000336",
+      "input_cache_read": "0.00000000336"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "DeepSeek",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -5893,44 +5820,6 @@
     }
   },
   {
-    "id": "meta/muse-glimmer-30b:batch",
-    "name": "Meta: Muse Glimmer 30B (batch)",
-    "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.000000175",
-      "completion": "0.00000075",
-      "input_cache_read": "0.00000002"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
     "id": "meta/muse-spark-1.1",
     "name": "Meta: Muse Spark 1.1",
     "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context...",
@@ -7344,6 +7233,45 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
+    }
+  },
+  {
+    "id": "moonshotai/kimi-k3:batch",
+    "name": "MoonshotAI: Kimi K3 (batch)",
+    "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000228",
+      "completion": "0.0000114",
+      "input_cache_read": "0.000000228"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -10998,9 +10926,43 @@
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000003",
-      "completion": "0.00000013",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000018",
+      "completion": "0.00000009"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-oss-20b:batch",
+    "name": "OpenAI: gpt-oss-20b (batch)",
+    "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.000000024",
+      "completion": "0.000000112"
     },
     "architecture": {
       "modality": "text->text",
@@ -13148,9 +13110,9 @@
     "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000032",
+      "completion": "0.0000027",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13167,7 +13129,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 262140,
       "is_moderated": false
     },
     "reasoning": {
@@ -14187,9 +14149,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15596,42 +15558,6 @@
     }
   },
   {
-    "id": "z-ai/glm-5.2:batch",
-    "name": "Z.ai: GLM 5.2 (batch)",
-    "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.0000007",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000007"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "xhigh",
-        "high"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "z-ai/glm-5.2:free",
     "name": "Z.ai: GLM 5.2 (free)",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
@@ -15672,9 +15598,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000084",
-      "completion": "0.00000264",
-      "input_cache_read": "0.000000156"
+      "prompt": "0.0000006538",
+      "completion": "0.0000020548",
+      "input_cache_read": "0.00000012142"
     },
     "architecture": {
       "modality": "text->text",
@@ -15748,9 +15674,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000006",
+      "completion": "0.0000002",
+      "input_cache_read": "0.000000012"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15767,7 +15693,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -15826,9 +15752,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000013"
+      "prompt": "0.00000072",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -15843,7 +15769,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
