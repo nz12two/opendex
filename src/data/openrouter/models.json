@@ -244,9 +244,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000003",
-      "completion": "0.0000008",
-      "input_cache_read": "0.000000008"
+      "prompt": "0.000000038",
+      "completion": "0.00000055",
+      "input_cache_read": "0.0000000228"
     },
     "architecture": {
       "modality": "text->text",
@@ -3165,90 +3165,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.000000498696",
+      "completion": "0.000001496088",
+      "input_cache_read": "0.0000000166232"
     },
     "architecture": {
       "modality": "text->text",
@@ -3262,7 +3181,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
+      "context_length": 1024000,
       "max_completion_tokens": 384000,
       "is_moderated": false
     },
@@ -3282,9 +3201,90 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
+      "overrides": [
+        {
+          "utc_days": [
+            "saturday",
+            "sunday"
+          ],
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 0,
+          "utc_end": 100,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 1000,
+          "utc_end": 0,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3300,7 +3300,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -7876,7 +7876,7 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000007",
+      "prompt": "0.00000008",
       "completion": "0.0000002",
       "input_cache_read": "0.00000004"
     },
@@ -7893,7 +7893,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
