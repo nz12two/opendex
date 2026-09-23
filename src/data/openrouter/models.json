@@ -208,9 +208,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000039996",
-      "completion": "0.00000119988",
-      "input_cache_read": "0.000000012726"
+      "prompt": "0.000000389",
+      "completion": "0.0000029",
+      "input_cache_read": "0.00000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -225,7 +225,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3092,9 +3092,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008246",
-      "completion": "0.00000016492",
-      "input_cache_read": "0.000000016492"
+      "prompt": "0.00000007784",
+      "completion": "0.00000015568",
+      "input_cache_read": "0.000000015568"
     },
     "architecture": {
       "modality": "text->text",
@@ -3202,9 +3202,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000953172",
-      "completion": "0.000001906344",
-      "input_cache_read": "0.000000079431"
+      "prompt": "0.000000946386",
+      "completion": "0.000001892772",
+      "input_cache_read": "0.0000000788655"
     },
     "architecture": {
       "modality": "text->text",
@@ -5366,7 +5366,7 @@
     "id": "inclusionai/ling-3.0-flash-vl",
     "name": "inclusionAI: Ling 3.0 Flash VL",
     "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
-    "context_length": 131072,
+    "context_length": 262144,
     "pricing": {
       "prompt": "0.00000006",
       "completion": "0.00000018",
@@ -5387,38 +5387,6 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true
-    }
-  },
-  {
-    "id": "inclusionai/ling-3.0-flash-vl:free",
-    "name": "inclusionAI: Ling 3.0 Flash VL (free)",
-    "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -14028,6 +13996,47 @@
     }
   },
   {
+    "id": "qwen/qwen3.8-max-prime",
+    "name": "Qwen: Qwen3.8 Max Prime",
+    "description": "Qwen3.8 Max Prime is a higher-throughput variant of Qwen3.8 Max from Alibaba's Qwen team, served as a separate SKU at a higher price point. It accepts text, image, and video...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.000012",
+      "input_cache_read": "0.0000005"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "xhigh"
+    }
+  },
+  {
     "id": "qwen/qwen3.8-omni-flash",
     "name": "Qwen: Qwen3.8 Omni Flash",
     "description": "Qwen3.8 Omni Flash is an omni-modal reasoning model from Alibaba, the first Qwen model built around agentic capabilities with native audio-video understanding. It is suited for audio-video analysis and summarization,...",
@@ -14424,6 +14433,45 @@
       "context_length": 131072,
       "max_completion_tokens": 16384,
       "is_moderated": false
+    }
+  },
+  {
+    "id": "stealth/space-bunny-alpha",
+    "name": "Space Bunny Alpha",
+    "description": "Space Bunny Alpha is an anonymous large model with blazing-fast inference, strong coding capabilities and native multimodal input support. It delivers adjustable reasoning effort, and a 1M-token context window. Space...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 524288,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "max"
     }
   },
   {
@@ -16213,7 +16261,7 @@
     "pricing": {
       "prompt": "0.00000037",
       "completion": "0.00000125",
-      "input_cache_read": "0.000000075"
+      "input_cache_read": "0.00000009"
     },
     "architecture": {
       "modality": "text+image+video->text",
