@@ -170,9 +170,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000099",
-      "completion": "0.0000006",
-      "input_cache_read": "0.00000006"
+      "prompt": "0.00000004",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -208,7 +208,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003865",
+      "prompt": "0.00000039",
       "completion": "0.0000029",
       "input_cache_read": "0.00000025"
     },
@@ -244,9 +244,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000038",
-      "completion": "0.00000055",
-      "input_cache_read": "0.0000000228"
+      "prompt": "0.00000003",
+      "completion": "0.00000032",
+      "input_cache_read": "0.000000016"
     },
     "architecture": {
       "modality": "text->text",
@@ -384,9 +384,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000091",
-      "completion": "0.0000069875",
-      "input_cache_read": "0.000000195"
+      "prompt": "0.0000014",
+      "completion": "0.00001075",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -725,9 +725,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.000000045",
+      "completion": "0.00000014",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -744,7 +744,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
@@ -3127,8 +3127,8 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.00000064",
+      "prompt": "0.00000003",
+      "completion": "0.00000032",
       "input_cache_read": "0.000000016"
     },
     "architecture": {
@@ -3371,6 +3371,44 @@
     },
     "reasoning": {
       "mandatory": false
+    }
+  },
+  {
+    "id": "fireworks/ember-1",
+    "name": "Fireworks: Ember-1",
+    "description": "Ember-1 is a specialized reasoning model from Fireworks Research, built on [Kimi K3](https://openrouter.ai/moonshotai/kimi-k3). It is designed to make every token go further: it produces shorter reasoning traces, using roughly 40%...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000003",
+      "completion": "0.000015",
+      "input_cache_read": "0.0000003"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
     }
   },
   {
@@ -7147,7 +7185,7 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000007062",
+      "prompt": "0.0000006562",
       "completion": "0.0000033",
       "input_cache_read": "0.00000018"
     },
@@ -7304,43 +7342,6 @@
     }
   },
   {
-    "id": "nex-agi/nex-n2.5-mini",
-    "name": "Nex AGI: Nex-N2.5-Mini",
-    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000025",
-      "completion": "0.0000001",
-      "input_cache_read": "0.0000000025"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "nex-agi/nex-n2.5-mini:free",
     "name": "Nex AGI: Nex-N2.5-Mini (free)",
     "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
@@ -7348,43 +7349,6 @@
     "pricing": {
       "prompt": "0",
       "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "nex-agi/nex-n2.5-pro",
-    "name": "Nex AGI: Nex-N2.5-Pro",
-    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12645,8 +12609,8 @@
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000004815",
-      "completion": "0.00000019305"
+      "prompt": "0.0000001",
+      "completion": "0.0000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -12660,8 +12624,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32000,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
