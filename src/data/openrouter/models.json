@@ -170,9 +170,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.00000049",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -209,7 +209,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000002528",
-      "completion": "0.00000288",
+      "completion": "0.0000019584",
       "input_cache_read": "0.00000008832"
     },
     "architecture": {
@@ -3092,9 +3092,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000049",
-      "completion": "0.000000098",
-      "input_cache_read": "0.0000000098"
+      "prompt": "0.00000004816",
+      "completion": "0.00000009632",
+      "input_cache_read": "0.000000009632"
     },
     "architecture": {
       "modality": "text->text",
@@ -3202,9 +3202,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000783",
-      "completion": "0.000001566",
-      "input_cache_read": "0.00000006525"
+      "prompt": "0.000000723144",
+      "completion": "0.000001446288",
+      "input_cache_read": "0.000000060262"
     },
     "architecture": {
       "modality": "text->text",
@@ -3237,9 +3237,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000462",
-      "completion": "0.000001386",
-      "input_cache_read": "0.0000000154"
+      "prompt": "0.00000034584",
+      "completion": "0.00000103752",
+      "input_cache_read": "0.000000011528"
     },
     "architecture": {
       "modality": "text->text",
@@ -3273,90 +3273,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000003",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000015",
-          "completion": "0.0000006",
-          "input_cache_read": "0.000000003"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000015",
-          "completion": "0.0000006",
-          "input_cache_read": "0.000000003"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.0000003",
-          "completion": "0.0000012",
-          "input_cache_read": "0.000000006"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000015",
-          "completion": "0.0000006",
-          "input_cache_read": "0.000000003"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.0000003",
-          "completion": "0.0000012",
-          "input_cache_read": "0.000000006"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000015",
-          "completion": "0.0000006",
-          "input_cache_read": "0.000000003"
-        }
-      ]
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3372,7 +3291,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5014,9 +4933,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5487,9 +5406,9 @@
     "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000018",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.000000021",
+      "completion": "0.0000000616",
+      "input_cache_read": "0.0000000042"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5505,7 +5424,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 262144,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -7480,78 +7399,6 @@
     }
   },
   {
-    "id": "nex-agi/nex-n2.5-mini:free",
-    "name": "Nex AGI: Nex-N2.5-Mini (free)",
-    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "nex-agi/nex-n2.5-pro:free",
-    "name": "Nex AGI: Nex-N2.5-Pro (free)",
-    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "nousresearch/hermes-3-llama-3.1-405b",
     "name": "Nous: Hermes 3 405B Instruct",
     "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the...",
@@ -7907,9 +7754,9 @@
     "id": "nvidia/nemotron-3.5-lightning",
     "name": "NVIDIA: Nemotron 3.5 Lightning",
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
-    "context_length": 262144,
+    "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000008",
+      "prompt": "0.00000007",
       "completion": "0.0000002",
       "input_cache_read": "0.00000004"
     },
@@ -7926,7 +7773,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -14792,9 +14639,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -16245,7 +16092,7 @@
     "id": "z-ai/glm-5.2:free",
     "name": "Z.ai: GLM 5.2 (free)",
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
-    "context_length": 32768,
+    "context_length": 131072,
     "pricing": {
       "prompt": "0",
       "completion": "0"
@@ -16262,8 +16109,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 32768,
-      "max_completion_tokens": 29491,
+      "context_length": 131072,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
