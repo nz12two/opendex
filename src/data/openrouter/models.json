@@ -149,11 +149,10 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
+      "mandatory": true,
       "supported_efforts": [
         "max",
         "xhigh",
@@ -170,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000035",
-      "completion": "0.00000029",
-      "input_cache_read": "0.000000001"
+      "prompt": "0.00000006",
+      "completion": "0.00000039",
+      "input_cache_read": "0.000000005"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -244,9 +243,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.000000021",
-      "completion": "0.00000032",
-      "input_cache_read": "0.000000016"
+      "prompt": "0.000000019",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000014"
     },
     "architecture": {
       "modality": "text->text",
@@ -384,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000009",
-      "input_cache_read": "0.0000003"
+      "prompt": "0.000000875",
+      "completion": "0.0000112",
+      "input_cache_read": "0.00000029"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -676,16 +675,16 @@
     "description": "This model always redirects to the latest Grok model from xAI.",
     "context_length": 500000,
     "pricing": {
-      "prompt": "0.0000016",
-      "completion": "0.0000048",
+      "prompt": "0.000002",
+      "completion": "0.000006",
       "web_search": "0.005",
-      "input_cache_read": "0.0000004",
+      "input_cache_read": "0.0000005",
       "overrides": [
         {
           "min_prompt_tokens": 200000,
-          "prompt": "0.0000032",
-          "completion": "0.0000096",
-          "input_cache_read": "0.0000008"
+          "prompt": "0.000004",
+          "completion": "0.000012",
+          "input_cache_read": "0.000001"
         }
       ]
     },
@@ -764,9 +763,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000001785",
-      "completion": "0.000002805",
-      "input_cache_read": "0.000000146625"
+      "prompt": "0.00000015",
+      "completion": "0.0000033",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -781,7 +780,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -2277,6 +2276,92 @@
     }
   },
   {
+    "id": "anthropic/claude-sonnet-5.5",
+    "name": "Anthropic: Claude Sonnet 5.5",
+    "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade. It is especially strong at building features, fixing bugs, and producing...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.0000025",
+      "input_cache_write_1h": "0.000004"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "anthropic/claude-sonnet-5.5:batch",
+    "name": "Anthropic: Claude Sonnet 5.5 (batch)",
+    "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade. It is especially strong at building features, fixing bugs, and producing...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
+      "input_cache_write_1h": "0.000002"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "arcee-ai/trinity-large-thinking",
     "name": "Arcee AI: Trinity Large Thinking",
     "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
@@ -2938,43 +3023,13 @@
     }
   },
   {
-    "id": "deepseek/deepseek-r1-distill-llama-70b",
-    "name": "DeepSeek: R1 Distill Llama 70B",
-    "description": "DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across...",
-    "context_length": 8192,
-    "pricing": {
-      "prompt": "0.0000008",
-      "completion": "0.0000008"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Llama3",
-      "instruct_type": "deepseek-r1"
-    },
-    "top_provider": {
-      "context_length": 8192,
-      "max_completion_tokens": 7372,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "deepseek/deepseek-v3.1-terminus",
     "name": "DeepSeek: DeepSeek V3.1 Terminus",
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
     "context_length": 163840,
     "pricing": {
       "prompt": "0.00000027",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000135"
+      "completion": "0.000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -2988,8 +3043,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 32768,
+      "context_length": 163840,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3033,8 +3088,9 @@
     "description": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.00000041"
+      "prompt": "0.0000001344",
+      "completion": "0.0000002016",
+      "input_cache_read": "0.0000000672"
     },
     "architecture": {
       "modality": "text->text",
@@ -3049,7 +3105,7 @@
     },
     "top_provider": {
       "context_length": 163840,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3062,9 +3118,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008694",
-      "completion": "0.00000017388",
-      "input_cache_read": "0.000000017388"
+      "prompt": "0.00000004886",
+      "completion": "0.00000009772",
+      "input_cache_read": "0.000000009772"
     },
     "architecture": {
       "modality": "text->text",
@@ -3134,9 +3190,9 @@
     "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014"
+      "prompt": "0.0000002156",
+      "completion": "0.0000006468",
+      "input_cache_read": "0.00000000686"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3151,8 +3207,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -3172,9 +3228,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000953172",
-      "completion": "0.000001906344",
-      "input_cache_read": "0.000000079431"
+      "prompt": "0.000000783",
+      "completion": "0.000001566",
+      "input_cache_read": "0.00000006525"
     },
     "architecture": {
       "modality": "text->text",
@@ -3207,9 +3263,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003995",
+      "prompt": "0.0000003929",
       "completion": "0.0000042",
-      "input_cache_read": "0.000000399"
+      "input_cache_read": "0.0000003143"
     },
     "architecture": {
       "modality": "text->text",
@@ -3243,9 +3299,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000035",
-      "completion": "0.00000029",
-      "input_cache_read": "0.000000001"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3260,8 +3316,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1040000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -4903,9 +4959,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5303,36 +5359,6 @@
     "top_provider": {
       "context_length": 262144,
       "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true
-    }
-  },
-  {
-    "id": "inclusionai/ling-3.0-flash-fin:free",
-    "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
-    "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -7364,6 +7390,80 @@
     }
   },
   {
+    "id": "nex-agi/nex-n2.5-mini",
+    "name": "Nex AGI: Nex-N2.5-Mini",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000025",
+      "completion": "0.0000001",
+      "input_cache_read": "0.0000000025"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "nex-agi/nex-n2.5-pro",
+    "name": "Nex AGI: Nex-N2.5-Pro",
+    "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.00000025",
+      "input_cache_read": "0.000000015"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen3",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "nousresearch/hermes-3-llama-3.1-405b",
     "name": "Nous: Hermes 3 405B Instruct",
     "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the...",
@@ -7738,7 +7838,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -10105,18 +10205,18 @@
     "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.00001",
+      "prompt": "0.000004",
+      "completion": "0.00002",
       "web_search": "0.01",
-      "input_cache_read": "0.0000002",
-      "input_cache_write": "0.0000025",
+      "input_cache_read": "0.0000004",
+      "input_cache_write": "0.000005",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.000004",
-          "completion": "0.000015",
-          "input_cache_read": "0.0000004",
-          "input_cache_write": "0.000005"
+          "prompt": "0.000008",
+          "completion": "0.00003",
+          "input_cache_read": "0.0000008",
+          "input_cache_write": "0.00001"
         }
       ]
     },
@@ -10136,7 +10236,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -11266,7 +11366,8 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.000000018",
-      "completion": "0.00000009"
+      "completion": "0.00000009",
+      "input_cache_read": "0.000000009"
     },
     "architecture": {
       "modality": "text->text",
@@ -12241,7 +12342,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.000000075",
-      "completion": "0.0000005"
+      "completion": "0.0000005",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12599,8 +12701,8 @@
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000003"
+      "prompt": "0.00000004815",
+      "completion": "0.00000019305"
     },
     "architecture": {
       "modality": "text->text",
@@ -12614,8 +12716,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 128000,
+      "max_completion_tokens": 32000,
       "is_moderated": false
     }
   },
@@ -14642,9 +14744,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15532,16 +15634,16 @@
     "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
     "context_length": 500000,
     "pricing": {
-      "prompt": "0.0000016",
-      "completion": "0.0000048",
+      "prompt": "0.000002",
+      "completion": "0.000006",
       "web_search": "0.005",
-      "input_cache_read": "0.0000004",
+      "input_cache_read": "0.0000005",
       "overrides": [
         {
           "min_prompt_tokens": 200000,
-          "prompt": "0.0000032",
-          "completion": "0.0000096",
-          "input_cache_read": "0.0000008"
+          "prompt": "0.000004",
+          "completion": "0.000012",
+          "input_cache_read": "0.000001"
         }
       ]
     },
