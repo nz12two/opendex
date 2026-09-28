@@ -208,9 +208,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002523",
-      "completion": "0.0000035",
-      "input_cache_read": "0.0000002518"
+      "prompt": "0.00000022592",
+      "completion": "0.0000019584",
+      "input_cache_read": "0.00000008832"
     },
     "architecture": {
       "modality": "text->text",
@@ -764,7 +764,7 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000004522",
+      "prompt": "0.0000001785",
       "completion": "0.000002805",
       "input_cache_read": "0.000000146625"
     },
@@ -3062,9 +3062,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000028",
-      "input_cache_read": "0.000000028"
+      "prompt": "0.00000008694",
+      "completion": "0.00000017388",
+      "input_cache_read": "0.000000017388"
     },
     "architecture": {
       "modality": "text->text",
@@ -3172,9 +3172,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000953172",
+      "completion": "0.000001906344",
+      "input_cache_read": "0.000000079431"
     },
     "architecture": {
       "modality": "text->text",
@@ -3207,9 +3207,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002523",
-      "completion": "0.0000035",
-      "input_cache_read": "0.0000002518"
+      "prompt": "0.0000003995",
+      "completion": "0.0000042",
+      "input_cache_read": "0.000000399"
     },
     "architecture": {
       "modality": "text->text",
@@ -4903,9 +4903,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000675",
-      "completion": "0.000000225",
-      "input_cache_read": "0.0000000375"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5824,7 +5824,7 @@
   {
     "id": "meta/muse-spark-1.1",
     "name": "Meta: Muse Spark 1.1",
-    "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context...",
+    "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, and PDF documents and returns text, with a 1M-token context window....",
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000125",
@@ -5833,13 +5833,12 @@
       "input_cache_read": "0.00000015"
     },
     "architecture": {
-      "modality": "text+image+file+audio+video->text",
+      "modality": "text+image+file+video->text",
       "input_modalities": [
         "text",
         "image",
         "video",
-        "file",
-        "audio"
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -5867,7 +5866,7 @@
   {
     "id": "meta/muse-spark-1.2",
     "name": "Meta: Muse Spark 1.2",
-    "description": "Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, audio, and PDF documents, returns text, and offers a 1M-token context...",
+    "description": "Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, and PDF documents, returns text, and offers a 1M-token context window....",
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000125",
@@ -5876,13 +5875,12 @@
       "input_cache_read": "0.00000015"
     },
     "architecture": {
-      "modality": "text+image+file+audio+video->text",
+      "modality": "text+image+file+video->text",
       "input_modalities": [
         "text",
         "image",
         "video",
-        "file",
-        "audio"
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -5919,13 +5917,12 @@
       "input_cache_read": "0.000000002"
     },
     "architecture": {
-      "modality": "text+image+file+audio+video->text",
+      "modality": "text+image+file+video->text",
       "input_modalities": [
         "text",
         "image",
         "video",
-        "file",
-        "audio"
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -5962,13 +5959,12 @@
       "input_cache_read": "0.00000015"
     },
     "architecture": {
-      "modality": "text+image+file+audio+video->text",
+      "modality": "text+image+file+video->text",
       "input_modalities": [
         "text",
         "image",
         "video",
-        "file",
-        "audio"
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -6006,13 +6002,12 @@
       "input_cache_read": "0.000000002"
     },
     "architecture": {
-      "modality": "text+image+file+audio+video->text",
+      "modality": "text+image+file+video->text",
       "input_modalities": [
         "text",
         "image",
         "video",
-        "file",
-        "audio"
+        "file"
       ],
       "output_modalities": [
         "text"
@@ -7180,9 +7175,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000004",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.00000065",
+      "completion": "0.00000341",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -16065,9 +16060,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000014",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.0000009646",
+      "completion": "0.0000030316",
+      "input_cache_read": "0.00000017914"
     },
     "architecture": {
       "modality": "text->text",
