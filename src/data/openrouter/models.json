@@ -207,7 +207,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000022592",
+      "prompt": "0.000000096",
       "completion": "0.0000019584",
       "input_cache_read": "0.00000007488"
     },
@@ -244,7 +244,7 @@
     "context_length": 1310720,
     "pricing": {
       "prompt": "0.000000012",
-      "completion": "0.0000004",
+      "completion": "0.00000125",
       "input_cache_read": "0.00000001"
     },
     "architecture": {
@@ -383,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000006795",
-      "completion": "0.0000087934",
-      "input_cache_read": "0.0000003"
+      "prompt": "0.0000004",
+      "completion": "0.00001",
+      "input_cache_read": "0.0000004"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -763,9 +763,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1310720,
     "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.0000034",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.00000019",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text->text",
@@ -780,7 +780,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3089,9 +3089,8 @@
     "description": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.0000001344",
-      "completion": "0.0000002016",
-      "input_cache_read": "0.0000000672"
+      "prompt": "0.00000027",
+      "completion": "0.00000041"
     },
     "architecture": {
       "modality": "text->text",
@@ -3264,9 +3263,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000004",
+      "prompt": "0.00000048",
       "completion": "0.0000042",
-      "input_cache_read": "0.00000032"
+      "input_cache_read": "0.000000384"
     },
     "architecture": {
       "modality": "text->text",
@@ -4960,9 +4959,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7820,7 +7819,7 @@
     "id": "nvidia/nemotron-3.5-lightning",
     "name": "NVIDIA: Nemotron 3.5 Lightning",
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
-    "context_length": 1000000,
+    "context_length": 262144,
     "pricing": {
       "prompt": "0.00000006",
       "completion": "0.00000016",
@@ -11295,9 +11294,8 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000075"
+      "prompt": "0.000000037",
+      "completion": "0.00000017"
     },
     "architecture": {
       "modality": "text->text",
@@ -11312,7 +11310,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
@@ -12672,8 +12670,8 @@
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000013",
-      "completion": "0.00000052"
+      "prompt": "0.00000012",
+      "completion": "0.0000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -12687,8 +12685,8 @@
       "instruct_type": "qwen3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 8192,
+      "context_length": 40960,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -13345,7 +13343,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -13938,9 +13936,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000000449",
+      "prompt": "0.0000000428",
       "completion": "0.0000044",
-      "input_cache_read": "0.0000000359"
+      "input_cache_read": "0.0000000342"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16194,9 +16192,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003249",
+      "prompt": "0.0000001949",
       "completion": "0.0000044",
-      "input_cache_read": "0.0000002599"
+      "input_cache_read": "0.0000001559"
     },
     "architecture": {
       "modality": "text->text",
