@@ -383,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003654",
-      "completion": "0.0000091343",
-      "input_cache_read": "0.0000004"
+      "prompt": "0.00000029",
+      "completion": "0.000009",
+      "input_cache_read": "0.00000028"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3117,9 +3117,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000008176",
-      "completion": "0.00000016352",
-      "input_cache_read": "0.000000016352"
+      "prompt": "0.00000007854",
+      "completion": "0.00000015708",
+      "input_cache_read": "0.000000015708"
     },
     "architecture": {
       "modality": "text->text",
@@ -3133,8 +3133,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1024000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -12958,8 +12958,8 @@
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000013",
-      "completion": "0.00000052"
+      "prompt": "0.00000012",
+      "completion": "0.0000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -12973,8 +12973,8 @@
       "instruct_type": "qwen3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 8192,
+      "context_length": 40960,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -14225,7 +14225,7 @@
     "context_length": 1000000,
     "pricing": {
       "prompt": "0.0000000249",
-      "completion": "0.00000435",
+      "completion": "0.00000299",
       "input_cache_read": "0.0000000199"
     },
     "architecture": {
@@ -15031,9 +15031,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15121,9 +15121,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16465,9 +16465,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000014",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.0000009646",
+      "completion": "0.0000030316",
+      "input_cache_read": "0.00000017914"
     },
     "architecture": {
       "modality": "text->text",
@@ -16496,7 +16496,7 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000041",
+      "prompt": "0.000000432",
       "completion": "0.00000399",
       "input_cache_read": "0.00000026"
     },
