@@ -169,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000243",
+      "prompt": "0.0000000264",
       "completion": "0.0000006",
-      "input_cache_read": "0.0000000243"
+      "input_cache_read": "0.0000000264"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -207,9 +207,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001853",
-      "completion": "0.0000035",
-      "input_cache_read": "0.0000001853"
+      "prompt": "0.00000015312",
+      "completion": "0.00000045936",
+      "input_cache_read": "0.000000004872"
     },
     "architecture": {
       "modality": "text->text",
@@ -383,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000006845",
+      "prompt": "0.000000415",
       "completion": "0.00001",
-      "input_cache_read": "0.0000006845"
+      "input_cache_read": "0.000000415"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -762,8 +762,8 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.000002694",
+      "prompt": "0.000000106",
+      "completion": "0.000002653",
       "input_cache_read": "0.000000176"
     },
     "architecture": {
@@ -2361,6 +2361,35 @@
     }
   },
   {
+    "id": "apodex/apodex-1.1-mini:free",
+    "name": "Apodex: Apodex 1.1 Mini (free)",
+    "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
     "id": "arcee-ai/trinity-large-thinking",
     "name": "Arcee AI: Trinity Large Thinking",
     "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
@@ -2927,8 +2956,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 147456,
+      "context_length": 128000,
+      "max_completion_tokens": 115200,
       "is_moderated": false
     }
   },
@@ -5039,9 +5068,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7344,9 +7373,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000006845",
+      "prompt": "0.000000415",
       "completion": "0.00001",
-      "input_cache_read": "0.0000006845"
+      "input_cache_read": "0.000000415"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14926,9 +14955,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15016,9 +15045,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -15363,6 +15392,34 @@
     },
     "top_provider": {
       "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "unbiased/pareto-26.10-preview",
+    "name": "Pareto 26.10 Preview",
+    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.0000008",
+      "completion": "0.0000032",
+      "input_cache_read": "0.00000003"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
       "max_completion_tokens": 131072,
       "is_moderated": false
     }
