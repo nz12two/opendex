@@ -169,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000198",
+      "prompt": "0.000000015543",
       "completion": "0.000000396",
-      "input_cache_read": "0.00000000291"
+      "input_cache_read": "0.000000002851"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -207,9 +207,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000123",
+      "prompt": "0.0000002664",
       "completion": "0.0000035",
-      "input_cache_read": "0.000000123"
+      "input_cache_read": "0.0000002664"
     },
     "architecture": {
       "modality": "text->text",
@@ -243,7 +243,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000099",
+      "prompt": "0.000000004455",
       "completion": "0.00000013068",
       "input_cache_read": "0.000000001386"
     },
@@ -383,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001941",
-      "completion": "0.0000073625",
-      "input_cache_read": "0.0000004"
+      "prompt": "0.00000038",
+      "completion": "0.00001",
+      "input_cache_read": "0.00000038"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -762,9 +762,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000013",
+      "prompt": "0.0000001328",
       "completion": "0.000004",
-      "input_cache_read": "0.00000013"
+      "input_cache_read": "0.0000001328"
     },
     "architecture": {
       "modality": "text->text",
@@ -3117,9 +3117,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007854",
-      "completion": "0.00000015708",
-      "input_cache_read": "0.000000015708"
+      "prompt": "0.000000042",
+      "completion": "0.000000084",
+      "input_cache_read": "0.0000000084"
     },
     "architecture": {
       "modality": "text->text",
@@ -3152,9 +3152,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000001",
+      "prompt": "0.0000000171",
       "completion": "0.00000128",
-      "input_cache_read": "0.00000001"
+      "input_cache_read": "0.0000000171"
     },
     "architecture": {
       "modality": "text->text",
@@ -3227,9 +3227,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000783",
-      "completion": "0.000001566",
-      "input_cache_read": "0.00000006525"
+      "prompt": "0.000000255084",
+      "completion": "0.000000510168",
+      "input_cache_read": "0.000000021257"
     },
     "architecture": {
       "modality": "text->text",
@@ -3379,9 +3379,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000198",
+      "prompt": "0.000000015543",
       "completion": "0.000000396",
-      "input_cache_read": "0.00000000291"
+      "input_cache_read": "0.000000002851"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6224,7 +6224,7 @@
     "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000004",
+      "prompt": "0.00000055",
       "completion": "0.0000022"
     },
     "architecture": {
@@ -7219,8 +7219,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000006",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000015"
+      "completion": "0.0000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -7235,7 +7234,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 98304,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -7345,9 +7344,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000003",
-      "completion": "0.000015",
-      "input_cache_read": "0.0000003"
+      "prompt": "0.00000038",
+      "completion": "0.00001",
+      "input_cache_read": "0.00000038"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7901,9 +7900,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000016",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000595",
+      "completion": "0.00000017",
+      "input_cache_read": "0.00000002975"
     },
     "architecture": {
       "modality": "text->text",
@@ -7918,7 +7917,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 32768,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -11348,110 +11347,6 @@
           "completion": "0.000015",
           "input_cache_read": "0.0000002",
           "input_cache_write": "0.000005"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "file",
-        "image",
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1050000,
-      "max_completion_tokens": 128000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "openai/gpt-6.1-sol-pro:batch",
-    "name": "OpenAI: GPT-6.1 Sol Pro (batch)",
-    "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-    "context_length": 1050000,
-    "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000005",
-      "web_search": "0.01",
-      "input_cache_read": "0.00000005",
-      "input_cache_write": "0.00000125",
-      "overrides": [
-        {
-          "min_prompt_tokens": 272000,
-          "prompt": "0.000002",
-          "completion": "0.0000075",
-          "input_cache_read": "0.0000001",
-          "input_cache_write": "0.0000025"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "file",
-        "image",
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1050000,
-      "max_completion_tokens": 128000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "openai/gpt-6.1-sol:batch",
-    "name": "OpenAI: GPT-6.1 Sol (batch)",
-    "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional...",
-    "context_length": 1050000,
-    "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000005",
-      "web_search": "0.01",
-      "input_cache_read": "0.00000005",
-      "input_cache_write": "0.00000125",
-      "overrides": [
-        {
-          "min_prompt_tokens": 272000,
-          "prompt": "0.000002",
-          "completion": "0.0000075",
-          "input_cache_read": "0.0000001",
-          "input_cache_write": "0.0000025"
         }
       ]
     },
@@ -15031,9 +14926,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15121,9 +15016,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16496,8 +16391,8 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000624",
-      "completion": "0.00000399",
+      "prompt": "0.0000014",
+      "completion": "0.0000044",
       "input_cache_read": "0.00000026"
     },
     "architecture": {
@@ -16532,9 +16427,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000014",
+      "prompt": "0.0000003",
       "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "input_cache_read": "0.00000024"
     },
     "architecture": {
       "modality": "text->text",
@@ -16548,8 +16443,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
