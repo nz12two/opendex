@@ -170,8 +170,8 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000002",
-      "completion": "0.00000042",
-      "input_cache_read": "0.000000006"
+      "completion": "0.0000006",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -186,8 +186,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1040000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -243,9 +243,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000003825",
-      "completion": "0.0000016",
-      "input_cache_read": "0.000000003825"
+      "prompt": "0.0000000077",
+      "completion": "0.00000128",
+      "input_cache_read": "0.0000000077"
     },
     "architecture": {
       "modality": "text->text",
@@ -383,7 +383,7 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000005",
+      "prompt": "0.000001",
       "completion": "0.000011357",
       "input_cache_read": "0.00000029"
     },
@@ -724,7 +724,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000002625",
-      "completion": "0.0000009",
+      "completion": "0.000000928749",
       "input_cache_read": "0.00000001125"
     },
     "architecture": {
@@ -3056,8 +3056,9 @@
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.000001"
+      "prompt": "0.0000003",
+      "completion": "0.000001",
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -3071,8 +3072,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 147456,
+      "context_length": 131072,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -3180,9 +3181,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000051",
+      "prompt": "0.0000000077",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000051"
+      "input_cache_read": "0.0000000077"
     },
     "architecture": {
       "modality": "text->text",
@@ -3408,8 +3409,8 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000002",
-      "completion": "0.00000042",
-      "input_cache_read": "0.000000006"
+      "completion": "0.0000006",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3424,8 +3425,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1040000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5067,9 +5068,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5449,9 +5450,9 @@
     "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000018",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.000000042",
+      "completion": "0.0000001232",
+      "input_cache_read": "0.0000000084"
     },
     "architecture": {
       "modality": "text->text",
@@ -5466,7 +5467,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -7824,9 +7825,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000024",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.0000005",
+      "completion": "0.0000022",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -7840,8 +7841,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202800,
-      "max_completion_tokens": 182520,
+      "context_length": 262144,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -8010,6 +8011,32 @@
     },
     "reasoning": {
       "mandatory": false
+    }
+  },
+  {
+    "id": "nvidia/switchyard",
+    "name": "NVIDIA: Switchyard",
+    "description": "Switchyard routes each request among the models you list in `models`, using a routing decision from NVIDIA's open-source Switchyard library running on OpenRouter's edge. Pass `model: nvidia/switchyard` plus two or...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "-1",
+      "completion": "-1"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Router",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": null,
+      "max_completion_tokens": null,
+      "is_moderated": false
     }
   },
   {
@@ -16552,9 +16579,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002625",
-      "completion": "0.0000009",
-      "input_cache_read": "0.00000001125"
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16570,8 +16597,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
