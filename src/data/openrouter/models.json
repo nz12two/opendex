@@ -169,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000015",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000002115"
+      "prompt": "0.00000002",
+      "completion": "0.00000042",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -186,8 +186,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1040000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -383,9 +383,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000139",
-      "completion": "0.000013",
-      "input_cache_read": "0.0000008"
+      "prompt": "0.0000005",
+      "completion": "0.000011357",
+      "input_cache_read": "0.00000029"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -764,7 +764,7 @@
     "pricing": {
       "prompt": "0.00000012",
       "completion": "0.000004",
-      "input_cache_read": "0.00000006"
+      "input_cache_read": "0.00000008"
     },
     "architecture": {
       "modality": "text->text",
@@ -3056,9 +3056,8 @@
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000135"
+      "prompt": "0.00000027",
+      "completion": "0.000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -3072,8 +3071,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "context_length": 163840,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3146,9 +3145,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000042",
-      "completion": "0.000000084",
-      "input_cache_read": "0.0000000084"
+      "prompt": "0.000000028",
+      "completion": "0.000000056",
+      "input_cache_read": "0.0000000056"
     },
     "architecture": {
       "modality": "text->text",
@@ -3181,9 +3180,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000171",
+      "prompt": "0.0000000051",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000171"
+      "input_cache_read": "0.0000000051"
     },
     "architecture": {
       "modality": "text->text",
@@ -3291,9 +3290,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
       "overrides": [
         {
           "utc_days": [
@@ -3408,9 +3407,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000015",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000002115"
+      "prompt": "0.00000002",
+      "completion": "0.00000042",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3425,8 +3424,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1040000,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -5521,6 +5520,36 @@
         "text",
         "image",
         "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
+    "id": "inclusionai/ling-3.1-flash",
+    "name": "inclusionAI: Ling 3.1 Flash",
+    "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
       ],
       "output_modalities": [
         "text"
@@ -7795,9 +7824,9 @@
     "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000022",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.0000006",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -7811,8 +7840,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "context_length": 202800,
+      "max_completion_tokens": 182520,
       "is_moderated": false
     },
     "reasoning": {
@@ -14957,9 +14986,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15047,9 +15076,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16523,9 +16552,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000002625",
+      "completion": "0.0000009",
+      "input_cache_read": "0.00000001125"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16541,8 +16570,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
