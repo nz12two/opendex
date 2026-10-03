@@ -169,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.0000006",
-      "input_cache_read": "0.00000002"
+      "prompt": "0.000000015",
+      "completion": "0.000000676999",
+      "input_cache_read": "0.000000002115"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -207,9 +207,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000396",
-      "input_cache_read": "0.0000000042"
+      "prompt": "0.00000011",
+      "completion": "0.0000027",
+      "input_cache_read": "0.000000099"
     },
     "architecture": {
       "modality": "text->text",
@@ -243,9 +243,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000077",
-      "completion": "0.00000128",
-      "input_cache_read": "0.0000000077"
+      "prompt": "0.000000005775",
+      "completion": "0.000000948024",
+      "input_cache_read": "0.00000000105"
     },
     "architecture": {
       "modality": "text->text",
@@ -383,7 +383,7 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001",
+      "prompt": "0.000000625",
       "completion": "0.000011357",
       "input_cache_read": "0.00000029"
     },
@@ -3056,9 +3056,8 @@
     "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000135"
+      "prompt": "0.00000027",
+      "completion": "0.000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -3072,8 +3071,8 @@
       "instruct_type": "deepseek-v3.1"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "context_length": 163840,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3183,7 +3182,7 @@
     "pricing": {
       "prompt": "0.0000000077",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000077"
+      "input_cache_read": "0.0000000069"
     },
     "architecture": {
       "modality": "text->text",
@@ -3408,9 +3407,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.0000006",
-      "input_cache_read": "0.00000002"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7278,8 +7277,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000006",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000015"
+      "completion": "0.0000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -7294,7 +7292,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 98304,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -7340,9 +7338,9 @@
     "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000043415",
-      "completion": "0.000001828",
-      "input_cache_read": "0.00000007312"
+      "prompt": "0.00000095",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7960,9 +7958,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000016",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000595",
+      "completion": "0.00000017",
+      "input_cache_read": "0.00000002975"
     },
     "architecture": {
       "modality": "text->text",
@@ -7977,7 +7975,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 32768,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -8016,7 +8014,7 @@
   {
     "id": "nvidia/switchyard",
     "name": "NVIDIA: Switchyard",
-    "description": "Switchyard routes each request among the models you list in `models`, using a routing decision from NVIDIA's open-source Switchyard library running on OpenRouter's edge. Pass `model: nvidia/switchyard` plus two or...",
+    "description": "Switchyard is an open-source model router that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most popular...",
     "context_length": 1000000,
     "pricing": {
       "prompt": "-1",
@@ -12969,8 +12967,8 @@
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000004815",
-      "completion": "0.00000019305"
+      "prompt": "0.0000001",
+      "completion": "0.0000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -12984,8 +12982,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32000,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -13381,8 +13379,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -15013,9 +15011,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15103,9 +15101,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16475,9 +16473,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000009646",
-      "completion": "0.0000030316",
-      "input_cache_read": "0.00000017914"
+      "prompt": "0.0000014",
+      "completion": "0.0000044",
+      "input_cache_read": "0.00000026"
     },
     "architecture": {
       "modality": "text->text",
