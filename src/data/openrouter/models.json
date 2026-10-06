@@ -169,9 +169,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000011421",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.000000014",
+      "completion": "0.000000477",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -207,7 +207,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002541",
+      "prompt": "0.0000002514",
       "completion": "0.0000042",
       "input_cache_read": "0.00000025"
     },
@@ -243,9 +243,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000103",
+      "prompt": "0.0000000123",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000103"
+      "input_cache_read": "0.0000000123"
     },
     "architecture": {
       "modality": "text->text",
@@ -383,7 +383,7 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000083",
+      "prompt": "0.00000078",
       "completion": "0.000013",
       "input_cache_read": "0.00000045"
     },
@@ -723,9 +723,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000214",
+      "prompt": "0.0000000244",
       "completion": "0.0000005",
-      "input_cache_read": "0.0000000214"
+      "input_cache_read": "0.0000000244"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3145,9 +3145,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000106",
+      "prompt": "0.0000000242",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000106"
+      "input_cache_read": "0.0000000242"
     },
     "architecture": {
       "modality": "text->text",
@@ -3180,9 +3180,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000103",
+      "prompt": "0.0000000123",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000103"
+      "input_cache_read": "0.0000000123"
     },
     "architecture": {
       "modality": "text->text",
@@ -3407,9 +3407,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000012563",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000012563"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -4954,6 +4954,45 @@
     }
   },
   {
+    "id": "google/gemini-nano-banana-2.1",
+    "name": "Google: Nano Banana 2.1",
+    "description": "Nano Banana 2.1 (Gemini Nano Banana 2.1) is Google's image generation and editing model on the Flash tier, succeeding Nano Banana 2 and Nano Banana Pro. It improves product recontextualization,...",
+    "context_length": 65536,
+    "pricing": {
+      "prompt": "0.0000015",
+      "completion": "0.0000075",
+      "image_output": "0.00003",
+      "web_search": "0.014"
+    },
+    "architecture": {
+      "modality": "text+image->text+image",
+      "input_modalities": [
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "image",
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 65536,
+      "max_completion_tokens": 58982,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "minimal"
+      ],
+      "default_effort": "minimal"
+    }
+  },
+  {
     "id": "google/gemma-2-27b-it",
     "name": "Google: Gemma 2 27B",
     "description": "Gemma 2 27B by Google is an open model built from the same research and technology used to create the [Gemini models](/models?q=gemini). Gemma models are well-suited for a variety of...",
@@ -5067,9 +5106,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5874,7 +5913,8 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000001875",
-      "completion": "0.0000006525"
+      "completion": "0.0000006525",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6795,6 +6835,42 @@
     }
   },
   {
+    "id": "mistralai/mistral-large-4-0",
+    "name": "Mistral: Mistral Large 4",
+    "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 512K-token context window with up...",
+    "context_length": 524288,
+    "pricing": {
+      "prompt": "0.00000068",
+      "completion": "0.00000209",
+      "input_cache_read": "0.00000007"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 524288,
+      "max_completion_tokens": 262144,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "high",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "mistralai/mistral-medium-3",
     "name": "Mistral: Mistral Medium 3",
     "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost...",
@@ -7403,9 +7479,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095",
-      "completion": "0.000014",
-      "input_cache_read": "0.00000031"
+      "prompt": "0.00000099",
+      "completion": "0.000015",
+      "input_cache_read": "0.00000033"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14936,9 +15012,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15026,9 +15102,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
