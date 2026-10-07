@@ -46,14 +46,24 @@
     "id": "~anthropic/claude-haiku-latest",
     "name": "Anthropic: Claude Haiku Latest",
     "description": "This model always redirects to the latest model in the Claude Haiku family.",
-    "context_length": 200000,
+    "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000005",
+      "prompt": "0.0000001",
+      "completion": "0.0000005",
       "web_search": "0.01",
-      "input_cache_read": "0.0000001",
-      "input_cache_write": "0.00000125",
-      "input_cache_write_1h": "0.000002"
+      "input_cache_read": "0.00000001",
+      "input_cache_write": "0.000000125",
+      "input_cache_write_1h": "0.0000002",
+      "overrides": [
+        {
+          "min_prompt_tokens": 100000,
+          "prompt": "0.0000005",
+          "completion": "0.0000025",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.000000625",
+          "input_cache_write_1h": "0.000001"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -69,12 +79,20 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 64000,
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
-      "mandatory": false
+      "mandatory": false,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
     }
   },
   {
@@ -129,7 +147,7 @@
       "prompt": "0.000002",
       "completion": "0.00001",
       "web_search": "0.01",
-      "input_cache_read": "0.0000002",
+      "input_cache_read": "0.0000001",
       "input_cache_write": "0.0000025",
       "input_cache_write_1h": "0.000004"
     },
@@ -169,9 +187,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.0000012",
-      "input_cache_read": "0.00000002"
+      "prompt": "0.000000019",
+      "completion": "0.000000424",
+      "input_cache_read": "0.000000009"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -207,9 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.0000043",
-      "input_cache_read": "0.000000033"
+      "prompt": "0.0000002856",
+      "completion": "0.0000042",
+      "input_cache_read": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -224,7 +242,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -383,7 +401,7 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000061",
+      "prompt": "0.00000049",
       "completion": "0.000013",
       "input_cache_read": "0.00000045"
     },
@@ -723,9 +741,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000214",
+      "prompt": "0.00000004",
       "completion": "0.0000005",
-      "input_cache_read": "0.0000000214"
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -762,9 +780,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000063",
-      "completion": "0.0000063",
-      "input_cache_read": "0.0000000585"
+      "prompt": "0.000000062",
+      "completion": "0.00000339",
+      "input_cache_read": "0.00000006"
     },
     "architecture": {
       "modality": "text->text",
@@ -779,7 +797,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -1387,6 +1405,112 @@
     },
     "reasoning": {
       "mandatory": false
+    }
+  },
+  {
+    "id": "anthropic/claude-haiku-5.5",
+    "name": "Anthropic: Claude Haiku 5.5",
+    "description": "Claude Haiku 5.5 is Anthropic's small, fast model for high-volume, cost-sensitive work such as summarization, subagents, and browser use. It succeeds Claude Haiku 4.5 with stronger coding, computer use, and...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000001",
+      "input_cache_write": "0.000000125",
+      "input_cache_write_1h": "0.0000002",
+      "overrides": [
+        {
+          "min_prompt_tokens": 100000,
+          "prompt": "0.0000005",
+          "completion": "0.0000025",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.000000625",
+          "input_cache_write_1h": "0.000001"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "anthropic/claude-haiku-5.5:batch",
+    "name": "Anthropic: Claude Haiku 5.5 (batch)",
+    "description": "Claude Haiku 5.5 is Anthropic's small, fast model for high-volume, cost-sensitive work such as summarization, subagents, and browser use. It succeeds Claude Haiku 4.5 with stronger coding, computer use, and...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.00000005",
+      "completion": "0.00000025",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000005",
+      "input_cache_write": "0.0000000625",
+      "input_cache_write_1h": "0.0000001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 100000,
+          "prompt": "0.00000025",
+          "completion": "0.00000125",
+          "input_cache_read": "0.000000025",
+          "input_cache_write": "0.0000003125",
+          "input_cache_write_1h": "0.0000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
     }
   },
   {
@@ -2283,7 +2407,7 @@
       "prompt": "0.000002",
       "completion": "0.00001",
       "web_search": "0.01",
-      "input_cache_read": "0.0000002",
+      "input_cache_read": "0.0000001",
       "input_cache_write": "0.0000025",
       "input_cache_write_1h": "0.000004"
     },
@@ -2326,7 +2450,7 @@
       "prompt": "0.000001",
       "completion": "0.000005",
       "web_search": "0.01",
-      "input_cache_read": "0.0000001",
+      "input_cache_read": "0.00000005",
       "input_cache_write": "0.00000125",
       "input_cache_write_1h": "0.000002"
     },
@@ -3085,9 +3209,9 @@
     "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000028",
+      "prompt": "0.000000259",
       "completion": "0.00000042",
-      "input_cache_read": "0.000000028"
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -3101,8 +3225,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "context_length": 163840,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3407,9 +3531,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
+      "prompt": "0.0000003",
       "completion": "0.0000012",
-      "input_cache_read": "0.00000002"
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5106,9 +5230,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7453,9 +7577,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000062",
+      "prompt": "0.0000005",
       "completion": "0.000015",
-      "input_cache_read": "0.00000043"
+      "input_cache_read": "0.00000045"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7739,8 +7863,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.00000005",
-      "completion": "0.0000002",
-      "input_cache_read": "0.00000003"
+      "completion": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -7755,7 +7878,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -8009,9 +8132,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000016",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000049",
+      "completion": "0.00000014",
+      "input_cache_read": "0.0000000245"
     },
     "architecture": {
       "modality": "text->text",
@@ -8026,7 +8149,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 32768,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14234,7 +14357,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
+      "context_length": 1048576,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14986,9 +15109,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15076,9 +15199,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16479,9 +16602,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000171",
+      "prompt": "0.0000000855",
       "completion": "0.0000072",
-      "input_cache_read": "0.000000162"
+      "input_cache_read": "0.000000077"
     },
     "architecture": {
       "modality": "text->text",
@@ -16515,9 +16638,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.000007",
-      "input_cache_read": "0.000000065"
+      "prompt": "0.000000062",
+      "completion": "0.00000339",
+      "input_cache_read": "0.00000006"
     },
     "architecture": {
       "modality": "text->text",
