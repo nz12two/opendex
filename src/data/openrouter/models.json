@@ -187,7 +187,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000101",
+      "prompt": "0.0000000001",
       "completion": "0.0000006",
       "input_cache_read": "0.000000005"
     },
@@ -225,8 +225,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000005",
+      "prompt": "0.00000022",
+      "completion": "0.000004",
       "input_cache_read": "0.000000219"
     },
     "architecture": {
@@ -261,9 +261,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000047",
+      "prompt": "0.0000000107",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000047"
+      "input_cache_read": "0.0000000107"
     },
     "architecture": {
       "modality": "text->text",
@@ -401,8 +401,8 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.000015",
+      "prompt": "0.00000033",
+      "completion": "0.00001489",
       "input_cache_read": "0.0000003"
     },
     "architecture": {
@@ -3180,8 +3180,8 @@
     "context_length": 163840,
     "pricing": {
       "prompt": "0.000000259",
-      "completion": "0.00000042",
-      "input_cache_read": "0.000000135"
+      "completion": "0.0000008",
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text->text",
@@ -3239,9 +3239,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000078",
+      "prompt": "0.0000000199",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000078"
+      "input_cache_read": "0.0000000199"
     },
     "architecture": {
       "modality": "text->text",
@@ -3274,9 +3274,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000047",
+      "prompt": "0.0000000107",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000047"
+      "input_cache_read": "0.0000000107"
     },
     "architecture": {
       "modality": "text->text",
@@ -7453,9 +7453,9 @@
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000045",
-      "completion": "0.00000225",
-      "input_cache_read": "0.00000007"
+      "prompt": "0.0000005",
+      "completion": "0.0000025",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -8104,9 +8104,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000469",
-      "completion": "0.000000134",
-      "input_cache_read": "0.00000002345"
+      "prompt": "0.00000007",
+      "completion": "0.0000002",
+      "input_cache_read": "0.00000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -8121,7 +8121,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -13037,8 +13037,8 @@
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
     "context_length": 40960,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000022"
+      "prompt": "0.00000012",
+      "completion": "0.00000024"
     },
     "architecture": {
       "modality": "text->text",
@@ -13053,7 +13053,7 @@
     },
     "top_provider": {
       "context_length": 40960,
-      "max_completion_tokens": 36864,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
