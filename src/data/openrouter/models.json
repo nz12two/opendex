@@ -187,9 +187,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000438",
-      "completion": "0.0000001752",
-      "input_cache_read": "0.000000000876"
+      "prompt": "0.0000000441",
+      "completion": "0.000000765",
+      "input_cache_read": "0.0000000054"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -205,7 +205,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -225,9 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000025872",
-      "completion": "0.00000077616",
-      "input_cache_read": "0.000000008232"
+      "prompt": "0.000000202",
+      "completion": "0.000008",
+      "input_cache_read": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -401,9 +401,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000073",
-      "completion": "0.00001",
-      "input_cache_read": "0.00000055"
+      "prompt": "0.00000072",
+      "completion": "0.000024",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -741,7 +741,7 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000261",
+      "prompt": "0.0000000297",
       "completion": "0.0000009",
       "input_cache_read": "0.0000000108"
     },
@@ -780,9 +780,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000055",
-      "completion": "0.000005",
-      "input_cache_read": "0.00000006"
+      "prompt": "0.000000063",
+      "completion": "0.0000044",
+      "input_cache_read": "0.0000000586"
     },
     "architecture": {
       "modality": "text->text",
@@ -797,7 +797,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -2485,35 +2485,6 @@
     }
   },
   {
-    "id": "apodex/apodex-1.1-mini:free",
-    "name": "Apodex: Apodex 1.1 Mini (free)",
-    "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "arcee-ai/trinity-large-thinking",
     "name": "Arcee AI: Trinity Large Thinking",
     "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
@@ -3239,9 +3210,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000128",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.000000091",
+      "completion": "0.000000182",
+      "input_cache_read": "0.0000000182"
     },
     "architecture": {
       "modality": "text->text",
@@ -3255,8 +3226,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
@@ -3349,9 +3320,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000446136",
-      "completion": "0.000000892272",
-      "input_cache_read": "0.000000037178"
+      "prompt": "0.000000395328",
+      "completion": "0.000000790656",
+      "input_cache_read": "0.000000032944"
     },
     "architecture": {
       "modality": "text->text",
@@ -3501,9 +3472,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000438",
-      "completion": "0.0000001752",
-      "input_cache_read": "0.000000000876"
+      "prompt": "0.0000000441",
+      "completion": "0.000000765",
+      "input_cache_read": "0.0000000054"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3519,7 +3490,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5048,6 +5019,98 @@
     }
   },
   {
+    "id": "google/gemini-4-argon",
+    "name": "Google: Gemini 4 Argon",
+    "description": "Gemini 4 Argon is Google's flagship reasoning model, built for complex software engineering, deep mathematical and scientific problem solving, and autonomous multi-step agents. Google trained it to keep context across...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "image": "0.000002",
+      "audio": "0.000002",
+      "input_audio_cache": "0.0000001",
+      "web_search": "0.014",
+      "internal_reasoning": "0.00001",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000001875"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "google/gemini-4-argon:batch",
+    "name": "Google: Gemini 4 Argon (batch)",
+    "description": "Gemini 4 Argon is Google's flagship reasoning model, built for complex software engineering, deep mathematical and scientific problem solving, and autonomous multi-step agents. Google trained it to keep context across...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "image": "0.000001",
+      "audio": "0.000001",
+      "input_audio_cache": "0.00000005",
+      "web_search": "0.014",
+      "internal_reasoning": "0.000005",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.0000001875"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Gemini",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "google/gemini-nano-banana-2.1",
     "name": "Google: Nano Banana 2.1",
     "description": "Nano Banana 2.1 (Gemini Nano Banana 2.1) is Google's image generation and editing model on the Flash tier, succeeding Nano Banana 2 and Nano Banana Pro. It improves product recontextualization,...",
@@ -5200,9 +5263,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5577,76 +5640,14 @@
     }
   },
   {
-    "id": "inclusionai/ling-3.0-flash-fin",
-    "name": "inclusionAI: Ling 3.0 Flash Fin",
-    "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000042",
-      "completion": "0.0000001232",
-      "input_cache_read": "0.0000000084"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true
-    }
-  },
-  {
-    "id": "inclusionai/ling-3.0-flash-sante",
-    "name": "inclusionAI: Ling 3.0 Flash Sante",
-    "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000042",
-      "completion": "0.0000001232",
-      "input_cache_read": "0.0000000084"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true
-    }
-  },
-  {
     "id": "inclusionai/ling-3.0-flash-vl",
     "name": "inclusionAI: Ling 3.0 Flash VL",
     "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
-    "context_length": 262144,
+    "context_length": 131072,
     "pricing": {
-      "prompt": "0.000000021",
-      "completion": "0.0000000616",
-      "input_cache_read": "0.0000000042"
+      "prompt": "0.00000006",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000012"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5662,7 +5663,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
+      "context_length": 131072,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -5677,8 +5678,9 @@
     "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0",
-      "completion": "0"
+      "prompt": "0.000000075",
+      "completion": "0.000000225",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -5777,6 +5779,36 @@
     },
     "top_provider": {
       "context_length": 65536,
+      "max_completion_tokens": 8192,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
+    "id": "liquid/lfm-2.5-24b-a2b",
+    "name": "LiquidAI: LFM2.5-24B-A2B",
+    "description": "LFM2.5-24B-A2B is a mixture-of-experts reasoning model from Liquid AI with 24B total and 2.45B active parameters. It always reasons before answering and is built for agents that call tools. Liquid...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.00000005",
+      "completion": "0.0000007",
+      "input_cache_read": "0.000000025"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
       "max_completion_tokens": 8192,
       "is_moderated": false
     },
@@ -13606,9 +13638,9 @@
     "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000008",
-      "completion": "0.00000075",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.00000015",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13624,8 +13656,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 32768,
+      "context_length": 256000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -14939,9 +14971,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15029,9 +15061,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16505,7 +16537,7 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000261",
+      "prompt": "0.0000000297",
       "completion": "0.0000009",
       "input_cache_read": "0.0000000108"
     },
