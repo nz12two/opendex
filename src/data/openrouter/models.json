@@ -187,9 +187,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000441",
-      "completion": "0.000000765",
-      "input_cache_read": "0.0000000054"
+      "prompt": "0.0000000252",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000008"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -225,9 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000202",
+      "prompt": "0.00000018",
       "completion": "0.000008",
-      "input_cache_read": "0.0000002"
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text->text",
@@ -401,9 +401,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000072",
-      "completion": "0.000024",
-      "input_cache_read": "0.0000003"
+      "prompt": "0.0000007",
+      "completion": "0.0000135",
+      "input_cache_read": "0.00000028"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -687,6 +687,34 @@
     }
   },
   {
+    "id": "~unbiased/pareto-latest",
+    "name": "Pareto Latest",
+    "description": "This model always redirects to the latest model in the Pareto family.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000025",
+      "completion": "0.0000075",
+      "input_cache_read": "0.00000025"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Router",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "~x-ai/grok-latest",
     "name": "xAI: Grok Latest",
     "description": "This model always redirects to the latest Grok model from xAI.",
@@ -741,7 +769,7 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000297",
+      "prompt": "0.000000036",
       "completion": "0.0000009",
       "input_cache_read": "0.0000000108"
     },
@@ -3320,9 +3348,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000395328",
-      "completion": "0.000000790656",
-      "input_cache_read": "0.000000032944"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3355,9 +3383,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
+      "prompt": "0.00000132",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000044",
       "overrides": [
         {
           "utc_days": [
@@ -3472,9 +3500,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000441",
-      "completion": "0.000000765",
-      "input_cache_read": "0.0000000054"
+      "prompt": "0.0000000252",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000008"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -6496,8 +6524,8 @@
     "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning,...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012"
+      "prompt": "0.000000255",
+      "completion": "0.00000102"
     },
     "architecture": {
       "modality": "text->text",
@@ -6511,8 +6539,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 196608,
-      "max_completion_tokens": 176947,
+      "context_length": 204800,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -7625,9 +7653,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000073",
-      "completion": "0.00001",
-      "input_cache_read": "0.00000055"
+      "prompt": "0.0000007",
+      "completion": "0.0000135",
+      "input_cache_read": "0.00000028"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11887,9 +11915,8 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000075"
+      "prompt": "0.000000037",
+      "completion": "0.00000017"
     },
     "architecture": {
       "modality": "text->text",
@@ -11904,7 +11931,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
@@ -13670,9 +13697,9 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000035",
-      "input_cache_read": "0.000000225"
+      "prompt": "0.0000005",
+      "completion": "0.0000036",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14128,7 +14155,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
+      "context_length": 1000000,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14971,9 +14998,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15061,9 +15088,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -15385,34 +15412,6 @@
     }
   },
   {
-    "id": "unbiased/pareto",
-    "name": "Pareto",
-    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.0000075",
-      "input_cache_read": "0.00000025"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "unbiased/pareto-26.10-preview",
     "name": "Pareto 26.10 Preview",
     "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
@@ -15436,6 +15435,34 @@
     },
     "top_provider": {
       "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "unbiased/pareto-26.9",
+    "name": "Pareto 26.9",
+    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000025",
+      "completion": "0.0000075",
+      "input_cache_read": "0.00000025"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
       "max_completion_tokens": 131072,
       "is_moderated": false
     }
@@ -16433,9 +16460,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.000000966",
-      "completion": "0.000003036",
-      "input_cache_read": "0.0000001794"
+      "prompt": "0.00000133",
+      "completion": "0.00000418",
+      "input_cache_read": "0.000000247"
     },
     "architecture": {
       "modality": "text->text",
@@ -16449,8 +16476,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 128000,
+      "context_length": 202745,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -16537,9 +16564,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000297",
-      "completion": "0.0000009",
-      "input_cache_read": "0.0000000108"
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16555,8 +16582,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
