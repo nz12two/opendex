@@ -225,9 +225,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000225",
+      "prompt": "0.0000001307",
       "completion": "0.000008",
-      "input_cache_read": "0.00000023"
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -391,9 +391,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000029",
-      "completion": "0.000024",
-      "input_cache_read": "0.00000028"
+      "prompt": "0.00000044",
+      "completion": "0.000014",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -798,9 +798,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000024",
+      "prompt": "0.0000000608",
       "completion": "0.0000044",
-      "input_cache_read": "0.0000000223"
+      "input_cache_read": "0.0000000565"
     },
     "architecture": {
       "modality": "text->text",
@@ -2110,51 +2110,6 @@
     }
   },
   {
-    "id": "anthropic/claude-sonnet-4",
-    "name": "Anthropic: Claude Sonnet 4",
-    "description": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.000003",
-      "completion": "0.000015",
-      "web_search": "0.01",
-      "input_cache_read": "0.0000003",
-      "input_cache_write": "0.00000375",
-      "input_cache_write_1h": "0.000006",
-      "overrides": [
-        {
-          "min_prompt_tokens": 200000,
-          "prompt": "0.000006",
-          "completion": "0.0000225",
-          "input_cache_read": "0.0000006",
-          "input_cache_write": "0.0000075",
-          "input_cache_write_1h": "0.000012"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Claude",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 64000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "anthropic/claude-sonnet-4.5",
     "name": "Anthropic: Claude Sonnet 4.5",
     "description": "Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
@@ -3338,9 +3293,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000422472",
+      "completion": "0.000000844944",
+      "input_cache_read": "0.000000035206"
     },
     "architecture": {
       "modality": "text->text",
@@ -7378,8 +7333,8 @@
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
     "context_length": 256000,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000002"
+      "prompt": "0.00000009375",
+      "completion": "0.00000025"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7394,7 +7349,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
+      "context_length": 256000,
       "max_completion_tokens": 16384,
       "is_moderated": false
     }
@@ -7643,7 +7598,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000045",
-      "completion": "0.000015",
+      "completion": "0.0000165",
       "input_cache_read": "0.00000028"
     },
     "architecture": {
@@ -8244,6 +8199,37 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
+    "id": "nvidia/nemotron-3.5-super-vl:free",
+    "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+    "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14988,9 +14974,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15078,9 +15064,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -15398,34 +15384,6 @@
     "top_provider": {
       "context_length": null,
       "max_completion_tokens": null,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "unbiased/pareto-26.10-preview",
-    "name": "Pareto 26.10 Preview",
-    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.0000008",
-      "completion": "0.0000032",
-      "input_cache_read": "0.00000003"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
       "is_moderated": false
     }
   },
@@ -16481,9 +16439,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.000007",
-      "input_cache_read": "0.000000019"
+      "prompt": "0.00000015",
+      "completion": "0.000008",
+      "input_cache_read": "0.000000149"
     },
     "architecture": {
       "modality": "text->text",
@@ -16517,9 +16475,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000003",
+      "prompt": "0.00000012",
       "completion": "0.0000048",
-      "input_cache_read": "0.000000029"
+      "input_cache_read": "0.000000119"
     },
     "architecture": {
       "modality": "text->text",
