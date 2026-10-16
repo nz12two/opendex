@@ -189,7 +189,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000036",
-      "completion": "0.0000006633",
+      "completion": "0.0000006435",
       "input_cache_read": "0.0000000054"
     },
     "architecture": {
@@ -206,7 +206,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000094",
+      "prompt": "0.0000000111",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000094"
+      "input_cache_read": "0.0000000111"
     },
     "architecture": {
       "modality": "text->text",
@@ -396,7 +396,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000294",
-      "completion": "0.000028",
+      "completion": "0.000024",
       "input_cache_read": "0.000000284"
     },
     "architecture": {
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000158",
-      "completion": "0.0000007904",
-      "input_cache_read": "0.0000000125"
+      "prompt": "0.00000001332",
+      "completion": "0.00000072216",
+      "input_cache_read": "0.00000001125"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -2419,7 +2419,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -2974,8 +2974,8 @@
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.0000002574",
-      "completion": "0.0000010287"
+      "prompt": "0.00000032",
+      "completion": "0.00000089"
     },
     "architecture": {
       "modality": "text->text",
@@ -2989,8 +2989,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 16000,
+      "context_length": 163840,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -3241,9 +3241,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000094",
+      "prompt": "0.0000000111",
       "completion": "0.00000128",
-      "input_cache_read": "0.0000000094"
+      "input_cache_read": "0.0000000111"
     },
     "architecture": {
       "modality": "text->text",
@@ -3318,9 +3318,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000358092",
-      "completion": "0.000000716184",
-      "input_cache_read": "0.000000029841"
+      "prompt": "0.000000297192",
+      "completion": "0.000000594384",
+      "input_cache_read": "0.000000024766"
     },
     "architecture": {
       "modality": "text->text",
@@ -3473,7 +3473,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000036",
-      "completion": "0.0000006633",
+      "completion": "0.0000006435",
       "input_cache_read": "0.0000000054"
     },
     "architecture": {
@@ -3490,7 +3490,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3511,9 +3511,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000112",
-      "completion": "0.000000336",
-      "input_cache_read": "0.00000000336"
+      "prompt": "0.00000005",
+      "completion": "0.00000015",
+      "input_cache_read": "0.000000004"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3529,7 +3529,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -5275,9 +5275,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7739,7 +7739,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000304",
-      "completion": "0.000012533",
+      "completion": "0.000011936",
       "input_cache_read": "0.00000021"
     },
     "architecture": {
@@ -16345,6 +16345,36 @@
     }
   },
   {
+    "id": "xingchen-agi/xing4.0-29b-a4b:free",
+    "name": "XingChen: Xing4.0 29B A4B (free)",
+    "description": "Xing4.0-29B-A4B is an open-weight mixture-of-experts language model from China Telecom's AI team (TeleAI) and the successor to the TeleChat series. It has 29B total parameters with 4B active per token...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
     "id": "z-ai/glm-4.5",
     "name": "Z.ai: GLM 4.5",
     "description": "GLM-4.5 is our latest flagship foundation model, purpose-built for agent-based applications. It leverages a Mixture-of-Experts (MoE) architecture and supports a context length of up to 128k tokens. GLM-4.5 delivers significantly...",
@@ -16731,9 +16761,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000158",
-      "completion": "0.0000007904",
-      "input_cache_read": "0.0000000125"
+      "prompt": "0.00000001332",
+      "completion": "0.00000072216",
+      "input_cache_read": "0.00000001125"
     },
     "architecture": {
       "modality": "text+image+video->text",
