@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000012",
+      "prompt": "0.000000225",
       "completion": "0.000008",
-      "input_cache_read": "0.00000012"
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000000912",
-      "completion": "0.000000144",
-      "input_cache_read": "0.000000001523"
+      "prompt": "0.0000000086",
+      "completion": "0.00000045",
+      "input_cache_read": "0.0000000086"
     },
     "architecture": {
       "modality": "text->text",
@@ -376,7 +376,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -803,9 +803,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000007"
+      "prompt": "0.000000079",
+      "completion": "0.0000014",
+      "input_cache_read": "0.000000078"
     },
     "architecture": {
       "modality": "text->text",
@@ -820,7 +820,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3241,9 +3241,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000114",
-      "completion": "0.00000045",
-      "input_cache_read": "0.0000000114"
+      "prompt": "0.00000015",
+      "completion": "0.00000015",
+      "input_cache_read": "0.000000042"
     },
     "architecture": {
       "modality": "text->text",
@@ -3318,9 +3318,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002088",
-      "completion": "0.0000004176",
-      "input_cache_read": "0.0000000174"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3391,8 +3391,8 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000616",
-      "completion": "0.000000144",
+      "prompt": "0.0000000472",
+      "completion": "0.00000012",
       "input_cache_read": "0.0000000016"
     },
     "architecture": {
@@ -3430,9 +3430,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000003",
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006",
       "overrides": [
         {
           "utc_days": [
@@ -5133,7 +5133,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -6041,8 +6041,8 @@
     "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000033"
+      "prompt": "0.0000000509",
+      "completion": "0.000000335"
     },
     "architecture": {
       "modality": "text->text",
@@ -6056,8 +6056,8 @@
       "instruct_type": "llama3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
+      "context_length": 80000,
+      "max_completion_tokens": 72000,
       "is_moderated": false
     }
   },
@@ -7887,7 +7887,7 @@
     "id": "morph/morph-v3-fast",
     "name": "Morph: Morph V3 Fast",
     "description": "Morph's fastest apply model for code edits. ~10,500 tokens/sec with 96% accuracy for rapid code transformations. The model requires the prompt to be in the following format: <instruction>{instruction}</instruction> <code>{initial_code}</code> <update>{edit_snippet}</update>...",
-    "context_length": 81920,
+    "context_length": 262144,
     "pricing": {
       "prompt": "0.0000008",
       "completion": "0.0000012"
@@ -7904,8 +7904,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 81920,
-      "max_completion_tokens": 38000,
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     }
   },
@@ -11293,7 +11293,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -13860,8 +13860,8 @@
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000026",
-      "completion": "0.0000026"
+      "prompt": "0.000000195",
+      "completion": "0.00000156"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13878,7 +13878,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -15295,9 +15295,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15385,9 +15385,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16856,7 +16856,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000079",
-      "completion": "0.000001",
+      "completion": "0.0000014",
       "input_cache_read": "0.000000078"
     },
     "architecture": {
