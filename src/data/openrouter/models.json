@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000047",
+      "prompt": "0.000000035",
       "completion": "0.0000006",
-      "input_cache_read": "0.000000006"
+      "input_cache_read": "0.000000004"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000225",
+      "prompt": "0.0000001307",
       "completion": "0.000008",
-      "input_cache_read": "0.00000023"
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -266,7 +266,7 @@
     "pricing": {
       "prompt": "0.00000000392",
       "completion": "0.00000012",
-      "input_cache_read": "0.00000000336"
+      "input_cache_read": "0.000000003304"
     },
     "architecture": {
       "modality": "text->text",
@@ -396,7 +396,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000238",
-      "completion": "0.000013",
+      "completion": "0.000016",
       "input_cache_read": "0.000000228"
     },
     "architecture": {
@@ -803,9 +803,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000045",
+      "prompt": "0.000000051",
       "completion": "0.000006",
-      "input_cache_read": "0.000000028"
+      "input_cache_read": "0.000000032"
     },
     "architecture": {
       "modality": "text->text",
@@ -3212,9 +3212,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.00000015",
-      "input_cache_read": "0.000000042"
+      "prompt": "0.0000001298",
+      "completion": "0.0000003894",
+      "input_cache_read": "0.00000000413"
     },
     "architecture": {
       "modality": "text->text",
@@ -3229,7 +3229,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3289,9 +3289,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000368358",
+      "completion": "0.000000736716",
+      "input_cache_read": "0.0000000306965"
     },
     "architecture": {
       "modality": "text->text",
@@ -3362,8 +3362,8 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000376",
-      "completion": "0.00000008",
+      "prompt": "0.000000028",
+      "completion": "0.0000000112",
       "input_cache_read": "0.0000000016"
     },
     "architecture": {
@@ -5317,9 +5317,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5647,6 +5647,44 @@
     "top_provider": {
       "context_length": 260000,
       "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "inception/mercury-3",
+    "name": "Inception: Mercury 3",
+    "description": "Mercury 3 is a diffusion-based language model from Inception, and the lab's most capable model to date. It is suited for agentic workflows and real-time applications where latency compounds, such...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.00000035",
+      "input_cache_read": "0.00000001"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14610,9 +14648,9 @@
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000003",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.0000003",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -15254,9 +15292,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15344,9 +15382,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
