@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000225",
+      "prompt": "0.0000001307",
       "completion": "0.000008",
-      "input_cache_read": "0.00000023"
+      "input_cache_read": "0.00000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000000392",
-      "completion": "0.00000012",
-      "input_cache_read": "0.00000000336"
+      "prompt": "0.0000000065",
+      "completion": "0.00000045",
+      "input_cache_read": "0.0000000065"
     },
     "architecture": {
       "modality": "text->text",
@@ -764,7 +764,7 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000037476",
+      "prompt": "0.000000048",
       "completion": "0.00000016",
       "input_cache_read": "0.000000006"
     },
@@ -3212,9 +3212,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014"
+      "prompt": "0.0000001298",
+      "completion": "0.0000003894",
+      "input_cache_read": "0.00000000413"
     },
     "architecture": {
       "modality": "text->text",
@@ -3289,9 +3289,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000403854",
+      "completion": "0.000000807708",
+      "input_cache_read": "0.0000000336545"
     },
     "architecture": {
       "modality": "text->text",
@@ -3362,9 +3362,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000056",
+      "prompt": "0.00000002832",
       "completion": "0.00000012",
-      "input_cache_read": "0.0000000016"
+      "input_cache_read": "0.000000000566"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3811,45 +3811,6 @@
     }
   },
   {
-    "id": "google/gemini-2.5-flash:batch",
-    "name": "Google: Gemini 2.5 Flash (batch)",
-    "description": "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in \"thinking\" capabilities, enabling it to provide responses with greater...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.00000125",
-      "image": "0.00000015",
-      "audio": "0.0000005",
-      "input_audio_cache": "0.0000001",
-      "web_search": "0.014",
-      "internal_reasoning": "0.00000125",
-      "input_cache_read": "0.00000003"
-    },
-    "architecture": {
-      "modality": "text+image+file+audio+video->text",
-      "input_modalities": [
-        "file",
-        "image",
-        "text",
-        "audio",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Gemini",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 65535,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "google/gemini-2.5-pro",
     "name": "Google: Gemini 2.5 Pro",
     "description": "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
@@ -3932,55 +3893,6 @@
         "image",
         "text",
         "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Gemini",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 65536,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
-    "id": "google/gemini-2.5-pro:batch",
-    "name": "Google: Gemini 2.5 Pro (batch)",
-    "description": "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.000000625",
-      "completion": "0.000005",
-      "image": "0.000000625",
-      "audio": "0.000000625",
-      "input_audio_cache": "0.000000125",
-      "web_search": "0.014",
-      "internal_reasoning": "0.000005",
-      "input_cache_read": "0.000000125",
-      "overrides": [
-        {
-          "min_prompt_tokens": 200000,
-          "prompt": "0.00000125",
-          "completion": "0.0000075",
-          "audio": "0.00000125",
-          "input_audio_cache": "0.00000025",
-          "input_cache_read": "0.00000025"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file+audio+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file",
-        "audio",
-        "video"
       ],
       "output_modalities": [
         "text"
@@ -13684,8 +13596,9 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000011"
+      "prompt": "0.0000001",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text->text",
@@ -13700,7 +13613,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -15292,9 +15205,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15382,9 +15295,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16722,9 +16635,9 @@
     "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.00000192",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.000001",
+      "completion": "0.0000032",
+      "input_cache_read": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -16738,8 +16651,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 198000,
-      "max_completion_tokens": 128000,
+      "context_length": 202752,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -16889,7 +16802,7 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000037476",
+      "prompt": "0.000000048",
       "completion": "0.00000016",
       "input_cache_read": "0.000000006"
     },
