@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.000000024",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000007",
+      "completion": "0.0000005",
+      "input_cache_read": "0.000000008"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002016",
+      "prompt": "0.000000225",
       "completion": "0.000008",
-      "input_cache_read": "0.0000002"
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000086",
-      "completion": "0.00000045",
-      "input_cache_read": "0.0000000086"
+      "prompt": "0.00000000392",
+      "completion": "0.00000012",
+      "input_cache_read": "0.00000000336"
     },
     "architecture": {
       "modality": "text->text",
@@ -764,7 +764,7 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000059076",
+      "prompt": "0.000000037476",
       "completion": "0.00000016",
       "input_cache_read": "0.000000006"
     },
@@ -3362,8 +3362,8 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000352",
-      "completion": "0.0000000112",
+      "prompt": "0.000000056",
+      "completion": "0.00000012",
       "input_cache_read": "0.0000000016"
     },
     "architecture": {
@@ -3401,9 +3401,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
       "overrides": [
         {
           "utc_days": [
@@ -5318,9 +5318,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14457,9 +14457,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00000024",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000004",
+      "completion": "0.00000135",
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14476,7 +14476,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -16889,9 +16889,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000037476",
+      "completion": "0.00000016",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16907,8 +16907,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
