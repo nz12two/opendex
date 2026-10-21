@@ -396,7 +396,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000238",
-      "completion": "0.000024",
+      "completion": "0.000016",
       "input_cache_read": "0.000000228"
     },
     "architecture": {
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000051691",
-      "completion": "0.00000012",
-      "input_cache_read": "0.00000000375"
+      "prompt": "0.00000000441",
+      "completion": "0.000000134175",
+      "input_cache_read": "0.00000000315"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3289,9 +3289,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000427518",
-      "completion": "0.000000855036",
-      "input_cache_read": "0.0000000356265"
+      "prompt": "0.000000398808",
+      "completion": "0.000000797616",
+      "input_cache_read": "0.000000033234"
     },
     "architecture": {
       "modality": "text->text",
@@ -5311,9 +5311,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -8175,8 +8175,9 @@
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000008",
-      "completion": "0.00000045"
+      "prompt": "0.0000003",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -14637,6 +14638,35 @@
     }
   },
   {
+    "id": "recursive/flint-v1.0:free",
+    "name": "Recursive: Flint (free)",
+    "description": "Flint is an open-weight mixture-of-experts model from Recursive, with about 2.5B active parameters out of 40B total, built by Recursive's autoresearch system Eureka Machine for coding agents. It is suited...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
     "id": "reflection/beam-1.0-501b-a23b",
     "name": "Reflection: Beam 1.0 501B A23B",
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
@@ -16883,9 +16913,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000000441",
+      "completion": "0.000000134175",
+      "input_cache_read": "0.00000000315"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16901,8 +16931,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
