@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000019",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000002"
+      "prompt": "0.00000007",
+      "completion": "0.0000005",
+      "input_cache_read": "0.000000008"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -396,7 +396,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000238",
-      "completion": "0.000016",
+      "completion": "0.000024",
       "input_cache_read": "0.000000228"
     },
     "architecture": {
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000052",
-      "completion": "0.0000001985",
-      "input_cache_read": "0.0000000052"
+      "prompt": "0.0000000285",
+      "completion": "0.0000000923",
+      "input_cache_read": "0.0000000285"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -783,7 +783,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3289,9 +3289,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000087522",
-      "completion": "0.00000175044",
-      "input_cache_read": "0.000000072935"
+      "prompt": "0.000000733236",
+      "completion": "0.000001466472",
+      "input_cache_read": "0.000000061103"
     },
     "architecture": {
       "modality": "text->text",
@@ -5272,9 +5272,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7788,7 +7788,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000239",
-      "completion": "0.000011936",
+      "completion": "0.0000108",
       "input_cache_read": "0.00000021"
     },
     "architecture": {
@@ -7847,6 +7847,46 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 16384,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low",
+        "none"
+      ],
+      "default_effort": "max"
+    }
+  },
+  {
+    "id": "moonshotai/kimi-k3.1-pro",
+    "name": "MoonshotAI: Kimi K3.1 Pro",
+    "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "input_cache_read": "0.0000002"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
