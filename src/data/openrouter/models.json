@@ -764,7 +764,7 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000511",
+      "prompt": "0.0000000507",
       "completion": "0.0000000702",
       "input_cache_read": "0.00000003"
     },
@@ -8532,32 +8532,6 @@
     }
   },
   {
-    "id": "openai/gpt-3.5-turbo",
-    "name": "OpenAI: GPT-3.5 Turbo",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
-    "context_length": 16385,
-    "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000015"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 16385,
-      "max_completion_tokens": 4096,
-      "is_moderated": true
-    }
-  },
-  {
     "id": "openai/gpt-3.5-turbo-0613",
     "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
     "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
@@ -8607,59 +8581,6 @@
       "context_length": 16385,
       "max_completion_tokens": 4096,
       "is_moderated": false
-    }
-  },
-  {
-    "id": "openai/gpt-3.5-turbo-instruct",
-    "name": "OpenAI: GPT-3.5 Turbo Instruct",
-    "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-    "context_length": 4095,
-    "pricing": {
-      "prompt": "0.0000015",
-      "completion": "0.000002"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": "chatml"
-    },
-    "top_provider": {
-      "context_length": 4095,
-      "max_completion_tokens": 3685,
-      "is_moderated": true
-    }
-  },
-  {
-    "id": "openai/gpt-3.5-turbo:batch",
-    "name": "OpenAI: GPT-3.5 Turbo (batch)",
-    "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021.",
-    "context_length": 16385,
-    "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000075",
-      "web_search": "0.01"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 16385,
-      "max_completion_tokens": 4096,
-      "is_moderated": true
     }
   },
   {
@@ -15318,9 +15239,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15408,9 +15329,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16878,9 +16799,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000079",
-      "completion": "0.0000014",
-      "input_cache_read": "0.000000078"
+      "prompt": "0.0000000908",
+      "completion": "0.00000161",
+      "input_cache_read": "0.0000000897"
     },
     "architecture": {
       "modality": "text->text",
