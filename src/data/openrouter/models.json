@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000161",
+      "prompt": "0.00000018",
       "completion": "0.00002",
-      "input_cache_read": "0.000000151"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3325,9 +3325,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000132",
-      "completion": "0.00000396",
-      "input_cache_read": "0.000000044",
+      "prompt": "0.00000066",
+      "completion": "0.00000198",
+      "input_cache_read": "0.000000022",
       "overrides": [
         {
           "utc_days": [
@@ -3482,9 +3482,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
       "overrides": [
         {
           "utc_days": [
@@ -5272,9 +5272,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000675",
-      "completion": "0.000000225",
-      "input_cache_read": "0.0000000375"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5337,9 +5337,8 @@
     "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000034",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.0000002",
+      "completion": "0.0000004"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5356,7 +5355,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -7818,9 +7817,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000161",
+      "prompt": "0.00000018",
       "completion": "0.00002",
-      "input_cache_read": "0.000000151"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13453,7 +13452,7 @@
     "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
+      "prompt": "0.0000001",
       "completion": "0.0000003"
     },
     "architecture": {
