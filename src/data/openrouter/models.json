@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.00000004",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -206,7 +206,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002565",
+      "prompt": "0.0000001188",
       "completion": "0.000008",
-      "input_cache_read": "0.00000026"
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,8 +264,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000475",
-      "completion": "0.0000001568",
+      "prompt": "0.0000000422",
+      "completion": "0.0000001694",
       "input_cache_read": "0.000000028"
     },
     "architecture": {
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000018",
+      "prompt": "0.00000015",
       "completion": "0.00002",
-      "input_cache_read": "0.00000017"
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -634,18 +634,18 @@
     "description": "This model always redirects to the latest model in the GPT Terra family.",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.000002",
-      "completion": "0.000012",
+      "prompt": "0.000001",
+      "completion": "0.000005",
       "web_search": "0.01",
-      "input_cache_read": "0.0000002",
-      "input_cache_write": "0.0000025",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000125",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.000004",
-          "completion": "0.000018",
-          "input_cache_read": "0.0000004",
-          "input_cache_write": "0.000005"
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025"
         }
       ]
     },
@@ -665,7 +665,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -2477,36 +2477,6 @@
     }
   },
   {
-    "id": "arcee-ai/trinity-large-thinking",
-    "name": "Arcee AI: Trinity Large Thinking",
-    "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.0000008",
-      "input_cache_read": "0.00000006"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 80000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "bytedance-seed/seed-1.6",
     "name": "ByteDance Seed: Seed 1.6",
     "description": "Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It incorporates multimodal capabilities and adaptive deep thinking with a 256K context window.",
@@ -3212,9 +3182,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.00000132",
-      "input_cache_read": "0.000000014"
+      "prompt": "0.00000004444",
+      "completion": "0.00000013332",
+      "input_cache_read": "0.000000001414"
     },
     "architecture": {
       "modality": "text->text",
@@ -3289,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000716532",
+      "completion": "0.000001433064",
+      "input_cache_read": "0.000000059711"
     },
     "architecture": {
       "modality": "text->text",
@@ -3443,9 +3413,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.000001",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.0000000477",
+      "completion": "0.0000001908",
+      "input_cache_read": "0.000000000954"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3461,7 +3431,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5272,9 +5242,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6827,34 +6797,6 @@
     }
   },
   {
-    "id": "mistralai/codestral-2508:batch",
-    "name": "Mistral: Codestral 2508 (batch)",
-    "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
-    "context_length": 256000,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.00000045",
-      "input_cache_read": "0.000000015"
-    },
-    "architecture": {
-      "modality": "text+file->text",
-      "input_modalities": [
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 204800,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "mistralai/devstral-2512",
     "name": "Mistral: Devstral 2 2512",
     "description": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring...",
@@ -6967,34 +6909,6 @@
     }
   },
   {
-    "id": "mistralai/ministral-8b-2512:batch",
-    "name": "Mistral: Ministral 3 8B 2512 (batch)",
-    "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.000000075",
-      "input_cache_read": "0.0000000075"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 209715,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "mistralai/mistral-large",
     "name": "Mistral Large",
     "description": "This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-2407`). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/)....",
@@ -7059,35 +6973,6 @@
       "prompt": "0.0000005",
       "completion": "0.0000015",
       "input_cache_read": "0.00000005"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 209715,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "mistralai/mistral-large-2512:batch",
-    "name": "Mistral: Mistral Large 3 2512 (batch)",
-    "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000075",
-      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -7276,35 +7161,6 @@
     }
   },
   {
-    "id": "mistralai/mistral-medium-3.1:batch",
-    "name": "Mistral: Mistral Medium 3.1 (batch)",
-    "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.000001",
-      "input_cache_read": "0.00000002"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 104857,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "mistralai/mistral-nemo",
     "name": "Mistral: Mistral Nemo",
     "description": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,...",
@@ -7393,43 +7249,6 @@
       "prompt": "0.00000015",
       "completion": "0.0000006",
       "input_cache_read": "0.000000015"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 209715,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": false,
-      "supported_efforts": [
-        "high",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "mistralai/mistral-small-2603:batch",
-    "name": "Mistral: Mistral Small 4 (batch)",
-    "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7817,9 +7636,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000018",
+      "prompt": "0.00000015",
       "completion": "0.00002",
-      "input_cache_read": "0.00000017"
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12015,6 +11834,112 @@
     }
   },
   {
+    "id": "openai/gpt-6.1-terra",
+    "name": "OpenAI: GPT-6.1 Terra",
+    "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.1-terra:batch",
+    "name": "OpenAI: GPT-6.1 Terra (batch)",
+    "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.0000005",
+      "completion": "0.0000025",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000025",
+      "input_cache_write": "0.000000625",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000001",
+          "completion": "0.00000375",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.00000125"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-audio",
     "name": "OpenAI: GPT Audio",
     "description": "The gpt-audio model is OpenAI's first generally available audio model. The new snapshot features an upgraded decoder for more natural sounding voices and maintains better voice consistency. Audio is priced...",
@@ -14099,8 +14024,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000001",
-      "completion": "0.00000095",
-      "input_cache_read": "0.00000005"
+      "completion": "0.0000009",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15268,9 +15193,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15358,9 +15283,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
