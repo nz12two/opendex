@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.00000002",
+      "completion": "0.000000048267",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -206,7 +206,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001188",
+      "prompt": "0.0000002264",
       "completion": "0.000008",
-      "input_cache_read": "0.00000012"
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,8 +264,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000422",
-      "completion": "0.0000001694",
+      "prompt": "0.0000000475",
+      "completion": "0.0000001568",
       "input_cache_read": "0.000000028"
     },
     "architecture": {
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.00002",
-      "input_cache_read": "0.00000014"
+      "prompt": "0.00000019",
+      "completion": "0.00000894",
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -803,9 +803,9 @@
     "description": "This model always redirects to the latest GLM model from Z.ai.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000699",
-      "completion": "0.0000014",
-      "input_cache_read": "0.0000000689"
+      "prompt": "0.0000000703",
+      "completion": "0.0000043843",
+      "input_cache_read": "0.0000000703"
     },
     "architecture": {
       "modality": "text->text",
@@ -820,7 +820,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3146,9 +3146,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000091",
-      "completion": "0.000000182",
-      "input_cache_read": "0.0000000182"
+      "prompt": "0.00000014",
+      "completion": "0.00000028",
+      "input_cache_read": "0.000000028"
     },
     "architecture": {
       "modality": "text->text",
@@ -3162,8 +3162,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3182,9 +3182,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004444",
-      "completion": "0.00000013332",
-      "input_cache_read": "0.000000001414"
+      "prompt": "0.000000119",
+      "completion": "0.000000238",
+      "input_cache_read": "0.0000000238"
     },
     "architecture": {
       "modality": "text->text",
@@ -3199,7 +3199,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3259,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000716532",
-      "completion": "0.000001433064",
-      "input_cache_read": "0.000000059711"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3295,9 +3295,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
+      "prompt": "0.00000132",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000044",
       "overrides": [
         {
           "utc_days": [
@@ -3413,9 +3413,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000477",
-      "completion": "0.0000001908",
-      "input_cache_read": "0.000000000954"
+      "prompt": "0.00000014",
+      "completion": "0.00000042",
+      "input_cache_read": "0.0000000042"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3431,7 +3431,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3452,9 +3452,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000003",
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006",
       "overrides": [
         {
           "utc_days": [
@@ -5444,32 +5444,6 @@
     "top_provider": {
       "context_length": 4096,
       "max_completion_tokens": 3686,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "ibm-granite/granite-4.0-h-micro",
-    "name": "IBM: Granite 4.0 Micro",
-    "description": "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. These models are the latest in a series of models released by IBM. They are fine-tuned for long...",
-    "context_length": 131000,
-    "pricing": {
-      "prompt": "0.000000017",
-      "completion": "0.000000112"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131000,
-      "max_completion_tokens": 117900,
       "is_moderated": false
     }
   },
@@ -7604,8 +7578,8 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006712",
-      "completion": "0.00000335",
+      "prompt": "0.00000056",
+      "completion": "0.0000031",
       "input_cache_read": "0.00000015"
     },
     "architecture": {
@@ -7636,9 +7610,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
+      "prompt": "0.0000002",
       "completion": "0.00002",
-      "input_cache_read": "0.00000014"
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -8357,7 +8331,7 @@
   {
     "id": "nvidia/switchyard",
     "name": "NVIDIA: Switchyard",
-    "description": "Switchyard is an open-source model router that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most popular...",
+    "description": "Switchyard is an open-source model routing system that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most...",
     "context_length": 1000000,
     "pricing": {
       "prompt": "-1",
@@ -10875,7 +10849,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -11882,6 +11856,110 @@
         "medium",
         "low",
         "none"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.1-terra-pro",
+    "name": "OpenAI: GPT-6.1 Terra Pro",
+    "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.1-terra-pro:batch",
+    "name": "OpenAI: GPT-6.1 Terra Pro (batch)",
+    "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.0000005",
+      "completion": "0.0000025",
+      "web_search": "0.01",
+      "input_cache_read": "0.000000025",
+      "input_cache_write": "0.000000625",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000001",
+          "completion": "0.00000375",
+          "input_cache_read": "0.00000005",
+          "input_cache_write": "0.00000125"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
       ],
       "default_effort": "medium"
     }
@@ -13755,9 +13833,8 @@
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.00000216",
-      "input_cache_read": "0.00000027"
+      "prompt": "0.00000026",
+      "completion": "0.0000026"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13774,7 +13851,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 81920,
       "is_moderated": false
     },
     "reasoning": {
@@ -14024,8 +14101,8 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.0000001",
-      "completion": "0.0000009",
-      "input_cache_read": "0.00000003"
+      "completion": "0.00000095",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15193,9 +15270,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15283,9 +15360,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16217,9 +16294,9 @@
     "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding...",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.000000119",
-      "completion": "0.000000238",
-      "input_cache_read": "0.00000000255"
+      "prompt": "0.0000004",
+      "completion": "0.000002",
+      "input_cache_read": "0.00000008"
     },
     "architecture": {
       "modality": "text+image+audio+video->text",
@@ -16236,8 +16313,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1050000,
-      "max_completion_tokens": 945000,
+      "context_length": 1000000,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -16250,9 +16327,9 @@
     "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.0000003045",
-      "completion": "0.000000609",
-      "input_cache_read": "0.0000000028"
+      "prompt": "0.00000048",
+      "completion": "0.0000018",
+      "input_cache_read": "0.000000096"
     },
     "architecture": {
       "modality": "text->text",
@@ -16266,8 +16343,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1050000,
-      "max_completion_tokens": 945000,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -16685,9 +16762,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000014",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.000000966",
+      "completion": "0.000003036",
+      "input_cache_read": "0.0000001794"
     },
     "architecture": {
       "modality": "text->text",
@@ -16701,8 +16778,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
-      "max_completion_tokens": 131072,
+      "context_length": 200000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
@@ -16753,7 +16830,7 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000699",
+      "prompt": "0.0000000769",
       "completion": "0.0000014",
       "input_cache_read": "0.0000000689"
     },
