@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000022",
-      "completion": "0.00000121",
-      "input_cache_read": "0.000000012398"
+      "prompt": "0.0000000182",
+      "completion": "0.0000018",
+      "input_cache_read": "0.0000000165"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000019",
-      "completion": "0.0000105634",
-      "input_cache_read": "0.00000019"
+      "prompt": "0.000000151",
+      "completion": "0.00000894",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000363",
-      "completion": "0.000000110001",
-      "input_cache_read": "0.000000047071"
+      "prompt": "0.0000000416",
+      "completion": "0.0000000798",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -783,7 +783,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3259,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000088044",
-      "completion": "0.00000176088",
-      "input_cache_read": "0.00000007337"
+      "prompt": "0.000000875394",
+      "completion": "0.000001750788",
+      "input_cache_read": "0.0000000729495"
     },
     "architecture": {
       "modality": "text->text",
@@ -5241,9 +5241,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7609,9 +7609,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002",
+      "prompt": "0.000000159",
       "completion": "0.00002",
-      "input_cache_read": "0.00000019"
+      "input_cache_read": "0.000000149"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13154,6 +13154,38 @@
         "none"
       ],
       "default_effort": "xhigh"
+    }
+  },
+  {
+    "id": "prism-ml/ternary-bonsai-2-9b",
+    "name": "PrismML: Ternary Bonsai 2 9B",
+    "description": "Ternary Bonsai 2 9B is PrismML’s compact, open-weight language model for conversational AI, reasoning, and tool use. Built on Qwen3.5, it uses ternary weights packed into 2 bits for efficient...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000008",
+      "completion": "0.00000013",
+      "input_cache_read": "0.00000004"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
     }
   },
   {
