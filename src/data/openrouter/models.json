@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000126",
+      "prompt": "0.0000000138",
       "completion": "0.0000018",
-      "input_cache_read": "0.0000000114"
+      "input_cache_read": "0.0000000137"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002542",
+      "prompt": "0.0000001035",
       "completion": "0.000008",
-      "input_cache_read": "0.00000025"
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,8 +264,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000475",
-      "completion": "0.0000001568",
+      "prompt": "0.0000000422",
+      "completion": "0.0000001694",
       "input_cache_read": "0.000000028"
     },
     "architecture": {
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000189",
-      "completion": "0.00002",
-      "input_cache_read": "0.000000179"
+      "prompt": "0.0000001824",
+      "completion": "0.0000093388",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000216",
-      "completion": "0.0000001324",
-      "input_cache_read": "0.0000000216"
+      "prompt": "0.0000000285",
+      "completion": "0.0000000923",
+      "input_cache_read": "0.0000000285"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3014,7 +3014,7 @@
     },
     "top_provider": {
       "context_length": 163840,
-      "max_completion_tokens": 32768,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3259,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000888966",
+      "completion": "0.000001777932",
+      "input_cache_read": "0.0000000740805"
     },
     "architecture": {
       "modality": "text->text",
@@ -3413,9 +3413,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000042",
-      "input_cache_read": "0.0000000042"
+      "prompt": "0.000000045",
+      "completion": "0.0000005",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3431,7 +3431,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5241,9 +5241,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5453,7 +5453,7 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.00000006",
-      "completion": "0.00000025",
+      "completion": "0.00000015",
       "input_cache_read": "0.000000015"
     },
     "architecture": {
@@ -5925,8 +5925,9 @@
     "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.00000004"
+      "prompt": "0.00000005",
+      "completion": "0.00000008",
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text->text",
@@ -5941,7 +5942,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     }
   },
@@ -6382,7 +6383,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -7608,9 +7609,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000189",
+      "prompt": "0.000000192",
       "completion": "0.00002",
-      "input_cache_read": "0.000000179"
+      "input_cache_read": "0.000000182"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7998,7 +7999,7 @@
     "id": "nvidia/nemotron-3-super-120b-a12b",
     "name": "NVIDIA: Nemotron 3 Super",
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
-    "context_length": 262144,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000024",
@@ -8016,8 +8017,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 1048576,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -8393,33 +8394,6 @@
       "context_length": 8191,
       "max_completion_tokens": 4096,
       "is_moderated": false
-    }
-  },
-  {
-    "id": "openai/gpt-4-turbo",
-    "name": "OpenAI: GPT-4 Turbo",
-    "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00003"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 4096,
-      "is_moderated": true
     }
   },
   {
@@ -12243,71 +12217,6 @@
     }
   },
   {
-    "id": "openai/o1",
-    "name": "OpenAI: o1",
-    "description": "The latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.000015",
-      "completion": "0.00006",
-      "web_search": "0.01",
-      "input_cache_read": "0.0000075"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
-    "id": "openai/o1-pro",
-    "name": "OpenAI: o1-pro",
-    "description": "The o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.00015",
-      "completion": "0.0006",
-      "web_search": "0.01"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "openai/o3",
     "name": "OpenAI: o3",
     "description": "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following....",
@@ -12338,74 +12247,6 @@
     },
     "reasoning": {
       "mandatory": true
-    }
-  },
-  {
-    "id": "openai/o3-mini",
-    "name": "OpenAI: o3 Mini",
-    "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.0000011",
-      "completion": "0.0000044",
-      "web_search": "0.01",
-      "input_cache_read": "0.00000055"
-    },
-    "architecture": {
-      "modality": "text+file->text",
-      "input_modalities": [
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
-    "id": "openai/o3-mini-high",
-    "name": "OpenAI: o3 Mini High",
-    "description": "OpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reasoning_effort set to high. o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.0000011",
-      "completion": "0.0000044",
-      "web_search": "0.01",
-      "input_cache_read": "0.00000055"
-    },
-    "architecture": {
-      "modality": "text+file->text",
-      "input_modalities": [
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "high"
-      ],
-      "default_effort": "high"
     }
   },
   {
@@ -12503,76 +12344,6 @@
     },
     "reasoning": {
       "mandatory": true
-    }
-  },
-  {
-    "id": "openai/o4-mini",
-    "name": "OpenAI: o4 Mini",
-    "description": "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.0000011",
-      "completion": "0.0000044",
-      "web_search": "0.01",
-      "input_cache_read": "0.000000275"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
-    "id": "openai/o4-mini-high",
-    "name": "OpenAI: o4 Mini High",
-    "description": "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining...",
-    "context_length": 200000,
-    "pricing": {
-      "prompt": "0.0000011",
-      "completion": "0.0000044",
-      "web_search": "0.01",
-      "input_cache_read": "0.000000275"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "GPT",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 200000,
-      "max_completion_tokens": 100000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "high"
-      ],
-      "default_effort": "high"
     }
   },
   {
@@ -12773,6 +12544,48 @@
       "context_length": null,
       "max_completion_tokens": null,
       "is_moderated": false
+    }
+  },
+  {
+    "id": "particle-ai/particle-1",
+    "name": "Particle AI: Particle-1",
+    "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000003"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal",
+        "none"
+      ],
+      "default_effort": "high"
     }
   },
   {
@@ -13651,35 +13464,6 @@
     }
   },
   {
-    "id": "qwen/qwen3-next-80b-a3b-thinking",
-    "name": "Qwen: Qwen3 Next 80B A3B Thinking",
-    "description": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured “thinking” traces by default. It’s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000012"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "qwen/qwen3-vl-235b-a22b-instruct",
     "name": "Qwen: Qwen3 VL 235B A22B Instruct",
     "description": "Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies strong text generation with visual understanding across images and video. The Instruct model targets general vision-language use (VQA, document parsing, chart/table...",
@@ -14402,9 +14186,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000000039",
-      "completion": "0.00000125",
-      "input_cache_read": "0.0000000039"
+      "prompt": "0.0000002",
+      "completion": "0.0000025",
+      "input_cache_read": "0.00000009"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14421,7 +14205,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -15266,9 +15050,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15356,9 +15140,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16789,9 +16573,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000014",
-      "completion": "0.000007",
-      "input_cache_read": "0.000000013"
+      "prompt": "0.000000006",
+      "completion": "0.0000054",
+      "input_cache_read": "0.000000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -16863,9 +16647,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000285",
+      "completion": "0.0000000923",
+      "input_cache_read": "0.0000000285"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16881,8 +16665,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
