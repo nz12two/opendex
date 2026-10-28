@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000151",
+      "prompt": "0.0000000126",
       "completion": "0.0000018",
-      "input_cache_read": "0.000000015"
+      "input_cache_read": "0.0000000114"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000159",
+      "prompt": "0.000000189",
       "completion": "0.00002",
-      "input_cache_read": "0.000000149"
+      "input_cache_read": "0.000000179"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000464",
-      "completion": "0.0000000737",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000216",
+      "completion": "0.0000001324",
+      "input_cache_read": "0.0000000216"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3146,9 +3146,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000028",
-      "input_cache_read": "0.000000028"
+      "prompt": "0.000000091",
+      "completion": "0.000000182",
+      "input_cache_read": "0.0000000182"
     },
     "architecture": {
       "modality": "text->text",
@@ -3162,8 +3162,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
@@ -5241,9 +5241,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7608,9 +7608,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000159",
+      "prompt": "0.000000189",
       "completion": "0.00002",
-      "input_cache_read": "0.000000149"
+      "input_cache_read": "0.000000179"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -8000,8 +8000,9 @@
     "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000008",
-      "completion": "0.00000045"
+      "prompt": "0.0000003",
+      "completion": "0.0000024",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -16788,9 +16789,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000341",
+      "prompt": "0.000000014",
       "completion": "0.000007",
-      "input_cache_read": "0.0000000331"
+      "input_cache_read": "0.000000013"
     },
     "architecture": {
       "modality": "text->text",
@@ -16862,8 +16863,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000464",
-      "completion": "0.0000000737",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -16880,8 +16881,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
