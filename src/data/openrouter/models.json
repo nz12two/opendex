@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000233",
-      "completion": "0.0000018",
-      "input_cache_read": "0.0000000231"
+      "prompt": "0.000000044",
+      "completion": "0.000000383",
+      "input_cache_read": "0.000000004"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000057",
-      "completion": "0.0000001341",
-      "input_cache_read": "0.000000028"
+      "prompt": "0.0000000308",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000298"
     },
     "architecture": {
       "modality": "text->text",
@@ -466,7 +466,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -613,7 +613,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -764,8 +764,8 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000457",
-      "completion": "0.0000000742",
+      "prompt": "0.0000000503",
+      "completion": "0.0000000701",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -3259,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000897318",
-      "completion": "0.000001794636",
-      "input_cache_read": "0.0000000747765"
+      "prompt": "0.0000016",
+      "completion": "0.0000032",
+      "input_cache_read": "0.000000135"
     },
     "architecture": {
       "modality": "text->text",
@@ -3275,8 +3275,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 384000,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5241,9 +5241,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6972,9 +6972,9 @@
     "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 1M-token context window with up...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000136",
-      "completion": "0.00000418",
-      "input_cache_read": "0.00000014"
+      "prompt": "0.0000007",
+      "completion": "0.0000021",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12437,7 +12437,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": null,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     }
   },
@@ -14186,9 +14186,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000000039",
-      "completion": "0.00000125",
-      "input_cache_read": "0.0000000039"
+      "prompt": "0.0000002",
+      "completion": "0.0000025",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14204,8 +14204,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "context_length": 1000000,
+      "max_completion_tokens": 262144,
       "is_moderated": false
     },
     "reasoning": {
@@ -14903,7 +14903,7 @@
     "id": "stepfun/step-5-preview",
     "name": "StepFun: Step 5 Preview",
     "description": "Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters). It performs strongly in software engineering and professional...",
-    "context_length": 1000000,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.000001",
       "completion": "0.0000027",
@@ -15050,9 +15050,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15140,9 +15140,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -15459,7 +15459,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     }
   },
@@ -15577,45 +15577,6 @@
       "supported_efforts": [
         "max",
         "xhigh",
-        "high",
-        "medium",
-        "low",
-        "minimal",
-        "none"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "upstage/solar-pro-3",
-    "name": "Upstage: Solar Pro 3",
-    "description": "Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 102B total parameters and 12B active parameters per forward pass, it delivers exceptional performance while maintaining computational efficiency. Optimized...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": false,
-      "supported_efforts": [
         "high",
         "medium",
         "low",
@@ -16647,8 +16608,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000457",
-      "completion": "0.0000000742",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -16665,8 +16626,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
