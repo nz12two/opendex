@@ -188,8 +188,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000138",
-      "completion": "0.0000018",
+      "prompt": "0.0000000166",
+      "completion": "0.0000015",
       "input_cache_read": "0.0000000137"
     },
     "architecture": {
@@ -264,8 +264,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000422",
-      "completion": "0.0000001694",
+      "prompt": "0.0000000475",
+      "completion": "0.0000001568",
       "input_cache_read": "0.000000028"
     },
     "architecture": {
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
-      "completion": "0.0000093388",
-      "input_cache_read": "0.00000018"
+      "prompt": "0.0000001624",
+      "completion": "0.0000097471",
+      "input_cache_read": "0.00000016"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000285",
-      "completion": "0.0000000923",
-      "input_cache_read": "0.0000000285"
+      "prompt": "0.0000000457",
+      "completion": "0.0000000742",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3259,9 +3259,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000888966",
-      "completion": "0.000001777932",
-      "input_cache_read": "0.0000000740805"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -10786,7 +10786,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -10993,7 +10993,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -14186,9 +14186,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000009"
+      "prompt": "0.000000039",
+      "completion": "0.00000125",
+      "input_cache_read": "0.0000000039"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14205,7 +14205,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -15050,9 +15050,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15140,9 +15140,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16357,9 +16357,9 @@
     "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000022",
-      "input_cache_read": "0.00000011"
+      "prompt": "0.0000005",
+      "completion": "0.000002",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -16373,7 +16373,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
+      "context_length": 202752,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -16574,7 +16574,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000006",
-      "completion": "0.0000054",
+      "completion": "0.000007",
       "input_cache_read": "0.000000005"
     },
     "architecture": {
@@ -16647,9 +16647,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000285",
-      "completion": "0.0000000923",
-      "input_cache_read": "0.0000000285"
+      "prompt": "0.0000000457",
+      "completion": "0.0000000742",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
