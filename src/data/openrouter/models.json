@@ -188,8 +188,8 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000141",
-      "completion": "0.000000144",
+      "prompt": "0.0000000155",
+      "completion": "0.00000012",
       "input_cache_read": "0.000000013"
     },
     "architecture": {
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005764",
-      "completion": "0.00000017292",
-      "input_cache_read": "0.000000001834"
+      "prompt": "0.00000005",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -281,7 +281,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -764,9 +764,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000163",
+      "prompt": "0.0000000149",
       "completion": "0.0000001479",
-      "input_cache_read": "0.0000000163"
+      "input_cache_read": "0.0000000149"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3295,90 +3295,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000066",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000022",
-      "overrides": [
-        {
-          "utc_days": [
-            "saturday",
-            "sunday"
-          ],
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 0,
-          "utc_end": 100,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 100,
-          "utc_end": 400,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 400,
-          "utc_end": 600,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 600,
-          "utc_end": 1000,
-          "prompt": "0.00000132",
-          "completion": "0.00000396",
-          "input_cache_read": "0.000000044"
-        },
-        {
-          "utc_days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
-          "utc_start": 1000,
-          "utc_end": 0,
-          "prompt": "0.00000066",
-          "completion": "0.00000198",
-          "input_cache_read": "0.000000022"
-        }
-      ]
+      "prompt": "0.000000115",
+      "completion": "0.000004",
+      "input_cache_read": "0.00000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -3393,7 +3312,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -16274,9 +16193,9 @@
     "description": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000054",
-      "completion": "0.00000198",
-      "input_cache_read": "0.000000099"
+      "prompt": "0.0000006",
+      "completion": "0.0000022",
+      "input_cache_read": "0.00000011"
     },
     "architecture": {
       "modality": "text->text",
@@ -16290,7 +16209,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
+      "context_length": 202752,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -16502,9 +16421,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000163",
+      "prompt": "0.0000000149",
       "completion": "0.0000001479",
-      "input_cache_read": "0.0000000163"
+      "input_cache_read": "0.0000000149"
     },
     "architecture": {
       "modality": "text+image+video->text",
