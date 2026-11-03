@@ -717,14 +717,16 @@
     "pricing": {
       "prompt": "0.000002",
       "completion": "0.000006",
-      "web_search": "0.005",
+      "web_search": "0.01",
       "input_cache_read": "0.0000005",
+      "input_cache_write": "0",
       "overrides": [
         {
           "min_prompt_tokens": 200000,
           "prompt": "0.000004",
           "completion": "0.000012",
-          "input_cache_read": "0.000001"
+          "input_cache_read": "0.000001",
+          "input_cache_write": "0"
         }
       ]
     },
@@ -744,7 +746,7 @@
     "top_provider": {
       "context_length": 500000,
       "max_completion_tokens": 450000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -3182,9 +3184,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000119",
-      "completion": "0.000000238",
-      "input_cache_read": "0.0000000238"
+      "prompt": "0.000000059",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -5160,9 +5162,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000085",
-      "completion": "0.000000256",
-      "input_cache_read": "0.000000043"
+      "prompt": "0.000000065",
+      "completion": "0.000000194",
+      "input_cache_read": "0.000000032"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5923,8 +5925,9 @@
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000032"
+      "prompt": "0.0000002",
+      "completion": "0.00000052",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -5939,7 +5942,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -6626,9 +6629,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -13107,8 +13110,8 @@
     "description": "Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.00000028"
+      "prompt": "0.00000015",
+      "completion": "0.0000006"
     },
     "architecture": {
       "modality": "text->text",
@@ -13124,7 +13127,7 @@
     "top_provider": {
       "context_length": 262144,
       "max_completion_tokens": 235929,
-      "is_moderated": false
+      "is_moderated": true
     }
   },
   {
@@ -13204,8 +13207,9 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000011"
+      "prompt": "0.0000001",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text->text",
@@ -13220,7 +13224,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
