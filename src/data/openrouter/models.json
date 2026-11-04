@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000035",
-      "completion": "0.000000315",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.0000000333",
+      "completion": "0.000000475",
+      "input_cache_read": "0.00000000475"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001615",
-      "completion": "0.0000101551",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.00000019",
+      "completion": "0.00000894",
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -766,9 +766,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000313",
-      "completion": "0.0000000846",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000283",
+      "completion": "0.0000000933",
+      "input_cache_read": "0.0000000283"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3298,7 +3298,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000115",
-      "completion": "0.000004",
+      "completion": "0.0000046",
       "input_cache_read": "0.00000011"
     },
     "architecture": {
@@ -3336,7 +3336,7 @@
     "pricing": {
       "prompt": "0.000000045",
       "completion": "0.0000005",
-      "input_cache_read": "0.000000012"
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5162,9 +5162,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000077",
-      "completion": "0.00000023",
-      "input_cache_read": "0.000000038"
+      "prompt": "0.00000007",
+      "completion": "0.00000021",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5374,7 +5374,7 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.00000006",
-      "completion": "0.00000015",
+      "completion": "0.00000025",
       "input_cache_read": "0.000000015"
     },
     "architecture": {
@@ -5925,9 +5925,8 @@
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000002",
-      "completion": "0.00000052",
-      "input_cache_read": "0.0000001"
+      "prompt": "0.0000001",
+      "completion": "0.00000032"
     },
     "architecture": {
       "modality": "text->text",
@@ -5942,7 +5941,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 128000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -6629,9 +6628,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7547,9 +7546,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000276",
-      "completion": "0.0000096",
-      "input_cache_read": "0.00000013"
+      "prompt": "0.0000002",
+      "completion": "0.000016",
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11936,9 +11935,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.000000025",
-      "completion": "0.000000092",
-      "input_cache_read": "0.000000022"
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000075"
     },
     "architecture": {
       "modality": "text->text",
@@ -12942,9 +12941,8 @@
     "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.0000008",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000009",
+      "completion": "0.00000055"
     },
     "architecture": {
       "modality": "text->text",
@@ -12958,8 +12956,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
+      "context_length": 262144,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -14858,9 +14856,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -14943,14 +14941,52 @@
     }
   },
   {
+    "id": "tencent/hy4",
+    "name": "Tencent: Hy4",
+    "description": "The official release of Hy4 delivers comprehensive and substantial improvements over Hy4 Preview, with particularly strong gains in agentic capabilities and performance across a wide range of long-horizon, real-world productivity...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.000000417",
+      "completion": "0.0000012505",
+      "input_cache_read": "0.000000021"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "low",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "tencent/hy4-preview",
     "name": "Tencent: Hy4 preview",
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16514,9 +16550,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000313",
-      "completion": "0.0000000846",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.0000000283",
+      "completion": "0.0000000933",
+      "input_cache_read": "0.0000000283"
     },
     "architecture": {
       "modality": "text+image+video->text",
