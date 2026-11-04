@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000333",
-      "completion": "0.000000475",
-      "input_cache_read": "0.00000000475"
+      "prompt": "0.000000032",
+      "completion": "0.0000005",
+      "input_cache_read": "0.000000005"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000019",
-      "completion": "0.00000894",
-      "input_cache_read": "0.00000019"
+      "prompt": "0.0000001824",
+      "completion": "0.0000101551",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -766,9 +766,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000283",
-      "completion": "0.0000000933",
-      "input_cache_read": "0.0000000283"
+      "prompt": "0.0000000269",
+      "completion": "0.0000000996",
+      "input_cache_read": "0.0000000269"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5162,9 +5162,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000007",
-      "completion": "0.00000021",
-      "input_cache_read": "0.000000035"
+      "prompt": "0.000000077",
+      "completion": "0.00000023",
+      "input_cache_read": "0.000000038"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7546,9 +7546,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002",
+      "prompt": "0.000000192",
       "completion": "0.000016",
-      "input_cache_read": "0.00000019"
+      "input_cache_read": "0.000000182"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -11935,9 +11935,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000075"
+      "prompt": "0.000000029",
+      "completion": "0.000000107",
+      "input_cache_read": "0.000000026"
     },
     "architecture": {
       "modality": "text->text",
@@ -12941,8 +12941,9 @@
     "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.00000055"
+      "prompt": "0.00000014",
+      "completion": "0.0000008",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -12956,8 +12957,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "context_length": 131072,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     }
   },
@@ -15196,88 +15197,6 @@
     }
   },
   {
-    "id": "thinkingmachines/inkling-small:free",
-    "name": "Thinking Machines: Inkling Small (free)",
-    "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image+audio->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 262144,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "medium",
-        "low",
-        "minimal",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
-    "id": "thinkingmachines/inkling:free",
-    "name": "Thinking Machines: Inkling (free)",
-    "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image+audio->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 262144,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "medium",
-        "low",
-        "minimal",
-        "none"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "typesafe/jev-router",
     "name": "TypeSafe: Jev Router",
     "description": "Jev Router picks the best model and reasoning effort for each request, balancing quality, speed, and cost. It runs on [Jev](https://openrouter.ai/~typesafe/jev-latest), TypeSafe's first System One model, and adapts as your...",
@@ -15975,7 +15894,7 @@
     "id": "xiaomi/mimo-v2.5",
     "name": "Xiaomi: MiMo-V2.5",
     "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding...",
-    "context_length": 1050000,
+    "context_length": 1000000,
     "pricing": {
       "prompt": "0.0000004",
       "completion": "0.000002",
@@ -16550,9 +16469,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000283",
-      "completion": "0.0000000933",
-      "input_cache_read": "0.0000000283"
+      "prompt": "0.0000000269",
+      "completion": "0.0000000996",
+      "input_cache_read": "0.0000000269"
     },
     "architecture": {
       "modality": "text+image+video->text",
