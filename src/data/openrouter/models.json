@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001035",
+      "prompt": "0.0000000963",
       "completion": "0.000008",
-      "input_cache_read": "0.0000001"
+      "input_cache_read": "0.0000000963"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,7 +264,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000434",
+      "prompt": "0.000000059",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
-      "completion": "0.000010146",
-      "input_cache_read": "0.00000018"
+      "prompt": "0.0000001548",
+      "completion": "0.0000097471",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3184,7 +3184,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000434",
+      "prompt": "0.000000059",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -3297,9 +3297,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000115",
-      "completion": "0.0000046",
-      "input_cache_read": "0.00000011"
+      "prompt": "0.000000107",
+      "completion": "0.000004278",
+      "input_cache_read": "0.0000001023"
     },
     "architecture": {
       "modality": "text->text",
@@ -3493,9 +3493,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000015",
-      "input_cache_read": "0.000000004"
+      "prompt": "0.000000112",
+      "completion": "0.000000336",
+      "input_cache_read": "0.00000000336"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3511,7 +3511,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -5162,9 +5162,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000035",
-      "completion": "0.000000106",
-      "input_cache_read": "0.000000018"
+      "prompt": "0.000000032",
+      "completion": "0.000000096",
+      "input_cache_read": "0.000000016"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5636,7 +5636,7 @@
     },
     "top_provider": {
       "context_length": 128000,
-      "max_completion_tokens": 4096,
+      "max_completion_tokens": 8192,
       "is_moderated": false
     }
   },
@@ -5925,8 +5925,9 @@
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000032"
+      "prompt": "0.0000002",
+      "completion": "0.00000052",
+      "input_cache_read": "0.0000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -5941,7 +5942,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -5951,9 +5952,9 @@
     "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
     "context_length": 524288,
     "pricing": {
-      "prompt": "0.0000001875",
-      "completion": "0.0000006525",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000035",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5968,8 +5969,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 16384,
+      "context_length": 524288,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     }
   },
@@ -6628,9 +6629,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -11935,9 +11936,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000002",
-      "completion": "0.000000074",
-      "input_cache_read": "0.000000018"
+      "prompt": "0.000000013",
+      "completion": "0.000000049",
+      "input_cache_read": "0.000000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -12006,9 +12007,9 @@
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.000000018",
-      "completion": "0.00000009",
-      "input_cache_read": "0.000000009"
+      "prompt": "0.00000003",
+      "completion": "0.00000013",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -12023,7 +12024,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 32768,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
@@ -12267,7 +12268,7 @@
   {
     "id": "openrouter/auto",
     "name": "Auto Router",
-    "description": "The Auto Router automatically selects the best model for your prompt, powered by the wisdom of the market. It routes you based on what the OpenRouter community collectively spends on...",
+    "description": "Auto is OpenRouter’s general-purpose router, now powered by [Jev Router](https://openrouter.ai/typesafe/jev-router). It replaces market-spend rankings with request-aware selection of both the model and reasoning effort, weighing task difficulty, measured benchmark results,...",
     "context_length": 2000000,
     "pricing": {
       "prompt": "-1",
@@ -13930,7 +13931,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1000000,
+      "context_length": 1048576,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
@@ -14319,7 +14320,7 @@
     "id": "ricursiveai/ripple-65b-preview",
     "name": "ricursiveAI/Ripple-65B-Preview",
     "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
-    "context_length": 16384,
+    "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000002",
       "completion": "0.0000006",
@@ -14337,8 +14338,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 16384,
-      "max_completion_tokens": 14745,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -14888,9 +14889,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15016,9 +15017,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
