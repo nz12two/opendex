@@ -264,7 +264,7 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000487",
+      "prompt": "0.0000000434",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001548",
+      "prompt": "0.0000001824",
       "completion": "0.0000093388",
-      "input_cache_read": "0.00000015"
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -766,9 +766,9 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000285",
-      "completion": "0.0000000923",
-      "input_cache_read": "0.0000000285"
+      "prompt": "0.0000000335",
+      "completion": "0.000000083",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3185,7 +3185,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000487",
+      "prompt": "0.0000000434",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -3300,9 +3300,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000072819",
-      "completion": "0.00000145638",
-      "input_cache_read": "0.0000000606825"
+      "prompt": "0.000000535398",
+      "completion": "0.000001070796",
+      "input_cache_read": "0.0000000446165"
     },
     "architecture": {
       "modality": "text->text",
@@ -3336,9 +3336,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001165",
-      "completion": "0.00000466",
-      "input_cache_read": "0.000000111"
+      "prompt": "0.000000111",
+      "completion": "0.00000444",
+      "input_cache_read": "0.000000106"
     },
     "architecture": {
       "modality": "text->text",
@@ -6792,9 +6792,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7614,9 +7614,9 @@
     "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.0000025",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.000000532",
+      "completion": "0.000003325",
+      "input_cache_read": "0.000000209"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7631,8 +7631,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 256000,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -12067,9 +12067,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.000000017",
-      "completion": "0.000000063",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.000000021",
+      "completion": "0.000000076",
+      "input_cache_read": "0.000000019"
     },
     "architecture": {
       "modality": "text->text",
@@ -15090,9 +15090,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15218,9 +15218,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
