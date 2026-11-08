@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001662",
-      "completion": "0.0000101398",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000001824",
+      "completion": "0.0000093388",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3300,9 +3300,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000423864",
-      "completion": "0.000000847728",
-      "input_cache_read": "0.000000035322"
+      "prompt": "0.000000251604",
+      "completion": "0.000000503208",
+      "input_cache_read": "0.000000020967"
     },
     "architecture": {
       "modality": "text->text",
@@ -3338,7 +3338,7 @@
     "pricing": {
       "prompt": "0.000000111",
       "completion": "0.00000444",
-      "input_cache_read": "0.000000106"
+      "input_cache_read": "0.000000097"
     },
     "architecture": {
       "modality": "text->text",
@@ -3374,8 +3374,8 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.000000051",
-      "completion": "0.000000567",
-      "input_cache_read": "0.000000018"
+      "completion": "0.00000041",
+      "input_cache_read": "0.000000022"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5475,120 +5475,6 @@
         "none"
       ],
       "default_effort": "high"
-    }
-  },
-  {
-    "id": "inception/mercury-2",
-    "name": "Inception: Mercury 2",
-    "description": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM). Instead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00000025",
-      "completion": "0.00000075",
-      "input_cache_read": "0.000000025"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 50000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low",
-        "none"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "inception/mercury-2.5",
-    "name": "Inception: Mercury 2.5",
-    "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
-    "context_length": 260000,
-    "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.00000015",
-      "input_cache_read": "0.000000004"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 260000,
-      "max_completion_tokens": 65536,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low",
-        "none"
-      ],
-      "default_effort": "medium"
-    }
-  },
-  {
-    "id": "inception/mercury-3",
-    "name": "Inception: Mercury 3",
-    "description": "Mercury 3 is a diffusion-based language model from Inception, and the lab's most capable model to date. It is suited for agentic workflows and real-time applications where latency compounds, such...",
-    "context_length": 1000000,
-    "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000035",
-      "input_cache_read": "0.00000001"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 131072,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supported_efforts": [
-        "high",
-        "medium",
-        "low",
-        "none"
-      ],
-      "default_effort": "medium"
     }
   },
   {
@@ -7708,9 +7594,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000001084",
+      "prompt": "0.000000917",
       "completion": "0.000006",
-      "input_cache_read": "0.000000267"
+      "input_cache_read": "0.000000226"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12077,9 +11963,9 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000075"
+      "prompt": "0.000000022",
+      "completion": "0.000000083",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text->text",
