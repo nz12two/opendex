@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
-      "completion": "0.0000093388",
-      "input_cache_read": "0.00000018"
+      "prompt": "0.0000001539",
+      "completion": "0.0000105539",
+      "input_cache_read": "0.00000015"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3300,9 +3300,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000095526",
-      "completion": "0.00000191052",
-      "input_cache_read": "0.000000079605"
+      "prompt": "0.000000894012",
+      "completion": "0.000001788024",
+      "input_cache_read": "0.000000074501"
     },
     "architecture": {
       "modality": "text->text",
@@ -5235,9 +5235,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000675",
-      "completion": "0.000000225",
-      "input_cache_read": "0.0000000375"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6392,7 +6392,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -6541,9 +6541,9 @@
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.00000021",
-      "completion": "0.00000084",
-      "input_cache_read": "0.000000042"
+      "prompt": "0.00000027",
+      "completion": "0.00000108",
+      "input_cache_read": "0.000000054"
     },
     "architecture": {
       "modality": "text->text",
@@ -6557,8 +6557,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 196608,
-      "max_completion_tokens": 176947,
+      "context_length": 204800,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -6635,9 +6635,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7227,8 +7227,9 @@
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
     "context_length": 256000,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000002"
+      "prompt": "0.0000001",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7243,8 +7244,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 16384,
+      "context_length": 32768,
+      "max_completion_tokens": 26214,
       "is_moderated": false
     }
   },
@@ -7593,9 +7594,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000917",
+      "prompt": "0.000000883",
       "completion": "0.000006",
-      "input_cache_read": "0.000000226"
+      "input_cache_read": "0.000000218"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14158,6 +14159,46 @@
     }
   },
   {
+    "id": "qwen/qwen3.8-max-0902:batch",
+    "name": "Qwen: Qwen3.8 Max (0902) (batch)",
+    "description": "Qwen3.8 Max 0902 is an updated snapshot of Qwen3.8 Max from Alibaba's Qwen team. It is a 2.4-trillion-parameter mixture-of-experts model that accepts text, image, and video input and returns text,...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000115",
+      "completion": "0.00000345"
+    },
+    "architecture": {
+      "modality": "text+image+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "xhigh"
+    }
+  },
+  {
     "id": "qwen/qwen3.8-max-prime",
     "name": "Qwen: Qwen3.8 Max Prime",
     "description": "Qwen3.8 Max Prime is a higher-throughput variant of Qwen3.8 Max from Alibaba's Qwen team, served as a separate SKU at a higher price point. It accepts text, image, and video...",
@@ -16289,9 +16330,9 @@
     "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000013",
-      "completion": "0.00000085",
-      "input_cache_read": "0.000000025"
+      "prompt": "0.0000002",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -16428,7 +16469,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
+      "context_length": 204800,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
