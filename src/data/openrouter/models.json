@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001719",
+      "prompt": "0.0000001824",
       "completion": "0.0000093388",
-      "input_cache_read": "0.00000017"
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -766,8 +766,8 @@
     "description": "This model always redirects to the latest model in the GLM Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000335",
-      "completion": "0.000000083",
+      "prompt": "0.0000000399",
+      "completion": "0.0000000784",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -3459,9 +3459,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000051",
-      "completion": "0.000000567",
-      "input_cache_read": "0.000000018"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7944,6 +7944,42 @@
         "high",
         "medium",
         "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "nex-agi/nex-n2.6",
+    "name": "Nex AGI: Nex-N2.6",
+    "description": "Nex-N2.6 is an agentic model from Nex AGI, built on [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16) with about 321B parameters. It is suited for computer use, coding, and long-horizon tasks that involve tools. Compared with...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000012",
+      "completion": "0.0000004",
+      "input_cache_read": "0.000000024"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium"
       ],
       "default_effort": "high"
     }
@@ -14109,7 +14145,7 @@
     "id": "qwen/qwen3.8-27b",
     "name": "Qwen: Qwen3.8 27B",
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
-    "context_length": 1024000,
+    "context_length": 1048575,
     "pricing": {
       "prompt": "0.00000015",
       "completion": "0.000001875",
@@ -16706,9 +16742,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000006",
+      "prompt": "0.000000007",
       "completion": "0.0000068",
-      "input_cache_read": "0.000000005"
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text->text",
@@ -16743,9 +16779,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000623",
-      "completion": "0.000001271",
-      "input_cache_read": "0.00000021"
+      "prompt": "0.000000527",
+      "completion": "0.000001075",
+      "input_cache_read": "0.000000178"
     },
     "architecture": {
       "modality": "text->text",
@@ -16817,8 +16853,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
+      "prompt": "0.0000000399",
+      "completion": "0.0000000784",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -16835,8 +16871,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
