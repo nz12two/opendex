@@ -5,12 +5,12 @@
     "description": "This model always redirects to the latest model in the Claude Fable family.",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00005",
+      "prompt": "0.000008",
+      "completion": "0.00004",
       "web_search": "0.01",
-      "input_cache_read": "0.00000025",
-      "input_cache_write": "0.0000125",
-      "input_cache_write_1h": "0.00002"
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.00001",
+      "input_cache_write_1h": "0.000016"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001539",
-      "completion": "0.0000105539",
-      "input_cache_read": "0.00000015"
+      "prompt": "0.0000001719",
+      "completion": "0.0000093388",
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -1332,6 +1332,92 @@
       "input_cache_read": "0.000000125",
       "input_cache_write": "0.00000625",
       "input_cache_write_1h": "0.00001"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "anthropic/claude-fable-5.2",
+    "name": "Anthropic: Claude Fable 5.2",
+    "description": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision. In prerelease testing it completed otherwise-infeasible...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000008",
+      "completion": "0.00004",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.00001",
+      "input_cache_write_1h": "0.000016"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Claude",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "anthropic/claude-fable-5.2:batch",
+    "name": "Anthropic: Claude Fable 5.2 (batch)",
+    "description": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision. In prerelease testing it completed otherwise-infeasible...",
+    "context_length": 1000000,
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.00002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.000005",
+      "input_cache_write_1h": "0.000008"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -3300,9 +3386,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000894012",
-      "completion": "0.000001788024",
-      "input_cache_read": "0.000000074501"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3490,9 +3576,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000011",
-      "completion": "0.0000002",
-      "input_cache_read": "0.000000002"
+      "prompt": "0.000000112",
+      "completion": "0.000000336",
+      "input_cache_read": "0.00000000336"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3508,7 +3594,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -5235,9 +5321,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.00000008",
+      "completion": "0.0000001",
+      "input_cache_read": "0.000000046"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5253,8 +5339,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 256000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     },
     "reasoning": {
@@ -5974,9 +6060,9 @@
     "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000059",
-      "completion": "0.00000079",
-      "input_cache_read": "0.000000295"
+      "prompt": "0.00000071",
+      "completion": "0.00000071",
+      "input_cache_read": "0.00000071"
     },
     "architecture": {
       "modality": "text->text",
@@ -5990,8 +6076,8 @@
       "instruct_type": "llama3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 32768,
+      "context_length": 128000,
+      "max_completion_tokens": 115200,
       "is_moderated": false
     }
   },
@@ -6075,6 +6161,51 @@
       "context_length": 163840,
       "max_completion_tokens": 16384,
       "is_moderated": false
+    }
+  },
+  {
+    "id": "meta/muse-ember",
+    "name": "Meta: Muse Ember",
+    "description": "Muse Ember is the smallest and most efficient model from Meta that’s designed for complex reasoning execution and the work agents repeat all day: tool calls, coding agent subtasks, routing,...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000005",
+      "web_search": "0.0025",
+      "input_cache_read": "0.000000004",
+      "input_cache_write": "0.000000125"
+    },
+    "architecture": {
+      "modality": "text+image+file+audio+video->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "max"
     }
   },
   {
@@ -6477,39 +6608,10 @@
     }
   },
   {
-    "id": "minimax/minimax-m1",
-    "name": "MiniMax: MiniMax M1",
-    "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
-    "context_length": 1000000,
-    "pricing": {
-      "prompt": "0.00000055",
-      "completion": "0.0000022"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1000000,
-      "max_completion_tokens": 40000,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "minimax/minimax-m2.5",
     "name": "MiniMax: MiniMax M2.5",
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
-    "context_length": 204800,
+    "context_length": 200000,
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000012",
@@ -6539,11 +6641,11 @@
     "id": "minimax/minimax-m2.7",
     "name": "MiniMax: MiniMax M2.7",
     "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
-    "context_length": 204800,
+    "context_length": 196608,
     "pricing": {
-      "prompt": "0.00000027",
-      "completion": "0.00000108",
-      "input_cache_read": "0.000000054"
+      "prompt": "0.00000021",
+      "completion": "0.00000084",
+      "input_cache_read": "0.000000042"
     },
     "architecture": {
       "modality": "text->text",
@@ -6557,8 +6659,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 204800,
-      "max_completion_tokens": 131072,
+      "context_length": 196608,
+      "max_completion_tokens": 176947,
       "is_moderated": false
     },
     "reasoning": {
@@ -6635,9 +6737,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7594,9 +7696,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000883",
-      "completion": "0.000006",
-      "input_cache_read": "0.000000218"
+      "prompt": "0.00000228",
+      "completion": "0.0000114",
+      "input_cache_read": "0.000000228"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7613,7 +7715,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     },
     "reasoning": {
@@ -8149,7 +8251,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000015",
-      "completion": "0.0000005",
+      "completion": "0.00000047",
       "input_cache_read": "0.00000002"
     },
     "architecture": {
@@ -12350,7 +12452,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -12381,7 +12483,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -12971,8 +13073,8 @@
     "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
     "context_length": 40960,
     "pricing": {
-      "prompt": "0.00000012",
-      "completion": "0.00000024"
+      "prompt": "0.0000001",
+      "completion": "0.00000022"
     },
     "architecture": {
       "modality": "text->text",
@@ -12987,7 +13089,7 @@
     },
     "top_provider": {
       "context_length": 40960,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 36864,
       "is_moderated": false
     },
     "reasoning": {
@@ -14767,48 +14869,6 @@
     }
   },
   {
-    "id": "stealth/crouton-alpha",
-    "name": "Crouton Alpha",
-    "description": "Crouton Alpha is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image+file+audio+video->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "video",
-        "file",
-        "audio"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "supported_efforts": [
-        "max",
-        "xhigh",
-        "high",
-        "medium",
-        "low",
-        "minimal"
-      ],
-      "default_effort": "max"
-    }
-  },
-  {
     "id": "stepfun/step-3.5-flash",
     "name": "StepFun: Step 3.5 Flash",
     "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
@@ -14879,7 +14939,7 @@
     "id": "stepfun/step-5-preview",
     "name": "StepFun: Step 5 Preview",
     "description": "Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters). It performs strongly in software engineering and professional...",
-    "context_length": 1048576,
+    "context_length": 1000000,
     "pricing": {
       "prompt": "0.000001",
       "completion": "0.0000027",
@@ -15324,6 +15384,45 @@
     }
   },
   {
+    "id": "thinkingmachines/inkling-2-small:free",
+    "name": "Thinking Machines: Inkling 2 Small (free)",
+    "description": "Inkling 2 Small is a multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second Inkling...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
     "id": "thinkingmachines/inkling-small",
     "name": "Thinking Machines: Inkling Small",
     "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
@@ -15433,7 +15532,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -16139,7 +16238,7 @@
     "id": "xiaomi/mimo-v2.5-pro",
     "name": "Xiaomi: MiMo-V2.5-Pro",
     "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
-    "context_length": 1050000,
+    "context_length": 1024000,
     "pricing": {
       "prompt": "0.00000048",
       "completion": "0.0000018",
@@ -16718,8 +16817,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000335",
-      "completion": "0.000000083",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -16736,8 +16835,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
@@ -16757,9 +16856,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000018",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000003",
+      "completion": "0.000000061",
+      "input_cache_read": "0.000000013"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16776,7 +16875,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
