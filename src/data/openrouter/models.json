@@ -396,7 +396,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000001824",
-      "completion": "0.0000093388",
+      "completion": "0.0000110055",
       "input_cache_read": "0.00000018"
     },
     "architecture": {
@@ -1976,7 +1976,7 @@
     "top_provider": {
       "context_length": 1000000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -3308,9 +3308,9 @@
     "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000091",
-      "completion": "0.000000182",
-      "input_cache_read": "0.0000000182"
+      "prompt": "0.00000009",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text->text",
@@ -3324,8 +3324,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -3459,9 +3459,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000887226",
-      "completion": "0.000001774452",
-      "input_cache_read": "0.0000000739355"
+      "prompt": "0.00000095526",
+      "completion": "0.00000191052",
+      "input_cache_read": "0.000000079605"
     },
     "architecture": {
       "modality": "text->text",
@@ -3532,9 +3532,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.000000051",
+      "completion": "0.000000567",
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5909,6 +5909,36 @@
     }
   },
   {
+    "id": "kt/midm-k-3.0-pro",
+    "name": "KT: Mi:dm K 3.0 Pro",
+    "description": "Mi:dm K 3.0 Pro is a Mixture-of-Experts reasoning model from KT, with 120B total and 12B active parameters. It uses a hybrid architecture that mixes Mamba, MoE and attention layers.",
+    "context_length": 261795,
+    "pricing": {
+      "prompt": "0.0000002",
+      "completion": "0.0000008",
+      "input_cache_read": "0.00000004"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 261795,
+      "max_completion_tokens": 235615,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
+    }
+  },
+  {
     "id": "liquid/lfm-2.5-2.6b",
     "name": "LiquidAI: LFM2.5-2.6B",
     "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
@@ -6902,9 +6932,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -8037,6 +8067,36 @@
       "context_length": 262144,
       "max_completion_tokens": 131072,
       "is_moderated": false
+    }
+  },
+  {
+    "id": "motif-technologies/motif-3",
+    "name": "Motif Technologies: Motif 3",
+    "description": "Motif 3 is a Mixture-of-Experts language model from Motif Technologies, with 314B total and 13.2B active parameters. It is a general-purpose multilingual model for English and Korean, particularly strong at...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.00000006"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false
     }
   },
   {
@@ -10790,7 +10850,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -13152,32 +13212,6 @@
     }
   },
   {
-    "id": "qwen/qwen-2.5-7b-instruct",
-    "name": "Qwen: Qwen2.5 7B Instruct",
-    "description": "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2: - Significantly more knowledge and has greatly improved capabilities in coding and...",
-    "context_length": 32768,
-    "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000002"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen",
-      "instruct_type": "chatml"
-    },
-    "top_provider": {
-      "context_length": 32768,
-      "max_completion_tokens": 29491,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "qwen/qwen-2.5-coder-32b-instruct",
     "name": "Qwen2.5 Coder 32B Instruct",
     "description": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5: - Significantly improvements in **code generation**, **code reasoning**...",
@@ -15287,9 +15321,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15415,9 +15449,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16565,36 +16599,6 @@
     }
   },
   {
-    "id": "xingchen-agi/xing4.0-29b-a4b:free",
-    "name": "XingChen: Xing4.0 29B A4B (free)",
-    "description": "Xing4.0-29B-A4B is an open-weight mixture-of-experts language model from China Telecom's AI team (TeleAI) and the successor to the TeleChat series. It has 29B total parameters with 4B active per token...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true
-    }
-  },
-  {
     "id": "z-ai/glm-4.5",
     "name": "Z.ai: GLM 4.5",
     "description": "GLM-4.5 is our latest flagship foundation model, purpose-built for agent-based applications. It leverages a Mixture-of-Experts (MoE) architecture and supports a context length of up to 128k tokens. GLM-4.5 delivers significantly...",
@@ -16876,9 +16880,9 @@
     "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
     "context_length": 204800,
     "pricing": {
-      "prompt": "0.0000014",
-      "completion": "0.0000044",
-      "input_cache_read": "0.00000026"
+      "prompt": "0.00000133",
+      "completion": "0.00000418",
+      "input_cache_read": "0.000000247"
     },
     "architecture": {
       "modality": "text->text",
@@ -16892,7 +16896,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 202752,
+      "context_length": 202745,
       "max_completion_tokens": 131072,
       "is_moderated": false
     },
