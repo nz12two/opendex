@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000019",
-      "completion": "0.0000106066",
-      "input_cache_read": "0.00000019"
+      "prompt": "0.0000001824",
+      "completion": "0.0000110055",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -2984,8 +2984,8 @@
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.00000032",
-      "completion": "0.00000089"
+      "prompt": "0.0000002574",
+      "completion": "0.0000010287"
     },
     "architecture": {
       "modality": "text->text",
@@ -2999,8 +2999,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 16384,
+      "context_length": 128000,
+      "max_completion_tokens": 16000,
       "is_moderated": false
     }
   },
@@ -3410,9 +3410,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000507",
-      "completion": "0.0000002028",
-      "input_cache_read": "0.000000001014"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3428,7 +3428,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5458,9 +5458,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5827,6 +5827,37 @@
     }
   },
   {
+    "id": "inclusionai/ling-3.2-flash:free",
+    "name": "inclusionAI: Ling 3.2 Flash (free)",
+    "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 262144,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  {
     "id": "inference-net/schematron-v2-small",
     "name": "Inference.net: Schematron V2 Small",
     "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema...",
@@ -6142,8 +6173,8 @@
     "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.00000033"
+      "prompt": "0.0000000509",
+      "completion": "0.000000335"
     },
     "architecture": {
       "modality": "text->text",
@@ -6157,8 +6188,8 @@
       "instruct_type": "llama3"
     },
     "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
+      "context_length": 80000,
+      "max_completion_tokens": 72000,
       "is_moderated": false
     }
   },
@@ -6845,9 +6876,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -13862,9 +13893,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000044",
-      "completion": "0.000000065",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.000000168",
+      "completion": "0.000000248",
+      "input_cache_read": "0.000000152"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15316,9 +15347,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15444,9 +15475,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -17011,9 +17042,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000298",
-      "completion": "0.000000916",
-      "input_cache_read": "0.000000101"
+      "prompt": "0.000000322",
+      "completion": "0.000000989",
+      "input_cache_read": "0.000000109"
     },
     "architecture": {
       "modality": "text->text",
