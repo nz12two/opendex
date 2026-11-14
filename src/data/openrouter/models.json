@@ -3410,9 +3410,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.0000000507",
+      "completion": "0.0000002028",
+      "input_cache_read": "0.000000001014"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3428,7 +3428,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -6876,9 +6876,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -10750,18 +10750,18 @@
     "description": "GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks...",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.0000044",
-      "completion": "0.000022",
+      "prompt": "0.000004",
+      "completion": "0.00002",
       "web_search": "0.01",
-      "input_cache_read": "0.00000044",
-      "input_cache_write": "0.0000055",
+      "input_cache_read": "0.0000004",
+      "input_cache_write": "0.000005",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.0000088",
-          "completion": "0.000033",
-          "input_cache_read": "0.00000088",
-          "input_cache_write": "0.000011"
+          "prompt": "0.000008",
+          "completion": "0.00003",
+          "input_cache_read": "0.0000008",
+          "input_cache_write": "0.00001"
         }
       ]
     },
@@ -10781,7 +10781,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -13893,9 +13893,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000168",
-      "completion": "0.000000248",
-      "input_cache_read": "0.000000152"
+      "prompt": "0.000000118",
+      "completion": "0.000000173",
+      "input_cache_read": "0.000000106"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14370,7 +14370,7 @@
     "id": "qwen/qwen3.8-27b",
     "name": "Qwen: Qwen3.8 27B",
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
-    "context_length": 1048575,
+    "context_length": 1024000,
     "pricing": {
       "prompt": "0.00000015",
       "completion": "0.000001875",
@@ -15347,9 +15347,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15475,9 +15475,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
