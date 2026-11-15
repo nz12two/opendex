@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000038",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000002",
+      "completion": "0.000000108",
+      "input_cache_read": "0.000000007"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -206,7 +206,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -3067,8 +3067,9 @@
     "description": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.000000571",
-      "completion": "0.000002286"
+      "prompt": "0.0000005",
+      "completion": "0.00000215",
+      "input_cache_read": "0.00000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -3082,8 +3083,8 @@
       "instruct_type": "deepseek-r1"
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32000,
+      "context_length": 163840,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -3221,9 +3222,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000018",
-      "input_cache_read": "0.000000015"
+      "prompt": "0.0000000434",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -3238,7 +3239,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 384000,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3448,9 +3449,90 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000038",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
+      "overrides": [
+        {
+          "utc_days": [
+            "saturday",
+            "sunday"
+          ],
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 0,
+          "utc_end": 100,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 1000,
+          "utc_end": 0,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3466,7 +3548,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -3487,9 +3569,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000045",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000002"
+      "prompt": "0.000000036",
+      "completion": "0.000000318",
+      "input_cache_read": "0.000000003"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5669,7 +5751,7 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.00000006",
-      "completion": "0.00000025",
+      "completion": "0.00000015",
       "input_cache_read": "0.000000015"
     },
     "architecture": {
@@ -7874,8 +7956,8 @@
     "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002375",
-      "completion": "0.0000084114",
+      "prompt": "0.0000002403",
+      "completion": "0.0000084023",
       "input_cache_read": "0.0000002"
     },
     "architecture": {
@@ -7914,9 +7996,9 @@
     "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000346",
-      "completion": "0.00000441",
-      "input_cache_read": "0.000000111"
+      "prompt": "0.000000275",
+      "completion": "0.000004125",
+      "input_cache_read": "0.000000088"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -8495,7 +8577,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000015",
-      "completion": "0.00000047",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000002"
     },
     "architecture": {
@@ -8512,8 +8594,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -13703,36 +13785,6 @@
     }
   },
   {
-    "id": "qwen/qwen3-vl-30b-a3b-thinking",
-    "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-    "description": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.00000029",
-      "completion": "0.000001"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "qwen/qwen3-vl-8b-instruct",
     "name": "Qwen: Qwen3 VL 8B Instruct",
     "description": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video. It features improved multimodal fusion with Interleaved-MRoPE for long-horizon...",
@@ -13892,9 +13944,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000168",
-      "completion": "0.000000246",
-      "input_cache_read": "0.000000151"
+      "prompt": "0.000000022",
+      "completion": "0.000000033",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15129,35 +15181,6 @@
     }
   },
   {
-    "id": "stepfun/step-3.5-flash",
-    "name": "StepFun: Step 3.5 Flash",
-    "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000003"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "stepfun/step-3.7-flash",
     "name": "StepFun: Step 3.7 Flash",
     "description": "Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters...",
@@ -15231,35 +15254,6 @@
         "low"
       ],
       "default_effort": "medium"
-    }
-  },
-  {
-    "id": "tencent/hunyuan-a13b-instruct",
-    "name": "Tencent: Hunyuan A13B Instruct",
-    "description": "Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model developed by Tencent, with a total parameter count of 80B and support for reasoning via Chain-of-Thought. It offers competitive benchmark...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000057"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 117964,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
     }
   },
   {
@@ -17271,9 +17265,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000347",
-      "completion": "0.000001068",
-      "input_cache_read": "0.000000117"
+      "prompt": "0.000000322",
+      "completion": "0.000000989",
+      "input_cache_read": "0.000000109"
     },
     "architecture": {
       "modality": "text->text",
