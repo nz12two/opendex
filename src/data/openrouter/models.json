@@ -3410,9 +3410,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000042",
-      "input_cache_read": "0.0000000042"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3428,7 +3428,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5458,9 +5458,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6876,9 +6876,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7763,8 +7763,8 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000035",
+      "prompt": "0.0000007",
+      "completion": "0.00000375",
       "input_cache_read": "0.00000016"
     },
     "architecture": {
@@ -12381,9 +12381,9 @@
     "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000003",
-      "completion": "0.00000013",
-      "input_cache_read": "0.00000003"
+      "prompt": "0.000000018",
+      "completion": "0.00000009",
+      "input_cache_read": "0.000000009"
     },
     "architecture": {
       "modality": "text->text",
@@ -12697,7 +12697,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -12728,7 +12728,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -15818,7 +15818,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -17101,8 +17101,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000399",
-      "completion": "0.0000000784",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -17119,8 +17119,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
