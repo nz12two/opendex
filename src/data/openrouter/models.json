@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000019",
-      "completion": "0.0000106066",
-      "input_cache_read": "0.00000019"
+      "prompt": "0.0000001824",
+      "completion": "0.0000110055",
+      "input_cache_read": "0.00000018"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3067,9 +3067,8 @@
     "description": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.0000005",
-      "completion": "0.00000215",
-      "input_cache_read": "0.00000035"
+      "prompt": "0.000000571",
+      "completion": "0.000002286"
     },
     "architecture": {
       "modality": "text->text",
@@ -3083,8 +3082,8 @@
       "instruct_type": "deepseek-r1"
     },
     "top_provider": {
-      "context_length": 163840,
-      "max_completion_tokens": 32768,
+      "context_length": 128000,
+      "max_completion_tokens": 32000,
       "is_moderated": false
     },
     "reasoning": {
@@ -3410,9 +3409,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000051",
-      "completion": "0.000000567",
-      "input_cache_read": "0.000000018"
+      "prompt": "0.0000000507",
+      "completion": "0.0000002028",
+      "input_cache_read": "0.000000001014"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3428,7 +3427,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -5458,9 +5457,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7794,9 +7793,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002",
+      "prompt": "0.000000192",
       "completion": "0.000016",
-      "input_cache_read": "0.00000019"
+      "input_cache_read": "0.000000182"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12510,7 +12509,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -14279,9 +14278,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.000000058",
-      "input_cache_read": "0.000000036"
+      "prompt": "0.000000154",
+      "completion": "0.000000226",
+      "input_cache_read": "0.000000138"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -16968,11 +16967,11 @@
     "id": "xiaomi/mimo-v2.5-pro",
     "name": "Xiaomi: MiMo-V2.5-Pro",
     "description": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
-    "context_length": 1024000,
+    "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000435",
-      "completion": "0.00000087",
-      "input_cache_read": "0.0000000036"
+      "prompt": "0.00000048",
+      "completion": "0.0000018",
+      "input_cache_read": "0.000000096"
     },
     "architecture": {
       "modality": "text->text",
@@ -16986,8 +16985,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1024000,
-      "max_completion_tokens": 131072,
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -17517,8 +17516,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000399",
-      "completion": "0.0000000784",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -17535,8 +17534,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
