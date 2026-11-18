@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
-      "completion": "0.0000110055",
-      "input_cache_read": "0.00000018"
+      "prompt": "0.00000019",
+      "completion": "0.0000106066",
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -435,18 +435,18 @@
     "description": "This model always redirects to the latest model in the GPT Astra family.",
     "context_length": 1050000,
     "pricing": {
-      "prompt": "0.00001",
-      "completion": "0.00005",
+      "prompt": "0.000008",
+      "completion": "0.00004",
       "web_search": "0.01",
-      "input_cache_read": "0.000001",
-      "input_cache_write": "0.0000125",
+      "input_cache_read": "0.0000004",
+      "input_cache_write": "0.00001",
       "overrides": [
         {
           "min_prompt_tokens": 272000,
-          "prompt": "0.00002",
-          "completion": "0.000075",
-          "input_cache_read": "0.000002",
-          "input_cache_write": "0.000025"
+          "prompt": "0.000016",
+          "completion": "0.00006",
+          "input_cache_read": "0.0000008",
+          "input_cache_write": "0.00002"
         }
       ]
     },
@@ -3410,9 +3410,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.000000051",
+      "completion": "0.000000567",
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5404,7 +5404,7 @@
     "context_length": 131072,
     "pricing": {
       "prompt": "0.00000008",
-      "completion": "0.00000035",
+      "completion": "0.00000045",
       "input_cache_read": "0.00000004"
     },
     "architecture": {
@@ -5458,9 +5458,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -7194,9 +7194,9 @@
     "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.00000044",
+      "completion": "0.0000022",
+      "input_cache_read": "0.000000044"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -7295,9 +7295,9 @@
     "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000004",
-      "completion": "0.000002",
-      "input_cache_read": "0.00000004"
+      "prompt": "0.00000044",
+      "completion": "0.0000022",
+      "input_cache_read": "0.000000044"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -7468,9 +7468,8 @@
     "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
     "context_length": 256000,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.000000075",
+      "completion": "0.0000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7485,8 +7484,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 32768,
-      "max_completion_tokens": 26214,
+      "context_length": 128000,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -7765,7 +7764,7 @@
     "pricing": {
       "prompt": "0.0000007",
       "completion": "0.00000375",
-      "input_cache_read": "0.00000016"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -7795,9 +7794,9 @@
     "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000192",
+      "prompt": "0.0000002",
       "completion": "0.000016",
-      "input_cache_read": "0.000000182"
+      "input_cache_read": "0.00000019"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -12215,6 +12214,422 @@
     }
   },
   {
+    "id": "openai/gpt-6.2-astra",
+    "name": "OpenAI: GPT-6.2 Astra",
+    "description": "GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000008",
+      "completion": "0.00004",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000004",
+      "input_cache_write": "0.00001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000016",
+          "completion": "0.00006",
+          "input_cache_read": "0.0000008",
+          "input_cache_write": "0.00002"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-astra-pro",
+    "name": "OpenAI: GPT-6.2 Astra Pro",
+    "description": "GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000008",
+      "completion": "0.00004",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000004",
+      "input_cache_write": "0.00001",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000016",
+          "completion": "0.00006",
+          "input_cache_read": "0.0000008",
+          "input_cache_write": "0.00002"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-astra-pro:batch",
+    "name": "OpenAI: GPT-6.2 Astra Pro (batch)",
+    "description": "GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.00002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.000005",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000008",
+          "completion": "0.00003",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.00001"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-astra:batch",
+    "name": "OpenAI: GPT-6.2 Astra (batch)",
+    "description": "GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.00002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.000005",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000008",
+          "completion": "0.00003",
+          "input_cache_read": "0.0000004",
+          "input_cache_write": "0.00001"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-sol",
+    "name": "OpenAI: GPT-6.2 Sol",
+    "description": "GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-sol-pro",
+    "name": "OpenAI: GPT-6.2 Sol Pro",
+    "description": "GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-sol-pro:batch",
+    "name": "OpenAI: GPT-6.2 Sol Pro (batch)",
+    "description": "GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
+    "id": "openai/gpt-6.2-sol:batch",
+    "name": "OpenAI: GPT-6.2 Sol (batch)",
+    "description": "GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited...",
+    "context_length": 1050000,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.00000005",
+      "input_cache_write": "0.00000125",
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000002",
+          "completion": "0.0000075",
+          "input_cache_read": "0.0000001",
+          "input_cache_write": "0.0000025"
+        }
+      ]
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "GPT",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1050000,
+      "max_completion_tokens": 128000,
+      "is_moderated": true
+    },
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    }
+  },
+  {
     "id": "openai/gpt-audio",
     "name": "OpenAI: GPT Audio",
     "description": "The gpt-audio model is OpenAI's first generally available audio model. The new snapshot features an upgraded decoder for more natural sounding voices and maintains better voice consistency. Audio is priced...",
@@ -12697,7 +13112,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 128000,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -12728,7 +13143,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 128000,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -13628,8 +14043,9 @@
     "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000011"
+      "prompt": "0.0000001",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000007"
     },
     "architecture": {
       "modality": "text->text",
@@ -13644,7 +14060,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     }
   },
@@ -13768,8 +14184,8 @@
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000026",
-      "completion": "0.0000026"
+      "prompt": "0.0000003",
+      "completion": "0.0000024"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -13786,7 +14202,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -13863,9 +14279,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000017",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000153"
+      "prompt": "0.00000004",
+      "completion": "0.000000058",
+      "input_cache_read": "0.000000036"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14342,9 +14758,9 @@
     "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
     "context_length": 1024000,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.000001875",
-      "input_cache_read": "0.0000000375"
+      "prompt": "0.00000006",
+      "completion": "0.0000022",
+      "input_cache_read": "0.000000059"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15818,7 +16234,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 128000,
+      "max_completion_tokens": 64000,
       "is_moderated": false
     }
   },
@@ -16806,7 +17222,7 @@
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000009",
-      "input_cache_read": "0.000000055"
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -17101,8 +17517,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
+      "prompt": "0.0000000399",
+      "completion": "0.0000000784",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -17119,8 +17535,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
