@@ -188,9 +188,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000035",
-      "completion": "0.00000015",
-      "input_cache_read": "0.0000000015"
+      "prompt": "0.000000036",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000999",
+      "prompt": "0.0000001211",
       "completion": "0.000008",
-      "input_cache_read": "0.0000000999"
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000055",
-      "completion": "0.0000003",
-      "input_cache_read": "0.000000035"
+      "prompt": "0.00000004664",
+      "completion": "0.00000013992",
+      "input_cache_read": "0.000000001484"
     },
     "architecture": {
       "modality": "text->text",
@@ -281,7 +281,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -395,7 +395,7 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
+      "prompt": "0.0000001805",
       "completion": "0.0000110055",
       "input_cache_read": "0.00000018"
     },
@@ -3221,7 +3221,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000055",
+      "prompt": "0.000000062",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -3372,9 +3372,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000111",
-      "completion": "0.00000444",
-      "input_cache_read": "0.000000097"
+      "prompt": "0.00000015",
+      "completion": "0.0000065",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -3409,9 +3409,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.0000000507",
+      "completion": "0.0000002028",
+      "input_cache_read": "0.000000001014"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3427,7 +3427,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -6730,7 +6730,7 @@
     "pricing": {
       "prompt": "0.00000125",
       "completion": "0.00000425",
-      "web_search": "0.01",
+      "web_search": "0.0025",
       "input_cache_read": "0.00000015"
     },
     "architecture": {
@@ -6750,7 +6750,7 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 943718,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -7049,9 +7049,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7935,7 +7935,7 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000006",
+      "prompt": "0.00000065",
       "completion": "0.0000035",
       "input_cache_read": "0.00000016"
     },
@@ -12423,7 +12423,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -12683,7 +12683,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -13285,7 +13285,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -13316,7 +13316,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -14453,8 +14453,7 @@
     "context_length": 262144,
     "pricing": {
       "prompt": "0.00000017",
-      "completion": "0.00000025",
-      "input_cache_read": "0.000000153"
+      "completion": "0.00000025"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14471,7 +14470,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 40960,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -15889,9 +15888,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -16049,9 +16048,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -16259,45 +16258,6 @@
     }
   },
   {
-    "id": "thinkingmachines/inkling-2-small:free",
-    "name": "Thinking Machines: Inkling 2 Small (free)",
-    "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true,
-      "default_enabled": true,
-      "supported_efforts": [
-        "max",
-        "high",
-        "medium",
-        "low",
-        "minimal"
-      ],
-      "default_effort": "high"
-    }
-  },
-  {
     "id": "thinkingmachines/inkling-small",
     "name": "Thinking Machines: Inkling Small",
     "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
@@ -16407,7 +16367,7 @@
     },
     "top_provider": {
       "context_length": null,
-      "max_completion_tokens": 64000,
+      "max_completion_tokens": 128000,
       "is_moderated": false
     }
   },
@@ -17579,9 +17539,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000007",
-      "completion": "0.0000068",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.00000062",
+      "completion": "0.00000242",
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text->text",
