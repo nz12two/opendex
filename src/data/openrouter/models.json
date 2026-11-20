@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000002565",
+      "prompt": "0.0000001663",
       "completion": "0.000008",
-      "input_cache_read": "0.00000026"
+      "input_cache_read": "0.00000017"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000047",
-      "completion": "0.0000003",
-      "input_cache_read": "0.000000035"
+      "prompt": "0.000000044",
+      "completion": "0.000000132",
+      "input_cache_read": "0.0000000014"
     },
     "architecture": {
       "modality": "text->text",
@@ -281,7 +281,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -3192,7 +3192,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000047",
+      "prompt": "0.0000000443",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -5602,9 +5602,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5945,9 +5945,9 @@
     "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
     "context_length": 1000000,
     "pricing": {
-      "prompt": "0.000000045",
-      "completion": "0.000000135",
-      "input_cache_read": "0.000000009"
+      "prompt": "0.00000006",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000012"
     },
     "architecture": {
       "modality": "text->text",
@@ -12395,7 +12395,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -14328,8 +14328,8 @@
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000026",
-      "completion": "0.0000026"
+      "prompt": "0.000000195",
+      "completion": "0.00000156"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14346,7 +14346,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -14902,7 +14902,7 @@
     "context_length": 1024000,
     "pricing": {
       "prompt": "0.00000006",
-      "completion": "0.0000022",
+      "completion": "0.00000196",
       "input_cache_read": "0.000000059"
     },
     "architecture": {
@@ -17285,7 +17285,7 @@
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000009",
-      "input_cache_read": "0.000000055"
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
