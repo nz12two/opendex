@@ -227,9 +227,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001211",
+      "prompt": "0.0000002565",
       "completion": "0.000008",
-      "input_cache_read": "0.00000012"
+      "input_cache_read": "0.00000026"
     },
     "architecture": {
       "modality": "text->text",
@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004664",
-      "completion": "0.00000013992",
-      "input_cache_read": "0.000000001484"
+      "prompt": "0.000000047",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -281,7 +281,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -2950,35 +2950,6 @@
     }
   },
   {
-    "id": "cohere/north-mini-code:free",
-    "name": "Cohere: North Mini Code (free)",
-    "description": "North Mini Code is Cohere's first agentic coding model and the debut of its North family. A sparse mixture-of-experts model with 30B total parameters and 3B active, it is optimized...",
-    "context_length": 256000,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Cohere",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 64000,
-      "is_moderated": true
-    },
-    "reasoning": {
-      "mandatory": false
-    }
-  },
-  {
     "id": "deepseek/deepseek-chat",
     "name": "DeepSeek: DeepSeek V3",
     "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
@@ -3221,7 +3192,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000062",
+      "prompt": "0.000000047",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -3338,7 +3309,7 @@
     "pricing": {
       "prompt": "0.0000009",
       "completion": "0.0000015",
-      "input_cache_read": "0.00000025"
+      "input_cache_read": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -3372,9 +3343,9 @@
     "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000065",
-      "input_cache_read": "0.00000012"
+      "prompt": "0.00000132",
+      "completion": "0.00000396",
+      "input_cache_read": "0.000000044"
     },
     "architecture": {
       "modality": "text->text",
@@ -3409,9 +3380,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000507",
-      "completion": "0.0000002028",
-      "input_cache_read": "0.000000001014"
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3427,7 +3398,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -3568,9 +3539,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000036",
-      "completion": "0.00000015",
-      "input_cache_read": "0.000000003"
+      "prompt": "0.000000035",
+      "completion": "0.000000149",
+      "input_cache_read": "0.0000000029"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3607,9 +3578,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000112",
-      "completion": "0.000000336",
-      "input_cache_read": "0.00000000336"
+      "prompt": "0.00000005",
+      "completion": "0.00000015",
+      "input_cache_read": "0.000000004"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3625,7 +3596,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -6315,39 +6286,13 @@
     }
   },
   {
-    "id": "meta-llama/llama-3.2-1b-instruct",
-    "name": "Meta: Llama 3.2 1B Instruct",
-    "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate...",
-    "context_length": 60000,
-    "pricing": {
-      "prompt": "0.000000027",
-      "completion": "0.000000201"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Llama3",
-      "instruct_type": "llama3"
-    },
-    "top_provider": {
-      "context_length": 60000,
-      "max_completion_tokens": 54000,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "meta-llama/llama-3.2-3b-instruct",
     "name": "Meta: Llama 3.2 3B Instruct",
     "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.0000000509",
-      "completion": "0.000000335"
+      "prompt": "0.00000005",
+      "completion": "0.00000033"
     },
     "architecture": {
       "modality": "text->text",
@@ -6361,8 +6306,8 @@
       "instruct_type": "llama3"
     },
     "top_provider": {
-      "context_length": 80000,
-      "max_completion_tokens": 72000,
+      "context_length": 131072,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     }
   },
@@ -7049,9 +6994,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7691,6 +7636,33 @@
     }
   },
   {
+    "id": "mistralai/pixtral-large-2502",
+    "name": "Mistral: Pixtral Large 2502",
+    "description": "Pixtral Large 2502 is the February 2025 version of Mistral AI's large multimodal model, following [Pixtral Large 2411](https://openrouter.ai/mistralai/pixtral-large-2411). It accepts text and image input, including documents, charts, and natural images,...",
+    "context_length": 128000,
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.000006"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 128000,
+      "max_completion_tokens": 102400,
+      "is_moderated": true
+    }
+  },
+  {
     "id": "mistralai/voxtral-small-24b-2507",
     "name": "Mistral: Voxtral Small 24B 2507",
     "description": "Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance. It excels at speech transcription, translation and audio understanding. Input audio...",
@@ -7935,9 +7907,9 @@
     "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000065",
-      "completion": "0.0000035",
-      "input_cache_read": "0.00000016"
+      "prompt": "0.0000006",
+      "completion": "0.000003",
+      "input_cache_read": "0.00000012"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -12423,7 +12395,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -12475,7 +12447,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -12683,7 +12655,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -12898,9 +12870,8 @@
     "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000075"
+      "prompt": "0.00000009",
+      "completion": "0.00000036"
     },
     "architecture": {
       "modality": "text->text",
@@ -12915,7 +12886,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     },
     "reasoning": {
@@ -13431,9 +13402,9 @@
     "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000006",
+      "prompt": "0.00000007",
       "completion": "0.0000005",
-      "input_cache_read": "0.000000003"
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -14357,8 +14328,8 @@
     "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000195",
-      "completion": "0.00000156"
+      "prompt": "0.00000026",
+      "completion": "0.0000026"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14375,7 +14346,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "max_completion_tokens": 81920,
       "is_moderated": false
     },
     "reasoning": {
@@ -15888,9 +15859,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -16048,9 +16019,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16592,8 +16563,8 @@
   },
   {
     "id": "x-ai/grok-4.20",
-    "name": "SpaceXAI: Grok 4.20",
-    "description": "Grok 4.20 is a reasoning model from SpaceXAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering...",
+    "name": "SpaceXSI: Grok 4.20",
+    "description": "Grok 4.20 is a reasoning model from SpaceXSI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering...",
     "context_length": 2000000,
     "pricing": {
       "prompt": "0.00000125",
@@ -16634,8 +16605,8 @@
   },
   {
     "id": "x-ai/grok-4.20-multi-agent",
-    "name": "SpaceXAI: Grok 4.20 Multi-Agent",
-    "description": "Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
+    "name": "SpaceXSI: Grok 4.20 Multi-Agent",
+    "description": "Grok 4.20 Multi-Agent is a variant of SpaceXSI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information...",
     "context_length": 2000000,
     "pricing": {
       "prompt": "0.00000125",
@@ -16683,8 +16654,8 @@
   },
   {
     "id": "x-ai/grok-4.3",
-    "name": "SpaceXAI: Grok 4.3",
-    "description": "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
+    "name": "SpaceXSI: Grok 4.3",
+    "description": "Grok 4.3 is a reasoning model from SpaceXSI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
     "context_length": 1000000,
     "pricing": {
       "prompt": "0.00000125",
@@ -16732,8 +16703,8 @@
   },
   {
     "id": "x-ai/grok-4.3:batch",
-    "name": "SpaceXAI: Grok 4.3 (batch)",
-    "description": "Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
+    "name": "SpaceXSI: Grok 4.3 (batch)",
+    "description": "Grok 4.3 is a reasoning model from SpaceXSI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual...",
     "context_length": 1000000,
     "pricing": {
       "prompt": "0.000001",
@@ -16781,8 +16752,8 @@
   },
   {
     "id": "x-ai/grok-4.5",
-    "name": "SpaceXAI: Grok 4.5",
-    "description": "Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM.",
+    "name": "SpaceXSI: Grok 4.5",
+    "description": "Grok 4.5 is a model from SpaceXSI with frontier performance on coding, knowledge work, and STEM.",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.000002",
@@ -16829,8 +16800,8 @@
   },
   {
     "id": "x-ai/grok-4.6",
-    "name": "SpaceXAI: Grok 4.6",
-    "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
+    "name": "SpaceXSI: Grok 4.6",
+    "description": "Grok 4.6 is a model from SpaceXSI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.000002",
@@ -16878,8 +16849,8 @@
   },
   {
     "id": "x-ai/grok-4.6:batch",
-    "name": "SpaceXAI: Grok 4.6 (batch)",
-    "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
+    "name": "SpaceXSI: Grok 4.6 (batch)",
+    "description": "Grok 4.6 is a model from SpaceXSI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.0000016",
@@ -16927,8 +16898,8 @@
   },
   {
     "id": "x-ai/grok-4.7",
-    "name": "SpaceXAI: Grok 4.7",
-    "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
+    "name": "SpaceXSI: Grok 4.7",
+    "description": "Grok 4.7 is SpaceXSI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.000002",
@@ -16976,8 +16947,8 @@
   },
   {
     "id": "x-ai/grok-4.7:batch",
-    "name": "SpaceXAI: Grok 4.7 (batch)",
-    "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
+    "name": "SpaceXSI: Grok 4.7 (batch)",
+    "description": "Grok 4.7 is SpaceXSI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
     "context_length": 500000,
     "pricing": {
       "prompt": "0.0000016",
@@ -17021,47 +16992,6 @@
         "low"
       ],
       "default_effort": "high"
-    }
-  },
-  {
-    "id": "x-ai/grok-build-0.1",
-    "name": "SpaceXAI: Grok Build 0.1",
-    "description": "Grok Build 0.1 is SpaceXAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding...",
-    "context_length": 256000,
-    "pricing": {
-      "prompt": "0.000001",
-      "completion": "0.000002",
-      "web_search": "0.005",
-      "input_cache_read": "0.0000002",
-      "overrides": [
-        {
-          "min_prompt_tokens": 200000,
-          "prompt": "0.000002",
-          "completion": "0.000004",
-          "input_cache_read": "0.0000004"
-        }
-      ]
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Grok",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 256000,
-      "max_completion_tokens": 230400,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
     }
   },
   {
@@ -17355,7 +17285,7 @@
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000009",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.000000055"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -17650,8 +17580,8 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000005",
+      "prompt": "0.0000000399",
+      "completion": "0.0000000784",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
@@ -17668,8 +17598,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048575,
-      "max_completion_tokens": 943717,
+      "context_length": 1048576,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -17689,9 +17619,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000024",
-      "completion": "0.000000069",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.000000023",
+      "completion": "0.000000068",
+      "input_cache_read": "0.000000009"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -17707,8 +17637,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
@@ -17843,9 +17773,9 @@
     "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000281",
-      "completion": "0.00000125",
-      "input_cache_read": "0.000000062"
+      "prompt": "0.00000028",
+      "completion": "0.000001249",
+      "input_cache_read": "0.000000061"
     },
     "architecture": {
       "modality": "text->text",
@@ -17859,8 +17789,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
