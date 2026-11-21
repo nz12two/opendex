@@ -3379,9 +3379,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
+      "prompt": "0.0000000498",
+      "completion": "0.0000001992",
+      "input_cache_read": "0.000000000996"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3397,7 +3397,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -3418,9 +3418,90 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000036",
-      "completion": "0.0000005",
-      "input_cache_read": "0.00000001"
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000003",
+      "overrides": [
+        {
+          "utc_days": [
+            "saturday",
+            "sunday"
+          ],
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 0,
+          "utc_end": 100,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 100,
+          "utc_end": 400,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 400,
+          "utc_end": 600,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 600,
+          "utc_end": 1000,
+          "prompt": "0.0000003",
+          "completion": "0.0000012",
+          "input_cache_read": "0.000000006"
+        },
+        {
+          "utc_days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday"
+          ],
+          "utc_start": 1000,
+          "utc_end": 0,
+          "prompt": "0.00000015",
+          "completion": "0.0000006",
+          "input_cache_read": "0.000000003"
+        }
+      ]
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3436,7 +3517,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 393216,
       "is_moderated": false
     },
     "reasoning": {
@@ -3527,36 +3608,6 @@
         "none"
       ],
       "default_effort": "high"
-    }
-  },
-  {
-    "id": "dots-studio/dots-3-note-preview:free",
-    "name": "Dots Studio: Dots3-Note Preview (free)",
-    "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-    "context_length": 512000,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 512000,
-      "max_completion_tokens": 460800,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
     }
   },
   {
@@ -5494,9 +5545,8 @@
     "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000004",
-      "completion": "0.00000005",
-      "input_cache_read": "0.00000002"
+      "prompt": "0.00000005",
+      "completion": "0.0000001"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5512,7 +5562,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 117964,
+      "max_completion_tokens": 16384,
       "is_moderated": false
     }
   },
@@ -6119,38 +6169,6 @@
       "context_length": 8000,
       "max_completion_tokens": 6000,
       "is_moderated": false
-    }
-  },
-  {
-    "id": "meituan/longcat-2.0",
-    "name": "Meituan: LongCat 2.0",
-    "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic...",
-    "context_length": 1048756,
-    "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.0000012",
-      "input_cache_read": "0.000000006"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048756,
-      "max_completion_tokens": 262144,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false,
-      "default_enabled": true,
-      "supports_max_tokens": true
     }
   },
   {
@@ -6790,9 +6808,9 @@
     "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
     "context_length": 198000,
     "pricing": {
-      "prompt": "0.000000295",
-      "completion": "0.0000012",
-      "input_cache_read": "0.00000006"
+      "prompt": "0.00000027",
+      "completion": "0.00000095",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -6806,8 +6824,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 196608,
-      "max_completion_tokens": 176947,
+      "context_length": 198000,
+      "max_completion_tokens": 32768,
       "is_moderated": false
     },
     "reasoning": {
@@ -6913,9 +6931,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -8559,7 +8577,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000015",
-      "completion": "0.0000005",
+      "completion": "0.00000047",
       "input_cache_read": "0.00000002"
     },
     "architecture": {
@@ -8576,8 +8594,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -14009,8 +14027,8 @@
     "description": "Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006"
+      "prompt": "0.00000007",
+      "completion": "0.00000028"
     },
     "architecture": {
       "modality": "text->text",
@@ -14026,7 +14044,7 @@
     "top_provider": {
       "context_length": 262144,
       "max_completion_tokens": 235929,
-      "is_moderated": true
+      "is_moderated": false
     }
   },
   {
@@ -15127,6 +15145,45 @@
     }
   },
   {
+    "id": "radixark/daisyrose-27b",
+    "name": "RadixArk: DaisyRose 27B",
+    "description": "DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, trained from [Qwen3.8 27B](https://openrouter.ai/qwen/qwen3.8-27b) using reinforcement learning only on long-horizon agent tasks, with no supervised fine-tuning or distillation. It is...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000015",
+      "completion": "0.000001875",
+      "input_cache_read": "0.0000000375"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "medium",
+        "low",
+        "none"
+      ],
+      "default_effort": "xhigh"
+    }
+  },
+  {
     "id": "recursive/flint-v1.0:free",
     "name": "Recursive: Flint (free)",
     "description": "Flint is an open-weight mixture-of-experts model from Recursive, with about 2.5B active parameters out of 40B total, built by Recursive's autoresearch system Eureka Machine for coding agents. It is suited...",
@@ -15778,9 +15835,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15901,9 +15958,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16054,6 +16111,47 @@
     "top_provider": {
       "context_length": 524288,
       "max_completion_tokens": 471859,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "medium",
+        "low",
+        "minimal",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "thinkingmachines/inkling-2-mini",
+    "name": "Thinking Machines: Inkling 2 Mini",
+    "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.0000001",
+      "completion": "0.0000004",
+      "input_cache_read": "0.00000002"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 65536,
       "is_moderated": false
     },
     "reasoning": {
@@ -17167,7 +17265,7 @@
     "pricing": {
       "prompt": "0.0000003",
       "completion": "0.0000009",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.000000055"
     },
     "architecture": {
       "modality": "text+image+video->text",
