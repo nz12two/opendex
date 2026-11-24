@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000044",
-      "completion": "0.000000132",
-      "input_cache_read": "0.0000000014"
+      "prompt": "0.00000004532",
+      "completion": "0.00000013596",
+      "input_cache_read": "0.000000001442"
     },
     "architecture": {
       "modality": "text->text",
@@ -3191,7 +3191,7 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000443",
+      "prompt": "0.0000000456",
       "completion": "0.0000003",
       "input_cache_read": "0.000000035"
     },
@@ -3379,9 +3379,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000498",
-      "completion": "0.0000001992",
-      "input_cache_read": "0.000000000996"
+      "prompt": "0.0000000507",
+      "completion": "0.0000002028",
+      "input_cache_read": "0.000000001014"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3527,36 +3527,6 @@
         "none"
       ],
       "default_effort": "high"
-    }
-  },
-  {
-    "id": "dots-studio/dots-3-note-preview:free",
-    "name": "Dots Studio: Dots3-Note Preview (free)",
-    "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-    "context_length": 512000,
-    "pricing": {
-      "prompt": "0",
-      "completion": "0"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 512000,
-      "max_completion_tokens": 460800,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": false
     }
   },
   {
@@ -5521,9 +5491,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000765",
-      "completion": "0.000000255",
-      "input_cache_read": "0.0000000425"
+      "prompt": "0.00000009",
+      "completion": "0.0000003",
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -5768,11 +5738,11 @@
     "id": "inclusionai/ling-3.0-flash",
     "name": "inclusionAI: Ling 3.0 Flash",
     "description": "*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*. The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers...",
-    "context_length": 131072,
+    "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000006",
-      "completion": "0.00000018",
-      "input_cache_read": "0.000000012"
+      "prompt": "0.000000021",
+      "completion": "0.000000063",
+      "input_cache_read": "0.0000000042"
     },
     "architecture": {
       "modality": "text->text",
@@ -5786,7 +5756,7 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 131072,
+      "context_length": 262144,
       "max_completion_tokens": 32768,
       "is_moderated": false
     },
@@ -6882,9 +6852,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -7195,35 +7165,6 @@
     }
   },
   {
-    "id": "mistralai/mistral-medium-3",
-    "name": "Mistral: Mistral Medium 3",
-    "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8× lower cost...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.0000022",
-      "input_cache_read": "0.000000044"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 104857,
-      "is_moderated": false
-    }
-  },
-  {
     "id": "mistralai/mistral-medium-3-5",
     "name": "Mistral: Mistral Medium 3.5",
     "description": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
@@ -7293,35 +7234,6 @@
         "none"
       ],
       "default_effort": "high"
-    }
-  },
-  {
-    "id": "mistralai/mistral-medium-3.1",
-    "name": "Mistral: Mistral Medium 3.1",
-    "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-    "context_length": 131072,
-    "pricing": {
-      "prompt": "0.00000044",
-      "completion": "0.0000022",
-      "input_cache_read": "0.000000044"
-    },
-    "architecture": {
-      "modality": "text+image+file->text",
-      "input_modalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Mistral",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 131072,
-      "max_completion_tokens": 104857,
-      "is_moderated": false
     }
   },
   {
@@ -7640,32 +7552,6 @@
     "reasoning": {
       "mandatory": false,
       "default_enabled": false
-    }
-  },
-  {
-    "id": "moonshotai/kimi-k2-0905",
-    "name": "MoonshotAI: Kimi K2 0905",
-    "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.0000006",
-      "completion": "0.0000025"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 98304,
-      "is_moderated": false
     }
   },
   {
@@ -12226,7 +12112,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": true,
@@ -15730,9 +15616,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000132",
-      "completion": "0.000000528",
-      "input_cache_read": "0.000000033",
+      "prompt": "0.0000000825",
+      "completion": "0.00000033",
+      "input_cache_read": "0.000000020625",
       "overrides": [
         {
           "utc_start": 0,
@@ -15853,9 +15739,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000834",
-      "completion": "0.000002501",
-      "input_cache_read": "0.000000042",
+      "prompt": "0.0000007506",
+      "completion": "0.0000022509",
+      "input_cache_read": "0.0000000378",
       "overrides": [
         {
           "utc_start": 0,
@@ -17425,9 +17311,9 @@
     "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000012",
-      "completion": "0.00000038",
-      "input_cache_read": "0.00000002"
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -17443,8 +17329,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "context_length": 1048575,
+      "max_completion_tokens": 943717,
       "is_moderated": false
     },
     "reasoning": {
