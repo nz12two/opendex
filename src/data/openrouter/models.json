@@ -264,9 +264,9 @@
     "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000004532",
-      "completion": "0.00000013596",
-      "input_cache_read": "0.000000001442"
+      "prompt": "0.000000047",
+      "completion": "0.0000003",
+      "input_cache_read": "0.000000035"
     },
     "architecture": {
       "modality": "text->text",
@@ -281,7 +281,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -685,11 +685,10 @@
     "id": "~unbiased/pareto-latest",
     "name": "Pareto Latest",
     "description": "This model always redirects to the latest model in the Pareto family.",
-    "context_length": 1048576,
+    "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000008",
-      "completion": "0.0000032",
-      "input_cache_read": "0.00000003"
+      "prompt": "-1",
+      "completion": "-1"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -704,8 +703,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "context_length": null,
+      "max_completion_tokens": null,
       "is_moderated": false
     }
   },
@@ -3191,9 +3190,9 @@
     "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000456",
-      "completion": "0.0000003",
-      "input_cache_read": "0.000000035"
+      "prompt": "0.00000006",
+      "completion": "0.00000018",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text->text",
@@ -3208,7 +3207,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 384000,
       "is_moderated": false
     },
     "reasoning": {
@@ -3306,8 +3305,8 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000777524",
-      "completion": "0.0000015852",
+      "prompt": "0.000000888188",
+      "completion": "0.0000015082",
       "input_cache_read": "0.0000002"
     },
     "architecture": {
@@ -3379,9 +3378,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000507",
-      "completion": "0.0000002028",
-      "input_cache_read": "0.000000001014"
+      "prompt": "0.00000014",
+      "completion": "0.00000042",
+      "input_cache_read": "0.0000000042"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3418,9 +3417,9 @@
     "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000003",
+      "prompt": "0.0000003",
+      "completion": "0.0000012",
+      "input_cache_read": "0.000000006",
       "overrides": [
         {
           "utc_days": [
@@ -5572,9 +5571,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000765",
+      "completion": "0.000000255",
+      "input_cache_read": "0.0000000425"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6615,7 +6614,7 @@
     "pricing": {
       "prompt": "0.00000125",
       "completion": "0.00000425",
-      "web_search": "0.0025",
+      "web_search": "0.01",
       "input_cache_read": "0.00000015"
     },
     "architecture": {
@@ -6635,7 +6634,7 @@
     "top_provider": {
       "context_length": 1048576,
       "max_completion_tokens": 943718,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": true,
@@ -6933,9 +6932,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -6992,6 +6991,34 @@
       "prompt": "0.0000003",
       "completion": "0.0000009",
       "input_cache_read": "0.00000003"
+    },
+    "architecture": {
+      "modality": "text+file->text",
+      "input_modalities": [
+        "text",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 256000,
+      "max_completion_tokens": 204800,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "mistralai/codestral-2508:batch",
+    "name": "Mistral: Codestral 2508 (batch)",
+    "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+    "context_length": 256000,
+    "pricing": {
+      "prompt": "0.00000015",
+      "completion": "0.00000045",
+      "input_cache_read": "0.000000015"
     },
     "architecture": {
       "modality": "text+file->text",
@@ -7124,6 +7151,34 @@
     }
   },
   {
+    "id": "mistralai/ministral-8b-2512:batch",
+    "name": "Mistral: Ministral 3 8B 2512 (batch)",
+    "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.000000075",
+      "input_cache_read": "0.0000000075"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    }
+  },
+  {
     "id": "mistralai/mistral-large",
     "name": "Mistral Large",
     "description": "This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-2407`). It's a proprietary weights-available model and excels at reasoning, code, JSON, chat, and more. Read the launch announcement [here](https://mistral.ai/news/mistral-large-2407/)....",
@@ -7188,6 +7243,35 @@
       "prompt": "0.0000005",
       "completion": "0.0000015",
       "input_cache_read": "0.00000005"
+    },
+    "architecture": {
+      "modality": "text+image+file->text",
+      "input_modalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    }
+  },
+  {
+    "id": "mistralai/mistral-large-2512:batch",
+    "name": "Mistral: Mistral Large 3 2512 (batch)",
+    "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.00000075",
+      "input_cache_read": "0.000000025"
     },
     "architecture": {
       "modality": "text+image+file->text",
@@ -7406,6 +7490,43 @@
       "prompt": "0.00000015",
       "completion": "0.0000006",
       "input_cache_read": "0.000000015"
+    },
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Mistral",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 209715,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "high",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  },
+  {
+    "id": "mistralai/mistral-small-2603:batch",
+    "name": "Mistral: Mistral Small 4 (batch)",
+    "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -14190,9 +14311,9 @@
     "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000045",
-      "completion": "0.000003",
-      "input_cache_read": "0.00000022"
+      "prompt": "0.0000005",
+      "completion": "0.0000036",
+      "input_cache_read": "0.0000003"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14209,7 +14330,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 81920,
+      "max_completion_tokens": 235929,
       "is_moderated": false
     },
     "reasoning": {
@@ -14222,7 +14343,7 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000017",
+      "prompt": "0.0000001",
       "completion": "0.00000025"
     },
     "architecture": {
@@ -15080,9 +15201,9 @@
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000025",
+      "prompt": "0.0000003",
       "completion": "0.000001",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.00000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -15097,7 +15218,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -15697,9 +15818,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -15820,9 +15941,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16155,6 +16276,36 @@
     }
   },
   {
+    "id": "tngtech/deepseek-r1t2-chimera",
+    "name": "TNG: DeepSeek R1T2 Chimera",
+    "description": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI’s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The...",
+    "context_length": 131072,
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000002625",
+      "input_cache_read": "0.00000002"
+    },
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "DeepSeek",
+      "instruct_type": null
+    },
+    "top_provider": {
+      "context_length": 131072,
+      "max_completion_tokens": 32768,
+      "is_moderated": false
+    },
+    "reasoning": {
+      "mandatory": true
+    }
+  },
+  {
     "id": "typesafe/jev-router",
     "name": "TypeSafe: Jev Router",
     "description": "Jev Router picks the best model and reasoning effort for each request, balancing quality, speed, and cost. It runs on [Jev](https://openrouter.ai/~typesafe/jev-latest), TypeSafe's first System One model, and adapts as your...",
@@ -16181,90 +16332,6 @@
     "top_provider": {
       "context_length": null,
       "max_completion_tokens": 128000,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "unbiased/pareto-26.10",
-    "name": "Pareto 26.10",
-    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.0000008",
-      "completion": "0.0000032",
-      "input_cache_read": "0.00000003"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "unbiased/pareto-26.10-preview",
-    "name": "Pareto 26.10 Preview",
-    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
-    "context_length": 1048576,
-    "pricing": {
-      "prompt": "0.0000008",
-      "completion": "0.0000032",
-      "input_cache_read": "0.00000003"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 1048576,
-      "max_completion_tokens": 131072,
-      "is_moderated": false
-    }
-  },
-  {
-    "id": "unbiased/pareto-26.9",
-    "name": "Pareto 26.9",
-    "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
-    "context_length": 262144,
-    "pricing": {
-      "prompt": "0.0000025",
-      "completion": "0.0000075",
-      "input_cache_read": "0.00000025"
-    },
-    "architecture": {
-      "modality": "text+image->text",
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Other",
-      "instruct_type": null
-    },
-    "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 131072,
       "is_moderated": false
     }
   },
@@ -17086,8 +17153,9 @@
     "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000014",
-      "completion": "0.00000086"
+      "prompt": "0.0000002",
+      "completion": "0.0000011",
+      "input_cache_read": "0.00000003"
     },
     "architecture": {
       "modality": "text->text",
@@ -17102,7 +17170,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 117964,
+      "max_completion_tokens": 98304,
       "is_moderated": false
     },
     "reasoning": {
