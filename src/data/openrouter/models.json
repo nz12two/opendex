@@ -3308,9 +3308,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000077585",
-      "completion": "0.0000015712",
-      "input_cache_read": "0.0000002"
+      "prompt": "0.000000493382",
+      "completion": "0.0000015016",
+      "input_cache_read": "0.00000023"
     },
     "architecture": {
       "modality": "text->text",
@@ -3381,9 +3381,9 @@
     "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000000507",
-      "completion": "0.0000002028",
-      "input_cache_read": "0.000000001014"
+      "prompt": "0.000000051",
+      "completion": "0.000000567",
+      "input_cache_read": "0.000000018"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -3399,7 +3399,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 393216,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -5546,8 +5546,9 @@
     "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
     "context_length": 131072,
     "pricing": {
-      "prompt": "0.00000005",
-      "completion": "0.0000001"
+      "prompt": "0.00000004",
+      "completion": "0.00000005",
+      "input_cache_read": "0.00000002"
     },
     "architecture": {
       "modality": "text+image->text",
@@ -5563,7 +5564,7 @@
     },
     "top_provider": {
       "context_length": 131072,
-      "max_completion_tokens": 16384,
+      "max_completion_tokens": 117964,
       "is_moderated": false
     }
   },
@@ -5573,9 +5574,9 @@
     "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.00000009",
-      "completion": "0.0000003",
-      "input_cache_read": "0.00000005"
+      "prompt": "0.0000000675",
+      "completion": "0.000000225",
+      "input_cache_read": "0.0000000375"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -6967,9 +6968,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.0000003",
-      "input_cache_read": "0.0000000075",
+      "prompt": "0.00000015",
+      "completion": "0.0000006",
+      "input_cache_read": "0.000000015",
       "overrides": [
         {
           "utc_start": 1500,
@@ -8585,9 +8586,9 @@
     "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000007",
+      "prompt": "0.00000005",
       "completion": "0.0000002",
-      "input_cache_read": "0.00000004"
+      "input_cache_read": "0.00000001"
     },
     "architecture": {
       "modality": "text->text",
@@ -8645,7 +8646,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.00000015",
-      "completion": "0.00000047",
+      "completion": "0.00000045",
       "input_cache_read": "0.00000002"
     },
     "architecture": {
@@ -8663,7 +8664,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -11195,7 +11196,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": true
+      "is_moderated": false
     },
     "reasoning": {
       "mandatory": false,
@@ -13949,35 +13950,6 @@
     }
   },
   {
-    "id": "qwen/qwen3-235b-a22b-thinking-2507",
-    "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-    "description": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144...",
-    "context_length": 128000,
-    "pricing": {
-      "prompt": "0.00000045",
-      "completion": "0.0000035"
-    },
-    "architecture": {
-      "modality": "text->text",
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "tokenizer": "Qwen3",
-      "instruct_type": "qwen3"
-    },
-    "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 16384,
-      "is_moderated": false
-    },
-    "reasoning": {
-      "mandatory": true
-    }
-  },
-  {
     "id": "qwen/qwen3-30b-a3b",
     "name": "Qwen: Qwen3 30B A3B",
     "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
@@ -14429,8 +14401,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000001",
-      "completion": "0.00000025"
+      "prompt": "0.000000075",
+      "completion": "0.00000011",
+      "input_cache_read": "0.000000067"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -14447,7 +14420,7 @@
     },
     "top_provider": {
       "context_length": 262144,
-      "max_completion_tokens": 235929,
+      "max_completion_tokens": 40960,
       "is_moderated": false
     },
     "reasoning": {
@@ -14886,8 +14859,8 @@
       "instruct_type": null
     },
     "top_provider": {
-      "context_length": 262144,
-      "max_completion_tokens": 65536,
+      "context_length": 1000000,
+      "max_completion_tokens": 900000,
       "is_moderated": false
     },
     "reasoning": {
@@ -15287,9 +15260,9 @@
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
+      "prompt": "0.00000025",
       "completion": "0.000001",
-      "input_cache_read": "0.00000004"
+      "input_cache_read": "0.00000005"
     },
     "architecture": {
       "modality": "text->text",
@@ -15304,7 +15277,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 943718,
+      "max_completion_tokens": 131072,
       "is_moderated": false
     },
     "reasoning": {
@@ -15904,9 +15877,9 @@
     "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.0000000825",
-      "completion": "0.00000033",
-      "input_cache_read": "0.000000020625",
+      "prompt": "0.000000132",
+      "completion": "0.000000528",
+      "input_cache_read": "0.000000033",
       "overrides": [
         {
           "utc_start": 0,
@@ -16027,9 +16000,9 @@
     "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000007506",
-      "completion": "0.0000022509",
-      "input_cache_read": "0.0000000378",
+      "prompt": "0.000000834",
+      "completion": "0.000002501",
+      "input_cache_read": "0.000000042",
       "overrides": [
         {
           "utc_start": 0,
@@ -16243,8 +16216,8 @@
     "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000003",
-      "completion": "0.000001",
+      "prompt": "0.00000015",
+      "completion": "0.0000005",
       "input_cache_read": "0.00000003"
     },
     "architecture": {
