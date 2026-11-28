@@ -395,9 +395,9 @@
     "description": "This model always redirects to the latest model in the Kimi family.",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.0000001824",
-      "completion": "0.0000110055",
-      "input_cache_read": "0.00000018"
+      "prompt": "0.0000001453",
+      "completion": "0.0000122894",
+      "input_cache_read": "0.00000014"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -3039,8 +3039,8 @@
     "description": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active...",
     "context_length": 163840,
     "pricing": {
-      "prompt": "0.000000571",
-      "completion": "0.000002286"
+      "prompt": "0.0000005",
+      "completion": "0.00000218"
     },
     "architecture": {
       "modality": "text->text",
@@ -3054,8 +3054,8 @@
       "instruct_type": "deepseek-r1"
     },
     "top_provider": {
-      "context_length": 128000,
-      "max_completion_tokens": 32000,
+      "context_length": 163840,
+      "max_completion_tokens": 147456,
       "is_moderated": false
     },
     "reasoning": {
@@ -3194,7 +3194,7 @@
     "context_length": 1048576,
     "pricing": {
       "prompt": "0.0000000456",
-      "completion": "0.0000003",
+      "completion": "0.00000027",
       "input_cache_read": "0.000000035"
     },
     "architecture": {
@@ -3308,9 +3308,9 @@
     "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.000000493382",
-      "completion": "0.0000015016",
-      "input_cache_read": "0.00000023"
+      "prompt": "0.00000089",
+      "completion": "0.0000015069",
+      "input_cache_read": "0.0000002"
     },
     "architecture": {
       "modality": "text->text",
@@ -6968,9 +6968,9 @@
     "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000015",
-      "completion": "0.0000006",
-      "input_cache_read": "0.000000015",
+      "prompt": "0.000000075",
+      "completion": "0.0000003",
+      "input_cache_read": "0.0000000075",
       "overrides": [
         {
           "utc_start": 1500,
@@ -11196,7 +11196,7 @@
     "top_provider": {
       "context_length": 1050000,
       "max_completion_tokens": 128000,
-      "is_moderated": false
+      "is_moderated": true
     },
     "reasoning": {
       "mandatory": false,
@@ -14401,9 +14401,9 @@
     "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
     "context_length": 262144,
     "pricing": {
-      "prompt": "0.000000075",
-      "completion": "0.00000011",
-      "input_cache_read": "0.000000067"
+      "prompt": "0.000000085",
+      "completion": "0.000000125",
+      "input_cache_read": "0.0000000765"
     },
     "architecture": {
       "modality": "text+image+video->text",
@@ -15260,9 +15260,9 @@
     "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000025",
+      "prompt": "0.0000003",
       "completion": "0.000001",
-      "input_cache_read": "0.00000005"
+      "input_cache_read": "0.00000004"
     },
     "architecture": {
       "modality": "text->text",
@@ -15277,7 +15277,7 @@
     },
     "top_provider": {
       "context_length": 1048576,
-      "max_completion_tokens": 131072,
+      "max_completion_tokens": 943718,
       "is_moderated": false
     },
     "reasoning": {
@@ -17489,9 +17489,9 @@
     "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
     "context_length": 1048576,
     "pricing": {
-      "prompt": "0.00000062",
-      "completion": "0.00000242",
-      "input_cache_read": "0.00000014"
+      "prompt": "0.000000007",
+      "completion": "0.0000068",
+      "input_cache_read": "0.000000006"
     },
     "architecture": {
       "modality": "text->text",
